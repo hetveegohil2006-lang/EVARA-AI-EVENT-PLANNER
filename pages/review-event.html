@@ -1,0 +1,1057 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>Step 4: Review &amp; Launch Vault — EVARA</title>
+  <meta name="description" content="Final pre-flight blueprint review for your luxury celebration before sealing in the EVARA Curation Vault."/>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+  
+  <link rel="stylesheet" href="../css/variables.css"/>
+  <link rel="stylesheet" href="../css/global.css"/>
+  <link rel="stylesheet" href="../css/layout.css"/>
+  <link rel="stylesheet" href="../css/components.css"/>
+  <link rel="stylesheet" href="../css/responsive.css"/>
+  <link rel="stylesheet" href="../css/pages/events.css"/>
+  <link rel="stylesheet" href="../css/pages/budget.css"/>
+</head>
+<body class="bg-[#F8F4EF]">
+  <!-- Mobile Menu Button -->
+  <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle navigation">
+    <span class="material-symbols-outlined">menu</span>
+  </button>
+  <div class="sidebar-backdrop" id="sidebarBackdrop"></div>
+
+  <!-- FIXED SIDEBAR -->
+  <aside class="sidebar">
+    <div class="sidebar-brand">
+      <img src="../assets/icons/evara-logo.svg" alt="EVARA Monogram Logo" class="brand-logo"/>
+      <div class="brand-text">
+        <span class="brand-name">EVARA</span>
+        <span class="brand-tagline">Private Concierge</span>
+      </div>
+    </div>
+
+    <div class="sidebar-cta">
+      <a href="create-event.html" class="btn btn-primary w-full justify-center">
+        <span class="material-symbols-outlined" style="font-size: 18px;">add</span>
+        <span>Create New Event</span>
+      </a>
+    </div>
+
+    <div class="sidebar-section-label">Curation</div>
+    <ul class="sidebar-nav">
+      <li class="sidebar-item">
+        <a href="../dashboard.html" class="sidebar-link" data-path="dashboard">
+          <span class="material-symbols-outlined">grid_view</span>
+          <span>Overview</span>
+        </a>
+      </li>
+      <li class="sidebar-item">
+        <a href="event-history.html" class="sidebar-link" data-path="events">
+          <span class="material-symbols-outlined">event_available</span>
+          <span>My Events</span>
+        </a>
+      </li>
+      <li class="sidebar-item">
+        <a href="budget.html" class="sidebar-link" data-path="budget">
+          <span class="material-symbols-outlined">payments</span>
+          <span>Budget Planner</span>
+        </a>
+      </li>
+      <li class="sidebar-item">
+        <a href="guests.html" class="sidebar-link" data-path="guests">
+          <span class="material-symbols-outlined">mark_email_read</span>
+          <span>Guests &amp; Invitations</span>
+        </a>
+      </li>
+      <li class="sidebar-item">
+        <a href="vendors.html" class="sidebar-link" data-path="vendors">
+          <span class="material-symbols-outlined">storefront</span>
+          <span>Vendors</span>
+        </a>
+      </li>
+      <li class="sidebar-item">
+        <a href="shopping.html" class="sidebar-link" data-path="shopping">
+          <span class="material-symbols-outlined">shopping_bag</span>
+          <span>Shopping Assistant</span>
+        </a>
+      </li>
+    </ul>
+
+    <div class="sidebar-section-label">Intelligence &amp; Archive</div>
+    <ul class="sidebar-nav">
+      <li class="sidebar-item">
+        <a href="ai-assistant.html" class="sidebar-link" data-path="assistant">
+          <span class="material-symbols-outlined" style="color: var(--color-gold);">auto_awesome</span>
+          <span>AI Event Assistant</span>
+        </a>
+      </li>
+      <li class="sidebar-item">
+        <a href="event-history.html" class="sidebar-link" data-path="history">
+          <span class="material-symbols-outlined">history_edu</span>
+          <span>Event History</span>
+        </a>
+      </li>
+    </ul>
+
+    <div class="sidebar-footer">
+      <ul class="sidebar-nav">
+        <li class="sidebar-item">
+          <a href="profile-settings.html" class="sidebar-link" data-path="settings">
+            <span class="material-symbols-outlined">settings</span>
+            <span>Settings</span>
+          </a>
+        </li>
+        <li class="sidebar-item">
+          <a href="about.html" class="sidebar-link" data-path="about">
+            <span class="material-symbols-outlined">info</span>
+            <span>About EVARA</span>
+          </a>
+        </li>
+      </ul>
+      <div class="concierge-status">
+        <span class="status-dot"></span>
+        <span class="status-text">Concierge v2.4 Active</span>
+      </div>
+    </div>
+  </aside>
+
+  <!-- MAIN WRAPPER -->
+  <div class="main-wrapper">
+    <!-- BLURRED HEADER -->
+    <header class="top-header">
+      <div class="header-search">
+        <span class="material-symbols-outlined search-icon">search</span>
+        <input type="text" class="search-input" placeholder="Search blueprint, itinerary, catering..."/>
+      </div>
+      <div class="header-actions">
+        <button class="icon-btn" aria-label="Notifications" onclick="window.location.href='notifications.html'">
+          <span class="material-symbols-outlined">notifications</span>
+          <span class="notification-badge"></span>
+        </button>
+        <div class="profile-pill" onclick="window.location.href='profile-settings.html'">
+          <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCblbJh5I878bB-SpKIAcY8gMe7Y6eDKxYbJLsCd9KulLzbHxlhTUyWD5y9ceH4RVYJjOwQwtyWCKA1CYDUwJB_eJeVVu7wvrhkUuvh1Pyxt159059DQaD3CoEXwd7iI0KGXa-OjhGk0K7YVTDOh5o9-gXmjcddhmp-tkv3nw1ee6SCxaERRbWfk-HgXJU9movKZDcCDa0ptrrt2gazDwN_0Sc6KueuTqtYp3fikBU" alt="Eleanor Vance" class="profile-avatar"/>
+          <div class="profile-info">
+            <span class="profile-name">Eleanor Vance</span>
+            <span class="profile-role">Principal Host</span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- CONTENT BODY -->
+    <main class="main-content" style="padding-bottom: 120px;">
+      <!-- Navigation Ribbon & 4-Phase Stepper -->
+      <section class="section" style="padding-top: var(--space-md); padding-bottom: var(--space-md);">
+        <div class="flex items-center justify-between flex-wrap gap-md mb-md">
+          <a href="guests-contributions.html" class="flex items-center gap-xs text-primary" style="font-weight: 600; text-transform: uppercase; font-size: 12px; letter-spacing: 0.08em; text-decoration: none;">
+            <span class="material-symbols-outlined" style="font-size: 18px;">arrow_back</span>
+            <span>Back to Guests &amp; Contributions</span>
+          </a>
+          <div class="flex items-center gap-xs px-sm py-xs rounded-full bg-surface-container text-xs shadow-sm">
+            <span class="status-dot" style="background-color: var(--color-success); animation: pulse 2s infinite;"></span>
+            <span style="font-weight: 500;">Draft Auto-Saved at 19:42 CEST</span>
+            <span class="text-muted">•</span>
+            <span style="color: var(--color-terracotta); font-weight: 600; text-transform: uppercase; letter-spacing: 0.04em;">Ready for Curation Vault</span>
+          </div>
+        </div>
+
+        <!-- 4-Phase Stepper Ribbon -->
+        <div class="card p-md shadow-sm mb-lg">
+          <div class="grid grid-cols-1 md:grid-cols-4 gap-md">
+            <!-- Step 1 -->
+            <a href="create-event.html" class="flex items-center gap-sm text-decoration-none" style="color: inherit;">
+              <div class="stepper-circle completed" style="width: 32px; height: 32px; font-size: 14px;">
+                <span class="material-symbols-outlined" style="font-size: 16px;">check</span>
+              </div>
+              <div class="flex flex-col">
+                <span class="stepper-step-label">Phase 01</span>
+                <span class="stepper-step-title" style="font-size: 15px;">Event Basics</span>
+              </div>
+            </a>
+            <!-- Step 2 -->
+            <a href="event-details.html" class="flex items-center gap-sm text-decoration-none" style="color: inherit;">
+              <div class="stepper-circle completed" style="width: 32px; height: 32px; font-size: 14px;">
+                <span class="material-symbols-outlined" style="font-size: 16px;">check</span>
+              </div>
+              <div class="flex flex-col">
+                <span class="stepper-step-label">Phase 02</span>
+                <span class="stepper-step-title" style="font-size: 15px;">Details &amp; Venue</span>
+              </div>
+            </a>
+            <!-- Step 3 -->
+            <a href="guests-contributions.html" class="flex items-center gap-sm text-decoration-none" style="color: inherit;">
+              <div class="stepper-circle completed" style="width: 32px; height: 32px; font-size: 14px;">
+                <span class="material-symbols-outlined" style="font-size: 16px;">check</span>
+              </div>
+              <div class="flex flex-col">
+                <span class="stepper-step-label">Phase 03</span>
+                <span class="stepper-step-title" style="font-size: 15px;">Guests &amp; Split</span>
+              </div>
+            </a>
+            <!-- Step 4 (Active) -->
+            <div class="flex items-center gap-sm p-xs rounded-lg" style="background-color: var(--color-champagne-light);">
+              <div class="stepper-circle active" style="width: 32px; height: 32px; font-size: 14px; box-shadow: 0 0 0 3px var(--color-champagne);">
+                <span>04</span>
+              </div>
+              <div class="flex flex-col">
+                <div class="flex items-center gap-xs">
+                  <span class="stepper-step-label" style="color: var(--color-espresso); font-weight: 700;">Phase 04</span>
+                  <span class="badge badge-accent" style="font-size: 9px; padding: 2px 6px;">Active</span>
+                </div>
+                <span class="stepper-step-title" style="color: var(--color-espresso); font-weight: 700; font-size: 15px;">Review &amp; Create</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Editorial Header Title -->
+        <div class="flex items-end justify-between flex-wrap gap-md">
+          <div class="flex flex-col gap-xs">
+            <span class="section-tag">Pre-Flight Review Vault</span>
+            <h1 class="page-title" style="font-size: 36px; margin-bottom: 4px;">Everything looks wonderful.</h1>
+            <p class="section-desc" style="font-size: 16px; margin: 0;">Let's review your plans before bringing your event to life.</p>
+          </div>
+          <div class="flex items-center gap-sm">
+            <button class="btn btn-secondary" onclick="ReportsModule.exportExpensesCSV()">
+              <span class="material-symbols-outlined" style="font-size: 18px;">download_done</span>
+              <span>Export Dossier</span>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Cinematic Event Cover & Hero Summary -->
+      <section class="section" style="padding-top: 0; padding-bottom: var(--space-lg);">
+        <div class="relative w-full rounded-2xl overflow-hidden shadow-lg" style="height: 440px; background-color: var(--color-espresso); position: relative;">
+          <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuC2h_wz8ScilaS9IGc3JtDnNzUdvkPki-2hUZihKSkc2MzyIhbqTwZetDrBFOr83k2yYut6RrYmAqdit1zfkJiVZ1kq5_11C-ps6DUtPFIld1-B2OC4yWicAmfLtZ5VjV_3fkvaJZRWujrY1tjQMNaLxEvCxfU4hF1b5pQ6xEWgboZtFwxfnOdOfoq1k9F1-LthAVtUWFk6NZJeLlJQFRmV9HXlDOI8-dysnfD6M8Y" alt="Villa San Valentino in Chianti Hills" style="width: 100%; height: 100%; object-fit: cover; object-position: center;"/>
+          <div style="position: absolute; inset: 0; background: linear-gradient(to top, rgba(34,26,23,0.92) 0%, rgba(34,26,23,0.5) 50%, rgba(34,26,23,0.2) 100%);"></div>
+
+          <!-- Floating Badges Top -->
+          <div style="position: absolute; top: 24px; left: 24px; right: 24px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px;">
+            <div class="flex items-center gap-xs">
+              <span class="badge" style="background: rgba(255,255,255,0.9); backdrop-filter: blur(8px); color: var(--color-espresso); font-weight: 600;">Phase 4 of 4 • Final Curated Blueprint</span>
+              <span class="badge badge-accent" style="background: rgba(233,216,200,0.9); backdrop-filter: blur(8px); color: var(--color-espresso); font-weight: 600;">Wedding &amp; Tuscan Gala</span>
+            </div>
+            <span class="badge badge-success" style="background: rgba(101,131,106,0.9); backdrop-filter: blur(8px); color: #fff;">
+              <span class="status-dot" style="background: #fff; width: 6px; height: 6px;"></span>
+              Status: Pre-Flight Verified
+            </span>
+          </div>
+
+          <!-- Hero Content Bottom -->
+          <div style="position: absolute; bottom: 24px; left: 24px; right: 24px; display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 20px;">
+            <div class="flex flex-col gap-xs" style="max-width: 800px; color: #fff;">
+              <div class="flex items-center gap-xs" style="color: var(--color-champagne-light); font-size: 13px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em;">
+                <span class="material-symbols-outlined" style="font-size: 18px;">villa</span>
+                <span>Chianti Hills Sanctuary • Private Estate</span>
+              </div>
+              <h2 class="font-serif" style="font-size: 40px; color: #fff; margin: 4px 0 8px 0; line-height: 1.15;">Villa San Valentino Tuscan Gala 2025</h2>
+              <div class="flex items-center flex-wrap gap-md" style="font-size: 14px; color: rgba(255,255,255,0.85);">
+                <div class="flex items-center gap-xs">
+                  <span class="material-symbols-outlined" style="font-size: 18px; color: var(--color-gold);">calendar_month</span>
+                  <span>Thu, Oct 24 – Sun, Oct 27, 2025 (4 Days)</span>
+                </div>
+                <span>•</span>
+                <div class="flex items-center gap-xs">
+                  <span class="material-symbols-outlined" style="font-size: 18px; color: var(--color-gold);">pin_drop</span>
+                  <span>Villa San Valentino, Chianti Hills, Tuscany</span>
+                </div>
+                <span>•</span>
+                <div class="flex items-center gap-xs">
+                  <span class="material-symbols-outlined" style="font-size: 18px; color: var(--color-gold);">groups</span>
+                  <span>36 Confirmed Guests • 80 Day Capacity</span>
+                </div>
+                <span>•</span>
+                <div class="flex items-center gap-xs" style="color: var(--color-champagne-light); font-weight: 600;">
+                  <span class="material-symbols-outlined" style="font-size: 18px;">account_balance_wallet</span>
+                  <span>₹15,00,000 Budget Pool</span>
+                </div>
+              </div>
+            </div>
+            <div class="flex-shrink-0">
+              <a href="create-event.html" class="btn btn-secondary" style="background: rgba(255,255,255,0.92); backdrop-filter: blur(8px);">
+                <span class="material-symbols-outlined" style="font-size: 18px;">edit</span>
+                <span>Edit Event Basics</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Detailed Curation Summary Bento Grid -->
+      <section class="section" style="padding-top: 0; padding-bottom: var(--space-lg);">
+        <div class="flex items-center justify-between mb-md">
+          <div class="flex flex-col">
+            <span class="section-tag">Section 01</span>
+            <h3 class="section-title">Curated Blueprint Summary</h3>
+          </div>
+          <span class="text-muted text-sm">Synchronized across 4 Modules</span>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-lg">
+          <!-- Card A: Schedule & Venue Logistics -->
+          <div class="card p-lg flex flex-col justify-between shadow-sm">
+            <div class="flex flex-col gap-md">
+              <div class="flex items-center justify-between">
+                <div class="flex items-center gap-sm">
+                  <div class="feature-icon" style="background: var(--color-champagne-light); color: var(--color-espresso);">
+                    <span class="material-symbols-outlined">calendar_today</span>
+                  </div>
+                  <div>
+                    <span class="text-xs uppercase tracking-wider text-muted font-bold">Module 01</span>
+                    <h4 class="font-serif" style="font-size: 20px; margin: 0;">Event Details &amp; Schedule Breakdown</h4>
+                  </div>
+                </div>
+                <a href="event-details.html" class="flex items-center gap-xs text-primary text-xs font-bold uppercase tracking-wider" style="text-decoration: none;">
+                  <span>Edit Venue</span>
+                  <span class="material-symbols-outlined" style="font-size: 14px;">open_in_new</span>
+                </a>
+              </div>
+
+              <!-- Schedule Pipeline -->
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-sm pt-xs">
+                <div class="card p-sm bg-surface">
+                  <div class="flex items-center justify-between text-xs mb-xs">
+                    <span style="color: var(--color-terracotta); font-weight: 700;">Oct 24 • 15:00</span>
+                    <span class="text-muted">Day 1</span>
+                  </div>
+                  <strong style="font-size: 14px; display: block;">Villa Check-in &amp; Welcome Aperitivo</strong>
+                  <span class="text-muted text-xs">Lawn Spritz &amp; Cypress Terrace Canapés</span>
+                </div>
+
+                <div class="card p-sm bg-surface">
+                  <div class="flex items-center justify-between text-xs mb-xs">
+                    <span style="color: var(--color-terracotta); font-weight: 700;">Oct 25 • 17:30</span>
+                    <span class="text-muted">Day 2</span>
+                  </div>
+                  <strong style="font-size: 14px; display: block;">Vow Golden Hour Ceremony</strong>
+                  <span class="text-muted text-xs">Ancient Stone Chapel &amp; Olive Grove Path</span>
+                </div>
+
+                <div class="card p-sm bg-surface">
+                  <div class="flex items-center justify-between text-xs mb-xs">
+                    <span style="color: var(--color-terracotta); font-weight: 700;">Oct 26 • 19:00</span>
+                    <span class="text-muted">Day 3</span>
+                  </div>
+                  <strong style="font-size: 14px; display: block;">Imperial Al Fresco Feasting</strong>
+                  <span class="text-muted text-xs">Tuscan Gastronomy, Chianti Riserva &amp; Strings</span>
+                </div>
+
+                <div class="card p-sm bg-surface">
+                  <div class="flex items-center justify-between text-xs mb-xs">
+                    <span style="color: var(--color-terracotta); font-weight: 700;">Oct 27 • 11:00</span>
+                    <span class="text-muted">Day 4</span>
+                  </div>
+                  <strong style="font-size: 14px; display: block;">Farewell Tuscan Brunch</strong>
+                  <span class="text-muted text-xs">Artisan Pastries, Espresso Bar &amp; Sprinter Departures</span>
+                </div>
+              </div>
+
+              <!-- Verified Route Bar -->
+              <div class="flex items-center justify-between p-sm rounded-lg" style="background: var(--color-champagne-light);">
+                <div class="flex items-center gap-sm">
+                  <span class="material-symbols-outlined text-primary">map</span>
+                  <div>
+                    <strong style="font-size: 13px; display: block;">Villa San Valentino, Greve in Chianti</strong>
+                    <span class="text-muted text-xs">38 km from Florence Peretola (FLR) • 42 min private shuttle</span>
+                  </div>
+                </div>
+                <span class="badge badge-success" style="font-size: 10px;">Verified Route</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card B: Bespoke Preferences & Atmosphere -->
+          <div class="card p-lg flex flex-col justify-between shadow-sm">
+            <div class="flex flex-col gap-md">
+              <div class="flex items-center justify-between">
+                <div class="flex items-center gap-sm">
+                  <div class="feature-icon" style="background: var(--color-champagne-light); color: var(--color-espresso);">
+                    <span class="material-symbols-outlined">palette</span>
+                  </div>
+                  <div>
+                    <span class="text-xs uppercase tracking-wider text-muted font-bold">Module 02</span>
+                    <h4 class="font-serif" style="font-size: 20px; margin: 0;">Bespoke Preferences &amp; Atmosphere</h4>
+                  </div>
+                </div>
+                <a href="event-details.html" class="flex items-center gap-xs text-primary text-xs font-bold uppercase tracking-wider" style="text-decoration: none;">
+                  <span>Edit Preferences</span>
+                  <span class="material-symbols-outlined" style="font-size: 14px;">tune</span>
+                </a>
+              </div>
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-sm">
+                <div class="card p-sm bg-surface">
+                  <div class="flex items-center gap-xs mb-xs" style="color: var(--color-terracotta); font-size: 12px; font-weight: 700;">
+                    <span class="material-symbols-outlined" style="font-size: 16px;">brush</span>
+                    <span>AESTHETIC IDENTITY</span>
+                  </div>
+                  <strong style="font-size: 14px; display: block;">Editorial Tuscan Rustic</strong>
+                  <p class="text-muted text-xs" style="margin: 4px 0 0 0;">Natural raw linen, antique brass candelabras, wild rosemary, seeded eucalyptus.</p>
+                </div>
+
+                <div class="card p-sm bg-surface">
+                  <div class="flex items-center gap-xs mb-xs" style="color: var(--color-terracotta); font-size: 12px; font-weight: 700;">
+                    <span class="material-symbols-outlined" style="font-size: 16px;">table_restaurant</span>
+                    <span>SEATING TOPOLOGY</span>
+                  </div>
+                  <strong style="font-size: 14px; display: block;">Imperial Feasting Table</strong>
+                  <p class="text-muted text-xs" style="margin: 4px 0 0 0;">Continuous 60-seat courtyard banqueting setup with warm overhead bulb canopy.</p>
+                </div>
+
+                <div class="card p-sm bg-surface">
+                  <div class="flex items-center gap-xs mb-xs" style="color: var(--color-terracotta); font-size: 12px; font-weight: 700;">
+                    <span class="material-symbols-outlined" style="font-size: 16px;">umbrella</span>
+                    <span>CONTINGENCY PLAN</span>
+                  </div>
+                  <strong style="font-size: 14px; display: block;">Covered Arcade Fallback</strong>
+                  <p class="text-muted text-xs" style="margin: 4px 0 0 0;">Seamless shift to Renaissance arched portico with transparent acoustic weather shielding.</p>
+                </div>
+
+                <div class="card p-sm bg-surface">
+                  <div class="flex items-center gap-xs mb-xs" style="color: var(--color-terracotta); font-size: 12px; font-weight: 700;">
+                    <span class="material-symbols-outlined" style="font-size: 16px;">wine_bar</span>
+                    <span>SOMMELIER &amp; DINING</span>
+                  </div>
+                  <strong style="font-size: 14px; display: block;">Organic Chianti Pairings</strong>
+                  <p class="text-muted text-xs" style="margin: 4px 0 0 0;">Truffle handmade tagliolini, bistecca tagliata, bio vineyard olive oil tasting.</p>
+                </div>
+              </div>
+
+              <div class="flex items-center justify-between text-muted text-xs pt-xs">
+                <span class="flex items-center gap-xs">
+                  <span class="material-symbols-outlined text-primary" style="font-size: 16px;">check_circle</span>
+                  <span>Dietary restrictions mapped for 8 vegetarian, 4 gluten-free guests</span>
+                </span>
+                <span class="badge" style="font-size: 10px;">Verified with Head Chef</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card C: Guests & Roster Telemetry -->
+          <div class="card p-lg flex flex-col justify-between shadow-sm">
+            <div class="flex flex-col gap-md">
+              <div class="flex items-center justify-between">
+                <div class="flex items-center gap-sm">
+                  <div class="feature-icon" style="background: var(--color-champagne-light); color: var(--color-espresso);">
+                    <span class="material-symbols-outlined">group</span>
+                  </div>
+                  <div>
+                    <span class="text-xs uppercase tracking-wider text-muted font-bold">Module 03</span>
+                    <h4 class="font-serif" style="font-size: 20px; margin: 0;">Guests &amp; Roster Telemetry</h4>
+                  </div>
+                </div>
+                <a href="guests-contributions.html" class="flex items-center gap-xs text-primary text-xs font-bold uppercase tracking-wider" style="text-decoration: none;">
+                  <span>Edit Guestlist</span>
+                  <span class="material-symbols-outlined" style="font-size: 14px;">person_add</span>
+                </a>
+              </div>
+
+              <!-- Roster Counters -->
+              <div class="grid grid-cols-2 sm:grid-cols-4 gap-sm">
+                <div class="card p-sm text-center bg-surface">
+                  <span class="text-xs uppercase text-muted font-bold">Dispatched</span>
+                  <div class="font-serif" style="font-size: 24px; color: var(--color-espresso); font-weight: 700;">42</div>
+                  <span class="text-muted text-xs">VIP Invites</span>
+                </div>
+                <div class="card p-sm text-center bg-surface">
+                  <span class="text-xs uppercase text-muted font-bold">Confirmed</span>
+                  <div class="font-serif" style="font-size: 24px; color: var(--color-success); font-weight: 700;">34</div>
+                  <span class="text-muted text-xs">+6 Plus-Ones</span>
+                </div>
+                <div class="card p-sm text-center bg-surface">
+                  <span class="text-xs uppercase text-muted font-bold">Awaiting</span>
+                  <div class="font-serif" style="font-size: 24px; color: var(--color-terracotta); font-weight: 700;">4</div>
+                  <span class="text-muted text-xs">Pending RSVP</span>
+                </div>
+                <div class="card p-sm text-center bg-surface">
+                  <span class="text-xs uppercase text-muted font-bold">Declined</span>
+                  <div class="font-serif" style="font-size: 24px; color: var(--color-muted); font-weight: 700;">2</div>
+                  <span class="text-muted text-xs">Polite Regrets</span>
+                </div>
+              </div>
+
+              <!-- Table Allocation Progress -->
+              <div class="card p-sm bg-surface">
+                <div class="flex items-center justify-between text-xs mb-xs">
+                  <span class="font-bold">Imperial Table Allocation</span>
+                  <span class="font-bold text-primary">36 / 36 Seats Reserved (100%)</span>
+                </div>
+                <div class="progress-bar-bg" style="height: 8px;">
+                  <div class="progress-bar-fill" style="width: 100%; background: var(--color-espresso);"></div>
+                </div>
+                <div class="flex items-center justify-between text-xs text-muted mt-xs">
+                  <span>Main Courtyard Long Table</span>
+                  <span class="badge badge-accent" style="font-size: 10px;">Capacity Cap Reached</span>
+                </div>
+              </div>
+
+              <!-- Pass Link Bar -->
+              <div class="flex items-center justify-between p-sm rounded-lg" style="background: var(--color-champagne-light);">
+                <div class="flex items-center gap-xs">
+                  <span class="material-symbols-outlined text-primary">link</span>
+                  <code style="font-size: 12px; color: var(--color-espresso); font-weight: 600;">evara.luxury/c/valentino-gala-2025</code>
+                </div>
+                <button class="btn btn-secondary" style="padding: 4px 10px; font-size: 11px;" onclick="App.copyToClipboard('https://evara.luxury/c/valentino-gala-2025', 'VIP Pass Link copied!')">
+                  Copy Pass Link
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card D: Financial Governance & Escrow -->
+          <div class="card p-lg flex flex-col justify-between shadow-sm">
+            <div class="flex flex-col gap-md">
+              <div class="flex items-center justify-between">
+                <div class="flex items-center gap-sm">
+                  <div class="feature-icon" style="background: var(--color-champagne-light); color: var(--color-espresso);">
+                    <span class="material-symbols-outlined">account_balance</span>
+                  </div>
+                  <div>
+                    <span class="text-xs uppercase tracking-wider text-muted font-bold">Module 04</span>
+                    <h4 class="font-serif" style="font-size: 20px; margin: 0;">Financial Governance &amp; Escrow</h4>
+                  </div>
+                </div>
+                <a href="budget.html" class="flex items-center gap-xs text-primary text-xs font-bold uppercase tracking-wider" style="text-decoration: none;">
+                  <span>Edit Escrow</span>
+                  <span class="material-symbols-outlined" style="font-size: 14px;">savings</span>
+                </a>
+              </div>
+
+              <!-- Total & Split Metrics -->
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-sm">
+                <div class="card p-sm bg-surface">
+                  <span class="text-xs uppercase text-muted font-bold">Total Event Outlay</span>
+                  <div class="font-serif" style="font-size: 24px; color: var(--color-espresso); font-weight: 700;">₹15,00,000</div>
+                  <span class="text-muted text-xs">INR • Locked Budget Pool</span>
+                </div>
+                <div class="card p-sm bg-surface">
+                  <span class="text-xs uppercase text-muted font-bold">Guest Shared Allocation</span>
+                  <div class="font-serif" style="font-size: 24px; color: var(--color-terracotta); font-weight: 700;">₹41,666 <span style="font-size: 12px; font-family: var(--font-body); font-weight: normal; color: var(--color-muted);">/ attendee</span></div>
+                  <span class="text-muted text-xs">Equal Split Model (36 seats)</span>
+                </div>
+              </div>
+
+              <!-- Escrow Progress -->
+              <div class="card p-sm bg-surface">
+                <div class="flex items-center justify-between text-xs mb-xs">
+                  <div class="flex items-center gap-xs">
+                    <span class="font-bold">Escrow Vault Deposit Progress</span>
+                    <span class="badge badge-accent" style="font-size: 10px;">72.2% Funded</span>
+                  </div>
+                  <span class="font-bold text-primary">₹10,83,316 of ₹15,00,000</span>
+                </div>
+                <div class="progress-bar-bg" style="height: 10px;">
+                  <div class="progress-bar-fill" style="width: 72.2%; background: var(--color-success);"></div>
+                </div>
+                <div class="flex items-center justify-between text-xs text-muted mt-xs">
+                  <span>26 Paid Contributors</span>
+                  <span>10 Inbound Pledges (₹4,16,684 pending)</span>
+                </div>
+              </div>
+
+              <!-- Escrow Guarantee Notice -->
+              <div class="flex items-center gap-sm p-sm rounded-lg" style="background: var(--color-champagne-light); font-size: 12px;">
+                <span class="material-symbols-outlined text-primary">verified_user</span>
+                <span><strong>EVARA Escrow Guarantee:</strong> Vendor balances disbursed only upon verified delivery milestones.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- AI-Generated Event Blueprint & Milestone Roadmap -->
+      <section class="section" style="padding-top: 0; padding-bottom: var(--space-lg);">
+        <div class="card p-lg shadow-sm" style="background: #fff;">
+          <div class="flex items-end justify-between flex-wrap gap-md mb-lg">
+            <div class="flex flex-col gap-xs max-w-2xl">
+              <div class="flex items-center gap-xs" style="color: var(--color-terracotta); font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em;">
+                <span class="material-symbols-outlined" style="font-size: 18px;">auto_awesome</span>
+                <span>Aria Neural Intelligence Roadmap</span>
+              </div>
+              <h3 class="font-serif" style="font-size: 26px; margin: 0;">Your Personalized Event Blueprint</h3>
+              <p class="text-muted text-sm" style="margin: 4px 0 0 0;">Aria neural engine has synthesized your venue, guest telemetry, and budget into an actionable production roadmap.</p>
+            </div>
+            <span class="badge badge-primary" style="padding: 6px 12px; font-size: 12px;">5 Critical Milestones Active</span>
+          </div>
+
+          <!-- Timeline Roadmap -->
+          <div class="timeline-container" style="position: relative; border-left: 2px solid var(--color-champagne); margin-left: 18px; padding-left: 24px;">
+            <!-- Milestone 1 -->
+            <div class="timeline-item mb-md" style="position: relative;">
+              <div style="position: absolute; left: -34px; top: 4px; width: 20px; height: 20px; border-radius: 50%; background: var(--color-success); color: #fff; display: flex; items-center; justify-content: center; font-size: 12px; box-shadow: 0 0 0 4px #fff;">
+                <span class="material-symbols-outlined" style="font-size: 14px;">done</span>
+              </div>
+              <div class="card p-md bg-surface flex items-center justify-between flex-wrap gap-md">
+                <div>
+                  <div class="flex items-center gap-xs mb-xs">
+                    <span class="badge badge-success" style="font-size: 10px;">✓ Confirmed Milestone</span>
+                    <span class="text-muted text-xs">Executed • Aug 12</span>
+                  </div>
+                  <h4 style="font-size: 16px; margin: 0 0 4px 0;">Venue Contract &amp; Primary Escrow Deposit</h4>
+                  <p class="text-muted text-xs" style="margin: 0;">Exclusive buyout of Villa San Valentino secured for 4 nights with zero cancellation penalties.</p>
+                </div>
+                <div class="flex items-center gap-sm flex-shrink-0">
+                  <strong style="font-size: 16px;">₹4,50,000</strong>
+                  <span class="badge">Locked in Escrow</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Milestone 2 -->
+            <div class="timeline-item mb-md" style="position: relative;">
+              <div style="position: absolute; left: -34px; top: 4px; width: 20px; height: 20px; border-radius: 50%; background: var(--color-terracotta); color: #fff; display: flex; items-center; justify-content: center; font-size: 12px; box-shadow: 0 0 0 4px #fff;">
+                <span class="material-symbols-outlined" style="font-size: 14px;">bolt</span>
+              </div>
+              <div class="card p-md bg-surface flex items-center justify-between flex-wrap gap-md">
+                <div>
+                  <div class="flex items-center gap-xs mb-xs">
+                    <span class="badge badge-accent" style="font-size: 10px;">⚡ AI Recommended</span>
+                    <span class="text-xs" style="color: var(--color-terracotta); font-weight: 600;">Target: Sept 15 (23 Days left)</span>
+                  </div>
+                  <h4 style="font-size: 16px; margin: 0 0 4px 0;">Guest Dietary &amp; Suite Allocation Lock</h4>
+                  <p class="text-muted text-xs" style="margin: 0;">Sync 34 RSVP dietary profiles directly with chef Fabrizio and assign 18 historic suites.</p>
+                </div>
+                <div class="flex items-center gap-sm flex-shrink-0">
+                  <a href="guests-contributions.html" class="btn btn-secondary" style="font-size: 12px; padding: 6px 14px;">Open Matrix</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Milestone 3 -->
+            <div class="timeline-item mb-md" style="position: relative;">
+              <div style="position: absolute; left: -34px; top: 4px; width: 20px; height: 20px; border-radius: 50%; background: var(--color-terracotta); color: #fff; display: flex; items-center; justify-content: center; font-size: 12px; box-shadow: 0 0 0 4px #fff;">
+                <span class="material-symbols-outlined" style="font-size: 14px;">bolt</span>
+              </div>
+              <div class="card p-md bg-surface flex items-center justify-between flex-wrap gap-md">
+                <div>
+                  <div class="flex items-center gap-xs mb-xs">
+                    <span class="badge badge-accent" style="font-size: 10px;">⚡ AI Recommended</span>
+                    <span class="text-xs" style="color: var(--color-terracotta); font-weight: 600;">Target: Oct 02</span>
+                  </div>
+                  <h4 style="font-size: 16px; margin: 0 0 4px 0;">Floral &amp; Al Fresco Lighting Rigging</h4>
+                  <p class="text-muted text-xs" style="margin: 0;">Approve final 120-meter festoon string canopy and low-profile terracotta vessel florals.</p>
+                </div>
+                <div class="flex items-center gap-sm flex-shrink-0">
+                  <strong style="font-size: 16px;">₹2,70,000</strong>
+                  <a href="vendors.html" class="btn btn-secondary" style="font-size: 12px; padding: 6px 14px;">Review Mockup</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Milestone 4 -->
+            <div class="timeline-item mb-md" style="position: relative;">
+              <div style="position: absolute; left: -34px; top: 4px; width: 20px; height: 20px; border-radius: 50%; background: var(--color-terracotta); color: #fff; display: flex; items-center; justify-content: center; font-size: 12px; box-shadow: 0 0 0 4px #fff;">
+                <span class="material-symbols-outlined" style="font-size: 14px;">bolt</span>
+              </div>
+              <div class="card p-md bg-surface flex items-center justify-between flex-wrap gap-md">
+                <div>
+                  <div class="flex items-center gap-xs mb-xs">
+                    <span class="badge badge-accent" style="font-size: 10px;">⚡ AI Recommended</span>
+                    <span class="text-xs" style="color: var(--color-terracotta); font-weight: 600;">Target: Oct 18</span>
+                  </div>
+                  <h4 style="font-size: 16px; margin: 0 0 4px 0;">Private Sprinter Transfers from Florence Peretola FLR</h4>
+                  <p class="text-muted text-xs" style="margin: 0;">Consolidate 14 inbound flight arrivals into 4 staggered Mercedes-Benz V-Class luxury shuttles.</p>
+                </div>
+                <div class="flex items-center gap-sm flex-shrink-0">
+                  <strong style="font-size: 16px;">₹1,80,000</strong>
+                  <button class="btn btn-secondary" style="font-size: 12px; padding: 6px 14px;" onclick="App.toast('Flight telemetry graph synchronized with Florence radar', 'flight')">View Flight Graph</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Milestone 5 -->
+            <div class="timeline-item" style="position: relative;">
+              <div style="position: absolute; left: -34px; top: 4px; width: 20px; height: 20px; border-radius: 50%; background: var(--color-espresso); color: #fff; display: flex; items-center; justify-content: center; font-size: 12px; box-shadow: 0 0 0 4px #fff;">
+                <span class="material-symbols-outlined" style="font-size: 14px;">star</span>
+              </div>
+              <div class="card p-md bg-surface flex items-center justify-between flex-wrap gap-md">
+                <div>
+                  <div class="flex items-center gap-xs mb-xs">
+                    <span class="badge badge-primary" style="font-size: 10px;">✓ Production Kickoff</span>
+                    <span class="text-muted text-xs">Oct 24 • 17:00</span>
+                  </div>
+                  <h4 style="font-size: 16px; margin: 0 0 4px 0;">Welcome Reception &amp; Tuscan Sunset Spritz</h4>
+                  <p class="text-muted text-xs" style="margin: 0;">Live acoustic cello duet, wood-fired focaccia, chilled Aperol Spritz, sunset toast across vineyards.</p>
+                </div>
+                <div class="flex items-center gap-sm flex-shrink-0">
+                  <span class="badge badge-success" style="font-size: 11px; padding: 4px 10px;">Ready</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Aria Callout Insight -->
+          <div class="card p-md mt-lg flex items-start gap-md" style="background: var(--color-champagne-light); border: 1px solid var(--color-champagne);">
+            <div class="feature-icon" style="background: var(--color-terracotta); color: #fff; flex-shrink: 0;">
+              <span class="material-symbols-outlined">lightbulb</span>
+            </div>
+            <div>
+              <div class="flex items-center gap-xs mb-xs">
+                <strong style="font-size: 14px;">Aria Fiscal &amp; Production Optimization</strong>
+                <span class="badge badge-accent" style="font-size: 10px;">₹48,000 Saved</span>
+              </div>
+              <p class="text-muted text-xs" style="margin: 0;">By consolidating imported florals with indigenous Chianti olive branches and local Tuscan botanical gardens, Aria reduced vendor logistics costs by ₹48,000 without compromising editorial aesthetics.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Visual Budget Allocation & Fiscal Gauges -->
+      <section class="section" style="padding-top: 0; padding-bottom: var(--space-lg);">
+        <div class="card p-lg shadow-sm">
+          <div class="flex items-end justify-between flex-wrap gap-md mb-md">
+            <div>
+              <span class="section-tag">Fiscal Architecture</span>
+              <h3 class="font-serif" style="font-size: 24px; margin: 4px 0 0 0;">Budget Allocation &amp; Expenditures</h3>
+            </div>
+            <div class="flex items-baseline gap-xs">
+              <span class="font-serif" style="font-size: 28px; color: var(--color-espresso); font-weight: 700;">₹15,00,000</span>
+              <span class="text-muted text-xs">INR Total Planned Pool</span>
+            </div>
+          </div>
+
+          <!-- Segmented Progress Bar -->
+          <div class="progress-bar-bg" style="height: 16px; border-radius: 8px; display: flex; overflow: hidden; background: var(--color-champagne);">
+            <div style="width: 45%; background: var(--color-espresso);" title="Venue Buyout (45%)"></div>
+            <div style="width: 25%; background: var(--color-terracotta);" title="Catering & Sommelier (25%)"></div>
+            <div style="width: 18%; background: var(--color-gold);" title="Décor & Lighting (18%)"></div>
+            <div style="width: 12%; background: var(--color-mocha);" title="Logistics & Shuttles (12%)"></div>
+          </div>
+
+          <!-- Breakdown Grid -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-md pt-md">
+            <div class="card p-sm bg-surface">
+              <div class="flex items-center gap-xs">
+                <span style="width: 10px; height: 10px; border-radius: 50%; background: var(--color-espresso);"></span>
+                <span class="text-xs font-bold uppercase">Venue Buyout</span>
+              </div>
+              <div class="flex items-baseline justify-between mt-xs">
+                <strong style="font-size: 18px;">₹6,75,000</strong>
+                <span class="text-muted text-xs">45%</span>
+              </div>
+              <span class="text-muted text-xs">Exclusive 4-day estate lease</span>
+            </div>
+
+            <div class="card p-sm bg-surface">
+              <div class="flex items-center gap-xs">
+                <span style="width: 10px; height: 10px; border-radius: 50%; background: var(--color-terracotta);"></span>
+                <span class="text-xs font-bold uppercase">Catering &amp; Sommelier</span>
+              </div>
+              <div class="flex items-baseline justify-between mt-xs">
+                <strong style="font-size: 18px;">₹3,75,000</strong>
+                <span class="text-muted text-xs">25%</span>
+              </div>
+              <span class="text-muted text-xs">4 courses &amp; reserve wine cellars</span>
+            </div>
+
+            <div class="card p-sm bg-surface">
+              <div class="flex items-center gap-xs">
+                <span style="width: 10px; height: 10px; border-radius: 50%; background: var(--color-gold);"></span>
+                <span class="text-xs font-bold uppercase">Décor &amp; Lighting</span>
+              </div>
+              <div class="flex items-baseline justify-between mt-xs">
+                <strong style="font-size: 18px;">₹2,70,000</strong>
+                <span class="text-muted text-xs">18%</span>
+              </div>
+              <span class="text-muted text-xs">Florals, festoons, candle foliage</span>
+            </div>
+
+            <div class="card p-sm bg-surface">
+              <div class="flex items-center gap-xs">
+                <span style="width: 10px; height: 10px; border-radius: 50%; background: var(--color-mocha);"></span>
+                <span class="text-xs font-bold uppercase">Logistics &amp; Shuttles</span>
+              </div>
+              <div class="flex items-baseline justify-between mt-xs">
+                <strong style="font-size: 18px;">₹1,80,000</strong>
+                <span class="text-muted text-xs">12%</span>
+              </div>
+              <span class="text-muted text-xs">Florence airport vans, luggage</span>
+            </div>
+          </div>
+
+          <div class="flex items-center justify-between text-muted text-xs pt-md">
+            <span class="flex items-center gap-xs">
+              <span class="material-symbols-outlined text-primary" style="font-size: 16px;">info</span>
+              <span>All figures represent host-curated estimates. Vendor contracts locked via EVARA Vault upon event creation.</span>
+            </span>
+            <a href="budget.html" class="text-primary font-bold" style="text-decoration: none;">Detailed Financial Model →</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Pre-Flight Verification & Dedicated Aria Concierge Widget -->
+      <section class="section" style="padding-top: 0; padding-bottom: var(--space-xl);">
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-lg">
+          <!-- Final Pre-Flight Checklist (2 Cols) -->
+          <div class="lg:col-span-2 card p-lg flex flex-col justify-between shadow-sm">
+            <div class="flex flex-col gap-md">
+              <div class="flex items-center justify-between">
+                <div>
+                  <span class="section-tag">Integrity Assurance</span>
+                  <h3 class="font-serif" style="font-size: 24px; margin: 4px 0 0 0;">Ready to create your event?</h3>
+                </div>
+                <span class="badge badge-success" style="font-size: 12px; padding: 4px 10px;">5 / 5 Verified</span>
+              </div>
+
+              <div class="flex flex-col gap-sm">
+                <div class="card p-sm bg-surface flex items-center gap-sm">
+                  <div style="width: 22px; height: 22px; border-radius: 50%; background: var(--color-success); color: #fff; display: flex; items-center; justify-content: center; flex-shrink: 0;">
+                    <span class="material-symbols-outlined" style="font-size: 14px;">check</span>
+                  </div>
+                  <div>
+                    <strong style="font-size: 13px; display: block;">Event identity and multi-day itinerary reviewed</strong>
+                    <span class="text-muted text-xs">October 24–27, 2025 sequence finalized across all guest tiers</span>
+                  </div>
+                </div>
+
+                <div class="card p-sm bg-surface flex items-center gap-sm">
+                  <div style="width: 22px; height: 22px; border-radius: 50%; background: var(--color-success); color: #fff; display: flex; items-center; justify-content: center; flex-shrink: 0;">
+                    <span class="material-symbols-outlined" style="font-size: 14px;">check</span>
+                  </div>
+                  <div>
+                    <strong style="font-size: 13px; display: block;">Villa San Valentino location &amp; noise ordinance verified</strong>
+                    <span class="text-muted text-xs">Live music permitted outdoors until 00:30, indoor ballroom until 03:00</span>
+                  </div>
+                </div>
+
+                <div class="card p-sm bg-surface flex items-center gap-sm">
+                  <div style="width: 22px; height: 22px; border-radius: 50%; background: var(--color-success); color: #fff; display: flex; items-center; justify-content: center; flex-shrink: 0;">
+                    <span class="material-symbols-outlined" style="font-size: 14px;">check</span>
+                  </div>
+                  <div>
+                    <strong style="font-size: 13px; display: block;">Budget target locked at ₹15,00,000 with flexible ±15% threshold</strong>
+                    <span class="text-muted text-xs">Includes contingency margin and currency rate lock protections (INR / EUR)</span>
+                  </div>
+                </div>
+
+                <div class="card p-sm bg-surface flex items-center gap-sm">
+                  <div style="width: 22px; height: 22px; border-radius: 50%; background: var(--color-success); color: #fff; display: flex; items-center; justify-content: center; flex-shrink: 0;">
+                    <span class="material-symbols-outlined" style="font-size: 14px;">check</span>
+                  </div>
+                  <div>
+                    <strong style="font-size: 13px; display: block;">Guest directory indexed with 34 confirmed party members</strong>
+                    <span class="text-muted text-xs">Invitations, flight tracker hooks, and pass credentials generated</span>
+                  </div>
+                </div>
+
+                <div class="card p-sm bg-surface flex items-center gap-sm">
+                  <div style="width: 22px; height: 22px; border-radius: 50%; background: var(--color-success); color: #fff; display: flex; items-center; justify-content: center; flex-shrink: 0;">
+                    <span class="material-symbols-outlined" style="font-size: 14px;">check</span>
+                  </div>
+                  <div>
+                    <strong style="font-size: 13px; display: block;">EVARA Escrow Vault initialized with dual-signature release</strong>
+                    <span class="text-muted text-xs">Funds safeguarded in Tier-1 institutional custodial account</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="flex items-center gap-xs text-muted text-xs pt-md">
+              <span class="material-symbols-outlined text-success" style="font-size: 16px;">shield</span>
+              <span>All essential parameters verified. You can launch your event now and invite additional guests or adjust allocations at any time.</span>
+            </div>
+          </div>
+
+          <!-- Dedicated Aria AI Concierge Widget (1 Col) -->
+          <div class="card p-lg flex flex-col justify-between shadow-sm relative overflow-hidden" style="background: linear-gradient(135deg, var(--color-champagne-light) 0%, #fff 100%); border: 1px solid var(--color-champagne);">
+            <div class="flex flex-col gap-md">
+              <div class="flex items-center justify-between">
+                <div class="flex items-center gap-sm">
+                  <div class="feature-icon" style="background: var(--color-espresso); color: #fff;">
+                    <span class="material-symbols-outlined">auto_awesome</span>
+                  </div>
+                  <div>
+                    <strong style="font-size: 15px; display: block;">Aria Concierge</strong>
+                    <span class="text-muted text-xs font-bold uppercase tracking-wider">Neural Engine Active</span>
+                  </div>
+                </div>
+                <span class="status-dot" style="background: var(--color-success); animation: pulse 2s infinite;"></span>
+              </div>
+
+              <div class="card p-md bg-surface shadow-sm">
+                <p class="font-serif italic text-sm" style="margin: 0; line-height: 1.6; color: var(--color-espresso);">
+                  “Your plan is taking shape beautifully, Eleanor! I've organized your details, balanced the ₹41,666 guest split, and prepared a verified blueprint to keep every vendor accountable.”
+                </p>
+              </div>
+
+              <div class="flex flex-col gap-xs">
+                <span class="text-xs uppercase text-muted font-bold tracking-wider">Quick AI Actions</span>
+                <div class="flex flex-wrap gap-xs">
+                  <button class="btn btn-secondary" style="font-size: 11px; padding: 4px 10px;" onclick="App.toast('Reviewing 4 vendor contracts against Chianti ordinances...', 'description')">
+                    <span class="material-symbols-outlined" style="font-size: 14px; color: var(--color-gold);">description</span>
+                    <span>Review Contracts</span>
+                  </button>
+                  <button class="btn btn-secondary" style="font-size: 11px; padding: 4px 10px;" onclick="App.toast('Acoustic rain shielding verified for covered arcade fallback', 'cloud')">
+                    <span class="material-symbols-outlined" style="font-size: 14px; color: var(--color-gold);">cloud</span>
+                    <span>Simulate Weather Fallback</span>
+                  </button>
+                  <button class="btn btn-secondary" style="font-size: 11px; padding: 4px 10px;" onclick="window.location.href='ai-assistant.html'">
+                    <span class="material-symbols-outlined" style="font-size: 14px; color: var(--color-gold);">mic</span>
+                    <span>Ask Aria Live 🎙️</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="pt-md">
+              <div class="flex items-center justify-between p-xs rounded bg-surface text-xs text-muted">
+                <div class="flex items-center gap-xs">
+                  <span class="material-symbols-outlined text-primary" style="font-size: 16px;">security</span>
+                  <span style="font-weight: 600;">Bespoke SLA Protected</span>
+                </div>
+                <span>v2.4 Active</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- PERSISTENT BOTTOM ACTION BAR -->
+    <div class="fixed-bottom-bar" style="position: fixed; bottom: 0; left: 280px; right: 0; background: rgba(248,244,239,0.96); backdrop-filter: blur(16px); padding: 16px 32px; border-top: 1px solid var(--color-champagne); z-index: 40; display: flex; align-items: center; justify-content: space-between; box-shadow: 0 -4px 20px rgba(57,48,45,0.06);">
+      <div class="flex items-center gap-sm">
+        <a href="guests-contributions.html" class="btn btn-secondary">
+          <span class="material-symbols-outlined" style="font-size: 18px;">arrow_back</span>
+          <span>Back to Guests &amp; Split</span>
+        </a>
+        <button class="btn btn-ghost" onclick="App.toast('Event blueprint saved to encrypted vault', 'lock')">
+          <span class="material-symbols-outlined" style="font-size: 18px;">lock</span>
+          <span>Save as Draft</span>
+        </button>
+      </div>
+
+      <div class="flex items-center gap-md">
+        <div class="flex flex-col text-right hidden lg:flex">
+          <span class="text-xs uppercase text-muted font-bold tracking-wider">Ready to finalize</span>
+          <span class="font-bold text-sm" style="color: var(--color-espresso);">Villa San Valentino Gala</span>
+        </div>
+        <button class="btn btn-primary" id="launch-event-btn" style="padding: 12px 28px; font-size: 14px; box-shadow: 0 4px 16px rgba(128,96,79,0.3);">
+          <span class="material-symbols-outlined" style="font-size: 20px; color: var(--color-champagne-light);">rocket_launch</span>
+          <span style="font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em;">Create Event &amp; Launch Vault</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Interactive Event Launch Simulation Modal -->
+  <div class="modal" id="launchModal" style="display: none;">
+    <div class="modal-content" style="max-width: 520px; text-align: center; padding: 36px 32px;">
+      <!-- Loading State -->
+      <div id="loadingState" class="flex flex-col items-center gap-md py-md">
+        <div style="position: relative; width: 72px; height: 72px;">
+          <div style="position: absolute; inset: 0; border-radius: 50%; border: 4px solid var(--color-champagne);"></div>
+          <div style="position: absolute; inset: 0; border-radius: 50%; border: 4px solid var(--color-espresso); border-top-color: transparent; animation: spin 1s linear infinite;"></div>
+          <div style="position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; color: var(--color-espresso);">
+            <span class="material-symbols-outlined" style="font-size: 28px;">lock</span>
+          </div>
+        </div>
+        <div class="flex flex-col gap-xs">
+          <h4 class="font-serif" style="font-size: 24px; margin: 0;" id="loadingTitle">Initializing EVARA Escrow Vault...</h4>
+          <p class="text-muted text-sm" style="margin: 0;" id="loadingSub">Locking contract conditions with Villa San Valentino estate...</p>
+        </div>
+        <div class="w-full progress-bar-bg" style="height: 8px;">
+          <div class="progress-bar-fill" id="loadingBar" style="width: 25%; transition: width 0.6s ease;"></div>
+        </div>
+        <div class="flex items-center gap-xs text-xs text-muted font-mono">
+          <span class="status-dot" style="background: var(--color-terracotta);"></span>
+          <span>Dual-Signature Multi-Sig Handshake Active</span>
+        </div>
+      </div>
+
+      <!-- Success State -->
+      <div id="successState" style="display: none;" class="flex flex-col items-center gap-md">
+        <div style="width: 72px; height: 72px; border-radius: 50%; background: rgba(101,131,106,0.15); color: var(--color-success); display: flex; align-items: center; justify-content: center;">
+          <span class="material-symbols-outlined" style="font-size: 44px;">check_circle</span>
+        </div>
+        <div>
+          <span class="badge badge-success mb-xs" style="font-size: 11px;">Event Officially Published</span>
+          <h4 class="font-serif" style="font-size: 26px; margin: 4px 0 8px 0;">Your Tuscan Gala is Live!</h4>
+          <p class="text-muted text-sm" style="margin: 0;">Villa San Valentino Tuscan Gala 2025 has been sealed in the curation vault. Digital passes and contribution requests are now active.</p>
+        </div>
+        <div class="card p-sm bg-surface w-full text-left flex flex-col gap-xs text-xs">
+          <div class="flex items-center justify-between">
+            <span class="text-muted">Event Identifier</span>
+            <strong class="font-mono">#EVR-TUSCANY-2025</strong>
+          </div>
+          <div class="flex items-center justify-between">
+            <span class="text-muted">Escrow Contract</span>
+            <span class="font-mono text-success">0x71a...F8e9 (Confirmed)</span>
+          </div>
+          <div class="flex items-center justify-between">
+            <span class="text-muted">Attendees Enrolled</span>
+            <strong>36 Guests Registered</strong>
+          </div>
+        </div>
+        <div class="flex items-center gap-sm w-full mt-sm">
+          <button class="btn btn-primary w-full justify-center" id="goToDashboardBtn" style="padding: 12px 18px;">
+            Go to Event Dashboard
+          </button>
+          <button class="btn btn-secondary flex-shrink-0" onclick="App.copyToClipboard('https://evara.luxury/c/valentino-gala-2025', 'Dossier link copied!')">
+            <span class="material-symbols-outlined" style="font-size: 16px;">share</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SCRIPTS -->
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+  <script src="../js/firebaseConfig.js"></script>
+  <script src="../js/storage.js"></script>
+  <script src="../js/app.js"></script>
+  <script src="../js/navigation.js"></script>
+  <script src="../js/events.js"></script>
+  <script src="../js/reports.js"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const launchBtn = document.getElementById('launch-event-btn');
+      const launchModal = document.getElementById('launchModal');
+      const loadingState = document.getElementById('loadingState');
+      const successState = document.getElementById('successState');
+      const loadingTitle = document.getElementById('loadingTitle');
+      const loadingSub = document.getElementById('loadingSub');
+      const loadingBar = document.getElementById('loadingBar');
+      const goToDashboardBtn = document.getElementById('goToDashboardBtn');
+
+      launchBtn.addEventListener('click', () => {
+        launchModal.style.display = 'flex';
+        loadingState.style.display = 'flex';
+        successState.style.display = 'none';
+        loadingBar.style.width = '25%';
+
+        setTimeout(() => {
+          loadingTitle.textContent = 'Enrolling 36 VIP Guest Credentials...';
+          loadingSub.textContent = 'Generating encrypted biometric RSVP tokens...';
+          loadingBar.style.width = '60%';
+        }, 800);
+
+        setTimeout(() => {
+          loadingTitle.textContent = 'Securing Milestone Escrow Guarantee...';
+          loadingSub.textContent = 'Deploying smart disbursement schedule for 4 vendors...';
+          loadingBar.style.width = '90%';
+        }, 1600);
+
+        setTimeout(() => {
+          loadingState.style.display = 'none';
+          successState.style.display = 'flex';
+          App.toast('Villa San Valentino Gala live in Curation Vault!', 'celebration');
+        }, 2400);
+      });
+
+      goToDashboardBtn.addEventListener('click', () => {
+        EventWizard.finalizeEvent();
+      });
+    });
+  </script>
+</body>
+</html>

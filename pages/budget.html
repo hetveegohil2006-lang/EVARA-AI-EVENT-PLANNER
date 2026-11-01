@@ -1,0 +1,1081 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>Budget &amp; Expenses Ledger — Villa San Valentino Gala — EVARA</title>
+  <meta name="description" content="Real-time fiscal reconciliation, guest split recovery, and vendor escrow management."/>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+  
+  <link rel="stylesheet" href="../css/variables.css"/>
+  <link rel="stylesheet" href="../css/global.css"/>
+  <link rel="stylesheet" href="../css/layout.css"/>
+  <link rel="stylesheet" href="../css/components.css"/>
+  <link rel="stylesheet" href="../css/responsive.css"/>
+  <link rel="stylesheet" href="../css/pages/budget.css"/>
+  <link rel="stylesheet" href="../css/pages/events.css"/>
+</head>
+<body class="bg-[#F8F4EF]">
+  <!-- Mobile Menu Button -->
+  <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle navigation">
+    <span class="material-symbols-outlined">menu</span>
+  </button>
+  <div class="sidebar-backdrop" id="sidebarBackdrop"></div>
+
+  <!-- FIXED EVENT-SCOPED SIDEBAR -->
+  <aside class="sidebar">
+    <div class="px-md pt-lg pb-sm">
+      <a href="../dashboard.html" class="flex items-center gap-xs text-muted hover:text-primary" style="font-size: 13px; font-weight: 600; text-decoration: none;">
+        <span class="material-symbols-outlined" style="font-size: 16px;">arrow_back</span>
+        <span>Back to All Events</span>
+      </a>
+    </div>
+
+    <!-- Workspace Scope Card -->
+    <div class="px-md pb-sm">
+      <div class="p-sm rounded-lg" style="background: var(--color-champagne-light); border: 1px solid var(--color-champagne);">
+        <span class="text-xs uppercase text-muted font-bold tracking-wider block" style="font-size: 10px;">Workspace Scope</span>
+        <span class="font-bold text-sm truncate block" style="color: var(--color-espresso);">Tuscan Gala 2025</span>
+      </div>
+    </div>
+
+    <div class="sidebar-section-label" style="padding-top: 4px;">Event Navigation</div>
+    <ul class="sidebar-nav">
+      <li class="sidebar-item">
+        <a href="event-overview.html" class="sidebar-link" data-path="event-overview">
+          <span class="material-symbols-outlined">dashboard</span>
+          <span>Event Overview</span>
+        </a>
+      </li>
+      <li class="sidebar-item">
+        <a href="checklist.html" class="sidebar-link" data-path="checklist">
+          <span class="material-symbols-outlined">checklist</span>
+          <span>Event Checklist</span>
+        </a>
+      </li>
+      <li class="sidebar-item">
+        <a href="guests.html" class="sidebar-link" data-path="guests">
+          <span class="material-symbols-outlined">mark_email_read</span>
+          <span>Guests &amp; Invitations</span>
+        </a>
+      </li>
+      <li class="sidebar-item">
+        <a href="budget.html" class="sidebar-link active" data-path="budget">
+          <span class="material-symbols-outlined">account_balance_wallet</span>
+          <span>Budget &amp; Payments</span>
+        </a>
+      </li>
+      <li class="sidebar-item">
+        <a href="vendors.html" class="sidebar-link" data-path="vendors">
+          <span class="material-symbols-outlined">storefront</span>
+          <span>Vendors</span>
+        </a>
+      </li>
+      <li class="sidebar-item">
+        <a href="shopping.html" class="sidebar-link" data-path="shopping">
+          <span class="material-symbols-outlined">shopping_bag</span>
+          <span>Shopping Assistant</span>
+        </a>
+      </li>
+      <li class="sidebar-item">
+        <a href="checklist.html" class="sidebar-link" data-path="timeline">
+          <span class="material-symbols-outlined">calendar_today</span>
+          <span>Timeline</span>
+        </a>
+      </li>
+      <li class="sidebar-item">
+        <a href="team-chat.html" class="sidebar-link" data-path="team">
+          <span class="material-symbols-outlined">groups</span>
+          <span>Team &amp; Volunteers</span>
+        </a>
+      </li>
+      <li class="sidebar-item">
+        <a href="team-chat.html" class="sidebar-link" data-path="chat">
+          <span class="material-symbols-outlined">forum</span>
+          <span>Event Chat</span>
+        </a>
+      </li>
+      <li class="sidebar-item">
+        <a href="reports.html" class="sidebar-link" data-path="reports">
+          <span class="material-symbols-outlined">lab_profile</span>
+          <span>Reports &amp; Exports</span>
+        </a>
+      </li>
+    </ul>
+
+    <div class="sidebar-footer">
+      <ul class="sidebar-nav">
+        <li class="sidebar-item">
+          <a href="profile-settings.html" class="sidebar-link" data-path="settings">
+            <span class="material-symbols-outlined">settings</span>
+            <span>Event Settings</span>
+          </a>
+        </li>
+      </ul>
+      <div class="concierge-status">
+        <span class="status-dot"></span>
+        <span class="status-text">Concierge AI v2.4 Active</span>
+      </div>
+    </div>
+  </aside>
+
+  <!-- MAIN WRAPPER -->
+  <div class="main-wrapper">
+    <!-- BLURRED HEADER WITH EVENT SCOPE DROPDOWN -->
+    <header class="top-header">
+      <div class="flex items-center gap-md">
+        <div class="flex items-center gap-xs">
+          <img src="../assets/icons/evara-logo.svg" alt="EVARA Logo" style="height: 28px; width: auto;"/>
+          <div class="flex flex-col">
+            <span class="font-serif" style="font-weight: 700; color: var(--color-espresso); line-height: 1; font-size: 18px;">EVARA</span>
+            <span class="text-muted uppercase tracking-widest" style="font-size: 9px; font-weight: 600;">Private Concierge</span>
+          </div>
+        </div>
+
+        <div style="height: 24px; width: 1px; background: var(--color-champagne);" class="hidden sm:block"></div>
+
+        <div class="flex items-center gap-xs px-sm py-xs rounded-lg" style="background: var(--color-champagne-light); border: 1px solid var(--color-champagne);">
+          <div class="flex flex-col">
+            <div class="flex items-center gap-xs">
+              <span class="font-bold text-sm" style="color: var(--color-espresso);">Villa San Valentino Tuscan Gala 2025</span>
+              <span class="material-symbols-outlined" style="font-size: 16px; color: var(--color-muted);">expand_more</span>
+            </div>
+            <span class="text-muted text-xs">Oct 24–27, 2025</span>
+          </div>
+          <span class="badge badge-accent" style="font-size: 10px; margin-left: 6px;">Planning Active</span>
+        </div>
+      </div>
+
+      <div class="header-search hidden md:block" style="max-width: 320px;">
+        <span class="material-symbols-outlined search-icon">search</span>
+        <input type="text" class="search-input" id="budgetSearch" placeholder="Search expenses, vendors, vouchers..."/>
+      </div>
+
+      <div class="header-actions">
+        <a href="payments.html" class="btn btn-secondary" style="font-size: 12px; padding: 6px 12px;">
+          <span class="material-symbols-outlined" style="font-size: 16px; color: var(--color-gold);">qr_code_2</span>
+          <span>QR Scanner &amp; UPI</span>
+        </a>
+        <button class="icon-btn" aria-label="Notifications" onclick="window.location.href='notifications.html'">
+          <span class="material-symbols-outlined">notifications</span>
+          <span class="notification-badge"></span>
+        </button>
+        <div class="profile-pill" onclick="window.location.href='profile-settings.html'">
+          <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCblbJh5I878bB-SpKIAcY8gMe7Y6eDKxYbJLsCd9KulLzbHxlhTUyWD5y9ceH4RVYJjOwQwtyWCKA1CYDUwJB_eJeVVu7wvrhkUuvh1Pyxt159059DQaD3CoEXwd7iI0KGXa-OjhGk0K7YVTDOh5o9-gXmjcddhmp-tkv3nw1ee6SCxaERRbWfk-HgXJU9movKZDcCDa0ptrrt2gazDwN_0Sc6KueuTqtYp3fikBU" alt="Eleanor Vance" class="profile-avatar"/>
+          <div class="profile-info hidden xl:block">
+            <span class="profile-name">Eleanor Vance</span>
+            <span class="profile-role">Principal Host</span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- MAIN BODY -->
+    <main class="main-content">
+      <!-- 1. TOP BREADCRUMB & CONCIERGE HEADER -->
+      <section class="section" style="padding-top: var(--space-md); padding-bottom: var(--space-md);">
+        <div class="flex items-end justify-between flex-wrap gap-md">
+          <div>
+            <div class="flex items-center gap-xs mb-xs">
+              <span class="text-muted text-xs uppercase tracking-wider">Financial Vault</span>
+              <span class="text-muted">/</span>
+              <span class="text-primary text-xs font-bold">Tuscan Gala 2025 Ledger</span>
+              <span class="badge badge-accent" style="font-size: 10px;">Escrow Protected</span>
+            </div>
+            <h1 class="page-title" style="font-size: 34px; margin-bottom: 4px;">Budget &amp; Expenses</h1>
+            <p class="section-desc" style="font-size: 15px; margin: 0; max-width: 680px;">
+              Stay in immaculate control of every rupee. Real-time reconciliation across guest splits, vendor escrow tranches, and curated hospitality reserves.
+            </p>
+          </div>
+
+          <div class="flex items-center flex-wrap gap-sm">
+            <button class="btn btn-secondary" onclick="toggleAriaDrawer()">
+              <span class="material-symbols-outlined" style="font-size: 18px; color: var(--color-gold);">auto_awesome</span>
+              <span>Analyze with Aria AI</span>
+            </button>
+            <button class="btn btn-secondary" onclick="ReportsModule.exportExpensesCSV()">
+              <span class="material-symbols-outlined" style="font-size: 18px;">file_download</span>
+              <span>Export Statement</span>
+            </button>
+            <button class="btn btn-primary" onclick="openExpenseModal()">
+              <span class="material-symbols-outlined" style="font-size: 18px;">add</span>
+              <span>Record Expense</span>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- 2. RECONCILIATION SUMMARY BAR (5 Columns) -->
+      <section class="section" style="padding-top: 0; padding-bottom: var(--space-md);">
+        <div class="card p-md shadow-sm" style="background: var(--color-champagne-light); border: 1px solid var(--color-champagne);">
+          <div class="grid grid-cols-2 md:grid-cols-5 gap-md text-center">
+            <div class="p-xs">
+              <span class="text-muted text-xs uppercase font-bold tracking-wider block">Target Budget</span>
+              <span class="font-serif block mt-xs" id="targetBudgetDisplay" style="font-size: 22px; font-weight: 700; color: var(--color-espresso);">₹15,00,000</span>
+              <span class="text-muted text-xs">Allocated Cap</span>
+            </div>
+            <div class="p-xs" style="border-left: 1px solid var(--color-champagne);">
+              <span class="text-success text-xs uppercase font-bold tracking-wider block">Guest Pool Collected</span>
+              <span class="font-serif text-success block mt-xs" id="guestPoolCollectedDisplay" style="font-size: 22px; font-weight: 700;">+₹10,83,316</span>
+              <span class="text-muted text-xs">26 / 36 Settled</span>
+            </div>
+            <div class="p-xs" style="border-left: 1px solid var(--color-champagne);">
+              <span class="text-muted text-xs uppercase font-bold tracking-wider block">Disbursed Expenses</span>
+              <span class="font-serif block mt-xs" id="disbursedExpensesDisplay" style="font-size: 22px; font-weight: 700; color: var(--color-espresso);">-₹7,15,000</span>
+              <span class="text-muted text-xs">Direct Remitted</span>
+            </div>
+            <div class="p-xs" style="border-left: 1px solid var(--color-champagne);">
+              <span class="text-xs uppercase font-bold tracking-wider block" style="color: var(--color-terracotta);">Pending Escrow</span>
+              <span class="font-serif block mt-xs" id="pendingEscrowDisplay" style="font-size: 22px; font-weight: 700; color: var(--color-terracotta);">-₹3,30,000</span>
+              <span class="text-muted text-xs">Milestone Gated</span>
+            </div>
+            <div class="p-xs col-span-2 md:col-span-1" style="border-left: 1px solid var(--color-champagne);">
+              <span class="text-primary text-xs uppercase font-bold tracking-wider block">Net Liquid Reserve</span>
+              <span class="font-serif text-primary block mt-xs" id="liquidReserveDisplay" style="font-size: 22px; font-weight: 700;">₹4,55,000</span>
+              <span class="badge badge-primary" id="headroomBadge" style="font-size: 10px; padding: 2px 8px; margin-top: 4px;">30.3% Headroom</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 3. FOUR LUXURY KPI METRIC TILES -->
+      <section class="section" style="padding-top: 0; padding-bottom: var(--space-md);">
+        <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-md">
+          <div class="card p-md shadow-sm flex flex-col justify-between">
+            <div class="flex items-start justify-between">
+              <div>
+                <span class="text-muted text-xs uppercase font-bold tracking-wider">Total Event Budget</span>
+                <div class="font-serif mt-xs" style="font-size: 26px; font-weight: 700; color: var(--color-espresso);">₹15,00,000</div>
+              </div>
+              <div class="feature-icon" style="background: var(--color-champagne-light); color: var(--color-espresso);">
+                <span class="material-symbols-outlined">account_balance</span>
+              </div>
+            </div>
+            <div class="flex items-center justify-between text-xs mt-md pt-xs" style="border-top: 1px solid var(--color-champagne);">
+              <span class="text-muted flex items-center gap-xs">
+                <span class="material-symbols-outlined text-success" style="font-size: 16px;">verified</span>
+                Villa Escrow Locked
+              </span>
+              <strong style="color: var(--color-espresso);">100% Target</strong>
+            </div>
+          </div>
+
+          <div class="card p-md shadow-sm flex flex-col justify-between">
+            <div class="flex items-start justify-between">
+              <div>
+                <span class="text-muted text-xs uppercase font-bold tracking-wider">Spent &amp; Committed</span>
+                <div class="font-serif mt-xs" style="font-size: 26px; font-weight: 700; color: var(--color-espresso);">₹10,45,000</div>
+              </div>
+              <div class="feature-icon" style="background: var(--color-champagne-light); color: var(--color-terracotta);">
+                <span class="material-symbols-outlined">trending_up</span>
+              </div>
+            </div>
+            <div class="flex items-center justify-between text-xs mt-md pt-xs" style="border-top: 1px solid var(--color-champagne);">
+              <span class="text-muted">69.7% of budget utilized</span>
+              <span class="badge badge-accent" style="font-size: 10px;">On Pace</span>
+            </div>
+          </div>
+
+          <div class="card p-md shadow-sm flex flex-col justify-between">
+            <div class="flex items-start justify-between">
+              <div>
+                <span class="text-muted text-xs uppercase font-bold tracking-wider">Available Liquidity</span>
+                <div class="font-serif mt-xs text-primary" style="font-size: 26px; font-weight: 700;">₹4,55,000</div>
+              </div>
+              <div class="feature-icon" style="background: var(--color-champagne-light); color: var(--color-gold);">
+                <span class="material-symbols-outlined">savings</span>
+              </div>
+            </div>
+            <div class="flex items-center justify-between text-xs mt-md pt-xs" style="border-top: 1px solid var(--color-champagne);">
+              <span class="text-muted">Remaining buffer</span>
+              <span class="badge badge-success" style="font-size: 10px;">₹50k Safe Buffer</span>
+            </div>
+          </div>
+
+          <div class="card p-md shadow-sm flex flex-col justify-between" style="background: #fff;">
+            <div class="flex items-start justify-between">
+              <div>
+                <span class="text-muted text-xs uppercase font-bold tracking-wider">Escrow Verifications Due</span>
+                <div class="font-serif mt-xs" style="font-size: 26px; font-weight: 700; color: var(--color-terracotta);">₹2,80,000</div>
+              </div>
+              <div class="feature-icon" style="background: var(--color-champagne-light); color: var(--color-terracotta);">
+                <span class="material-symbols-outlined">hourglass_top</span>
+              </div>
+            </div>
+            <div class="flex items-center justify-between text-xs mt-md pt-xs" style="border-top: 1px solid var(--color-champagne);">
+              <span class="text-muted">2 Milestones pending audit</span>
+              <span class="badge" style="font-size: 10px; background: #ffe0d1; color: var(--color-espresso);">Awaiting Sign-off</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 4. CAPITAL ALLOCATION DONUT & PROGRESS BARS BENTO -->
+      <section class="section" style="padding-top: 0; padding-bottom: var(--space-md);">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-md">
+          <!-- Circular Gauge & Villa Card (5 Cols) -->
+          <div class="lg:col-span-5 card p-lg shadow-sm flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-sm">
+                <div>
+                  <h3 class="font-serif" style="font-size: 20px; margin: 0;">Capital Allocation</h3>
+                  <span class="text-muted text-xs">₹10.45L Committed / ₹15.00L Cap</span>
+                </div>
+                <span class="badge badge-accent" style="font-size: 10px;">Dynamic Ratio</span>
+              </div>
+
+              <!-- High-Fidelity SVG Donut -->
+              <div style="position: relative; display: flex; align-items: center; justify-content: center; padding: 16px 0;">
+                <svg viewBox="0 0 120 120" style="width: 210px; height: 210px; transform: rotate(-90deg);">
+                  <!-- Background Track -->
+                  <circle cx="60" cy="60" r="48" fill="none" stroke="var(--color-champagne)" stroke-width="11"/>
+                  <!-- Venue (45%) -->
+                  <circle cx="60" cy="60" r="48" fill="none" stroke="var(--color-espresso)" stroke-width="11" stroke-dasharray="301.59" stroke-dashoffset="165.87" stroke-linecap="round"/>
+                  <!-- Catering (25%) -->
+                  <circle cx="60" cy="60" r="48" fill="none" stroke="var(--color-terracotta)" stroke-width="11" stroke-dasharray="301.59" stroke-dashoffset="256.35"/>
+                  <!-- Decoration (18%) -->
+                  <circle cx="60" cy="60" r="48" fill="none" stroke="var(--color-gold)" stroke-width="11" stroke-dasharray="301.59" stroke-dashoffset="259.36"/>
+                  <!-- Transport (12%) -->
+                  <circle cx="60" cy="60" r="48" fill="none" stroke="var(--color-mocha)" stroke-width="11" stroke-dasharray="301.59" stroke-dashoffset="271.43"/>
+                </svg>
+                <div style="position: absolute; display: flex; flex-direction: column; align-items: center; text-align: center;">
+                  <span class="font-serif" style="font-size: 32px; font-weight: 700; color: var(--color-espresso); line-height: 1;">69.7%</span>
+                  <span class="text-muted uppercase text-xs tracking-wider" style="font-size: 10px; margin-top: 4px;">Utilized</span>
+                  <span class="badge badge-primary" style="font-size: 11px; margin-top: 4px;">₹4.55L Free</span>
+                </div>
+              </div>
+
+              <!-- Legend -->
+              <div class="grid grid-cols-2 gap-xs text-xs pt-xs">
+                <div class="flex items-center gap-xs">
+                  <span style="width: 10px; height: 10px; border-radius: 50%; background: var(--color-espresso);"></span>
+                  <span class="text-muted truncate">Venue Buyout (45%)</span>
+                </div>
+                <div class="flex items-center gap-xs">
+                  <span style="width: 10px; height: 10px; border-radius: 50%; background: var(--color-terracotta);"></span>
+                  <span class="text-muted truncate">Catering &amp; Wines (25%)</span>
+                </div>
+                <div class="flex items-center gap-xs">
+                  <span style="width: 10px; height: 10px; border-radius: 50%; background: var(--color-gold);"></span>
+                  <span class="text-muted truncate">Decor &amp; Floral (18%)</span>
+                </div>
+                <div class="flex items-center gap-xs">
+                  <span style="width: 10px; height: 10px; border-radius: 50%; background: var(--color-mocha);"></span>
+                  <span class="text-muted truncate">Ops &amp; Shuttles (12%)</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Villa Estate Teaser Card -->
+            <div class="p-sm rounded-lg flex items-center gap-sm mt-md" style="background: var(--color-champagne-light); border: 1px solid var(--color-champagne);">
+              <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDpS4lk2PZ5aBJ1U9whNOZRviO-wZBir6-w3Ie2yb--FRtyk5AM1x80XSjTouZpWU7IArDbfziIcEQj7HJBKVmCE3NQAZY5hjy2cQEeWrdiVtVafj7ZYez40186mwQtYJlsoXWfb8Tqfnq3VQjmP4OPbzBAyyM62AzivVdV4Fl4ky2-kBQpRHb3bLRiPIFbYcfp_yiGt0bk3e6HzT0DmnqIDDTB2CA_j2nwqU3gwoU" alt="San Valentino Estate" style="width: 60px; height: 60px; border-radius: 8px; object-fit: cover; flex-shrink: 0;"/>
+              <div class="flex-1 min-w-0">
+                <div class="flex items-center justify-between">
+                  <strong class="text-xs truncate" style="color: var(--color-espresso);">San Valentino Estate</strong>
+                  <span class="badge badge-accent" style="font-size: 9px;">Locked</span>
+                </div>
+                <p class="text-muted text-xs truncate" style="margin: 2px 0;">3-Day Private Courtyard, Loggia &amp; Vineyards</p>
+                <div class="flex items-center justify-between text-xs">
+                  <span style="font-weight: 600;">₹6,75,000</span>
+                  <span class="text-success font-bold" style="font-size: 11px;">100% Escrowed</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Category Progress Bars (7 Cols) -->
+          <div class="lg:col-span-7 card p-lg shadow-sm flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-md">
+                <div>
+                  <h3 class="font-serif" style="font-size: 20px; margin: 0;">Budget Line Allocations</h3>
+                  <span class="text-muted text-xs">Prorated against the ₹15,00,000 master ceiling</span>
+                </div>
+                <button class="btn btn-ghost" style="font-size: 12px; padding: 4px 8px;" onclick="App.toast('Category reallocation modal initialized', 'tune')">
+                  <span>Reallocate Caps</span>
+                  <span class="material-symbols-outlined" style="font-size: 16px;">tune</span>
+                </button>
+              </div>
+
+              <div class="flex flex-col gap-md">
+                <!-- Item 1: Venue -->
+                <div class="flex flex-col gap-xs">
+                  <div class="flex justify-between text-xs">
+                    <span class="font-bold flex items-center gap-xs">
+                      <span class="material-symbols-outlined text-primary" style="font-size: 16px;">domain</span>
+                      Venue Buyout &amp; Estate Grounds
+                    </span>
+                    <div>
+                      <strong>₹6,75,000</strong> <span class="text-muted">/ ₹6,75,000</span>
+                      <span class="badge" style="font-size: 10px; margin-left: 6px;">100% Locked</span>
+                    </div>
+                  </div>
+                  <div class="progress-bar-bg" style="height: 8px;">
+                    <div class="progress-bar-fill" style="width: 100%; background: var(--color-espresso);"></div>
+                  </div>
+                </div>
+
+                <!-- Item 2: Catering -->
+                <div class="flex flex-col gap-xs">
+                  <div class="flex justify-between text-xs">
+                    <span class="font-bold flex items-center gap-xs">
+                      <span class="material-symbols-outlined text-primary" style="font-size: 16px;">restaurant</span>
+                      Food, Chianti Wine &amp; Banquet Catering
+                    </span>
+                    <div>
+                      <strong>₹2,25,000</strong> <span class="text-muted">/ ₹3,75,000</span>
+                      <span class="text-success text-xs font-bold" style="margin-left: 6px;">₹1.5L Headroom (60%)</span>
+                    </div>
+                  </div>
+                  <div class="progress-bar-bg" style="height: 8px;">
+                    <div class="progress-bar-fill" style="width: 60%; background: var(--color-terracotta);"></div>
+                  </div>
+                </div>
+
+                <!-- Item 3: Decor -->
+                <div class="flex flex-col gap-xs">
+                  <div class="flex justify-between text-xs">
+                    <span class="font-bold flex items-center gap-xs">
+                      <span class="material-symbols-outlined text-primary" style="font-size: 16px;">yard</span>
+                      Decoration, Festoons &amp; Floral Design
+                    </span>
+                    <div>
+                      <strong style="color: var(--color-terracotta);">₹2,10,000</strong> <span class="text-muted">/ ₹2,70,000</span>
+                      <span class="badge badge-accent" style="font-size: 10px; margin-left: 6px;">77.8% • Near Limit</span>
+                    </div>
+                  </div>
+                  <div class="progress-bar-bg" style="height: 8px;">
+                    <div class="progress-bar-fill" style="width: 77.8%; background: var(--color-gold);"></div>
+                  </div>
+                </div>
+
+                <!-- Item 4: Photography -->
+                <div class="flex flex-col gap-xs">
+                  <div class="flex justify-between text-xs">
+                    <span class="font-bold flex items-center gap-xs">
+                      <span class="material-symbols-outlined text-primary" style="font-size: 16px;">photo_camera</span>
+                      Editorial Photography &amp; Cinematography
+                    </span>
+                    <div>
+                      <strong>₹1,00,000</strong> <span class="text-muted">/ ₹1,50,000</span>
+                      <span class="text-muted text-xs" style="margin-left: 6px;">₹50k left (66%)</span>
+                    </div>
+                  </div>
+                  <div class="progress-bar-bg" style="height: 8px;">
+                    <div class="progress-bar-fill" style="width: 66.6%; background: var(--color-mocha);"></div>
+                  </div>
+                </div>
+
+                <!-- Item 5: Transportation -->
+                <div class="flex flex-col gap-xs">
+                  <div class="flex justify-between text-xs">
+                    <span class="font-bold flex items-center gap-xs">
+                      <span class="material-symbols-outlined text-primary" style="font-size: 16px;">airport_shuttle</span>
+                      Mercedes Sprinter Chauffeurs FLR - Villa
+                    </span>
+                    <div>
+                      <strong>₹1,20,000</strong> <span class="text-muted">/ ₹1,80,000</span>
+                      <span class="text-muted text-xs" style="margin-left: 6px;">₹60k left (66%)</span>
+                    </div>
+                  </div>
+                  <div class="progress-bar-bg" style="height: 8px;">
+                    <div class="progress-bar-fill" style="width: 66.6%; background: var(--color-espresso);"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Contingency Cushion Note -->
+            <div class="flex items-center justify-between text-xs p-sm rounded-lg mt-md" style="background: var(--color-champagne-light);">
+              <div class="flex items-center gap-xs">
+                <span class="material-symbols-outlined text-primary" style="font-size: 18px;">shield_lock</span>
+                <span>Emergency Contingency Reserve: <strong>₹50,000 unallocated buffer</strong></span>
+              </div>
+              <span class="badge badge-success" style="font-size: 10px;">100% Intact</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 5. ARIA FISCAL INTELLIGENCE & CONCIERGE RECOMMENDATIONS -->
+      <section class="section" style="padding-top: 0; padding-bottom: var(--space-md);">
+        <div class="card p-lg shadow-sm" style="background: linear-gradient(135deg, var(--color-champagne-light) 0%, #fff 100%); border: 1px solid var(--color-champagne);">
+          <div class="flex items-center justify-between flex-wrap gap-md mb-md">
+            <div class="flex items-center gap-xs">
+              <div class="feature-icon" style="background: var(--color-espresso); color: #fff; width: 36px; height: 36px;">
+                <span class="material-symbols-outlined" style="font-size: 20px;">auto_awesome</span>
+              </div>
+              <div>
+                <div class="flex items-center gap-xs">
+                  <h3 class="font-serif" style="font-size: 18px; margin: 0;">Aria Fiscal Intelligence</h3>
+                  <span class="badge badge-accent" style="font-size: 10px;">Active Concierge</span>
+                </div>
+                <span class="text-muted text-xs">Autonomous audit completed today at 08:30 CEST</span>
+              </div>
+            </div>
+
+            <div class="flex items-center gap-xs">
+              <button class="btn btn-secondary" style="font-size: 12px; padding: 6px 12px;" onclick="App.toast('Running scenario simulation for wet weather tent reallocation...', 'auto_awesome')">
+                Run Scenario Simulation
+              </button>
+              <button class="btn btn-primary" style="font-size: 12px; padding: 6px 12px;" onclick="App.toast('Suggested ₹48,000 rebalances applied to reserve buffer', 'check_circle')">
+                Apply Suggested Rebalances
+              </button>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-md">
+            <div class="card p-sm bg-surface flex flex-col justify-between shadow-sm">
+              <div class="flex items-start gap-xs">
+                <span class="material-symbols-outlined text-error" style="font-size: 18px; margin-top: 2px;">warning</span>
+                <div>
+                  <strong style="font-size: 13px; display: block;">Decor Approaching Ceiling</strong>
+                  <p class="text-muted text-xs" style="margin: 4px 0 0 0; line-height: 1.4;">
+                    Decoration is at 77.8% of allocated cap. You have ₹60,000 remaining for festoon lighting installations.
+                  </p>
+                </div>
+              </div>
+              <div class="flex items-center justify-between pt-sm text-xs" style="border-top: 1px solid var(--color-champagne);">
+                <span class="badge" style="background: #ffdad6; color: var(--color-error); font-size: 10px;">Alert Triggered</span>
+                <a href="vendors.html" class="text-primary font-bold" style="text-decoration: none;">Review Quotes →</a>
+              </div>
+            </div>
+
+            <div class="card p-sm bg-surface flex flex-col justify-between shadow-sm">
+              <div class="flex items-start gap-xs">
+                <span class="material-symbols-outlined text-success" style="font-size: 18px; margin-top: 2px;">verified_user</span>
+                <div>
+                  <strong style="font-size: 13px; display: block;">Escrow Milestone Gate</strong>
+                  <p class="text-muted text-xs" style="margin: 4px 0 0 0; line-height: 1.4;">
+                    ₹2,80,000 remains paused until Florence Transport inspection and Chef Fabrizio tasting sign-offs are confirmed.
+                  </p>
+                </div>
+              </div>
+              <div class="flex items-center justify-between pt-sm text-xs" style="border-top: 1px solid var(--color-champagne);">
+                <span class="badge badge-success" style="font-size: 10px;">Escrow Intact</span>
+                <a href="checklist.html" class="text-primary font-bold" style="text-decoration: none;">Release Terms →</a>
+              </div>
+            </div>
+
+            <div class="card p-sm bg-surface flex flex-col justify-between shadow-sm">
+              <div class="flex items-start gap-xs">
+                <span class="material-symbols-outlined text-primary" style="font-size: 18px; margin-top: 2px;">send_and_archive</span>
+                <div>
+                  <strong style="font-size: 13px; display: block;">Pending Member Contributions</strong>
+                  <p class="text-muted text-xs" style="margin: 4px 0 0 0; line-height: 1.4;">
+                    10 members (₹4,16,684 balance) have upcoming payment deadlines. Aria can dispatch respectful WhatsApp invitations.
+                  </p>
+                </div>
+              </div>
+              <div class="flex items-center justify-between pt-sm text-xs" style="border-top: 1px solid var(--color-champagne);">
+                <span class="badge badge-accent" style="font-size: 10px;">1-Click Dispatch</span>
+                <button class="btn btn-secondary" style="font-size: 11px; padding: 2px 8px;" onclick="App.toast('Dispatched gentle reminders to 10 pending members', 'send')">
+                  Send Reminders
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 6. EXPENSE LEDGER & TRANSACTIONS TABLE -->
+      <section class="section" style="padding-top: 0; padding-bottom: var(--space-md);">
+        <div class="card shadow-sm overflow-hidden">
+          <!-- Table Toolbar -->
+          <div class="p-md flex items-center justify-between flex-wrap gap-sm" style="border-bottom: 1px solid var(--color-champagne);">
+            <div class="flex items-center gap-xs">
+              <h3 class="font-serif" style="font-size: 20px; margin: 0;">Expense Ledger</h3>
+              <span class="badge badge-primary" style="font-size: 11px;">24 Transactions</span>
+            </div>
+
+            <div class="flex items-center gap-xs flex-wrap">
+              <input type="text" class="search-input" id="tableFilterInput" placeholder="Filter ledger entries..." style="max-width: 200px; font-size: 12px;"/>
+              <select class="search-input" style="font-size: 12px; padding: 6px 12px;">
+                <option>All Categories</option>
+                <option>Venue</option>
+                <option>Catering</option>
+                <option>Decoration</option>
+                <option>Transportation</option>
+                <option>Favors &amp; Paper</option>
+              </select>
+              <select class="search-input" style="font-size: 12px; padding: 6px 12px;">
+                <option>All Statuses</option>
+                <option>Paid</option>
+                <option>Pending Escrow</option>
+                <option>Partially Paid</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Table Container -->
+          <div class="table-container" style="overflow-x: auto;">
+            <table class="data-table w-full">
+              <thead>
+                <tr>
+                  <th>Expense Item &amp; Vendor</th>
+                  <th>Category</th>
+                  <th style="text-align: right;">Amount (₹)</th>
+                  <th>Payer / Source</th>
+                  <th>Date</th>
+                  <th>Status</th>
+                  <th>Voucher</th>
+                  <th style="text-align: right;">Action</th>
+                </tr>
+              </thead>
+              <tbody id="expenseTableBody" data-dynamic>
+                <!-- Row 1 -->
+                <tr>
+                  <td>
+                    <div class="flex items-center gap-xs">
+                      <div class="feature-icon" style="width: 32px; height: 32px; background: var(--color-champagne-light); color: var(--color-espresso);">
+                        <span class="material-symbols-outlined" style="font-size: 16px;">castle</span>
+                      </div>
+                      <div>
+                        <strong style="font-size: 13px; display: block;">Villa Buyout Tranche 1</strong>
+                        <span class="text-muted text-xs">Tenuta San Valentino Estate S.r.l</span>
+                      </div>
+                    </div>
+                  </td>
+                  <td><span class="badge" style="font-size: 11px;">Venue</span></td>
+                  <td style="text-align: right; font-weight: 700; color: var(--color-espresso);">₹4,50,000</td>
+                  <td>
+                    <span class="flex items-center gap-xs text-xs">
+                      <span class="status-dot" style="background: var(--color-success);"></span>
+                      EVARA Vault (Escrow)
+                    </span>
+                  </td>
+                  <td class="text-muted text-xs">Oct 01, 2025</td>
+                  <td><span class="badge badge-success" style="font-size: 10px;">Paid</span></td>
+                  <td>
+                    <button class="btn btn-secondary" style="font-size: 11px; padding: 2px 8px;" onclick="App.toast('Opening invoice_01.pdf', 'picture_as_pdf')">
+                      <span class="material-symbols-outlined" style="font-size: 14px; color: var(--color-terracotta);">picture_as_pdf</span>
+                      <span>invoice_01.pdf</span>
+                    </button>
+                  </td>
+                  <td style="text-align: right;">
+                    <button class="icon-btn" style="width: 28px; height: 28px;" onclick="App.toast('Actions menu', 'more_vert')">
+                      <span class="material-symbols-outlined" style="font-size: 18px;">more_vert</span>
+                    </button>
+                  </td>
+                </tr>
+
+                <!-- Row 2 -->
+                <tr>
+                  <td>
+                    <div class="flex items-center gap-xs">
+                      <div class="feature-icon" style="width: 32px; height: 32px; background: var(--color-champagne-light); color: var(--color-terracotta);">
+                        <span class="material-symbols-outlined" style="font-size: 16px;">restaurant_menu</span>
+                      </div>
+                      <div>
+                        <strong style="font-size: 13px; display: block;">Chef Fabrizio Private Catering Deposit</strong>
+                        <span class="text-muted text-xs">Cucina Toscana &amp; Sommelier Service</span>
+                      </div>
+                    </div>
+                  </td>
+                  <td><span class="badge" style="font-size: 11px;">Catering</span></td>
+                  <td style="text-align: right; font-weight: 700; color: var(--color-espresso);">₹2,25,000</td>
+                  <td>
+                    <span class="flex items-center gap-xs text-xs">
+                      <span class="status-dot" style="background: var(--color-espresso);"></span>
+                      Eleanor Vance (Host Direct)
+                    </span>
+                  </td>
+                  <td class="text-muted text-xs">Oct 08, 2025</td>
+                  <td><span class="badge badge-success" style="font-size: 10px;">Paid</span></td>
+                  <td>
+                    <button class="btn btn-secondary" style="font-size: 11px; padding: 2px 8px;" onclick="App.toast('Opening chef_dep.pdf', 'picture_as_pdf')">
+                      <span class="material-symbols-outlined" style="font-size: 14px; color: var(--color-terracotta);">picture_as_pdf</span>
+                      <span>chef_dep.pdf</span>
+                    </button>
+                  </td>
+                  <td style="text-align: right;">
+                    <button class="icon-btn" style="width: 28px; height: 28px;">
+                      <span class="material-symbols-outlined" style="font-size: 18px;">more_vert</span>
+                    </button>
+                  </td>
+                </tr>
+
+                <!-- Row 3 -->
+                <tr>
+                  <td>
+                    <div class="flex items-center gap-xs">
+                      <div class="feature-icon" style="width: 32px; height: 32px; background: var(--color-champagne-light); color: var(--color-gold);">
+                        <span class="material-symbols-outlined" style="font-size: 16px;">local_florist</span>
+                      </div>
+                      <div>
+                        <strong style="font-size: 13px; display: block;">Festoon Canopy &amp; Terracotta Urns</strong>
+                        <span class="text-muted text-xs">Fiori di Firenze Atelier</span>
+                      </div>
+                    </div>
+                  </td>
+                  <td><span class="badge badge-accent" style="font-size: 11px;">Decoration</span></td>
+                  <td style="text-align: right; font-weight: 700; color: var(--color-terracotta);">₹2,10,000</td>
+                  <td>
+                    <span class="flex items-center gap-xs text-xs">
+                      <span class="status-dot" style="background: var(--color-espresso);"></span>
+                      Eleanor Vance
+                    </span>
+                  </td>
+                  <td class="text-muted text-xs">Oct 12, 2025</td>
+                  <td><span class="badge badge-accent" style="font-size: 10px;">Pending Escrow</span></td>
+                  <td>
+                    <button class="btn btn-secondary" style="font-size: 11px; padding: 2px 8px;" onclick="App.toast('Opening quote_festoon.pdf', 'picture_as_pdf')">
+                      <span class="material-symbols-outlined" style="font-size: 14px; color: var(--color-terracotta);">picture_as_pdf</span>
+                      <span>quote_festoon.pdf</span>
+                    </button>
+                  </td>
+                  <td style="text-align: right;">
+                    <button class="icon-btn" style="width: 28px; height: 28px;">
+                      <span class="material-symbols-outlined" style="font-size: 18px;">more_vert</span>
+                    </button>
+                  </td>
+                </tr>
+
+                <!-- Row 4 -->
+                <tr>
+                  <td>
+                    <div class="flex items-center gap-xs">
+                      <div class="feature-icon" style="width: 32px; height: 32px; background: var(--color-champagne-light); color: var(--color-mocha);">
+                        <span class="material-symbols-outlined" style="font-size: 16px;">directions_car</span>
+                      </div>
+                      <div>
+                        <strong style="font-size: 13px; display: block;">Mercedes Sprinter Transfers FLR-Villa</strong>
+                        <span class="text-muted text-xs">Tuscany Chauffeur Prestige Group</span>
+                      </div>
+                    </div>
+                  </td>
+                  <td><span class="badge" style="font-size: 11px;">Transport</span></td>
+                  <td style="text-align: right; font-weight: 700; color: var(--color-espresso);">₹1,20,000</td>
+                  <td>
+                    <span class="flex items-center gap-xs text-xs">
+                      <span class="status-dot" style="background: var(--color-terracotta);"></span>
+                      Shared Escrow Pool
+                    </span>
+                  </td>
+                  <td class="text-muted text-xs">Oct 14, 2025</td>
+                  <td><span class="badge" style="font-size: 10px;">Partially Paid (50%)</span></td>
+                  <td>
+                    <button class="btn btn-secondary" style="font-size: 11px; padding: 2px 8px;" onclick="App.toast('Opening sprinter_adv.pdf', 'picture_as_pdf')">
+                      <span class="material-symbols-outlined" style="font-size: 14px; color: var(--color-terracotta);">picture_as_pdf</span>
+                      <span>sprinter_adv.pdf</span>
+                    </button>
+                  </td>
+                  <td style="text-align: right;">
+                    <button class="icon-btn" style="width: 28px; height: 28px;">
+                      <span class="material-symbols-outlined" style="font-size: 18px;">more_vert</span>
+                    </button>
+                  </td>
+                </tr>
+
+                <!-- Row 5 -->
+                <tr>
+                  <td>
+                    <div class="flex items-center gap-xs">
+                      <div class="feature-icon" style="width: 32px; height: 32px; background: var(--color-champagne-light); color: var(--color-espresso);">
+                        <span class="material-symbols-outlined" style="font-size: 16px;">mark_email_read</span>
+                      </div>
+                      <div>
+                        <strong style="font-size: 13px; display: block;">Letterpress Suite &amp; Escort Cards</strong>
+                        <span class="text-muted text-xs">Rossi 1931 Fine Stationery Florence</span>
+                      </div>
+                    </div>
+                  </td>
+                  <td><span class="badge" style="font-size: 11px;">Favors/Paper</span></td>
+                  <td style="text-align: right; font-weight: 700; color: var(--color-espresso);">₹40,000</td>
+                  <td>
+                    <span class="flex items-center gap-xs text-xs">
+                      <span class="status-dot" style="background: var(--color-espresso);"></span>
+                      Eleanor Vance
+                    </span>
+                  </td>
+                  <td class="text-muted text-xs">Oct 15, 2025</td>
+                  <td><span class="badge badge-success" style="font-size: 10px;">Paid</span></td>
+                  <td>
+                    <button class="btn btn-secondary" style="font-size: 11px; padding: 2px 8px;" onclick="App.toast('Opening rossi_inv.pdf', 'picture_as_pdf')">
+                      <span class="material-symbols-outlined" style="font-size: 14px; color: var(--color-terracotta);">picture_as_pdf</span>
+                      <span>rossi_inv.pdf</span>
+                    </button>
+                  </td>
+                  <td style="text-align: right;">
+                    <button class="icon-btn" style="width: 28px; height: 28px;">
+                      <span class="material-symbols-outlined" style="font-size: 18px;">more_vert</span>
+                    </button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <!-- Table Pagination Footer -->
+          <div class="p-sm flex items-center justify-between text-xs text-muted" style="background: var(--color-champagne-light);">
+            <span>Showing 5 of 24 expenses recorded</span>
+            <div class="flex items-center gap-xs">
+              <button class="btn btn-secondary" style="font-size: 11px; padding: 4px 10px;" disabled>Previous</button>
+              <strong style="color: var(--color-espresso);">Page 1 of 5</strong>
+              <button class="btn btn-secondary" style="font-size: 11px; padding: 4px 10px;">Next</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 7. MEMBER FAIR SPLIT & ESCROW RECOVERY SECTION -->
+      <section class="section" style="padding-top: 0; padding-bottom: var(--space-xl);">
+        <div class="card p-lg shadow-sm">
+          <div class="flex items-center justify-between flex-wrap gap-md mb-md">
+            <div>
+              <div class="flex items-center gap-xs mb-xs">
+                <h3 class="font-serif" style="font-size: 20px; margin: 0;">Member Contributions &amp; Fair Split</h3>
+                <span class="badge badge-accent" style="font-size: 10px;">Dynamic Escrow Pool</span>
+              </div>
+              <p class="text-muted text-xs" style="margin: 0;">
+                Calculated equally across 36 invited guests. Funds flow directly into the EVARA Protected Escrow account.
+              </p>
+            </div>
+
+            <div class="flex items-center p-xs rounded-lg" style="background: var(--color-champagne-light); border: 1px solid var(--color-champagne);">
+              <button class="btn btn-primary" style="font-size: 11px; padding: 4px 10px;">Equal Split (₹41,666 / head)</button>
+              <button class="btn btn-ghost" style="font-size: 11px; padding: 4px 10px;" onclick="App.toast('Tiered VIP contribution model selected', 'star')">Tiered VIP</button>
+              <button class="btn btn-ghost" style="font-size: 11px; padding: 4px 10px;" onclick="App.toast('Organizer Funded model selected', 'person')">Organizer Funded</button>
+            </div>
+          </div>
+
+          <!-- Summary Strip -->
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-md p-md rounded-lg mb-md" style="background: var(--color-champagne-light);">
+            <div>
+              <span class="text-muted text-xs uppercase font-bold tracking-wider block">Confirmed Settlement</span>
+              <div class="flex items-baseline gap-xs mt-xs">
+                <span class="font-serif" style="font-size: 24px; font-weight: 700; color: var(--color-espresso);">26 of 36</span>
+                <span class="text-success text-xs font-bold">72.2% Settled</span>
+              </div>
+              <span class="text-muted text-xs">10 payments awaiting transfer</span>
+            </div>
+
+            <div>
+              <span class="text-muted text-xs uppercase font-bold tracking-wider block">Escrow Deposited</span>
+              <div class="flex items-baseline gap-xs mt-xs">
+                <span class="font-serif text-primary" style="font-size: 24px; font-weight: 700;">₹10,83,316</span>
+                <span class="text-muted text-xs">of ₹15,00,000</span>
+              </div>
+              <span class="text-muted text-xs">Zero payout delays recorded</span>
+            </div>
+
+            <div>
+              <span class="text-muted text-xs uppercase font-bold tracking-wider block">Unsettled Balance</span>
+              <div class="flex items-baseline gap-xs mt-xs">
+                <span class="font-serif" style="font-size: 24px; font-weight: 700; color: var(--color-terracotta);">₹4,16,684</span>
+                <span class="badge badge-accent" style="font-size: 9px;">Escrow Pending</span>
+              </div>
+              <span class="text-muted text-xs">Next reminder batch in 48h</span>
+            </div>
+          </div>
+
+          <!-- Roster Micro-Table -->
+          <div class="table-container" style="overflow-x: auto;">
+            <table class="data-table w-full text-xs">
+              <thead>
+                <tr>
+                  <th>Guest / Member</th>
+                  <th>Share Allocated</th>
+                  <th style="text-align: right;">Received</th>
+                  <th style="text-align: right;">Balance Due</th>
+                  <th style="text-align: center;">Status</th>
+                  <th style="text-align: right;">Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <div class="flex items-center gap-xs">
+                      <div style="width: 28px; height: 28px; border-radius: 50%; background: var(--color-espresso); color: #fff; display: flex; items-center; justify-content: center; font-weight: bold; font-size: 10px;">
+                        EV
+                      </div>
+                      <div>
+                        <strong style="display: block;">Eleanor Vance</strong>
+                        <span class="text-muted text-xs">Principal Host</span>
+                      </div>
+                    </div>
+                  </td>
+                  <td style="font-weight: 600;">₹41,666</td>
+                  <td style="text-align: right; font-weight: 700; color: var(--color-espresso);">₹41,666</td>
+                  <td style="text-align: right; color: var(--color-muted);">₹0</td>
+                  <td style="text-align: center;"><span class="badge badge-success" style="font-size: 9px;">Settled</span></td>
+                  <td style="text-align: right;"><span class="text-muted text-xs">Confirmed Oct 02</span></td>
+                </tr>
+
+                <tr>
+                  <td>
+                    <div class="flex items-center gap-xs">
+                      <div style="width: 28px; height: 28px; border-radius: 50%; background: var(--color-champagne); color: var(--color-espresso); display: flex; items-center; justify-content: center; font-weight: bold; font-size: 10px;">
+                        JR
+                      </div>
+                      <div>
+                        <strong style="display: block;">Julian Ross</strong>
+                        <span class="text-muted text-xs">VIP Guest • Suite 4</span>
+                      </div>
+                    </div>
+                  </td>
+                  <td style="font-weight: 600;">₹41,666</td>
+                  <td style="text-align: right; font-weight: 700; color: var(--color-espresso);">₹41,666</td>
+                  <td style="text-align: right; color: var(--color-muted);">₹0</td>
+                  <td style="text-align: center;"><span class="badge badge-success" style="font-size: 9px;">Settled</span></td>
+                  <td style="text-align: right;"><span class="text-muted text-xs">Confirmed Oct 05</span></td>
+                </tr>
+
+                <tr>
+                  <td>
+                    <div class="flex items-center gap-xs">
+                      <div style="width: 28px; height: 28px; border-radius: 50%; background: var(--color-champagne-light); color: var(--color-terracotta); display: flex; items-center; justify-content: center; font-weight: bold; font-size: 10px;">
+                        MC
+                      </div>
+                      <div>
+                        <strong style="display: block;">Matteo &amp; Chiara Moretti</strong>
+                        <span class="text-muted text-xs">Couples Suite • 2 Seats</span>
+                      </div>
+                    </div>
+                  </td>
+                  <td style="font-weight: 600;">₹83,332</td>
+                  <td style="text-align: right; font-weight: 700; color: var(--color-terracotta);">₹41,666</td>
+                  <td style="text-align: right; font-weight: 700; color: var(--color-terracotta);">₹41,666</td>
+                  <td style="text-align: center;"><span class="badge badge-accent" style="font-size: 9px;">Partial Deposit</span></td>
+                  <td style="text-align: right;">
+                    <button class="btn btn-secondary" style="font-size: 10px; padding: 2px 8px;" onclick="App.toast('WhatsApp payment reminder queued for Matteo Moretti', 'chat')">
+                      <span class="material-symbols-outlined" style="font-size: 12px;">chat</span>
+                      <span>Remind</span>
+                    </button>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>
+                    <div class="flex items-center gap-xs">
+                      <div style="width: 28px; height: 28px; border-radius: 50%; background: var(--color-champagne-light); color: var(--color-muted); display: flex; items-center; justify-content: center; font-weight: bold; font-size: 10px;">
+                        SL
+                      </div>
+                      <div>
+                        <strong style="display: block;">Sophia Lindqvist</strong>
+                        <span class="text-muted text-xs">Confirmed Attendee</span>
+                      </div>
+                    </div>
+                  </td>
+                  <td style="font-weight: 600;">₹41,666</td>
+                  <td style="text-align: right; color: var(--color-muted);">₹0</td>
+                  <td style="text-align: right; font-weight: 700; color: var(--color-terracotta);">₹41,666</td>
+                  <td style="text-align: center;"><span class="badge" style="font-size: 9px;">Escrow Pending</span></td>
+                  <td style="text-align: right;">
+                    <button class="btn btn-primary" style="font-size: 10px; padding: 2px 8px;" onclick="App.toast('VIP Passcode & payment invite sent to Sophia Lindqvist', 'forward_to_inbox')">
+                      <span class="material-symbols-outlined" style="font-size: 12px;">forward_to_inbox</span>
+                      <span>Send Notice</span>
+                    </button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <!-- RECORD NEW EXPENSE MODAL -->
+  <div class="modal" id="expenseModal" style="display: none;">
+    <div class="modal-content" style="max-width: 520px; padding: 32px;">
+      <div class="flex items-center justify-between pb-sm mb-md" style="border-bottom: 1px solid var(--color-champagne);">
+        <div>
+          <span class="section-tag">Ledger Transaction</span>
+          <h3 class="font-serif" style="font-size: 22px; margin: 4px 0 0 0;">Record New Expense</h3>
+        </div>
+        <button class="icon-btn" onclick="closeExpenseModal()">
+          <span class="material-symbols-outlined">close</span>
+        </button>
+      </div>
+
+      <form id="recordExpenseForm" class="flex flex-col gap-sm">
+        <div class="form-group">
+          <label class="form-label">Expense Title</label>
+          <input type="text" class="form-input" id="expTitle" placeholder="e.g. Imperial Banqueting Candle Rigging" required/>
+        </div>
+
+        <div class="grid grid-cols-2 gap-sm">
+          <div class="form-group">
+            <label class="form-label">Category</label>
+            <select class="form-input" id="expCategory">
+              <option value="Venue">Venue</option>
+              <option value="Catering">Catering</option>
+              <option value="Decoration">Decoration</option>
+              <option value="Transportation">Transportation</option>
+              <option value="Photography">Photography</option>
+              <option value="Entertainment">Entertainment</option>
+              <option value="Favors">Favors &amp; Stationery</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Amount (₹ INR)</label>
+            <input type="number" class="form-input" id="expAmount" placeholder="e.g. 85000" required/>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-2 gap-sm">
+          <div class="form-group">
+            <label class="form-label">Vendor Name</label>
+            <input type="text" class="form-input" id="expVendor" placeholder="e.g. Fiori di Firenze" required/>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Payment Source</label>
+            <select class="form-input" id="expPayer">
+              <option value="EVARA Vault (Escrow)">EVARA Vault (Escrow)</option>
+              <option value="Eleanor Vance (Host Direct)">Eleanor Vance (Host Direct)</option>
+              <option value="Shared Escrow Pool">Shared Escrow Pool</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Status</label>
+          <select class="form-input" id="expStatus">
+            <option value="Paid">Paid</option>
+            <option value="Pending Escrow">Pending Escrow</option>
+            <option value="Partially Paid">Partially Paid</option>
+          </select>
+        </div>
+
+        <div class="flex items-center justify-end gap-sm mt-md pt-sm" style="border-top: 1px solid var(--color-champagne);">
+          <button type="button" class="btn btn-secondary" onclick="closeExpenseModal()">Cancel</button>
+          <button type="submit" class="btn btn-primary">Save to Ledger</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- SCRIPTS -->
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+  <script src="../js/firebaseConfig.js"></script>
+  <script src="../js/storage.js"></script>
+  <script src="../js/app.js"></script>
+  <script src="../js/navigation.js"></script>
+  <script src="../js/budget.js"></script>
+  <script src="../js/reports.js"></script>
+
+  <script>
+    function openExpenseModal() {
+      document.getElementById('expenseModal').style.display = 'flex';
+    }
+    function closeExpenseModal() {
+      document.getElementById('expenseModal').style.display = 'none';
+    }
+    function toggleAriaDrawer() {
+      App.toast('Aria AI: Reviewing 24 ledger items against Chianti hospitality benchmarks. ₹48,000 potential optimization identified.', 'auto_awesome');
+    }
+
+    document.getElementById('recordExpenseForm').addEventListener('submit', (e) => {
+      BudgetController.addExpense(e);
+      closeExpenseModal();
+    });
+  </script>
+</body>
+</html>

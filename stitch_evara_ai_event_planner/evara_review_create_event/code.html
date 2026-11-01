@@ -1,0 +1,924 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&amp;family=Plus+Jakarta+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"surface-container-high":"#f5e5e0","primary":"#664839","surface-dim":"#e6d7d2","on-surface":"#221a17","error":"#ba1a1a","secondary":"#7b563f","surface-container-low":"#fff1ec","tertiary-container":"#7e623b","surface-container-lowest":"#ffffff","on-error":"#ffffff","primary-container":"#80604f","tertiary-fixed":"#ffddb1","on-tertiary-container":"#ffe2bc","surface-tint":"#775847","primary-fixed":"#ffdbca","tertiary-fixed-dim":"#e4c192","secondary-container":"#fecdaf","on-tertiary":"#ffffff","surface-variant":"#efdfda","on-secondary-fixed":"#2e1504","surface-bright":"#fff8f6","on-error-container":"#93000a","primary-fixed-dim":"#e7beaa","tertiary":"#634a25","inverse-on-surface":"#fdede9","on-secondary-fixed-variant":"#603f29","on-background":"#221a17","on-primary-fixed-variant":"#5d4031","on-surface-variant":"#50443f","outline":"#82746e","secondary-fixed":"#ffdcc7","error-container":"#ffdad6","surface-container":"#fbebe6","background":"#fff8f6","secondary-fixed-dim":"#ecbd9f","on-primary":"#ffffff","on-secondary-container":"#7a553e","on-secondary":"#ffffff","on-primary-container":"#ffe0d1","outline-variant":"#d4c3bc","inverse-primary":"#e7beaa","surface":"#fff8f6","on-primary-fixed":"#2c1609","on-tertiary-fixed-variant":"#5a421e","inverse-surface":"#372e2b","on-tertiary-fixed":"#291800","surface-container-highest":"#efdfda"},borderRadius:{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},spacing:{"margin":"3rem","space-xs":"0.375rem","space-xl":"3.5rem","space-sm":"0.75rem","gutter":"1.5rem","margin-mobile":"1.25rem","gutter-mobile":"1rem","space-lg":"2rem","space-md":"1.25rem"},fontFamily:{"headline-lg-mobile":["Playfair Display"],"display-hero-mobile":["Playfair Display"],"title-md":["Plus Jakarta Sans"],"headline-sm":["Playfair Display"],"display-hero":["Playfair Display"],"label-sm":["Plus Jakarta Sans"],"body-lg":["Plus Jakarta Sans"],"headline-md":["Playfair Display"],"body-md":["Plus Jakarta Sans"],"title-lg":["Plus Jakarta Sans"],"headline-lg":["Playfair Display"],"body-sm":["Plus Jakarta Sans"],"label-md":["Plus Jakarta Sans"]},fontSize:{"headline-lg-mobile":["28px",{"lineHeight":"36px","letterSpacing":"-0.01em","fontWeight":"400"}],"display-hero-mobile":["36px",{"lineHeight":"44px","letterSpacing":"-0.01em","fontWeight":"400"}],"title-md":["16px",{"lineHeight":"24px","letterSpacing":"-0.005em","fontWeight":"600"}],"headline-sm":["22px",{"lineHeight":"28px","letterSpacing":"0em","fontWeight":"600"}],"display-hero":["56px",{"lineHeight":"64px","letterSpacing":"-0.02em","fontWeight":"400"}],"label-sm":["11px",{"lineHeight":"14px","letterSpacing":"0.06em","fontWeight":"600"}],"body-lg":["18px",{"lineHeight":"28px","letterSpacing":"0em","fontWeight":"400"}],"headline-md":["28px",{"lineHeight":"36px","letterSpacing":"-0.01em","fontWeight":"500"}],"body-md":["15px",{"lineHeight":"24px","letterSpacing":"0em","fontWeight":"400"}],"title-lg":["18px",{"lineHeight":"26px","letterSpacing":"-0.01em","fontWeight":"600"}],"headline-lg":["40px",{"lineHeight":"48px","letterSpacing":"-0.015em","fontWeight":"400"}],"body-sm":["13px",{"lineHeight":"20px","letterSpacing":"0.01em","fontWeight":"400"}],"label-md":["12px",{"lineHeight":"16px","letterSpacing":"0.08em","fontWeight":"600"}]}}}};</script></head><body class="bg-[#F8F4EF] font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-low shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-50 flex flex-col justify-between overflow-y-auto"><div class="flex flex-col"><div class="h-20 px-space-md flex items-center gap-space-sm"><img alt="EVARA Brand Wordmark &amp; Monogram Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1VBHLcpND7gN0lHMjZJpkmVs7GK3-iuaw2bcZU-Xk57skveghThXoZRIwVT7XDiJrLj5M1BbyzbKkAnOUSOVp9w_ZI6YGj-Kaz1DSwMb3C2eZ8O8cfEgqds7ntJnY8txMwNtEBQFmE60Uv_1_j_iSYEh0j9ioUGkf6cBdhMt2bjmFB5jmPIAFIyY3-MCR8-u-_Zols1HLdkoCUwSkCsiwI5UOT7Nl8t0-BK0UXMNp77"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm tracking-tight text-primary">EVARA</span><span class="font-label-sm text-label-sm tracking-wider uppercase text-on-surface-variant">Private Concierge</span></div></div><div class="px-space-md pt-space-xs pb-space-sm"><a class="flex items-center justify-center gap-space-xs w-full py-space-sm px-space-md rounded bg-primary text-on-primary hover:bg-primary-container hover:text-on-primary-container transition-all shadow-[0_4px_12px_-2px_rgba(57,48,45,0.08)]" data-path="create-new-event" href="#"><span class="material-symbols-outlined text-[18px]">add</span><span class="font-label-md text-label-md uppercase tracking-wider">Create New Event</span></a></div><nav class="flex flex-col gap-1 px-space-md mt-space-xs" data-active-classes="bg-surface-container-high text-primary font-semibold shadow-[0_2px_8px_rgba(57,48,45,0.04)]"><span class="px-space-sm pt-space-xs pb-1 font-label-sm text-label-sm uppercase tracking-wider text-outline">Curation</span><a class="flex items-center gap-space-sm px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="overview" href="#"><span class="material-symbols-outlined text-[20px]">grid_view</span><span class="font-body-md text-body-md">Overview</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="my-events" href="#"><span class="material-symbols-outlined text-[20px]">event_available</span><span class="font-body-md text-body-md">My Events</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="budget-planner" href="#"><span class="material-symbols-outlined text-[20px]">payments</span><span class="font-body-md text-body-md">Budget Planner</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="guests-and-invitations" href="#"><span class="material-symbols-outlined text-[20px]">mark_email_read</span><span class="font-body-md text-body-md">Guests &amp; Invitations</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="vendors" href="#"><span class="material-symbols-outlined text-[20px]">storefront</span><span class="font-body-md text-body-md">Vendors</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="shopping-assistant" href="#"><span class="material-symbols-outlined text-[20px]">shopping_bag</span><span class="font-body-md text-body-md">Shopping Assistant</span></a><span class="px-space-sm pt-space-sm pb-1 font-label-sm text-label-sm uppercase tracking-wider text-outline">Intelligence &amp; Archive</span><a class="flex items-center gap-space-sm px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="ai-event-assistant" href="#"><span class="material-symbols-outlined text-[20px] text-tertiary-container">auto_awesome</span><span class="font-body-md text-body-md">AI Event Assistant</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="event-history" href="#"><span class="material-symbols-outlined text-[20px]">history_edu</span><span class="font-body-md text-body-md">Event History</span></a></nav></div><div class="px-space-md py-space-md flex flex-col gap-1"><a class="flex items-center gap-space-sm px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="settings" href="#"><span class="material-symbols-outlined text-[20px]">settings</span><span class="font-body-md text-body-md">Settings</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="about-evara" href="#"><span class="material-symbols-outlined text-[20px]">info</span><span class="font-body-md text-body-md">About EVARA</span></a><div class="mt-space-xs pt-space-xs flex items-center gap-space-sm px-space-sm"><div class="h-2 w-2 rounded-full bg-secondary"></div><span class="font-label-sm text-label-sm text-outline tracking-wider uppercase">Concierge v2.4 Active</span></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-20 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex items-center justify-between px-space-lg"><div class="flex items-center gap-space-md"><img alt="EVARA Brand Wordmark &amp; Monogram Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1VBHLcpND7gN0lHMjZJpkmVs7GK3-iuaw2bcZU-Xk57skveghThXoZRIwVT7XDiJrLj5M1BbyzbKkAnOUSOVp9w_ZI6YGj-Kaz1DSwMb3C2eZ8O8cfEgqds7ntJnY8txMwNtEBQFmE60Uv_1_j_iSYEh0j9ioUGkf6cBdhMt2bjmFB5jmPIAFIyY3-MCR8-u-_Zols1HLdkoCUwSkCsiwI5UOT7Nl8t0-BK0UXMNp77"/><div class="hidden md:flex items-center gap-space-xs px-space-sm py-1.5 rounded bg-surface-container text-on-surface-variant"><span class="material-symbols-outlined text-[18px] text-outline">search</span><input class="bg-transparent font-body-sm text-body-sm text-on-surface placeholder:text-outline focus:outline-none w-64" placeholder="Search guest lists, venues, provisions..." type="text"/></div></div><div class="flex items-center gap-space-md"><button aria-label="Notifications" class="relative p-2 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-2 right-2 h-2 w-2 rounded-full bg-primary"></span></button><div class="h-6 w-px bg-outline-variant"></div><div class="flex items-center gap-space-sm"><div class="text-right hidden sm:block"><div class="font-title-md text-title-md text-on-surface">Eleanor Vance</div><div class="font-label-sm text-label-sm text-outline tracking-wide uppercase">Principal Host</div></div><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-1 ring-outline-variant" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCblbJh5I878bB-SpKIAcY8gMe7Y6eDKxYbJLsCd9KulLzbHxlhTUyWD5y9ceH4RVYJjOwQwtyWCKA1CYDUwJB_eJeVVu7wvrhkUuvh1Pyxt159059DQaD3CoEXwd7iI0KGXa-OjhGk0K7YVTDOh5o9-gXmjcddhmp-tkv3nw1ee6SCxaERRbWfk-HgXJU9movKZDcCDa0ptrrt2gazDwN_0Sc6KueuTqtYp3fikBU"/></div></div></header><main class="w-full pt-20 px-space-lg bg-[#F8F4EF]"><div class="flex flex-col w-full pb-32">
+<!-- Top Navigation & Progress Stepper Bar -->
+<section class="w-full flex flex-col gap-6 pt-4 pb-8">
+<div class="flex flex-wrap items-center justify-between gap-4">
+<a class="inline-flex items-center gap-2 text-primary hover:text-primary-container transition-colors group" href="#">
+<span class="material-symbols-outlined text-[18px] transition-transform group-hover:-translate-x-1">arrow_back</span>
+<span class="font-label-md text-label-md uppercase tracking-wider">Back to Guests &amp; Contributions</span>
+</a>
+<div class="flex items-center gap-2 px-3 py-1.5 rounded-full bg-surface-container text-on-surface-variant shadow-sm">
+<span class="h-2 w-2 rounded-full bg-[#65836A] animate-pulse"></span>
+<span class="font-body-sm text-body-sm text-on-surface">Draft Auto-Saved at 19:42 CEST</span>
+<span class="text-outline-variant">•</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wide text-secondary">Ready for Curation Vault</span>
+</div>
+</div>
+<!-- 4-Phase Stepper Ribbon -->
+<div class="w-full bg-surface-container-low rounded-xl p-4 sm:p-6 shadow-sm">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-4 relative">
+<!-- Step 1 -->
+<div class="flex items-center gap-3">
+<div class="flex-shrink-0 w-8 h-8 rounded-full bg-secondary text-on-secondary flex items-center justify-center font-label-md text-label-md shadow-sm">
+<span class="material-symbols-outlined text-[16px]">check</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline">Phase 01</span>
+<span class="font-title-md text-title-md text-on-surface truncate">Event Basics</span>
+</div>
+</div>
+<!-- Step 2 -->
+<div class="flex items-center gap-3">
+<div class="flex-shrink-0 w-8 h-8 rounded-full bg-secondary text-on-secondary flex items-center justify-center font-label-md text-label-md shadow-sm">
+<span class="material-symbols-outlined text-[16px]">check</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline">Phase 02</span>
+<span class="font-title-md text-title-md text-on-surface truncate">Details &amp; Venue</span>
+</div>
+</div>
+<!-- Step 3 -->
+<div class="flex items-center gap-3">
+<div class="flex-shrink-0 w-8 h-8 rounded-full bg-secondary text-on-secondary flex items-center justify-center font-label-md text-label-md shadow-sm">
+<span class="material-symbols-outlined text-[16px]">check</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline">Phase 03</span>
+<span class="font-title-md text-title-md text-on-surface truncate">Guests &amp; Split</span>
+</div>
+</div>
+<!-- Step 4 (Active) -->
+<div class="flex items-center gap-3 bg-surface-container-highest/60 p-2.5 rounded-lg">
+<div class="flex-shrink-0 w-8 h-8 rounded-full bg-primary text-on-primary flex items-center justify-center font-label-md text-label-md shadow-md ring-2 ring-tertiary-fixed">
+<span>04</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-2">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-primary font-bold">Phase 04</span>
+<span class="px-1.5 py-0.5 rounded bg-secondary-container text-on-secondary-container text-[9px] uppercase font-bold tracking-widest">Active</span>
+</div>
+<span class="font-title-md text-title-md text-primary font-bold truncate">Review &amp; Create</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Editorial Header Title -->
+<div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4 pt-2">
+<div class="flex flex-col gap-1 max-w-2xl">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary">Pre-Flight Review Vault</span>
+<h1 class="font-headline-lg text-headline-lg text-on-surface">Everything looks wonderful.</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant">Let's review your plans before bringing your event to life.</p>
+</div>
+<div class="flex items-center gap-3">
+<button class="px-4 py-2.5 rounded bg-surface-container hover:bg-surface-container-high text-on-surface transition-colors flex items-center gap-2 shadow-sm" id="quick-pdf-btn">
+<span class="material-symbols-outlined text-[18px]">download_done</span>
+<span class="font-label-md text-label-md uppercase tracking-wider">Export Dossier</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Cinematic Event Cover & Hero Summary -->
+<section class="w-full mb-12">
+<div class="relative w-full rounded-2xl overflow-hidden shadow-xl bg-inverse-surface text-inverse-on-surface">
+<div class="relative w-full h-[420px] md:h-[480px]">
+<img class="w-full h-full object-cover object-center transform hover:scale-105 transition-transform duration-700" data-alt="A sunlit panoramic golden hour view of Villa San Valentino in the rolling Tuscan hills of Chianti, featuring long wooden imperial banquet tables decorated with olive branches, white florals, and flickering candles, set in a private historic villa courtyard with cypress trees and warm stone architecture." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC2h_wz8ScilaS9IGc3JtDnNzUdvkPki-2hUZihKSkc2MzyIhbqTwZetDrBFOr83k2yYut6RrYmAqdit1zfkJiVZ1kq5_11C-ps6DUtPFIld1-B2OC4yWicAmfLtZ5VjV_3fkvaJZRWujrY1tjQMNaLxEvCxfU4hF1b5pQ6xEWgboZtFwxfnOdOfoq1k9F1-LthAVtUWFk6NZJeLlJQFRmV9HXlDOI8-dysnfD6M8Y"/>
+<div class="absolute inset-0 bg-gradient-to-t from-inverse-surface via-inverse-surface/60 to-transparent"></div>
+<div class="absolute inset-0 bg-gradient-to-r from-inverse-surface/80 via-transparent to-transparent"></div>
+<!-- Floating Badges Top -->
+<div class="absolute top-6 left-6 right-6 flex flex-wrap items-center justify-between gap-3">
+<div class="flex flex-wrap items-center gap-2">
+<span class="px-3 py-1 rounded bg-surface/90 backdrop-blur-md text-primary font-label-sm text-label-sm uppercase tracking-wider shadow-sm">
+              Phase 4 of 4 • Final Curated Blueprint
+            </span>
+<span class="px-3 py-1 rounded bg-secondary-container/90 backdrop-blur-md text-on-secondary-container font-label-sm text-label-sm uppercase tracking-wider shadow-sm">
+              Wedding &amp; Tuscan Gala
+            </span>
+</div>
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#65836A]/90 backdrop-blur-md text-on-secondary font-label-sm text-label-sm uppercase tracking-wider shadow-sm">
+<span class="h-1.5 w-1.5 rounded-full bg-white"></span>
+            Status: Pre-Flight Verified
+          </span>
+</div>
+<!-- Hero Content Bottom -->
+<div class="absolute bottom-6 left-6 right-6 flex flex-col md:flex-row md:items-end justify-between gap-6">
+<div class="flex flex-col gap-3 max-w-3xl">
+<div class="flex items-center gap-2 text-tertiary-fixed">
+<span class="material-symbols-outlined text-[20px]">villa</span>
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-tertiary-fixed">Chianti Hills Sanctuary • Private Estate</span>
+</div>
+<h2 class="font-display-hero text-headline-lg md:text-display-hero text-surface-container-lowest leading-tight">
+              Villa San Valentino Tuscan Gala 2025
+            </h2>
+<div class="flex flex-wrap items-center gap-y-2 gap-x-4 text-surface-variant font-body-sm text-body-sm">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-tertiary-fixed">calendar_month</span>
+<span>Thu, Oct 24 – Sun, Oct 27, 2025 (4 Days)</span>
+</div>
+<span class="text-outline-variant">•</span>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-tertiary-fixed">pin_drop</span>
+<span>Villa San Valentino, Chianti Hills, Tuscany, Italy</span>
+</div>
+<span class="text-outline-variant">•</span>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-tertiary-fixed">groups</span>
+<span>36 Confirmed Guests • 80 Day Capacity</span>
+</div>
+<span class="text-outline-variant">•</span>
+<div class="flex items-center gap-1.5 font-semibold text-tertiary-fixed">
+<span class="material-symbols-outlined text-[16px]">account_balance_wallet</span>
+<span>₹15,00,000 Total Estimated Budget</span>
+</div>
+</div>
+</div>
+<div class="flex-shrink-0">
+<button class="px-5 py-3 rounded bg-surface/90 hover:bg-surface text-on-surface backdrop-blur-md transition-all shadow-md flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+<span class="font-label-md text-label-md uppercase tracking-wider">Edit Event Basics</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Detailed Curation Summary Bento Grid -->
+<section class="w-full mb-14">
+<div class="flex items-center justify-between mb-6">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-outline">Section 01</span>
+<h3 class="font-headline-md text-headline-md text-on-surface">Curated Blueprint Summary</h3>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Synchronized across 4 Modules</span>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+<!-- Card A: Schedule & Venue Logistics -->
+<div class="bg-surface-container-low rounded-xl p-6 sm:p-8 flex flex-col justify-between shadow-sm relative overflow-hidden group">
+<div class="flex flex-col gap-6">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">calendar_today</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline">Module 01</span>
+<h4 class="font-title-lg text-title-lg text-on-surface">Event Details &amp; Schedule Breakdown</h4>
+</div>
+</div>
+<a class="font-label-sm text-label-sm uppercase tracking-wider text-primary hover:text-primary-container flex items-center gap-1 transition-colors" href="#">
+<span>Edit Details &amp; Venue</span>
+<span class="material-symbols-outlined text-[14px]">open_in_new</span>
+</a>
+</div>
+<!-- Schedule Pipeline -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
+<div class="p-3.5 bg-surface rounded-lg flex flex-col gap-1">
+<div class="flex items-center justify-between text-outline">
+<span class="font-label-sm text-label-sm uppercase font-bold text-secondary">Oct 24 • 15:00</span>
+<span class="text-[11px]">Day 1</span>
+</div>
+<span class="font-title-md text-title-md text-on-surface">Villa Check-in &amp; Welcome Aperitivo</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Lawn Spritz &amp; Cypress Terrace Canapés</span>
+</div>
+<div class="p-3.5 bg-surface rounded-lg flex flex-col gap-1">
+<div class="flex items-center justify-between text-outline">
+<span class="font-label-sm text-label-sm uppercase font-bold text-secondary">Oct 25 • 17:30</span>
+<span class="text-[11px]">Day 2</span>
+</div>
+<span class="font-title-md text-title-md text-on-surface">Vow Golden Hour Ceremony</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Ancient Stone Chapel &amp; Olive Grove Path</span>
+</div>
+<div class="p-3.5 bg-surface rounded-lg flex flex-col gap-1">
+<div class="flex items-center justify-between text-outline">
+<span class="font-label-sm text-label-sm uppercase font-bold text-secondary">Oct 26 • 19:00</span>
+<span class="text-[11px]">Day 3</span>
+</div>
+<span class="font-title-md text-title-md text-on-surface">Imperial Al Fresco Feasting</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Tuscan Gastronomy, Chianti Riserva &amp; Strings</span>
+</div>
+<div class="p-3.5 bg-surface rounded-lg flex flex-col gap-1">
+<div class="flex items-center justify-between text-outline">
+<span class="font-label-sm text-label-sm uppercase font-bold text-secondary">Oct 27 • 11:00</span>
+<span class="text-[11px]">Day 4</span>
+</div>
+<span class="font-title-md text-title-md text-on-surface">Farewell Tuscan Brunch</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Artisan Pastries, Espresso Bar &amp; Sprinter Departures</span>
+</div>
+</div>
+<!-- Verified Map Widget -->
+<div class="flex items-center justify-between p-3 bg-surface-container rounded-lg">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-[20px] text-primary">map</span>
+<div class="flex flex-col">
+<span class="font-body-sm text-body-sm font-semibold text-on-surface">Villa San Valentino, Greve in Chianti</span>
+<span class="text-xs text-on-surface-variant">38 km from Florence Peretola (FLR) • 42 min private shuttle</span>
+</div>
+</div>
+<span class="px-2.5 py-1 rounded bg-[#65836A]/15 text-[#65836A] font-label-sm text-label-sm uppercase font-bold">Verified Route</span>
+</div>
+</div>
+</div>
+<!-- Card B: Bespoke Preferences & Atmosphere -->
+<div class="bg-surface-container-low rounded-xl p-6 sm:p-8 flex flex-col justify-between shadow-sm relative overflow-hidden group">
+<div class="flex flex-col gap-6">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">palette</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline">Module 02</span>
+<h4 class="font-title-lg text-title-lg text-on-surface">Bespoke Preferences &amp; Atmosphere</h4>
+</div>
+</div>
+<a class="font-label-sm text-label-sm uppercase tracking-wider text-primary hover:text-primary-container flex items-center gap-1 transition-colors" href="#">
+<span>Edit Preferences</span>
+<span class="material-symbols-outlined text-[14px]">tune</span>
+</a>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+<div class="p-4 bg-surface rounded-lg flex flex-col gap-2">
+<div class="flex items-center gap-2 text-secondary">
+<span class="material-symbols-outlined text-[18px]">brush</span>
+<span class="font-label-sm text-label-sm uppercase font-bold">Aesthetic Identity</span>
+</div>
+<span class="font-title-md text-title-md text-on-surface">Editorial Tuscan Rustic</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Natural raw linen, antique brass candelabras, wild rosemary, seeded eucalyptus.</p>
+</div>
+<div class="p-4 bg-surface rounded-lg flex flex-col gap-2">
+<div class="flex items-center gap-2 text-secondary">
+<span class="material-symbols-outlined text-[18px]">table_restaurant</span>
+<span class="font-label-sm text-label-sm uppercase font-bold">Seating Topology</span>
+</div>
+<span class="font-title-md text-title-md text-on-surface">Imperial Feasting Table</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Continuous 60-seat courtyard banqueting setup with warm overhead bulb canopy.</p>
+</div>
+<div class="p-4 bg-surface rounded-lg flex flex-col gap-2">
+<div class="flex items-center gap-2 text-secondary">
+<span class="material-symbols-outlined text-[18px]">umbrella</span>
+<span class="font-label-sm text-label-sm uppercase font-bold">Contingency Plan</span>
+</div>
+<span class="font-title-md text-title-md text-on-surface">Covered Arcade Fallback</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Seamless shift to Renaissance arched portico with transparent acoustic weather shielding.</p>
+</div>
+<div class="p-4 bg-surface rounded-lg flex flex-col gap-2">
+<div class="flex items-center gap-2 text-secondary">
+<span class="material-symbols-outlined text-[18px]">wine_bar</span>
+<span class="font-label-sm text-label-sm uppercase font-bold">Sommelier &amp; Dining</span>
+</div>
+<span class="font-title-md text-title-md text-on-surface">Organic Chianti Pairings</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Truffle handmade tagliolini, bistecca tagliata, bio vineyard olive oil tasting.</p>
+</div>
+</div>
+</div>
+<div class="mt-4 pt-3 flex items-center justify-between text-on-surface-variant text-xs">
+<span class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-tertiary">check_circle</span>
+            Dietary restrictions mapped for 8 vegetarian, 4 gluten-free guests
+          </span>
+<span class="font-label-sm text-label-sm uppercase text-outline">Verified with Head Chef</span>
+</div>
+</div>
+<!-- Card C: Guests & Roster Telemetry -->
+<div class="bg-surface-container-low rounded-xl p-6 sm:p-8 flex flex-col justify-between shadow-sm relative overflow-hidden group">
+<div class="flex flex-col gap-6">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">group</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline">Module 03</span>
+<h4 class="font-title-lg text-title-lg text-on-surface">Guests &amp; Roster Telemetry</h4>
+</div>
+</div>
+<a class="font-label-sm text-label-sm uppercase tracking-wider text-primary hover:text-primary-container flex items-center gap-1 transition-colors" href="#">
+<span>Edit Guestlist &amp; Split</span>
+<span class="material-symbols-outlined text-[14px]">person_add</span>
+</a>
+</div>
+<!-- Roster Counters -->
+<div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
+<div class="p-3 bg-surface rounded-lg flex flex-col items-center text-center">
+<span class="font-label-sm text-label-sm uppercase text-outline">Dispatched</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">42</span>
+<span class="text-[11px] text-on-surface-variant">VIP Invites</span>
+</div>
+<div class="p-3 bg-surface rounded-lg flex flex-col items-center text-center">
+<span class="font-label-sm text-label-sm uppercase text-outline">Confirmed</span>
+<span class="font-headline-sm text-headline-sm text-[#65836A] font-bold">34</span>
+<span class="text-[11px] text-on-surface-variant">+6 Plus-Ones</span>
+</div>
+<div class="p-3 bg-surface rounded-lg flex flex-col items-center text-center">
+<span class="font-label-sm text-label-sm uppercase text-outline">Awaiting</span>
+<span class="font-headline-sm text-headline-sm text-secondary font-bold">4</span>
+<span class="text-[11px] text-on-surface-variant">Pending RSVP</span>
+</div>
+<div class="p-3 bg-surface rounded-lg flex flex-col items-center text-center">
+<span class="font-label-sm text-label-sm uppercase text-outline">Declined</span>
+<span class="font-headline-sm text-headline-sm text-outline font-bold">2</span>
+<span class="text-[11px] text-on-surface-variant">Polite Regrets</span>
+</div>
+</div>
+<!-- Progress Bar Capacity -->
+<div class="flex flex-col gap-2 p-4 bg-surface rounded-lg">
+<div class="flex items-center justify-between text-xs">
+<span class="font-semibold text-on-surface">Imperial Table Allocation</span>
+<span class="font-bold text-primary">36 / 36 Seats Reserved (100%)</span>
+</div>
+<div class="w-full bg-surface-container-high h-2 rounded-full overflow-hidden">
+<div class="bg-primary h-full rounded-full w-full"></div>
+</div>
+<div class="flex items-center justify-between text-[11px] text-on-surface-variant pt-1">
+<span>Main Courtyard Long Table</span>
+<span>Capacity Cap Reached</span>
+</div>
+</div>
+<!-- Direct RSVP Vault Link -->
+<div class="flex flex-wrap items-center justify-between gap-3 p-3 bg-surface-container rounded-lg">
+<div class="flex items-center gap-2 truncate">
+<span class="material-symbols-outlined text-[18px] text-primary">link</span>
+<code class="text-xs font-mono text-on-surface truncate">evara.luxury/c/valentino-gala-2025</code>
+</div>
+<button class="px-2.5 py-1 rounded bg-surface hover:bg-surface-container-highest text-primary font-label-sm text-label-sm uppercase tracking-wider transition-colors shadow-sm">
+              Copy Pass Link
+            </button>
+</div>
+</div>
+</div>
+<!-- Card D: Financial Governance & Contribution Vault -->
+<div class="bg-surface-container-low rounded-xl p-6 sm:p-8 flex flex-col justify-between shadow-sm relative overflow-hidden group">
+<div class="flex flex-col gap-6">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">account_balance</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline">Module 04</span>
+<h4 class="font-title-lg text-title-lg text-on-surface">Financial Governance &amp; Escrow</h4>
+</div>
+</div>
+<a class="font-label-sm text-label-sm uppercase tracking-wider text-primary hover:text-primary-container flex items-center gap-1 transition-colors" href="#">
+<span>Edit Escrow &amp; Split</span>
+<span class="material-symbols-outlined text-[14px]">savings</span>
+</a>
+</div>
+<!-- Total & Split Metrics -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+<div class="p-4 bg-surface rounded-lg flex flex-col gap-1">
+<span class="font-label-sm text-label-sm uppercase text-outline">Total Event Outlay</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">₹15,00,000</span>
+<span class="text-xs text-on-surface-variant">INR • Locked Budget Pool</span>
+</div>
+<div class="p-4 bg-surface rounded-lg flex flex-col gap-1">
+<span class="font-label-sm text-label-sm uppercase text-outline">Guest Shared Allocation</span>
+<span class="font-headline-sm text-headline-sm text-secondary font-bold">₹41,666 <span class="text-xs font-normal text-on-surface-variant">/ attendee</span></span>
+<span class="text-xs text-on-surface-variant">Equal Split Model (36 seats)</span>
+</div>
+</div>
+<!-- Escrow Progress -->
+<div class="p-4 bg-surface rounded-lg flex flex-col gap-3">
+<div class="flex items-center justify-between text-xs">
+<div class="flex items-center gap-2">
+<span class="font-bold text-on-surface">Escrow Vault Deposit Progress</span>
+<span class="px-1.5 py-0.5 rounded bg-secondary-container text-on-secondary-container text-[10px] font-bold">72.2% Funded</span>
+</div>
+<span class="font-bold text-primary">₹10,83,316 of ₹15,00,000</span>
+</div>
+<div class="w-full bg-surface-container-high h-2.5 rounded-full overflow-hidden">
+<div class="bg-[#65836A] h-full rounded-full" style="width: 72.2%"></div>
+</div>
+<div class="flex items-center justify-between text-xs text-on-surface-variant">
+<span>26 Paid Contributors</span>
+<span>10 Inbound Pledges (₹4,16,684 pending)</span>
+</div>
+</div>
+<div class="flex items-center gap-2 p-3 bg-tertiary-fixed/30 rounded-lg text-xs text-on-tertiary-fixed-variant">
+<span class="material-symbols-outlined text-[18px] text-tertiary">verified_user</span>
+<span>EVARA Milestone Escrow Guarantee: Vendor balances disbursed only upon signed deliverables.</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- AI-Generated Event Blueprint & Milestone Roadmap -->
+<section class="w-full mb-14">
+<div class="bg-surface-container-lowest rounded-2xl p-6 sm:p-10 shadow-sm relative overflow-hidden">
+<!-- Section Header -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-8">
+<div class="flex flex-col gap-1 max-w-2xl">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[20px] text-tertiary">auto_awesome</span>
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary">Aria Neural Intelligence Roadmap</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface">Your Personalized Event Blueprint</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+            Aria neural engine has synthesized your venue, guest telemetry, and budget into an actionable production roadmap.
+          </p>
+</div>
+<div class="flex items-center gap-2">
+<span class="px-3 py-1.5 rounded bg-surface-container text-primary font-label-sm text-label-sm uppercase tracking-wider font-semibold">
+            5 Critical Milestones Active
+          </span>
+</div>
+</div>
+<!-- Timeline Cards -->
+<div class="relative border-l-2 border-surface-container-high ml-4 md:ml-6 pl-6 md:pl-8 space-y-8">
+<!-- Milestone 1 -->
+<div class="relative group">
+<div class="absolute -left-[35px] md:-left-[43px] top-1.5 w-6 h-6 rounded-full bg-[#65836A] text-on-secondary flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-[14px]">done</span>
+</div>
+<div class="bg-surface-container-low p-5 rounded-xl flex flex-col md:flex-row md:items-center justify-between gap-4">
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-2">
+<span class="px-2 py-0.5 rounded bg-[#65836A]/15 text-[#65836A] font-label-sm text-label-sm uppercase font-bold">✓ Confirmed Milestone</span>
+<span class="text-xs text-outline">Executed • Aug 12</span>
+</div>
+<h4 class="font-title-lg text-title-lg text-on-surface">Venue Contract &amp; Primary Escrow Deposit</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                Exclusive buyout of Villa San Valentino secured for 4 nights with zero cancellation penalties.
+              </p>
+</div>
+<div class="flex items-center gap-3 flex-shrink-0">
+<span class="font-title-md text-title-md font-bold text-on-surface">₹4,50,000</span>
+<span class="px-2.5 py-1 rounded bg-surface text-on-surface-variant text-xs">Locked in Escrow</span>
+</div>
+</div>
+</div>
+<!-- Milestone 2 -->
+<div class="relative group">
+<div class="absolute -left-[35px] md:-left-[43px] top-1.5 w-6 h-6 rounded-full bg-tertiary-container text-on-tertiary-container flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-[14px]">bolt</span>
+</div>
+<div class="bg-surface-container-low p-5 rounded-xl flex flex-col md:flex-row md:items-center justify-between gap-4">
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-2">
+<span class="px-2 py-0.5 rounded bg-tertiary-fixed text-on-tertiary-fixed-variant font-label-sm text-label-sm uppercase font-bold">⚡ AI Recommended</span>
+<span class="text-xs text-secondary font-semibold">Target: Sept 15 (23 Days left)</span>
+</div>
+<h4 class="font-title-lg text-title-lg text-on-surface">Guest Dietary &amp; Suite Allocation Lock</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                Sync 34 RSVP dietary profiles directly with chef Fabrizio and assign 18 historic suites.
+              </p>
+</div>
+<div class="flex items-center gap-3 flex-shrink-0">
+<button class="px-3.5 py-1.5 rounded bg-surface hover:bg-surface-container text-primary font-label-md text-label-md uppercase tracking-wider transition-colors shadow-sm">
+                Open Matrix
+              </button>
+</div>
+</div>
+</div>
+<!-- Milestone 3 -->
+<div class="relative group">
+<div class="absolute -left-[35px] md:-left-[43px] top-1.5 w-6 h-6 rounded-full bg-tertiary-container text-on-tertiary-container flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-[14px]">bolt</span>
+</div>
+<div class="bg-surface-container-low p-5 rounded-xl flex flex-col md:flex-row md:items-center justify-between gap-4">
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-2">
+<span class="px-2 py-0.5 rounded bg-tertiary-fixed text-on-tertiary-fixed-variant font-label-sm text-label-sm uppercase font-bold">⚡ AI Recommended</span>
+<span class="text-xs text-secondary font-semibold">Target: Oct 02</span>
+</div>
+<h4 class="font-title-lg text-title-lg text-on-surface">Floral &amp; Al Fresco Lighting Rigging</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                Approve final 120-meter festoon string canopy and low-profile terracotta vessel florals.
+              </p>
+</div>
+<div class="flex items-center gap-3 flex-shrink-0">
+<span class="font-title-md text-title-md font-bold text-on-surface">₹2,70,000</span>
+<button class="px-3.5 py-1.5 rounded bg-surface hover:bg-surface-container text-primary font-label-md text-label-md uppercase tracking-wider transition-colors shadow-sm">
+                Review Mockup
+              </button>
+</div>
+</div>
+</div>
+<!-- Milestone 4 -->
+<div class="relative group">
+<div class="absolute -left-[35px] md:-left-[43px] top-1.5 w-6 h-6 rounded-full bg-tertiary-container text-on-tertiary-container flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-[14px]">bolt</span>
+</div>
+<div class="bg-surface-container-low p-5 rounded-xl flex flex-col md:flex-row md:items-center justify-between gap-4">
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-2">
+<span class="px-2 py-0.5 rounded bg-tertiary-fixed text-on-tertiary-fixed-variant font-label-sm text-label-sm uppercase font-bold">⚡ AI Recommended</span>
+<span class="text-xs text-secondary font-semibold">Target: Oct 18</span>
+</div>
+<h4 class="font-title-lg text-title-lg text-on-surface">Private Sprinter Transfers from Florence Peretola FLR</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                Consolidate 14 inbound flight arrivals into 4 staggered Mercedes-Benz V-Class luxury shuttles.
+              </p>
+</div>
+<div class="flex items-center gap-3 flex-shrink-0">
+<span class="font-title-md text-title-md font-bold text-on-surface">₹1,80,000</span>
+<button class="px-3.5 py-1.5 rounded bg-surface hover:bg-surface-container text-primary font-label-md text-label-md uppercase tracking-wider transition-colors shadow-sm">
+                View Flight Graph
+              </button>
+</div>
+</div>
+</div>
+<!-- Milestone 5 -->
+<div class="relative group">
+<div class="absolute -left-[35px] md:-left-[43px] top-1.5 w-6 h-6 rounded-full bg-primary text-on-primary flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-[14px]">star</span>
+</div>
+<div class="bg-surface-container-low p-5 rounded-xl flex flex-col md:flex-row md:items-center justify-between gap-4">
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-2">
+<span class="px-2 py-0.5 rounded bg-secondary text-on-secondary font-label-sm text-label-sm uppercase font-bold">✓ Production Kickoff</span>
+<span class="text-xs text-outline">Oct 24 • 17:00</span>
+</div>
+<h4 class="font-title-lg text-title-lg text-on-surface">Welcome Reception &amp; Tuscan Sunset Spritz</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                Live acoustic cello duet, wood-fired focaccia, chilled Aperol Spritz, sunset toast across vineyards.
+              </p>
+</div>
+<div class="flex items-center gap-3 flex-shrink-0">
+<span class="px-3 py-1 rounded bg-[#65836A]/20 text-[#65836A] font-label-sm text-label-sm uppercase font-bold">Ready</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Aria Intelligence Callout Insight -->
+<div class="mt-8 p-4 rounded-xl bg-surface-container-high/60 flex items-start gap-4">
+<div class="w-8 h-8 rounded-full bg-tertiary-container text-on-tertiary-container flex items-center justify-center flex-shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[18px]">lightbulb</span>
+</div>
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-2">
+<span class="font-title-md text-title-md text-on-surface font-semibold">Aria Fiscal &amp; Production Optimization</span>
+<span class="px-2 py-0.5 rounded bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-bold">₹48,000 Saved</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            By consolidating imported florals with indigenous Chianti olive branches and local Tuscan botanical gardens, Aria reduced vendor logistics costs by ₹48,000 without compromising editorial aesthetics.
+          </p>
+</div>
+</div>
+</div>
+</section>
+<!-- Visual Budget Allocation & Fiscal Gauges -->
+<section class="w-full mb-14">
+<div class="bg-surface-container-low rounded-2xl p-6 sm:p-10 shadow-sm flex flex-col gap-8">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-4">
+<div class="flex flex-col gap-1">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-outline">Fiscal Architecture</span>
+<h3 class="font-headline-md text-headline-md text-on-surface">Budget Allocation &amp; Expenditures</h3>
+</div>
+<div class="flex items-baseline gap-2">
+<span class="font-headline-md text-headline-md text-primary font-bold">₹15,00,000</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">INR Total Planned Pool</span>
+</div>
+</div>
+<!-- Multi-segmented Progress Bar -->
+<div class="flex flex-col gap-3">
+<div class="w-full h-4 rounded-full bg-surface-container-high overflow-hidden flex shadow-inner">
+<div class="h-full bg-primary" style="width: 45%" title="Venue Buyout (45%)"></div>
+<div class="h-full bg-secondary" style="width: 25%" title="Catering &amp; Sommelier (25%)"></div>
+<div class="h-full bg-tertiary-container" style="width: 18%" title="Décor &amp; Lighting (18%)"></div>
+<div class="h-full bg-outline" style="width: 12%" title="Production &amp; Logistics (12%)"></div>
+</div>
+<!-- Legend / Breakdown Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 pt-2">
+<!-- Item 1 -->
+<div class="p-3.5 bg-surface rounded-lg flex flex-col gap-1">
+<div class="flex items-center gap-2">
+<span class="w-3 h-3 rounded-full bg-primary"></span>
+<span class="font-label-sm text-label-sm uppercase font-bold text-on-surface">Venue Buyout</span>
+</div>
+<div class="flex items-baseline justify-between mt-1">
+<span class="font-title-lg text-title-lg text-on-surface font-bold">₹6,75,000</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">45%</span>
+</div>
+<span class="text-[11px] text-outline">Exclusive 4-day estate lease</span>
+</div>
+<!-- Item 2 -->
+<div class="p-3.5 bg-surface rounded-lg flex flex-col gap-1">
+<div class="flex items-center gap-2">
+<span class="w-3 h-3 rounded-full bg-secondary"></span>
+<span class="font-label-sm text-label-sm uppercase font-bold text-on-surface">Catering &amp; Sommelier</span>
+</div>
+<div class="flex items-baseline justify-between mt-1">
+<span class="font-title-lg text-title-lg text-on-surface font-bold">₹3,75,000</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">25%</span>
+</div>
+<span class="text-[11px] text-outline">4 courses &amp; reserve wine cellars</span>
+</div>
+<!-- Item 3 -->
+<div class="p-3.5 bg-surface rounded-lg flex flex-col gap-1">
+<div class="flex items-center gap-2">
+<span class="w-3 h-3 rounded-full bg-tertiary-container"></span>
+<span class="font-label-sm text-label-sm uppercase font-bold text-on-surface">Décor &amp; Lighting</span>
+</div>
+<div class="flex items-baseline justify-between mt-1">
+<span class="font-title-lg text-title-lg text-on-surface font-bold">₹2,70,000</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">18%</span>
+</div>
+<span class="text-[11px] text-outline">Florals, festoons, candle foliage</span>
+</div>
+<!-- Item 4 -->
+<div class="p-3.5 bg-surface rounded-lg flex flex-col gap-1">
+<div class="flex items-center gap-2">
+<span class="w-3 h-3 rounded-full bg-outline"></span>
+<span class="font-label-sm text-label-sm uppercase font-bold text-on-surface">Logistics &amp; Shuttles</span>
+</div>
+<div class="flex items-baseline justify-between mt-1">
+<span class="font-title-lg text-title-lg text-on-surface font-bold">₹1,80,000</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">12%</span>
+</div>
+<span class="text-[11px] text-outline">Florence airport vans, luggage handling</span>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-between text-xs text-on-surface-variant pt-2">
+<span class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-primary">info</span>
+          All figures represent host-curated estimates. Vendor contracts locked via EVARA Vault upon event creation.
+        </span>
+<button class="text-primary hover:underline font-semibold">Detailed Financial Model →</button>
+</div>
+</div>
+</section>
+<!-- Pre-Flight Verification & Dedicated Aria AI Concierge Widget -->
+<section class="w-full grid grid-cols-1 lg:grid-cols-3 gap-6 mb-14">
+<!-- Final Pre-Flight Checklist (2 Cols) -->
+<div class="lg:col-span-2 bg-surface-container-low rounded-2xl p-6 sm:p-8 flex flex-col justify-between shadow-sm">
+<div class="flex flex-col gap-6">
+<div class="flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-outline">Integrity Assurance</span>
+<h3 class="font-headline-md text-headline-md text-on-surface">Ready to create your event?</h3>
+</div>
+<span class="px-3 py-1 rounded bg-[#65836A]/20 text-[#65836A] font-label-sm text-label-sm uppercase font-bold">
+            5 / 5 Verified
+          </span>
+</div>
+<!-- Verification Items -->
+<div class="flex flex-col gap-3">
+<div class="flex items-center gap-3 p-3 bg-surface rounded-lg">
+<div class="w-6 h-6 rounded-full bg-[#65836A] text-on-secondary flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-[14px]">check</span>
+</div>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-on-surface">Event identity and multi-day itinerary reviewed</span>
+<span class="text-xs text-on-surface-variant">October 24–27, 2025 sequence finalized across all guest tiers</span>
+</div>
+</div>
+<div class="flex items-center gap-3 p-3 bg-surface rounded-lg">
+<div class="w-6 h-6 rounded-full bg-[#65836A] text-on-secondary flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-[14px]">check</span>
+</div>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-on-surface">Villa San Valentino location &amp; noise ordinance verified</span>
+<span class="text-xs text-on-surface-variant">Live music permitted outdoors until 00:30, indoor ballroom until 03:00</span>
+</div>
+</div>
+<div class="flex items-center gap-3 p-3 bg-surface rounded-lg">
+<div class="w-6 h-6 rounded-full bg-[#65836A] text-on-secondary flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-[14px]">check</span>
+</div>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-on-surface">Budget target locked at ₹15,00,000 with flexible ±15% threshold</span>
+<span class="text-xs text-on-surface-variant">Includes contingency margin and currency rate lock protections (INR / EUR)</span>
+</div>
+</div>
+<div class="flex items-center gap-3 p-3 bg-surface rounded-lg">
+<div class="w-6 h-6 rounded-full bg-[#65836A] text-on-secondary flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-[14px]">check</span>
+</div>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-on-surface">Guest directory indexed with 34 confirmed party members</span>
+<span class="text-xs text-on-surface-variant">Invitations, flight tracker hooks, and pass credentials generated</span>
+</div>
+</div>
+<div class="flex items-center gap-3 p-3 bg-surface rounded-lg">
+<div class="w-6 h-6 rounded-full bg-[#65836A] text-on-secondary flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-[14px]">check</span>
+</div>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-on-surface">EVARA Escrow Vault initialized with dual-signature release</span>
+<span class="text-xs text-on-surface-variant">Funds safeguarded in Tier-1 institutional custodial account</span>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-4 pt-3 flex items-center gap-2 text-xs text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px] text-[#65836A]">shield</span>
+<span>All essential parameters verified. You can launch your event now and invite additional guests or adjust allocations at any time.</span>
+</div>
+</div>
+<!-- Dedicated Aria AI Concierge Widget (1 Col) -->
+<div class="bg-gradient-to-br from-surface-container-high to-surface-container-low rounded-2xl p-6 sm:p-8 flex flex-col justify-between shadow-sm relative overflow-hidden">
+<!-- Glow ambient accent -->
+<div class="absolute -right-8 -top-8 w-32 h-32 rounded-full bg-tertiary-fixed/40 blur-2xl pointer-events-none"></div>
+<div class="flex flex-col gap-6 relative z-10">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-tertiary text-on-tertiary flex items-center justify-center shadow-md">
+<span class="material-symbols-outlined text-[20px]">auto_awesome</span>
+</div>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-on-surface font-bold">Aria Concierge</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary">Neural Curation Engine Active</span>
+</div>
+</div>
+<span class="h-2.5 w-2.5 rounded-full bg-[#65836A] animate-pulse"></span>
+</div>
+<div class="p-4 bg-surface/90 rounded-xl shadow-sm backdrop-blur-sm">
+<p class="font-body-md text-body-md text-on-surface italic leading-relaxed">
+            “Your plan is taking shape beautifully, Eleanor! I've organized your details, balanced the ₹41,666 guest split, and prepared a verified blueprint to keep every vendor accountable.”
+          </p>
+</div>
+<div class="flex flex-col gap-2">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline">Quick AI Actions</span>
+<div class="flex flex-wrap gap-2">
+<button class="px-3 py-1.5 rounded-full bg-surface hover:bg-surface-container text-on-surface font-label-sm text-label-sm uppercase tracking-wider shadow-sm transition-all flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[14px] text-tertiary">description</span>
+              Review Vendor Contracts
+            </button>
+<button class="px-3 py-1.5 rounded-full bg-surface hover:bg-surface-container text-on-surface font-label-sm text-label-sm uppercase tracking-wider shadow-sm transition-all flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[14px] text-tertiary">cloud</span>
+              Simulate Wet Weather Fallback
+            </button>
+<button class="px-3 py-1.5 rounded-full bg-surface hover:bg-surface-container text-on-surface font-label-sm text-label-sm uppercase tracking-wider shadow-sm transition-all flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[14px] text-tertiary">mic</span>
+              Ask Aria Live 🎙️
+            </button>
+</div>
+</div>
+</div>
+<div class="pt-6 relative z-10">
+<div class="p-3 bg-surface-container-highest/60 rounded-lg flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px] text-primary">security</span>
+<span class="text-xs text-on-surface font-medium">Bespoke SLA Protected</span>
+</div>
+<span class="text-[11px] text-outline">v2.4 Active</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Interactive Persistent Bottom Action Bar -->
+<div class="fixed bottom-0 left-72 right-0 bg-surface/95 backdrop-blur-xl py-4 px-8 shadow-[0_-4px_20px_rgba(57,48,45,0.06)] z-40 flex items-center justify-between">
+<div class="flex items-center gap-3">
+<a class="px-4 py-2.5 rounded bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md uppercase tracking-wider transition-colors flex items-center gap-2" href="#">
+<span class="material-symbols-outlined text-[18px]">arrow_back</span>
+<span class="hidden sm:inline">Back to Guests &amp; Split</span>
+</a>
+<button class="hidden md:flex items-center gap-2 px-4 py-2.5 rounded text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined text-[18px]">lock</span>
+<span class="font-label-md text-label-md uppercase tracking-wider">Save as Draft (Encrypted in Vault)</span>
+</button>
+</div>
+<div class="flex items-center gap-4">
+<div class="hidden lg:flex flex-col text-right">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline">Ready to finalize</span>
+<span class="font-title-md text-title-md text-on-surface">Villa San Valentino Gala</span>
+</div>
+<button class="px-7 py-3.5 rounded bg-primary text-on-primary hover:bg-primary-container hover:text-on-primary-container transition-all shadow-lg hover:shadow-xl flex items-center gap-2.5 transform active:scale-95" id="launch-event-btn">
+<span class="material-symbols-outlined text-[20px] text-tertiary-fixed">rocket_launch</span>
+<span class="font-label-md text-label-md uppercase tracking-wider font-bold">Create Event &amp; Launch Vault</span>
+</button>
+</div>
+</div>
+<!-- Interactive Event Launch Simulation Modal -->
+<div class="fixed inset-0 bg-inverse-surface/60 backdrop-blur-md z-50 flex items-center justify-center p-4 opacity-0 pointer-events-none transition-opacity duration-300" id="launch-modal">
+<div class="bg-surface rounded-2xl max-w-lg w-full p-8 shadow-2xl flex flex-col items-center text-center transform scale-95 transition-transform duration-300" id="modal-card">
+<!-- Loading State -->
+<div class="flex flex-col items-center gap-6 py-6 w-full" id="loading-state">
+<div class="relative w-20 h-20">
+<div class="absolute inset-0 rounded-full border-4 border-surface-container-high"></div>
+<div class="absolute inset-0 rounded-full border-4 border-primary border-t-transparent animate-spin"></div>
+<div class="absolute inset-0 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[28px] animate-pulse">lock</span>
+</div>
+</div>
+<div class="flex flex-col gap-2">
+<h4 class="font-headline-md text-headline-md text-on-surface" id="loading-title">Initializing EVARA Escrow Vault...</h4>
+<p class="font-body-md text-body-md text-on-surface-variant" id="loading-sub">Locking contract conditions with Villa San Valentino estate...</p>
+</div>
+<div class="w-full bg-surface-container h-2 rounded-full overflow-hidden mt-2">
+<div class="bg-primary h-full transition-all duration-700 ease-out" id="loading-bar" style="width: 25%"></div>
+</div>
+<div class="flex items-center gap-2 text-xs text-outline font-mono">
+<span class="h-2 w-2 rounded-full bg-secondary animate-ping"></span>
+<span>Dual-Signature Multi-Sig Handshake Active</span>
+</div>
+</div>
+<!-- Success State (Hidden initially) -->
+<div class="hidden flex-col items-center gap-6 py-4 w-full" id="success-state">
+<div class="w-20 h-20 rounded-full bg-[#65836A]/20 text-[#65836A] flex items-center justify-center shadow-inner">
+<span class="material-symbols-outlined text-[42px]">check_circle</span>
+</div>
+<div class="flex flex-col gap-2">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-[#65836A] font-bold">Event Officially Published</span>
+<h4 class="font-headline-md text-headline-md text-on-surface">Your Tuscan Gala is Live!</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">
+            Villa San Valentino Tuscan Gala 2025 has been sealed in the curation vault. Digital passes and contribution requests are being generated.
+          </p>
+</div>
+<div class="p-4 bg-surface-container-low rounded-xl w-full flex flex-col gap-2 text-left">
+<div class="flex items-center justify-between text-xs">
+<span class="text-outline">Event Identifier</span>
+<span class="font-mono font-bold text-on-surface">#EVR-TUSCANY-2025</span>
+</div>
+<div class="flex items-center justify-between text-xs">
+<span class="text-outline">Escrow Contract</span>
+<span class="font-mono text-[#65836A]">0x71a...F8e9 (Confirmed)</span>
+</div>
+<div class="flex items-center justify-between text-xs">
+<span class="text-outline">Attendees Enrolled</span>
+<span class="font-semibold text-on-surface">36 Guests Registered</span>
+</div>
+</div>
+<div class="flex flex-col sm:flex-row gap-3 w-full mt-2">
+<button class="flex-1 py-3 px-4 rounded bg-primary text-on-primary hover:bg-primary-container font-label-md text-label-md uppercase tracking-wider transition-colors" id="close-modal-btn">
+            Go to Event Dashboard
+          </button>
+<button class="py-3 px-4 rounded bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md uppercase tracking-wider transition-colors flex items-center justify-center gap-1.5">
+<span class="material-symbols-outlined text-[16px]">share</span>
+<span>Share Dossier</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script>
+  // Interactive Modal Trigger & State Progression Simulation
+  const launchBtn = document.getElementById('launch-event-btn');
+  const launchModal = document.getElementById('launch-modal');
+  const modalCard = document.getElementById('modal-card');
+  const loadingState = document.getElementById('loading-state');
+  const successState = document.getElementById('success-state');
+  const loadingTitle = document.getElementById('loading-title');
+  const loadingSub = document.getElementById('loading-sub');
+  const loadingBar = document.getElementById('loading-bar');
+  const closeModalBtn = document.getElementById('close-modal-btn');
+  const quickPdfBtn = document.getElementById('quick-pdf-btn');
+
+  function openLaunchSequence() {
+    launchModal.classList.remove('opacity-0', 'pointer-events-none');
+    modalCard.classList.remove('scale-95');
+    modalCard.classList.add('scale-100');
+
+    // Step 1: Initial Escrow
+    loadingBar.style.width = '35%';
+    loadingTitle.textContent = 'Initializing EVARA Escrow Vault...';
+    loadingSub.textContent = 'Locking contract conditions with Villa San Valentino estate...';
+
+    // Step 2: Guest Passes
+    setTimeout(() => {
+      loadingBar.style.width = '70%';
+      loadingTitle.textContent = 'Synthesizing Guest VIP Passes...';
+      loadingSub.textContent = 'Encrypting flight itinerary hooks and dietary preferences...';
+    }, 1200);
+
+    // Step 3: Success State
+    setTimeout(() => {
+      loadingBar.style.width = '100%';
+      loadingState.classList.add('hidden');
+      successState.classList.remove('hidden');
+      successState.classList.add('flex');
+    }, 2400);
+  }
+
+  function closeLaunchSequence() {
+    launchModal.classList.add('opacity-0', 'pointer-events-none');
+    modalCard.classList.remove('scale-100');
+    modalCard.classList.add('scale-95');
+
+    // Reset after transition
+    setTimeout(() => {
+      loadingState.classList.remove('hidden');
+      successState.classList.add('hidden');
+      successState.classList.remove('flex');
+      loadingBar.style.width = '25%';
+    }, 300);
+  }
+
+  if (launchBtn) {
+    launchBtn.addEventListener('click', openLaunchSequence);
+  }
+
+  if (closeModalBtn) {
+    closeModalBtn.addEventListener('click', closeLaunchSequence);
+  }
+
+  if (quickPdfBtn) {
+    quickPdfBtn.addEventListener('click', () => {
+      const origText = quickPdfBtn.innerHTML;
+      quickPdfBtn.innerHTML = '<span class="material-symbols-outlined text-[18px] animate-spin">refresh</span> Exporting...';
+      setTimeout(() => {
+        quickPdfBtn.innerHTML = '<span class="material-symbols-outlined text-[18px] text-[#65836A]">check</span> Dossier Ready!';
+        setTimeout(() => {
+          quickPdfBtn.innerHTML = origText;
+        }, 2000);
+      }, 1000);
+    });
+  }
+</script></main></div></body></html>

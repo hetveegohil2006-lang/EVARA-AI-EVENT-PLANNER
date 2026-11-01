@@ -1,0 +1,111 @@
+/* ==========================================================================
+   EVARA — BUDGET & PAYMENTS SPECIFIC STYLES
+   ========================================================================== */
+
+.budget-reconciliation-bar {
+  background-color: var(--surface-container);
+  border-radius: var(--radius-xl);
+  padding: 1.25rem;
+  border: 1px solid var(--color-champagne);
+  box-shadow: var(--shadow-sm);
+  margin-bottom: var(--space-lg);
+}
+
+.stat-cell {
+  padding: 0.75rem 1rem;
+  text-align: center;
+}
+
+.stat-cell-title {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--outline);
+  display: block;
+}
+
+.stat-cell-value {
+  font-family: var(--font-serif);
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--on-surface);
+  margin-top: 4px;
+  display: block;
+}
+
+.stat-cell-sub {
+  font-size: 11px;
+  color: var(--on-surface-variant);
+  margin-top: 2px;
+  display: block;
+}
+
+/* Expense Table */
+.data-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  text-align: left;
+}
+
+.data-table th {
+  padding: 0.85rem 1rem;
+  background-color: var(--surface-container-high);
+  font-family: var(--font-sans);
+  font-size: 11.5px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--outline);
+  border-bottom: 1px solid var(--color-champagne);
+}
+
+.data-table th:first-child {
+  border-top-left-radius: var(--radius-lg);
+}
+
+.data-table th:last-child {
+  border-top-right-radius: var(--radius-lg);
+}
+
+.data-table td {
+  padding: 1rem;
+  border-bottom: 1px solid rgba(233, 216, 200, 0.4);
+  font-size: 14px;
+  color: var(--on-surface);
+  background-color: var(--surface-container-lowest);
+  transition: background-color var(--transition-fast);
+}
+
+.data-table tr:hover td {
+  background-color: var(--surface-container-low);
+}
+
+.data-table tr:last-child td:first-child {
+  border-bottom-left-radius: var(--radius-lg);
+}
+
+.data-table tr:last-child td:last-child {
+  border-bottom-right-radius: var(--radius-lg);
+}
+
+/* QR Scanner & Generator Card */
+.qr-modal-frame {
+  width: 240px;
+  height: 240px;
+  margin: 0 auto;
+  background-color: white;
+  padding: 16px;
+  border-radius: var(--radius-xl);
+  box-shadow: 0 4px 16px rgba(57, 48, 45, 0.1);
+  border: 1px solid var(--color-champagne);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.qr-modal-frame svg, .qr-modal-frame img {
+  width: 100%;
+  height: 100%;
+}

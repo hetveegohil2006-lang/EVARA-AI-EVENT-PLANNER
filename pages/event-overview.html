@@ -1,0 +1,886 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>Villa San Valentino Tuscan Gala 2025 — Event Overview — EVARA</title>
+  <meta name="description" content="Dedicated command center and concierge telemetry for Villa San Valentino Tuscan Gala 2025."/>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+  
+  <link rel="stylesheet" href="../css/variables.css"/>
+  <link rel="stylesheet" href="../css/global.css"/>
+  <link rel="stylesheet" href="../css/layout.css"/>
+  <link rel="stylesheet" href="../css/components.css"/>
+  <link rel="stylesheet" href="../css/responsive.css"/>
+  <link rel="stylesheet" href="../css/pages/dashboard.css"/>
+  <link rel="stylesheet" href="../css/pages/events.css"/>
+</head>
+<body class="bg-[#F8F4EF]">
+  <!-- Mobile Menu Button -->
+  <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle navigation">
+    <span class="material-symbols-outlined">menu</span>
+  </button>
+  <div class="sidebar-backdrop" id="sidebarBackdrop"></div>
+
+  <!-- FIXED EVENT-SCOPED SIDEBAR -->
+  <aside class="sidebar">
+    <div class="px-md pt-lg pb-sm">
+      <a href="../dashboard.html" class="flex items-center gap-xs text-muted hover:text-primary" style="font-size: 13px; font-weight: 600; text-decoration: none;">
+        <span class="material-symbols-outlined" style="font-size: 16px;">arrow_back</span>
+        <span>Back to All Events</span>
+      </a>
+    </div>
+
+    <!-- Workspace Scope Card -->
+    <div class="px-md pb-sm">
+      <div class="p-sm rounded-lg" style="background: var(--color-champagne-light); border: 1px solid var(--color-champagne);">
+        <span class="text-xs uppercase text-muted font-bold tracking-wider block" style="font-size: 10px;">Workspace Scope</span>
+        <span class="font-bold text-sm truncate block" style="color: var(--color-espresso);">Tuscan Gala 2025</span>
+      </div>
+    </div>
+
+    <div class="sidebar-section-label" style="padding-top: 4px;">Event Navigation</div>
+    <ul class="sidebar-nav">
+      <li class="sidebar-item">
+        <a href="event-overview.html" class="sidebar-link active" data-path="event-overview">
+          <span class="material-symbols-outlined">dashboard</span>
+          <span>Event Overview</span>
+        </a>
+      </li>
+      <li class="sidebar-item">
+        <a href="checklist.html" class="sidebar-link" data-path="checklist">
+          <span class="material-symbols-outlined">checklist</span>
+          <span>Event Checklist</span>
+        </a>
+      </li>
+      <li class="sidebar-item">
+        <a href="guests.html" class="sidebar-link" data-path="guests">
+          <span class="material-symbols-outlined">mark_email_read</span>
+          <span>Guests &amp; Invitations</span>
+        </a>
+      </li>
+      <li class="sidebar-item">
+        <a href="budget.html" class="sidebar-link" data-path="budget">
+          <span class="material-symbols-outlined">account_balance_wallet</span>
+          <span>Budget &amp; Payments</span>
+        </a>
+      </li>
+      <li class="sidebar-item">
+        <a href="vendors.html" class="sidebar-link" data-path="vendors">
+          <span class="material-symbols-outlined">storefront</span>
+          <span>Vendors</span>
+        </a>
+      </li>
+      <li class="sidebar-item">
+        <a href="shopping.html" class="sidebar-link" data-path="shopping">
+          <span class="material-symbols-outlined">shopping_bag</span>
+          <span>Shopping Assistant</span>
+        </a>
+      </li>
+      <li class="sidebar-item">
+        <a href="checklist.html" class="sidebar-link" data-path="timeline">
+          <span class="material-symbols-outlined">calendar_today</span>
+          <span>Timeline</span>
+        </a>
+      </li>
+      <li class="sidebar-item">
+        <a href="team-chat.html" class="sidebar-link" data-path="team">
+          <span class="material-symbols-outlined">groups</span>
+          <span>Team &amp; Volunteers</span>
+        </a>
+      </li>
+      <li class="sidebar-item">
+        <a href="team-chat.html" class="sidebar-link" data-path="chat">
+          <span class="material-symbols-outlined">forum</span>
+          <span>Event Chat</span>
+        </a>
+      </li>
+      <li class="sidebar-item">
+        <a href="reports.html" class="sidebar-link" data-path="reports">
+          <span class="material-symbols-outlined">lab_profile</span>
+          <span>Reports &amp; Exports</span>
+        </a>
+      </li>
+    </ul>
+
+    <div class="sidebar-footer">
+      <ul class="sidebar-nav">
+        <li class="sidebar-item">
+          <a href="profile-settings.html" class="sidebar-link" data-path="settings">
+            <span class="material-symbols-outlined">settings</span>
+            <span>Event Settings</span>
+          </a>
+        </li>
+      </ul>
+      <div class="concierge-status">
+        <span class="status-dot"></span>
+        <span class="status-text">Concierge AI v2.4 Active</span>
+      </div>
+    </div>
+  </aside>
+
+  <!-- MAIN CONTENT WRAPPER -->
+  <div class="main-wrapper">
+    <!-- BLURRED HEADER WITH EVENT SCOPE DROPDOWN -->
+    <header class="top-header">
+      <div class="flex items-center gap-md">
+        <div class="flex items-center gap-xs">
+          <img src="../assets/icons/evara-logo.svg" alt="EVARA Logo" style="height: 28px; width: auto;"/>
+          <div class="flex flex-col">
+            <span class="font-serif" style="font-weight: 700; color: var(--color-espresso); line-height: 1; font-size: 18px;">EVARA</span>
+            <span class="text-muted uppercase tracking-widest" style="font-size: 9px; font-weight: 600;">Private Concierge</span>
+          </div>
+        </div>
+
+        <div style="height: 24px; width: 1px; background: var(--color-champagne);" class="hidden sm:block"></div>
+
+        <div class="flex items-center gap-xs px-sm py-xs rounded-lg" style="background: var(--color-champagne-light); border: 1px solid var(--color-champagne);">
+          <div class="flex flex-col">
+            <div class="flex items-center gap-xs">
+              <span class="font-bold text-sm" style="color: var(--color-espresso);">Villa San Valentino Tuscan Gala 2025</span>
+              <span class="material-symbols-outlined" style="font-size: 16px; color: var(--color-muted);">expand_more</span>
+            </div>
+            <span class="text-muted text-xs">Oct 24–27, 2025</span>
+          </div>
+          <span class="badge badge-accent" style="font-size: 10px; margin-left: 6px;">Planning Active</span>
+        </div>
+      </div>
+
+      <div class="header-search hidden md:block" style="max-width: 320px;">
+        <span class="material-symbols-outlined search-icon">search</span>
+        <input type="text" class="search-input" placeholder="Search tasks, guests, vendors, ledger..."/>
+      </div>
+
+      <div class="header-actions">
+        <div class="flex items-center px-xs py-1 rounded bg-surface-container text-xs font-semibold text-muted">
+          <span class="material-symbols-outlined mr-1" style="font-size: 15px;">payments</span>
+          <span>INR (₹)</span>
+        </div>
+        <button class="icon-btn" aria-label="Notifications" onclick="window.location.href='notifications.html'">
+          <span class="material-symbols-outlined">notifications</span>
+          <span class="notification-badge"></span>
+        </button>
+        <div class="profile-pill" onclick="window.location.href='profile-settings.html'">
+          <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCblbJh5I878bB-SpKIAcY8gMe7Y6eDKxYbJLsCd9KulLzbHxlhTUyWD5y9ceH4RVYJjOwQwtyWCKA1CYDUwJB_eJeVVu7wvrhkUuvh1Pyxt159059DQaD3CoEXwd7iI0KGXa-OjhGk0K7YVTDOh5o9-gXmjcddhmp-tkv3nw1ee6SCxaERRbWfk-HgXJU9movKZDcCDa0ptrrt2gazDwN_0Sc6KueuTqtYp3fikBU" alt="Eleanor Vance" class="profile-avatar"/>
+          <div class="profile-info hidden xl:block">
+            <span class="profile-name">Eleanor Vance</span>
+            <span class="profile-role">Principal Host</span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- MAIN BODY -->
+    <main class="main-content">
+      <!-- 1. EVENT HERO BANNER -->
+      <section class="section" style="padding-top: var(--space-md); padding-bottom: var(--space-md);">
+        <div class="relative w-full rounded-2xl overflow-hidden shadow-md" style="height: 400px; background: var(--color-espresso); position: relative;">
+          <img src="https://lh3.googleusercontent.com/aida/AEtjO1UKPjxXQ36u-3fZ_xMpJolfuPHmL0oFqfip-AmFeUU2dZeq9gpTkIYwquIZIIZ1WTJZzaSEEDBDU61lk6KkBdq3CvgoK1JAqzc8oqXZSPbGF5Yjx65Q6ZZkH4wwPOKyWYL43MBfr4Mx6wT5yzZDyv7Qz2M0qZiFWGbR_cFigogoBqCgaMc7TtL2SFCIEaVsHO4O5zmLC97i9iPDwwvC6Nj6dWvyXTxr7ppsZ3ZozJG3" alt="Villa San Valentino Cover" style="width: 100%; height: 100%; object-fit: cover; object-position: center;"/>
+          <div style="position: absolute; inset: 0; background: linear-gradient(to top, rgba(34,26,23,0.92) 0%, rgba(34,26,23,0.45) 50%, rgba(34,26,23,0.2) 100%);"></div>
+
+          <!-- Top Action Ribbon -->
+          <div style="position: absolute; top: 20px; left: 24px; right: 24px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px;">
+            <div class="flex items-center gap-xs px-sm py-1 rounded-full shadow-sm" style="background: rgba(255,255,255,0.88); backdrop-filter: blur(8px);">
+              <span class="status-dot" style="background: var(--color-terracotta); animation: pulse 2s infinite;"></span>
+              <span class="text-xs uppercase tracking-widest font-bold" style="color: var(--color-espresso);">Tuscan Portfolio • Private Curation</span>
+            </div>
+            <div class="flex items-center gap-xs">
+              <button class="btn btn-secondary" style="background: rgba(255,255,255,0.9); font-size: 12px; padding: 6px 12px;" onclick="App.copyToClipboard('https://evara.luxury/c/valentino-gala-2025', 'VIP Passcode Link copied!')">
+                <span class="material-symbols-outlined" style="font-size: 16px;">ios_share</span>
+                <span>Share Passcode Link</span>
+              </button>
+              <a href="invitations.html" class="btn btn-secondary" style="background: rgba(255,255,255,0.9); font-size: 12px; padding: 6px 12px;">
+                <span class="material-symbols-outlined" style="font-size: 16px;">visibility</span>
+                <span>Preview Invitation</span>
+              </a>
+              <button class="icon-btn" style="background: rgba(255,255,255,0.9); width: 34px; height: 34px;">
+                <span class="material-symbols-outlined" style="font-size: 18px;">more_horiz</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Hero Bottom Details -->
+          <div style="position: absolute; bottom: 24px; left: 24px; right: 24px; display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 16px;">
+            <div class="flex flex-col gap-xs" style="max-width: 800px; color: #fff;">
+              <div class="flex items-center gap-xs">
+                <span class="badge badge-accent" style="font-size: 11px;">Bespoke Wedding &amp; Gala</span>
+                <span class="badge" style="background: rgba(255,255,255,0.9); color: var(--color-espresso); font-weight: 600; font-size: 11px;">
+                  <span class="material-symbols-outlined" style="font-size: 14px; color: var(--color-gold);">verified</span>
+                  Planning • 68% Ready
+                </span>
+              </div>
+              <h1 class="font-serif" style="font-size: 38px; color: #fff; margin: 4px 0 6px 0; line-height: 1.15;">Villa San Valentino Tuscan Gala 2025</h1>
+              <div class="flex items-center flex-wrap gap-md" style="font-size: 13px; color: rgba(255,255,255,0.88);">
+                <span class="flex items-center gap-xs">
+                  <span class="material-symbols-outlined" style="font-size: 16px;">calendar_month</span>
+                  Oct 24–27, 2025 (4 Days)
+                </span>
+                <span>•</span>
+                <span class="flex items-center gap-xs">
+                  <span class="material-symbols-outlined" style="font-size: 16px;">location_on</span>
+                  Villa San Valentino, Chianti Hills, Tuscany, Italy
+                </span>
+                <span>•</span>
+                <span class="flex items-center gap-xs">
+                  <span class="material-symbols-outlined" style="font-size: 16px;">group</span>
+                  34 Confirmed Guests
+                </span>
+              </div>
+            </div>
+
+            <div class="flex items-center gap-xs">
+              <a href="event-details.html" class="btn btn-secondary" style="background: rgba(255,255,255,0.95); font-size: 13px;">
+                <span class="material-symbols-outlined" style="font-size: 18px;">edit_note</span>
+                <span>Edit Event</span>
+              </a>
+              <a href="checklist.html" class="btn btn-primary" style="font-size: 13px;">
+                <span class="material-symbols-outlined" style="font-size: 18px;">auto_awesome</span>
+                <span>Concierge Run-Sheet</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 2. WELCOME EDITORIAL HEADER -->
+      <section class="section" style="padding-top: 0; padding-bottom: var(--space-md);">
+        <div class="flex items-end justify-between flex-wrap gap-sm">
+          <div>
+            <span class="section-tag">Executive Dashboard</span>
+            <h2 class="font-serif" style="font-size: 28px; margin: 2px 0 4px 0;">Your event, beautifully organized.</h2>
+            <p class="text-muted text-sm" style="margin: 0;">Everything you need to plan, coordinate, and manage the Tuscan Gala in one unified workspace.</p>
+          </div>
+          <div class="flex items-center gap-xs px-sm py-xs rounded-lg shadow-sm" style="background: var(--color-champagne-light); border: 1px solid var(--color-champagne); font-size: 12px;">
+            <span class="material-symbols-outlined text-primary" style="font-size: 18px;">lock_clock</span>
+            <span>Curation Vault synced 4 mins ago • Escrow Active</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- 3. KEY METRICS MATRIX (6-Card Strip) -->
+      <section class="section" style="padding-top: 0; padding-bottom: var(--space-lg);">
+        <div class="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-6 gap-md">
+          <div class="card p-sm flex flex-col justify-between shadow-sm">
+            <div class="flex items-center justify-between text-muted text-xs mb-xs">
+              <span class="font-bold uppercase">Confirmed</span>
+              <span class="material-symbols-outlined text-success" style="font-size: 18px;">check_circle</span>
+            </div>
+            <div>
+              <div class="font-serif" style="font-size: 22px; font-weight: 700;">34 / 36</div>
+              <p class="text-muted text-xs mt-xs" style="margin: 0;">94% capacity (+6 guests)</p>
+            </div>
+          </div>
+
+          <div class="card p-sm flex flex-col justify-between shadow-sm">
+            <div class="flex items-center justify-between text-muted text-xs mb-xs">
+              <span class="font-bold uppercase">Invitations</span>
+              <span class="material-symbols-outlined text-primary" style="font-size: 18px;">mark_email_read</span>
+            </div>
+            <div>
+              <div class="font-serif" style="font-size: 22px; font-weight: 700;">42 Sent</div>
+              <p class="text-muted text-xs mt-xs" style="margin: 0;">38 opened / responded</p>
+            </div>
+          </div>
+
+          <div class="card p-sm flex flex-col justify-between shadow-sm">
+            <div class="flex items-center justify-between text-muted text-xs mb-xs">
+              <span class="font-bold uppercase">Pending RSVPs</span>
+              <span class="material-symbols-outlined" style="font-size: 18px; color: var(--color-terracotta);">hourglass_top</span>
+            </div>
+            <div>
+              <div class="font-serif" style="font-size: 22px; font-weight: 700; color: var(--color-terracotta);">4 Pending</div>
+              <p class="text-muted text-xs mt-xs" style="margin: 0;">Gentle nudge queued</p>
+            </div>
+          </div>
+
+          <div class="card p-sm flex flex-col justify-between shadow-sm">
+            <div class="flex items-center justify-between text-muted text-xs mb-xs">
+              <span class="font-bold uppercase">Planned Budget</span>
+              <span class="material-symbols-outlined text-primary" style="font-size: 18px;">account_balance_wallet</span>
+            </div>
+            <div>
+              <div class="font-serif" style="font-size: 22px; font-weight: 700;">₹15,00,000</div>
+              <p class="text-muted text-xs mt-xs" style="margin: 0;">Target cap locked</p>
+            </div>
+          </div>
+
+          <div class="card p-sm flex flex-col justify-between shadow-sm">
+            <div class="flex items-center justify-between text-muted text-xs mb-xs">
+              <span class="font-bold uppercase">Escrow Vault</span>
+              <span class="material-symbols-outlined text-success" style="font-size: 18px;">verified_user</span>
+            </div>
+            <div>
+              <div class="font-serif" style="font-size: 22px; font-weight: 700;">₹10,83,316</div>
+              <p class="text-muted text-xs mt-xs" style="margin: 0;">72.2% across 26 guests</p>
+            </div>
+          </div>
+
+          <div class="card p-sm flex flex-col justify-between shadow-sm">
+            <div class="flex items-center justify-between text-muted text-xs mb-xs">
+              <span class="font-bold uppercase">Task Engine</span>
+              <span class="material-symbols-outlined text-primary" style="font-size: 18px;">task_alt</span>
+            </div>
+            <div>
+              <div class="font-serif" style="font-size: 22px; font-weight: 700;">18 / 26 Done</div>
+              <p class="text-muted text-xs mt-xs" style="margin: 0;">69% progress velocity</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 4. YOUR PLANNING PROGRESS (Visual tracker with 6 category cards) -->
+      <section class="section" style="padding-top: 0; padding-bottom: var(--space-lg);">
+        <div class="card p-lg shadow-sm">
+          <div class="flex items-center justify-between flex-wrap gap-sm mb-md">
+            <div>
+              <div class="flex items-center gap-xs">
+                <h3 class="font-serif" style="font-size: 20px; margin: 0;">Your planning progress</h3>
+                <span class="badge badge-accent" style="font-size: 11px;">69% Completed</span>
+              </div>
+              <p class="text-muted text-xs mt-xs" style="margin: 0;">Track milestones from initial monogram to departure shuttles.</p>
+            </div>
+            <div class="flex items-center gap-sm">
+              <div class="progress-bar-bg" style="width: 200px; height: 10px;">
+                <div class="progress-bar-fill" style="width: 69%; background: var(--color-espresso);"></div>
+              </div>
+              <strong style="font-size: 13px;">18 / 26</strong>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-md">
+            <div class="card p-sm bg-surface flex items-start justify-between">
+              <div>
+                <div class="flex items-center gap-xs mb-xs">
+                  <span class="material-symbols-outlined text-success" style="font-size: 18px;">verified</span>
+                  <strong>Event Basics</strong>
+                </div>
+                <p class="text-muted text-xs" style="margin: 0 0 6px 0;">Name, Dates, Privacy, Monogram</p>
+                <span class="text-success text-xs font-bold">4 / 4 Completed ✓</span>
+              </div>
+              <a href="create-event.html" class="btn btn-secondary" style="font-size: 11px; padding: 4px 10px;">Review</a>
+            </div>
+
+            <div class="card p-sm bg-surface flex items-start justify-between">
+              <div>
+                <div class="flex items-center gap-xs mb-xs">
+                  <span class="material-symbols-outlined text-success" style="font-size: 18px;">villa</span>
+                  <strong>Venue &amp; Logistics</strong>
+                </div>
+                <p class="text-muted text-xs" style="margin: 0 0 6px 0;">Estate Buyout, FLR Shuttles, Helipad</p>
+                <span class="text-success text-xs font-bold">5 / 5 Completed ✓</span>
+              </div>
+              <a href="event-details.html" class="btn btn-secondary" style="font-size: 11px; padding: 4px 10px;">Review</a>
+            </div>
+
+            <div class="card p-sm bg-surface flex items-start justify-between">
+              <div>
+                <div class="flex items-center gap-xs mb-xs">
+                  <span class="material-symbols-outlined text-primary" style="font-size: 18px;">groups</span>
+                  <strong>Guests &amp; Invitations</strong>
+                </div>
+                <p class="text-muted text-xs" style="margin: 0 0 6px 0;">Dietary Matrix, Seating Chart</p>
+                <span class="text-primary text-xs font-bold">4 / 5 Tasks • 1 pending</span>
+              </div>
+              <a href="guests.html" class="btn btn-primary" style="font-size: 11px; padding: 4px 10px;">Continue</a>
+            </div>
+
+            <div class="card p-sm bg-surface flex items-start justify-between">
+              <div>
+                <div class="flex items-center gap-xs mb-xs">
+                  <span class="material-symbols-outlined" style="font-size: 18px; color: var(--color-terracotta);">savings</span>
+                  <strong>Budget &amp; Escrow</strong>
+                </div>
+                <p class="text-muted text-xs" style="margin: 0 0 6px 0;">Target Locked, Escrow Funded 72%</p>
+                <span class="text-xs font-bold" style="color: var(--color-terracotta);">3 / 4 Tasks • Active</span>
+              </div>
+              <a href="budget.html" class="btn btn-secondary" style="font-size: 11px; padding: 4px 10px;">Continue</a>
+            </div>
+
+            <div class="card p-sm bg-surface flex items-start justify-between">
+              <div>
+                <div class="flex items-center gap-xs mb-xs">
+                  <span class="material-symbols-outlined text-primary" style="font-size: 18px;">storefront</span>
+                  <strong>Vendors &amp; Purchases</strong>
+                </div>
+                <p class="text-muted text-xs" style="margin: 0 0 6px 0;">Sommelier confirmed, Lighting pending</p>
+                <span class="text-muted text-xs font-bold">2 / 5 Tasks • In Progress</span>
+              </div>
+              <a href="vendors.html" class="btn btn-secondary" style="font-size: 11px; padding: 4px 10px;">Manage</a>
+            </div>
+
+            <div class="card p-sm bg-surface flex items-start justify-between">
+              <div>
+                <div class="flex items-center gap-xs mb-xs">
+                  <span class="material-symbols-outlined text-muted" style="font-size: 18px;">celebration</span>
+                  <strong>Final Preparations</strong>
+                </div>
+                <p class="text-muted text-xs" style="margin: 0 0 6px 0;">Rehearsal run, Welcome packages</p>
+                <span class="text-muted text-xs font-bold">0 / 3 Tasks • Upcoming</span>
+              </div>
+              <span class="badge" style="font-size: 10px;">Queued</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 5. TWO-COLUMN MAIN WORKSPACE AREA -->
+      <section class="section" style="padding-top: 0; padding-bottom: var(--space-xl);">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-lg items-start">
+          <!-- LEFT COLUMN (8 cols) -->
+          <div class="lg:col-span-8 flex flex-col gap-lg">
+            <!-- A. UPCOMING TIMELINE & MILESTONES -->
+            <div class="card p-lg shadow-sm">
+              <div class="flex items-center justify-between mb-md">
+                <div>
+                  <span class="section-tag">Critical Path</span>
+                  <h3 class="font-serif" style="font-size: 20px; margin: 2px 0 0 0;">Upcoming Timeline &amp; Milestones</h3>
+                </div>
+                <a href="checklist.html" class="flex items-center gap-xs text-primary text-xs font-bold uppercase tracking-wider" style="text-decoration: none;">
+                  <span>Calendar View</span>
+                  <span class="material-symbols-outlined" style="font-size: 16px;">open_in_new</span>
+                </a>
+              </div>
+
+              <div class="flex flex-col gap-sm">
+                <!-- Task 1 -->
+                <div class="card p-sm bg-surface flex items-start gap-sm task-card">
+                  <input type="checkbox" class="task-checkbox cursor-pointer" style="margin-top: 3px;"/>
+                  <div class="flex-1">
+                    <div class="flex items-center justify-between flex-wrap gap-xs mb-xs">
+                      <strong class="task-title" style="font-size: 14px;">Approve final 120-meter festoon string canopy &amp; terracotta vessels</strong>
+                      <span class="badge badge-accent" style="font-size: 10px; background: #ffe0d1; color: var(--color-espresso);">High Priority</span>
+                    </div>
+                    <div class="flex items-center gap-sm text-xs text-muted">
+                      <span class="flex items-center gap-xs"><span class="material-symbols-outlined" style="font-size: 14px;">schedule</span>Oct 12, 2025</span>
+                      <span>•</span>
+                      <span class="flex items-center gap-xs"><span class="material-symbols-outlined" style="font-size: 14px;">person</span>Marco Bellini (Décor Lead)</span>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Task 2 -->
+                <div class="card p-sm bg-surface flex items-start gap-sm task-card">
+                  <input type="checkbox" class="task-checkbox cursor-pointer" style="margin-top: 3px;"/>
+                  <div class="flex-1">
+                    <div class="flex items-center justify-between flex-wrap gap-xs mb-xs">
+                      <strong class="task-title" style="font-size: 14px;">Lock 34 guest dietary requirements with Chef Fabrizio</strong>
+                      <span class="badge badge-accent" style="font-size: 10px;">Critical</span>
+                    </div>
+                    <div class="flex items-center gap-sm text-xs text-muted">
+                      <span class="flex items-center gap-xs"><span class="material-symbols-outlined" style="font-size: 14px;">schedule</span>Oct 15, 2025</span>
+                      <span>•</span>
+                      <span class="flex items-center gap-xs"><span class="material-symbols-outlined" style="font-size: 14px;">smart_toy</span>Aria Concierge (Automated)</span>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Task 3 -->
+                <div class="card p-sm bg-surface flex items-start gap-sm task-card">
+                  <input type="checkbox" class="task-checkbox cursor-pointer" style="margin-top: 3px;"/>
+                  <div class="flex-1">
+                    <div class="flex items-center justify-between flex-wrap gap-xs mb-xs">
+                      <strong class="task-title" style="font-size: 14px;">Consolidate 14 FLR inbound flight transfers into 4 Mercedes Sprinters</strong>
+                      <span class="badge" style="font-size: 10px;">Medium</span>
+                    </div>
+                    <div class="flex items-center gap-sm text-xs text-muted">
+                      <span class="flex items-center gap-xs"><span class="material-symbols-outlined" style="font-size: 14px;">schedule</span>Oct 18, 2025</span>
+                      <span>•</span>
+                      <span class="flex items-center gap-xs"><span class="material-symbols-outlined" style="font-size: 14px;">directions_car</span>Matteo Rossi (Logistics Lead)</span>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Task 4 -->
+                <div class="card p-sm bg-surface flex items-start gap-sm task-card">
+                  <input type="checkbox" class="task-checkbox cursor-pointer" style="margin-top: 3px;"/>
+                  <div class="flex-1">
+                    <div class="flex items-center justify-between flex-wrap gap-xs mb-xs">
+                      <strong class="task-title" style="font-size: 14px;">Conduct acoustic and sound ordinance dry run (02:00 AM limit)</strong>
+                      <span class="badge" style="font-size: 10px;">Normal</span>
+                    </div>
+                    <div class="flex items-center gap-sm text-xs text-muted">
+                      <span class="flex items-center gap-xs"><span class="material-symbols-outlined" style="font-size: 14px;">schedule</span>Oct 22, 2025</span>
+                      <span>•</span>
+                      <span class="flex items-center gap-xs"><span class="material-symbols-outlined" style="font-size: 14px;">volume_up</span>Villa Production Team</span>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Milestone Kickoff -->
+                <div class="card p-sm flex items-start gap-sm" style="background: var(--color-champagne-light); border: 1px solid var(--color-champagne);">
+                  <span class="material-symbols-outlined text-primary" style="font-size: 20px; margin-top: 2px;">flag</span>
+                  <div class="flex-1">
+                    <div class="flex items-center justify-between flex-wrap gap-xs mb-xs">
+                      <strong style="font-size: 14px; color: var(--color-espresso);">Day 1 Kickoff: Lawn Spritz &amp; Cypress Terrace Canapés</strong>
+                      <span class="badge badge-primary" style="font-size: 10px;">Milestone Launch</span>
+                    </div>
+                    <div class="flex items-center gap-sm text-xs text-muted">
+                      <span class="flex items-center gap-xs"><span class="material-symbols-outlined" style="font-size: 14px;">schedule</span>Oct 24, 2025 • 17:30 CET</span>
+                      <span>•</span>
+                      <span class="flex items-center gap-xs"><span class="material-symbols-outlined" style="font-size: 14px;">person</span>Eleanor Vance (Host)</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="pt-sm flex justify-end">
+                <a href="checklist.html" class="flex items-center gap-xs text-primary text-xs font-bold uppercase tracking-wider" style="text-decoration: none;">
+                  <span>View Full Timeline (14 more items)</span>
+                  <span class="material-symbols-outlined" style="font-size: 16px;">arrow_forward</span>
+                </a>
+              </div>
+            </div>
+
+            <!-- B. GUEST ACTIVITY & ESCROW FEED -->
+            <div class="card p-lg shadow-sm">
+              <div class="flex items-center justify-between flex-wrap gap-sm mb-md">
+                <div>
+                  <span class="section-tag">Live Stream</span>
+                  <h3 class="font-serif" style="font-size: 20px; margin: 2px 0 0 0;">Guest Activity &amp; Escrow Updates</h3>
+                </div>
+                <div class="flex items-center gap-xs text-xs text-muted font-bold">
+                  <span class="status-dot" style="background: var(--color-terracotta);"></span>
+                  <span>Real-Time Sync</span>
+                </div>
+              </div>
+
+              <!-- Breakdown Pill Row -->
+              <div class="flex items-center flex-wrap gap-xs p-xs rounded-lg mb-md" style="background: var(--color-champagne-light); font-size: 12px;">
+                <span class="badge" style="background: #fff;">42 Invited</span>
+                <span class="badge" style="background: #fff;">34 Confirmed</span>
+                <span class="badge badge-accent">4 Pending</span>
+                <span class="badge" style="background: #fff; color: var(--color-muted);">2 Declined</span>
+                <span class="badge" style="background: #fff; color: var(--color-espresso); font-weight: 700;">26 Paid into Escrow</span>
+                <span class="badge" style="background: #fff;">10 Split Pending</span>
+              </div>
+
+              <!-- Activity Feed List -->
+              <div class="flex flex-col gap-md">
+                <div class="flex items-start gap-sm">
+                  <div class="feature-icon" style="width: 34px; height: 34px; background: var(--color-champagne); color: var(--color-espresso); flex-shrink: 0;">
+                    <span class="material-symbols-outlined" style="font-size: 18px;">payments</span>
+                  </div>
+                  <div class="flex-1">
+                    <div class="flex items-center justify-between">
+                      <strong style="font-size: 14px;">Claire Moreau confirmed attendance (+1 guest)</strong>
+                      <span class="text-muted text-xs">12 mins ago</span>
+                    </div>
+                    <p class="text-muted text-xs mt-xs" style="margin: 0;">Contributed ₹41,666 to Escrow via Bank Wire • Dietary: Pescatarian</p>
+                  </div>
+                </div>
+
+                <div class="flex items-start gap-sm">
+                  <div class="feature-icon" style="width: 34px; height: 34px; background: var(--color-champagne-light); color: var(--color-muted); flex-shrink: 0;">
+                    <span class="material-symbols-outlined" style="font-size: 18px;">visibility</span>
+                  </div>
+                  <div class="flex-1">
+                    <div class="flex items-center justify-between">
+                      <strong style="font-size: 14px;">Marcus Thorne opened WhatsApp invitation link</strong>
+                      <span class="text-muted text-xs">1 hour ago</span>
+                    </div>
+                    <p class="text-muted text-xs mt-xs" style="margin: 0;">Viewed villa accommodation brochure and flight guidance schedule.</p>
+                  </div>
+                </div>
+
+                <div class="flex items-start gap-sm">
+                  <div class="feature-icon" style="width: 34px; height: 34px; background: var(--color-champagne-light); color: var(--color-terracotta); flex-shrink: 0;">
+                    <span class="material-symbols-outlined" style="font-size: 18px;">restaurant</span>
+                  </div>
+                  <div class="flex-1">
+                    <div class="flex items-center justify-between">
+                      <strong style="font-size: 14px;">Julian Sterling submitted dietary profile</strong>
+                      <span class="text-muted text-xs">3 hours ago</span>
+                    </div>
+                    <p class="text-muted text-xs mt-xs" style="margin: 0;">Requested Gluten-free banquet seating. Note routed directly to Chef Fabrizio.</p>
+                  </div>
+                </div>
+
+                <div class="flex items-start gap-sm">
+                  <div class="feature-icon" style="width: 34px; height: 34px; background: var(--color-espresso); color: #fff; flex-shrink: 0;">
+                    <span class="material-symbols-outlined" style="font-size: 18px;">auto_awesome</span>
+                  </div>
+                  <div class="flex-1">
+                    <div class="flex items-center justify-between">
+                      <strong style="font-size: 14px;">Aria Concierge automated reminder dispatched</strong>
+                      <span class="text-muted text-xs">Yesterday</span>
+                    </div>
+                    <p class="text-muted text-xs mt-xs" style="margin: 0;">Sent 4 gentle RSVP reminder notes via WhatsApp protocol.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="pt-md">
+                <a href="guests.html" class="btn btn-secondary w-full justify-center" style="font-size: 13px;">
+                  <span class="material-symbols-outlined" style="font-size: 18px;">table_bar</span>
+                  <span>Manage All Guests &amp; Table Assignments</span>
+                </a>
+              </div>
+            </div>
+
+            <!-- C. CONCIERGE QUICK ACTIONS -->
+            <div>
+              <h3 class="font-serif" style="font-size: 20px; margin: 0 0 4px 0;">Concierge Quick Actions</h3>
+              <p class="text-muted text-xs" style="margin: 0 0 12px 0;">Execute core curation actions with single-click precision.</p>
+
+              <div class="grid grid-cols-2 sm:grid-cols-3 gap-md">
+                <a href="guests.html" class="card p-md text-decoration-none shadow-sm hover:shadow-md" style="color: inherit;">
+                  <div class="feature-icon mb-xs" style="background: var(--color-champagne-light); color: var(--color-espresso);">
+                    <span class="material-symbols-outlined">person_add</span>
+                  </div>
+                  <strong style="font-size: 14px; display: block;">Invite Guests</strong>
+                  <span class="text-muted text-xs">Add manually or CSV</span>
+                </a>
+
+                <a href="checklist.html" class="card p-md text-decoration-none shadow-sm hover:shadow-md" style="color: inherit;">
+                  <div class="feature-icon mb-xs" style="background: var(--color-champagne-light); color: var(--color-terracotta);">
+                    <span class="material-symbols-outlined">add_task</span>
+                  </div>
+                  <strong style="font-size: 14px; display: block;">Add a Task</strong>
+                  <span class="text-muted text-xs">Assign to team or Aria</span>
+                </a>
+
+                <a href="vendors.html" class="card p-md text-decoration-none shadow-sm hover:shadow-md" style="color: inherit;">
+                  <div class="feature-icon mb-xs" style="background: var(--color-champagne-light); color: var(--color-gold);">
+                    <span class="material-symbols-outlined">storefront</span>
+                  </div>
+                  <strong style="font-size: 14px; display: block;">Find Vendors</strong>
+                  <span class="text-muted text-xs">Scout Chianti florists</span>
+                </a>
+
+                <a href="budget.html" class="card p-md text-decoration-none shadow-sm hover:shadow-md" style="color: inherit;">
+                  <div class="feature-icon mb-xs" style="background: var(--color-champagne-light); color: var(--color-espresso);">
+                    <span class="material-symbols-outlined">account_balance_wallet</span>
+                  </div>
+                  <strong style="font-size: 14px; display: block;">Manage Budget</strong>
+                  <span class="text-muted text-xs">Escrow releases</span>
+                </a>
+
+                <a href="shopping.html" class="card p-md text-decoration-none shadow-sm hover:shadow-md" style="color: inherit;">
+                  <div class="feature-icon mb-xs" style="background: var(--color-champagne-light); color: var(--color-terracotta);">
+                    <span class="material-symbols-outlined">shopping_bag</span>
+                  </div>
+                  <strong style="font-size: 14px; display: block;">Shopping List</strong>
+                  <span class="text-muted text-xs">Stationery &amp; gifts</span>
+                </a>
+
+                <a href="reports.html" class="card p-md text-decoration-none shadow-sm hover:shadow-md" style="color: inherit;">
+                  <div class="feature-icon mb-xs" style="background: var(--color-champagne-light); color: var(--color-gold);">
+                    <span class="material-symbols-outlined">picture_as_pdf</span>
+                  </div>
+                  <strong style="font-size: 14px; display: block;">Event Dossier</strong>
+                  <span class="text-muted text-xs">Export high-res PDF</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- RIGHT COLUMN (4 cols) -->
+          <div class="lg:col-span-4 flex flex-col gap-lg">
+            <!-- A. AI CONCIERGE WIDGET -->
+            <div class="card p-lg shadow-sm relative overflow-hidden" style="background: linear-gradient(135deg, var(--color-champagne-light) 0%, #fff 100%); border: 1px solid var(--color-champagne);">
+              <div class="flex items-center justify-between mb-md">
+                <div class="flex items-center gap-xs">
+                  <div class="feature-icon" style="background: var(--color-espresso); color: #fff; width: 36px; height: 36px;">
+                    <span class="material-symbols-outlined" style="font-size: 20px;">auto_awesome</span>
+                  </div>
+                  <div>
+                    <strong style="font-size: 15px; display: block;">Aria Concierge</strong>
+                    <span class="text-muted text-xs">Private AI Strategist</span>
+                  </div>
+                </div>
+                <span class="badge badge-accent" style="font-size: 10px;">Active</span>
+              </div>
+
+              <!-- Speech Bubble -->
+              <div class="card p-sm bg-surface mb-md shadow-sm">
+                <p class="font-serif italic text-xs" style="margin: 0; line-height: 1.6; color: var(--color-espresso);">
+                  “Hello Eleanor! I'm monitoring your Tuscan Gala telemetry. Your escrow vault is at <strong style="color: var(--color-espresso);">72.2%</strong>, and 4 guests have pending RSVPs. What would you like to coordinate today?”
+                </p>
+              </div>
+
+              <!-- Suggested Prompts -->
+              <div class="flex flex-col gap-xs mb-md">
+                <span class="text-xs uppercase text-muted font-bold tracking-wider">Suggested Prompts</span>
+                <button class="btn btn-secondary text-left w-full justify-between" style="font-size: 11px; padding: 6px 10px; font-weight: normal;" onclick="App.toast('Drafting personalized WhatsApp nudge for 4 pending guests...', 'auto_awesome')">
+                  <span>Draft WhatsApp nudge for 4 pending guests</span>
+                  <span class="material-symbols-outlined" style="font-size: 14px;">arrow_forward</span>
+                </button>
+                <button class="btn btn-secondary text-left w-full justify-between" style="font-size: 11px; padding: 6px 10px; font-weight: normal;" onclick="App.toast('Reviewing escrow milestone schedule against contract deliverable dates...', 'savings')">
+                  <span>Review event budget &amp; escrow milestones</span>
+                  <span class="material-symbols-outlined" style="font-size: 14px;">arrow_forward</span>
+                </button>
+                <button class="btn btn-secondary text-left w-full justify-between" style="font-size: 11px; padding: 6px 10px; font-weight: normal;" onclick="App.toast('Curating top acoustic cello & guitar duets in Chianti...', 'music_note')">
+                  <span>Suggest Tuscan acoustic musicians for Oct 24</span>
+                  <span class="material-symbols-outlined" style="font-size: 14px;">arrow_forward</span>
+                </button>
+              </div>
+
+              <!-- Input Box -->
+              <div class="relative">
+                <input type="text" class="search-input w-full" id="ariaQuickInput" placeholder="Ask Aria anything regarding Villa San Valentino..." style="font-size: 12px; padding-right: 64px;"/>
+                <div style="position: absolute; right: 6px; top: 50%; transform: translateY(-50%); display: flex; align-items: center; gap: 4px;">
+                  <button class="icon-btn" style="width: 26px; height: 26px;" onclick="App.toast('Microphone listening...', 'mic')">
+                    <span class="material-symbols-outlined" style="font-size: 16px;">mic</span>
+                  </button>
+                  <button class="btn btn-primary" style="padding: 4px 8px; font-size: 11px;" onclick="const val = document.getElementById('ariaQuickInput').value; if(val){ App.toast('Aria: Consulting Villa telemetry for «' + val + '»', 'auto_awesome'); document.getElementById('ariaQuickInput').value = ''; }">
+                    Ask
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- B. BUDGET ALLOCATION SUMMARY -->
+            <div class="card p-lg shadow-sm">
+              <div class="flex items-center justify-between mb-md">
+                <div>
+                  <span class="section-tag">Ledger &amp; Escrow</span>
+                  <h3 class="font-serif" style="font-size: 18px; margin: 2px 0 0 0;">Budget Allocation</h3>
+                </div>
+                <strong class="font-serif" style="font-size: 18px; color: var(--color-espresso);">₹15,00,000</strong>
+              </div>
+
+              <!-- Progress bar -->
+              <div class="progress-bar-bg mb-xs" style="height: 10px; display: flex; overflow: hidden;">
+                <div style="width: 45%; background: var(--color-espresso);" title="Venue: 45%"></div>
+                <div style="width: 25%; background: var(--color-terracotta);" title="Catering: 25%"></div>
+                <div style="width: 18%; background: var(--color-gold);" title="Decor: 18%"></div>
+                <div style="width: 12%; background: var(--color-mocha);" title="Logistics: 12%"></div>
+              </div>
+              <div class="flex justify-between text-muted text-xs mb-md">
+                <span>Collected: ₹10,83,316 (72.2%)</span>
+                <span>Split Pending: ₹4,16,684</span>
+              </div>
+
+              <!-- Line breakdown -->
+              <div class="flex flex-col gap-xs text-xs mb-md">
+                <div class="flex items-center justify-between p-xs rounded bg-surface">
+                  <div class="flex items-center gap-xs">
+                    <span style="width: 8px; height: 8px; border-radius: 50%; background: var(--color-espresso);"></span>
+                    <span>Venue Buyout &amp; Grounds</span>
+                  </div>
+                  <div class="text-right">
+                    <strong>₹6,75,000</strong>
+                    <span class="text-muted block" style="font-size: 10px;">Locked in Escrow</span>
+                  </div>
+                </div>
+
+                <div class="flex items-center justify-between p-xs rounded bg-surface">
+                  <div class="flex items-center gap-xs">
+                    <span style="width: 8px; height: 8px; border-radius: 50%; background: var(--color-terracotta);"></span>
+                    <span>Catering &amp; Sommelier</span>
+                  </div>
+                  <div class="text-right">
+                    <strong>₹3,75,000</strong>
+                    <span class="text-muted block" style="font-size: 10px;">Deposit: ₹1,50,000</span>
+                  </div>
+                </div>
+
+                <div class="flex items-center justify-between p-xs rounded bg-surface">
+                  <div class="flex items-center gap-xs">
+                    <span style="width: 8px; height: 8px; border-radius: 50%; background: var(--color-gold);"></span>
+                    <span>Décor &amp; Festoon Rigging</span>
+                  </div>
+                  <div class="text-right">
+                    <strong>₹2,70,000</strong>
+                    <span class="text-muted block" style="font-size: 10px;">Quote Sign-off</span>
+                  </div>
+                </div>
+
+                <div class="flex items-center justify-between p-xs rounded bg-surface">
+                  <div class="flex items-center gap-xs">
+                    <span style="width: 8px; height: 8px; border-radius: 50%; background: var(--color-mocha);"></span>
+                    <span>Transfers &amp; Logistics</span>
+                  </div>
+                  <div class="text-right">
+                    <strong>₹1,80,000</strong>
+                    <span class="text-muted block" style="font-size: 10px;">4 Sprinters</span>
+                  </div>
+                </div>
+              </div>
+
+              <a href="budget.html" class="flex items-center gap-xs text-primary text-xs font-bold uppercase tracking-wider" style="text-decoration: none;">
+                <span>View Budget Ledger</span>
+                <span class="material-symbols-outlined" style="font-size: 16px;">arrow_forward</span>
+              </a>
+            </div>
+
+            <!-- C. DEADLINE RADAR -->
+            <div class="card p-lg shadow-sm">
+              <div class="flex items-center justify-between mb-md">
+                <div class="flex items-center gap-xs">
+                  <span class="material-symbols-outlined text-primary" style="font-size: 20px;">notifications_active</span>
+                  <h3 class="font-serif" style="font-size: 18px; margin: 0;">Deadline Radar</h3>
+                </div>
+                <span class="badge badge-accent" style="font-size: 10px;">3 Actions Due</span>
+              </div>
+
+              <div class="flex flex-col gap-xs">
+                <div class="card p-sm flex items-start gap-xs" style="background: #ffdad6;">
+                  <span class="material-symbols-outlined text-error" style="font-size: 18px; flex-shrink: 0; margin-top: 2px;">warning</span>
+                  <div>
+                    <strong style="font-size: 13px; display: block; color: var(--color-espresso);">RSVP Cutoff in 3 days</strong>
+                    <span class="text-muted text-xs">4 guests have not finalized attendance status.</span>
+                  </div>
+                </div>
+
+                <div class="card p-sm flex items-start gap-xs" style="background: var(--color-champagne-light);">
+                  <span class="material-symbols-outlined text-primary" style="font-size: 18px; flex-shrink: 0; margin-top: 2px;">wine_bar</span>
+                  <div>
+                    <strong style="font-size: 13px; display: block; color: var(--color-espresso);">Sommelier wine pairing notes</strong>
+                    <span class="text-muted text-xs">Chianti Classico tasting sample sign-off due tomorrow.</span>
+                  </div>
+                </div>
+
+                <div class="card p-sm flex items-start gap-xs bg-surface">
+                  <span class="material-symbols-outlined text-primary" style="font-size: 18px; flex-shrink: 0; margin-top: 2px;">schedule_send</span>
+                  <div>
+                    <strong style="font-size: 13px; display: block;">Escrow Milestone 2 Release</strong>
+                    <span class="text-muted text-xs">Scheduled automated release of ₹3,75,000 on Oct 15.</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <!-- SCRIPTS -->
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+  <script src="../js/firebaseConfig.js"></script>
+  <script src="../js/storage.js"></script>
+  <script src="../js/app.js"></script>
+  <script src="../js/navigation.js"></script>
+  <script src="../js/events.js"></script>
+  <script src="../js/checklist.js"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Micro-interactions for task completion
+      document.querySelectorAll('.task-checkbox').forEach(cb => {
+        cb.addEventListener('change', (e) => {
+          const card = e.target.closest('.task-card');
+          const title = card ? card.querySelector('.task-title') : null;
+          if (title) {
+            if (e.target.checked) {
+              title.style.textDecoration = 'line-through';
+              title.style.opacity = '0.5';
+              App.toast('Milestone marked complete', 'task_alt');
+            } else {
+              title.style.textDecoration = 'none';
+              title.style.opacity = '1';
+            }
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>

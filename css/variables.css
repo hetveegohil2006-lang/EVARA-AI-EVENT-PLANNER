@@ -1,0 +1,126 @@
+/* ==========================================================================
+   EVARA DESIGN SYSTEM — CSS VARIABLES
+   Derived from Google Stitch 'Warm Luxury Editorial' Design Token Specification
+   ========================================================================== */
+
+:root {
+  /* Brand Core Palette */
+  --color-ivory: #F8F4EF;
+  --color-champagne: #E9D8C8;
+  --color-terracotta: #B88D72;
+  --color-mocha: #80604F;
+  --color-espresso: #39302D;
+  --color-white: #FFFFFF;
+  --color-soft-beige: #EFE7DF;
+
+  /* Surfaces & Containers */
+  --surface: #FFF8F6;
+  --surface-dim: #E6D7D2;
+  --surface-bright: #FFF8F6;
+  --surface-container-lowest: #FFFFFF;
+  --surface-container-low: #FFF1EC;
+  --surface-container: #FBEBE6;
+  --surface-container-high: #F5E5E0;
+  --surface-container-highest: #EFDFDA;
+  --surface-variant: #EFDFDA;
+  --background: #F8F4EF;
+
+  /* Semantic UI Colors */
+  --primary: #664839;
+  --primary-container: #80604F;
+  --primary-fixed: #FFDBCA;
+  --primary-fixed-dim: #E7BEAA;
+  --on-primary: #FFFFFF;
+  --on-primary-container: #FFE0D1;
+
+  --secondary: #7B563F;
+  --secondary-container: #FECDAF;
+  --on-secondary: #FFFFFF;
+  --on-secondary-container: #7A553E;
+
+  --tertiary: #634A25;
+  --tertiary-container: #7E623B;
+  --tertiary-gold: #C5A477;
+  --tertiary-fixed: #FFDDB1;
+  --tertiary-fixed-dim: #E4C192;
+  --on-tertiary: #FFFFFF;
+  --on-tertiary-container: #FFE2BC;
+
+  --on-surface: #221A17;
+  --on-surface-variant: #50443F;
+  --inverse-surface: #372E2B;
+  --inverse-on-surface: #FDEDE9;
+
+  --outline: #82746E;
+  --outline-variant: #D4C3BC;
+
+  /* Functional Status */
+  --success: #65836A;
+  --success-bg: #E8F0E9;
+  --warning: #D6A15B;
+  --warning-bg: #FDF4E7;
+  --error: #C66B62;
+  --error-bg: #FDEDED;
+
+  /* Typography */
+  --font-serif: 'Playfair Display', Georgia, serif;
+  --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+  /* Typography Scales */
+  --fs-display: 56px;
+  --lh-display: 64px;
+  --fs-headline-lg: 40px;
+  --lh-headline-lg: 48px;
+  --fs-headline-md: 28px;
+  --lh-headline-md: 36px;
+  --fs-headline-sm: 22px;
+  --lh-headline-sm: 28px;
+  --fs-title-lg: 18px;
+  --lh-title-lg: 26px;
+  --fs-title-md: 16px;
+  --lh-title-md: 24px;
+  --fs-body-lg: 18px;
+  --lh-body-lg: 28px;
+  --fs-body-md: 15px;
+  --lh-body-md: 24px;
+  --fs-body-sm: 13px;
+  --lh-body-sm: 20px;
+  --fs-label-md: 12px;
+  --lh-label-md: 16px;
+  --fs-label-sm: 11px;
+  --lh-label-sm: 14px;
+
+  /* Border Radii */
+  --radius-xs: 2px;
+  --radius-sm: 4px;
+  --radius-md: 6px;
+  --radius-lg: 8px;
+  --radius-xl: 12px;
+  --radius-2xl: 16px;
+  --radius-3xl: 24px;
+  --radius-full: 9999px;
+
+  /* Spatial Spacing */
+  --space-2xs: 0.25rem; /* 4px */
+  --space-xs: 0.375rem; /* 6px */
+  --space-sm: 0.75rem;  /* 12px */
+  --space-md: 1.25rem;  /* 20px */
+  --space-lg: 2rem;     /* 32px */
+  --space-xl: 3.5rem;   /* 56px */
+  --gutter: 1.5rem;     /* 24px */
+  --sidebar-width: 288px; /* 18rem */
+  --header-height: 80px;
+
+  /* Atmospheric Shadows */
+  --shadow-xs: 0 1px 2px rgba(57, 48, 45, 0.04);
+  --shadow-sm: 0 2px 8px rgba(57, 48, 45, 0.04);
+  --shadow-md: 0 6px 18px rgba(57, 48, 45, 0.06);
+  --shadow-lg: 0 10px 30px -10px rgba(57, 48, 45, 0.08), 0 4px 12px -2px rgba(57, 48, 45, 0.04);
+  --shadow-xl: 0 24px 48px -12px rgba(57, 48, 45, 0.12), 0 2px 6px 0px rgba(57, 48, 45, 0.04);
+  --shadow-gold: 0 0 0 1px rgba(197, 164, 119, 0.45);
+
+  /* Transitions */
+  --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-normal: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 400ms cubic-bezier(0.4, 0, 0.2, 1);
+}

@@ -1,0 +1,841 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&amp;family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"surface-container-lowest":"#ffffff","on-error":"#ffffff","tertiary-container":"#7e623b","error-container":"#ffdad6","surface-container-high":"#f5e5e0","secondary-fixed":"#ffdcc7","outline":"#82746e","on-surface":"#221a17","inverse-surface":"#372e2b","error":"#ba1a1a","surface-bright":"#fff8f6","on-primary-fixed":"#2c1609","secondary":"#7b563f","inverse-primary":"#e7beaa","on-error-container":"#93000a","on-secondary-fixed-variant":"#603f29","on-primary":"#ffffff","surface":"#fff8f6","on-tertiary":"#ffffff","on-primary-fixed-variant":"#5d4031","on-tertiary-container":"#ffe2bc","surface-container-highest":"#efdfda","tertiary-fixed":"#ffddb1","surface-tint":"#775847","surface-container-low":"#fff1ec","inverse-on-surface":"#fdede9","primary-fixed-dim":"#e7beaa","tertiary-fixed-dim":"#e4c192","primary-container":"#80604f","secondary-container":"#fecdaf","surface-variant":"#efdfda","on-secondary-container":"#7a553e","on-background":"#221a17","on-secondary-fixed":"#2e1504","on-primary-container":"#ffe0d1","background":"#fff8f6","primary":"#664839","surface-container":"#fbebe6","on-tertiary-fixed":"#291800","secondary-fixed-dim":"#ecbd9f","outline-variant":"#d4c3bc","on-surface-variant":"#50443f","tertiary":"#634a25","on-tertiary-fixed-variant":"#5a421e","surface-dim":"#e6d7d2","primary-fixed":"#ffdbca","on-secondary":"#ffffff"},borderRadius:{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},spacing:{"space-md":"1.25rem","margin":"3rem","space-xs":"0.375rem","gutter":"1.5rem","space-sm":"0.75rem","space-lg":"2rem","gutter-mobile":"1rem","margin-mobile":"1.25rem","space-xl":"3.5rem"},fontFamily:{"headline-sm":["Playfair Display"],"headline-md":["Playfair Display"],"display-hero-mobile":["Playfair Display"],"label-sm":["Plus Jakarta Sans"],"headline-lg":["Playfair Display"],"body-lg":["Plus Jakarta Sans"],"headline-lg-mobile":["Playfair Display"],"display-hero":["Playfair Display"],"label-md":["Plus Jakarta Sans"],"body-md":["Plus Jakarta Sans"],"title-md":["Plus Jakarta Sans"],"title-lg":["Plus Jakarta Sans"],"body-sm":["Plus Jakarta Sans"]},fontSize:{"headline-sm":["22px",{lineHeight:"28px",letterSpacing:"0em",fontWeight:"600"}],"headline-md":["28px",{lineHeight:"36px",letterSpacing:"-0.01em",fontWeight:"500"}],"display-hero-mobile":["36px",{lineHeight:"44px",letterSpacing:"-0.01em",fontWeight:"400"}],"label-sm":["11px",{lineHeight:"14px",letterSpacing:"0.06em",fontWeight:"600"}],"headline-lg":["40px",{lineHeight:"48px",letterSpacing:"-0.015em",fontWeight:"400"}],"body-lg":["18px",{lineHeight:"28px",letterSpacing:"0em",fontWeight:"400"}],"headline-lg-mobile":["28px",{lineHeight:"36px",letterSpacing:"-0.01em",fontWeight:"400"}],"display-hero":["56px",{lineHeight:"64px",letterSpacing:"-0.02em",fontWeight:"400"}],"label-md":["12px",{lineHeight:"16px",letterSpacing:"0.08em",fontWeight:"600"}],"body-md":["15px",{lineHeight:"24px",letterSpacing:"0em",fontWeight:"400"}],"title-md":["16px",{lineHeight:"24px",letterSpacing:"-0.005em",fontWeight:"600"}],"title-lg":["18px",{lineHeight:"26px",letterSpacing:"-0.01em",fontWeight:"600"}],"body-sm":["13px",{lineHeight:"20px",letterSpacing:"0.01em",fontWeight:"400"}]}}}};</script></head><body class="bg-background font-body-md text-on-surface antialiased min-h-screen selection:bg-secondary-container selection:text-on-secondary-container"><aside class="fixed left-0 top-0 h-screen w-72 bg-surface-container-low z-50 flex flex-col justify-between shadow-[0_1px_8px_rgba(57,48,45,0.04)] transition-all duration-300"><div class="flex flex-col flex-1 overflow-y-auto"><div class="px-space-md pt-space-lg pb-space-xs"><div class="flex items-center justify-between"><div class="flex items-center gap-space-xs"><img alt="Sophisticated luxury floral-intertwined letter E monogram logo for EVARA event planning, Warm Luxury palette with champagne, terracotta, and espresso accents." class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1VVJya-TjrqzKuzx19rXDIelDK7TXBIPXGpLxu1kCmnFkWC26I5xyi9GdXsYjZc1UurkqBs-WFaWa0QS2qZ6Dj58I8mn3di7NQ0c43y-fazru-jC-uSh0qCwr1Vc20gZ3lP42LyGsS4SC88vT02AW5TVEFaFbZ475xHHZAraf3Ju7cWcg0e7VyodEofqbljjMszcmWy9kuQ45WF9TLj8vS__95rGPys9nkdQ9sJIdE"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-primary tracking-tight leading-none">EVARA</span><span class="font-label-sm text-[10px] text-on-surface-variant tracking-widest uppercase">Private Concierge</span></div></div><button aria-label="Toggle navigation" class="p-space-xs text-on-surface-variant hover:text-on-surface hover:bg-surface-container rounded-lg transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">menu_open</span></button></div></div><div class="px-space-md py-space-xs"><div class="px-space-sm py-space-xs bg-surface-container rounded-lg"><span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider block">Workspace Scope</span><span class="font-title-md text-title-md text-on-surface truncate block" title="Villa San Valentino Tuscan Gala 2025">Villa San Valentino Tuscan Gala 2025</span></div></div><div class="px-space-md pt-space-xs pb-1"><span class="font-label-sm text-[11px] text-on-surface-variant uppercase tracking-wider">Navigation Modules</span></div><nav class="flex-1 px-space-md space-y-0.5" data-active-classes="bg-primary-container text-on-primary-container font-title-md shadow-sm rounded-lg"><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface font-title-md text-title-md transition-colors" data-path="dashboard" href="#">Dashboard</a><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface font-title-md text-title-md transition-colors" data-path="events-and-history" href="#">Events &amp; History</a><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface font-title-md text-title-md transition-colors" data-path="checklist-and-timeline" href="#">Checklist &amp; Timeline</a><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface font-title-md text-title-md transition-colors" data-path="budget" href="#">Budget</a><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface font-title-md text-title-md transition-colors" data-path="payments-and-qr" href="#">Payments &amp; QR</a><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface font-title-md text-title-md transition-colors" data-path="vendors" href="#">Vendors</a><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface font-title-md text-title-md transition-colors" data-path="shopping-assistant" href="#">Shopping Assistant</a><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface font-title-md text-title-md transition-colors" data-path="guest-management" href="#">Guest Management</a><a aria-current="page" class="flex items-center px-space-sm py-space-xs transition-colors bg-primary-container text-on-primary-container font-title-md shadow-sm rounded-lg" data-path="invitation-designer" href="#">Invitation Designer</a><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface font-title-md text-title-md transition-colors" data-path="team-chat" href="#">Team Chat</a><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface font-title-md text-title-md transition-colors" data-path="ai-assistant" href="#">AI Assistant</a><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface font-title-md text-title-md transition-colors" data-path="reports-and-exports" href="#">Reports &amp; Exports</a><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface font-title-md text-title-md transition-colors" data-path="notifications" href="#">Notifications</a><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface font-title-md text-title-md transition-colors" data-path="profile-and-settings" href="#">Profile &amp; Settings</a></nav></div><div class="px-space-md pb-space-lg pt-space-xs space-y-space-xs"><div class="p-space-sm rounded-lg bg-surface-container flex items-center justify-between"><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-[18px] text-tertiary">auto_awesome</span><div class="flex flex-col"><span class="font-label-sm text-label-sm text-on-surface font-semibold">Concierge AI v2.4</span><span class="font-label-sm text-[10px] text-on-surface-variant leading-none">Private Model Active</span></div></div><div class="w-2 h-2 rounded-full bg-secondary animate-pulse"></div></div></div></aside><div class="pl-72 flex flex-col min-h-screen"><header class="fixed top-0 left-72 right-0 h-20 bg-surface/85 backdrop-blur-xl z-40 shadow-[0_1px_8px_rgba(57,48,45,0.04)]"><div class="w-full h-full px-gutter flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-md min-w-max"><button class="flex items-center gap-space-xs px-space-sm py-space-xs bg-surface-container-low hover:bg-surface-container rounded-lg text-left transition-colors" type="button"><div class="flex flex-col"><div class="flex items-center gap-space-xs"><span class="font-title-md text-title-md text-on-surface">Villa San Valentino Tuscan Gala 2025</span><span class="material-symbols-outlined text-[18px] text-on-surface-variant">expand_more</span></div><span class="font-label-sm text-label-sm text-on-surface-variant">Oct 24–27, 2025</span></div><span class="px-space-xs py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-[10px] uppercase font-semibold">Planning Active</span></button></div><div class="flex-1 max-w-md hidden md:block"><div class="relative"><span class="material-symbols-outlined absolute left-space-sm top-1/2 -translate-y-1/2 text-on-surface-variant text-[18px]">search</span><input class="w-full bg-surface-container-low text-on-surface font-body-sm text-body-sm pl-9 pr-space-sm py-space-xs rounded-lg placeholder:text-on-surface-variant focus:outline-none focus:bg-surface-container-lowest transition-colors" placeholder="Search tasks, guests, vendors, ledger..." type="text"/></div></div><div class="flex items-center gap-space-sm min-w-max"><div class="flex items-center px-space-xs py-1 rounded-lg bg-surface-container-low text-on-surface-variant font-label-md text-label-md"><span class="material-symbols-outlined text-[16px] mr-1">payments</span><span>INR (₹)</span></div><a class="relative p-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-low transition-colors" data-path="notifications" href="#"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-error"></span></a><div class="h-6 w-px bg-surface-variant"></div><a class="flex items-center gap-space-xs hover:opacity-90 transition-opacity" data-path="profile-and-settings" href="#"><div class="text-right hidden xl:block"><span class="font-title-md text-body-sm text-on-surface block leading-tight font-semibold">Eleanor Vance</span><span class="font-label-sm text-label-sm text-on-surface-variant block">Principal Host</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></a></div></div></header><main class="flex-1 w-full pt-20 px-gutter py-space-lg bg-background"><div class="flex flex-col w-full">
+<!-- Top Bar: Title & Scope Action Deck -->
+<div class="flex flex-col lg:flex-row lg:items-end justify-between gap-space-md mb-space-lg pb-space-sm border-b-0">
+<div class="space-y-space-xs max-w-2xl">
+<div class="flex items-center gap-space-xs">
+<span class="inline-flex items-center gap-1.5 px-space-sm py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm uppercase tracking-wider font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>
+          Stationery Atelier • Autumn 2025
+        </span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">• Villa San Valentino Tuscan Gala</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">Create Your Invitation</h1>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+        Craft bespoke digital stationery, hand-pressed editorial aesthetics, and multi-channel guest dispatches powered by Aria Concierge.
+      </p>
+</div>
+<!-- Atelier Action Controls -->
+<div class="flex flex-wrap items-center gap-space-xs">
+<button class="inline-flex items-center gap-space-xs px-space-md py-space-xs rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-title-md text-title-md transition-all shadow-sm" type="button">
+<span class="material-symbols-outlined text-[18px] text-tertiary">cloud_download</span>
+<span>Import Event Details</span>
+</button>
+<button class="inline-flex items-center gap-space-xs px-space-md py-space-xs rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-title-md text-title-md transition-all shadow-sm" onclick="toggleFullscreenPreview()" type="button">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+<span>Preview Fullscreen</span>
+</button>
+<button class="inline-flex items-center gap-space-xs px-space-md py-space-xs rounded-lg bg-primary text-on-primary font-title-md text-title-md hover:bg-primary-container transition-all shadow-md" type="button">
+<span class="material-symbols-outlined text-[18px]">add_circle</span>
+<span>Create New Invitation</span>
+</button>
+</div>
+</div>
+<!-- Primary Atelier Navigation Tabs -->
+<div class="flex items-center gap-2 p-1.5 rounded-xl bg-surface-container-low mb-space-xl overflow-x-auto">
+<button class="tab-btn px-space-md py-2 rounded-lg font-title-md text-title-md bg-surface-container-lowest text-primary shadow-sm flex items-center gap-2 whitespace-nowrap" data-tab="studio" type="button">
+<span class="material-symbols-outlined text-[18px]">draw</span>
+<span>Custom Studio &amp; Canvas</span>
+</button>
+<button class="tab-btn px-space-md py-2 rounded-lg font-title-md text-title-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container flex items-center gap-2 whitespace-nowrap transition-colors" data-tab="templates" type="button">
+<span class="material-symbols-outlined text-[18px]">auto_awesome_motion</span>
+<span>Template Gallery (7)</span>
+</button>
+<button class="tab-btn px-space-md py-2 rounded-lg font-title-md text-title-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container flex items-center gap-2 whitespace-nowrap transition-colors" data-tab="my-invites" type="button">
+<span class="material-symbols-outlined text-[18px]">folder_special</span>
+<span>My Invitations (3 saved)</span>
+</button>
+<button class="tab-btn px-space-md py-2 rounded-lg font-title-md text-title-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container flex items-center gap-2 whitespace-nowrap transition-colors" data-tab="telemetry" type="button">
+<span class="material-symbols-outlined text-[18px]">query_stats</span>
+<span>Dispatched Telemetry</span>
+</button>
+</div>
+<!-- SECTION 1: Interactive Invitation Studio & Live Editor (Split Workstation) -->
+<div class="grid grid-cols-1 xl:grid-cols-12 gap-space-lg mb-space-xl items-start">
+<!-- LEFT CONFIGURATION PANEL (5 Cols) -->
+<div class="xl:col-span-5 flex flex-col gap-space-md">
+<!-- Studio Header Card -->
+<div class="p-space-lg rounded-xl bg-surface-container-low shadow-sm space-y-space-md">
+<div class="flex items-center justify-between">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-tertiary">Bespoke Suite #01</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Card Typography &amp; Details</h2>
+</div>
+<span class="px-space-xs py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm font-semibold">Ready to Foil</span>
+</div>
+<!-- Form Inputs Deck -->
+<div class="space-y-space-sm">
+<div>
+<label class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant block mb-1">Event Suite Title</label>
+<input class="w-full bg-surface-container-lowest text-on-surface font-title-md text-title-md px-space-sm py-2.5 rounded-lg focus:outline-none focus:ring-1 focus:ring-secondary transition-all" id="input-title" type="text" value="Villa San Valentino Tuscan Gala 2025"/>
+</div>
+<div class="grid grid-cols-2 gap-space-sm">
+<div>
+<label class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant block mb-1">Monogram / Seal</label>
+<input class="w-full bg-surface-container-lowest text-on-surface font-title-md text-title-md px-space-sm py-2.5 rounded-lg focus:outline-none focus:ring-1 focus:ring-secondary" id="input-monogram" type="text" value="E &amp; V"/>
+</div>
+<div>
+<label class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant block mb-1">RSVP Deadline</label>
+<input class="w-full bg-surface-container-lowest text-on-surface font-title-md text-title-md px-space-sm py-2.5 rounded-lg focus:outline-none focus:ring-1 focus:ring-secondary" id="input-rsvp" type="text" value="October 10, 2025"/>
+</div>
+</div>
+<div>
+<label class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant block mb-1">Dates &amp; Itinerary Summary</label>
+<input class="w-full bg-surface-container-lowest text-on-surface font-title-md text-title-md px-space-sm py-2.5 rounded-lg focus:outline-none focus:ring-1 focus:ring-secondary" id="input-date" type="text" value="October 24–27, 2025 • Chianti Hills, Italy"/>
+</div>
+<div>
+<label class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant block mb-1">Venue Coordinates &amp; Verification</label>
+<div class="flex items-center gap-2 p-2 rounded-lg bg-surface-container-lowest">
+<span class="material-symbols-outlined text-[18px] text-tertiary">pin_drop</span>
+<div class="flex-1 min-w-0">
+<p class="font-title-md text-title-md text-on-surface truncate">Villa San Valentino, San Gimignano</p>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Connected to EVARA Logistics Graph (43.4682° N, 11.0435° E)</p>
+</div>
+<span class="material-symbols-outlined text-[16px] text-secondary">verified</span>
+</div>
+</div>
+<div>
+<label class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant block mb-1">Attire / Dress Code Directive</label>
+<input class="w-full bg-surface-container-lowest text-on-surface font-body-sm text-body-sm px-space-sm py-2.5 rounded-lg focus:outline-none focus:ring-1 focus:ring-secondary" id="input-dress" type="text" value="Editorial Tuscan Black Tie / Terracotta &amp; Champagne Linen"/>
+</div>
+</div>
+<!-- Typography & Theme Stylers -->
+<div class="pt-space-xs space-y-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Typographic Rhythm</span>
+<div class="flex items-center gap-1.5 p-1 bg-surface-container rounded-lg">
+<button class="px-space-xs py-1 rounded text-xs font-semibold bg-surface-container-lowest text-primary shadow-sm font-headline-sm" onclick="setTypo('serif')" type="button">Serif Luxury</button>
+<button class="px-space-xs py-1 rounded text-xs font-semibold text-on-surface-variant hover:text-on-surface font-title-md" onclick="setTypo('sans')" type="button">Modern Clean</button>
+</div>
+</div>
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant block mb-2">Artisan Card Palette</span>
+<div class="grid grid-cols-4 gap-2">
+<button class="flex flex-col items-center p-2 rounded-lg bg-surface-container-lowest hover:bg-surface-container transition-all group text-left" onclick="setTheme('tuscan')" type="button">
+<div class="w-full h-5 rounded bg-[#f5e5e0] mb-1 flex items-center justify-center">
+<div class="w-2.5 h-2.5 rounded-full bg-[#80604f]"></div>
+</div>
+<span class="font-label-sm text-[10px] text-on-surface group-hover:text-primary font-medium text-center">Tuscan Sand</span>
+</button>
+<button class="flex flex-col items-center p-2 rounded-lg bg-surface-container-lowest hover:bg-surface-container transition-all group text-left" onclick="setTheme('indigo')" type="button">
+<div class="w-full h-5 rounded bg-[#2e3440] mb-1 flex items-center justify-center">
+<div class="w-2.5 h-2.5 rounded-full bg-[#ffdcc7]"></div>
+</div>
+<span class="font-label-sm text-[10px] text-on-surface group-hover:text-primary font-medium text-center">Twilight</span>
+</button>
+<button class="flex flex-col items-center p-2 rounded-lg bg-surface-container-lowest hover:bg-surface-container transition-all group text-left" onclick="setTheme('champagne')" type="button">
+<div class="w-full h-5 rounded bg-[#fff8f6] mb-1 flex items-center justify-center">
+<div class="w-2.5 h-2.5 rounded-full bg-[#c5a477]"></div>
+</div>
+<span class="font-label-sm text-[10px] text-on-surface group-hover:text-primary font-medium text-center">Champagne</span>
+</button>
+<button class="flex flex-col items-center p-2 rounded-lg bg-surface-container-lowest hover:bg-surface-container transition-all group text-left" onclick="setTheme('botanical')" type="button">
+<div class="w-full h-5 rounded bg-[#e8ede7] mb-1 flex items-center justify-center">
+<div class="w-2.5 h-2.5 rounded-full bg-[#526a57]"></div>
+</div>
+<span class="font-label-sm text-[10px] text-on-surface group-hover:text-primary font-medium text-center">Olive Wash</span>
+</button>
+</div>
+</div>
+</div>
+<!-- AI Concierge Copy Generator Inset -->
+<div class="p-space-md rounded-xl bg-surface-container shadow-sm space-y-space-xs relative overflow-hidden">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[18px] text-tertiary">auto_awesome</span>
+<span class="font-title-md text-title-md text-on-surface">Aria AI Invitation Copy</span>
+</div>
+<select class="bg-surface-container-lowest text-on-surface font-label-sm text-label-sm px-2 py-1 rounded-md focus:outline-none" id="ai-tone">
+<option value="regal">Regal &amp; Poetic</option>
+<option value="intimate">Warm Intimate</option>
+<option value="contemporary">Contemporary Chic</option>
+</select>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Let the AI concierge generate sensory Tuscan verbiage reflecting harvest season, candlelit pergolas, and wine pairings.</p>
+<div class="flex items-center gap-2 pt-1">
+<button class="inline-flex items-center gap-1.5 px-space-sm py-1.5 rounded-lg bg-primary-container text-on-primary-container font-title-md text-title-md hover:bg-primary transition-all shadow-sm" onclick="generateAiCopy()" type="button">
+<span class="material-symbols-outlined text-[16px]">magic_button</span>
+<span>Regenerate Editorial Wording</span>
+</button>
+<span class="font-label-sm text-[11px] text-secondary hidden" id="ai-status">Synced to Card</span>
+</div>
+</div>
+</div>
+</div>
+<!-- RIGHT LIVE STATIONERY PREVIEW CARD (7 Cols) -->
+<div class="xl:col-span-7 flex flex-col items-center">
+<!-- Interactive Envelope & Card Deck Wrapper -->
+<div class="w-full max-w-xl mx-auto space-y-space-md">
+<!-- Live Action Utility Toolbar -->
+<div class="flex items-center justify-between px-space-sm py-2 rounded-xl bg-surface-container-low shadow-sm">
+<div class="flex items-center gap-space-xs">
+<span class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-secondary text-on-secondary font-label-sm text-[10px]">1</span>
+<span class="font-title-md text-title-md text-on-surface">Digital Envelope &amp; Heavy Press Card</span>
+</div>
+<div class="flex items-center gap-1">
+<button class="px-2 py-1 rounded text-xs font-semibold bg-surface-container hover:bg-surface-container-high text-on-surface flex items-center gap-1" onclick="triggerWaxSeal()" type="button">
+<span class="material-symbols-outlined text-[14px] text-tertiary">mail</span>
+<span>Toggle Wax Seal</span>
+</button>
+<button class="px-2 py-1 rounded text-xs font-semibold bg-surface-container hover:bg-surface-container-high text-on-surface flex items-center gap-1" type="button">
+<span class="material-symbols-outlined text-[14px]">rotate_90_degrees_cw</span>
+<span>Flip Back</span>
+</button>
+</div>
+</div>
+<!-- The Physical Stationery Emulation Canvas -->
+<div class="relative w-full rounded-2xl bg-[#efe7df] p-6 sm:p-10 shadow-2xl flex flex-col items-center transition-all duration-500 overflow-hidden" id="stationery-stage">
+<!-- Subtle Deck Texture / Ambient Gradient -->
+<div class="absolute inset-0 bg-gradient-to-b from-[#fff8f6]/60 via-transparent to-[#80604f]/10 pointer-events-none"></div>
+<!-- Wax Seal Decorative Interactive Ribbon (Top Center) -->
+<div class="cursor-pointer z-30 -mt-2 mb-4 group flex flex-col items-center transition-transform hover:scale-105 active:scale-95" id="wax-seal" onclick="triggerWaxSeal()" title="Click to break wax seal and reveal RSVP response ledger">
+<div class="w-14 h-14 rounded-full bg-[#7a3b2e] shadow-lg flex items-center justify-center relative ring-4 ring-[#8d4739]/30">
+<div class="w-11 h-11 rounded-full border border-[#b88d72]/40 flex items-center justify-center bg-[#6e3327]">
+<span class="font-headline-sm text-headline-sm text-[#ffdcc7] select-none italic font-serif">E</span>
+</div>
+</div>
+<span class="font-label-sm text-[9px] uppercase tracking-widest text-[#7a3b2e] mt-1 font-bold">EVARA Seal • Click</span>
+</div>
+<!-- The Art Paper Card (Heavy 450 GSM Matte Look) -->
+<div class="w-full rounded-xl bg-[#fff8f6] shadow-xl p-8 sm:p-12 relative flex flex-col items-center text-center transition-all duration-300" id="card-surface">
+<!-- Inset Subtle Guilloche / Gold Hairline Border -->
+<div class="absolute inset-3 sm:inset-4 rounded-lg pointer-events-none shadow-[inset_0_0_0_1px_rgba(197,164,119,0.35)]"></div>
+<!-- Monogram Brand Logo (Embossed foil asset) -->
+<div class="mb-4 relative">
+<div class="w-16 h-16 rounded-full overflow-hidden p-1 shadow-sm bg-surface-container">
+<img alt="EVARA Monogram Emblem" class="w-full h-full object-cover rounded-full" src="https://lh3.googleusercontent.com/aida/AEtjO1VVJya-TjrqzKuzx19rXDIelDK7TXBIPXGpLxu1kCmnFkWC26I5xyi9GdXsYjZc1UurkqBs-WFaWa0QS2qZ6Dj58I8mn3di7NQ0c43y-fazru-jC-uSh0qCwr1Vc20gZ3lP42LyGsS4SC88vT02AW5TVEFaFbZ475xHHZAraf3Ju7cWcg0e7VyodEofqbljjMszcmWy9kuQ45WF9TLj8vS__95rGPys9nkdQ9sJIdE"/>
+</div>
+<div class="absolute -bottom-2 left-1/2 -translate-x-1/2 px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-[9px] tracking-widest uppercase">
+                Private Host
+              </div>
+</div>
+<!-- Host Sub-heading -->
+<p class="font-label-md text-label-md tracking-[0.2em] uppercase text-secondary mb-1">
+              Eleanor Vance &amp; Julian Sterling
+            </p>
+<p class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-widest mb-6">
+              Request the honour of your presence at
+            </p>
+<!-- Major Event Title -->
+<h3 class="font-headline-lg text-headline-lg text-on-surface leading-tight tracking-tight mb-4 font-normal" id="card-title-preview">
+              Villa San Valentino Tuscan Gala
+            </h3>
+<!-- AI Sensory Prose Snippet -->
+<p class="font-body-md text-body-md text-on-surface-variant max-w-md italic mb-8 leading-relaxed" id="card-prose-preview">
+              “Beneath the golden light of ancient Chianti olive groves, four days of sublime music, Tuscan vintage reserves, and intimate celebration await your arrival.”
+            </p>
+<!-- Decorative Venue Editorial Photo (Landscape Banner) -->
+<div class="w-full h-44 rounded-lg overflow-hidden relative shadow-inner mb-8 group">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Bespoke outdoor Tuscan villa banquet courtyard set with linen tables, crystal glassware, cypress trees, golden hour sunset light, and historic stone archways for luxury gala." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBXZxlndoZP0PgwlNs0q2Acq--qfbg11FZZol7sO6hrBElXzFtuVn922S9XLgctpKKFrpwWaJAkYA9bAj4ZegMtU5siQ5wtNZip57IxoyAtYfnKfLoWy9W3LMeiPrCchDwvn0kEWwuB7dd_7U5szPO90_JjCnzy0g8qq3BU3aA-a16QNcsl8t3a_vLMJcC1BdEHXLirviQvg_udpqUuZNzjvcyX6ckK9xCv5zvG9FE"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+<div class="absolute bottom-3 left-4 right-4 flex items-center justify-between text-white text-left">
+<div>
+<span class="font-label-sm text-[10px] tracking-widest uppercase opacity-80 block">Historic Residence</span>
+<span class="font-title-md text-title-md font-semibold">Villa San Valentino • Chianti, Italy</span>
+</div>
+<span class="material-symbols-outlined text-[20px] opacity-80">diamond</span>
+</div>
+</div>
+<!-- Date, Itinerary & Dress Code Matrix -->
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-4 w-full py-4 bg-surface-container-low rounded-lg mb-8">
+<div class="space-y-0.5">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant block">Celebration Dates</span>
+<span class="font-title-md text-title-md text-on-surface font-semibold block" id="card-date-preview">Oct 24–27, 2025</span>
+<span class="font-label-sm text-[11px] text-tertiary">3-Day Full Residency</span>
+</div>
+<div class="space-y-0.5">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant block">Dress Code</span>
+<span class="font-title-md text-title-md text-on-surface font-semibold block" id="card-dress-preview">Tuscan Black Tie</span>
+<span class="font-label-sm text-[11px] text-on-surface-variant">Champagne &amp; Terracotta Linen</span>
+</div>
+<div class="space-y-0.5">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant block">Kindly Confirm By</span>
+<span class="font-title-md text-title-md text-error block font-semibold" id="card-rsvp-preview">October 10, 2025</span>
+<span class="font-label-sm text-[11px] text-on-surface-variant">Discreet Guest Quota</span>
+</div>
+</div>
+<!-- VIP QR Pass & Personalized Identifier -->
+<div class="flex items-center justify-between w-full pt-2">
+<div class="text-left space-y-1">
+<div class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[14px]">badge</span>
+<span>Personalized Guest Token</span>
+</div>
+<p class="font-title-md text-title-md text-on-surface">The Honourable Guest &amp; Companion</p>
+<p class="font-label-sm text-[11px] text-on-surface-variant">Passcode: EVARA-772-VILLASV</p>
+</div>
+<!-- Interactive Dynamic QR Code Vector -->
+<div class="p-2.5 rounded-lg bg-surface-container-lowest shadow-sm flex flex-col items-center">
+<svg class="w-14 h-14 text-on-surface" fill="currentColor" viewbox="0 0 100 100">
+<path d="M10 10h30v30H10zm6 6v18h18V16zm4 4h10v10H20zM60 10h30v30H60zm6 6v18h18V16zm4 4h10v10H70zM10 60h30v30H10zm6 6v18h18V66zm4 4h10v10H20zM60 60h10v10H60zm20 0h10v10H80zm-10 10h10v10H70zm20 10h10v10H90zm-30 10h10v10H60zm20 0h10v10H80z"></path>
+</svg>
+<span class="font-label-sm text-[9px] uppercase tracking-tighter text-on-surface-variant mt-0.5">RSVP Scan</span>
+</div>
+</div>
+</div>
+<!-- Bottom Micro Foil Stamp Footnote -->
+<div class="mt-4 flex items-center justify-between w-full px-2 text-on-surface-variant">
+<span class="font-label-sm text-[10px] tracking-widest uppercase">Atelier Print Model: EVARA-450G-COTTON</span>
+<span class="font-label-sm text-[10px] tracking-widest uppercase">Verified Cryptographic Key</span>
+</div>
+</div>
+<!-- Direct Actions Under Card -->
+<div class="flex items-center justify-between px-space-xs">
+<div class="flex items-center gap-2">
+<button class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-title-md text-body-sm transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">file_download</span>
+<span>Export High-Res Print PDF (300 DPI)</span>
+</button>
+<button class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-title-md text-body-sm transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">photo_camera</span>
+<span>PNG Snapshot</span>
+</button>
+</div>
+<span class="font-label-sm text-label-sm text-secondary font-semibold">120 GSM Lined Envelopes included</span>
+</div>
+</div>
+</div>
+</div>
+<!-- SECTION 2: Multi-Channel Invitation Message Generator (Omni-Channel Dispatch) -->
+<div class="w-full mb-space-xl p-space-lg rounded-2xl bg-surface-container-low shadow-sm">
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-md mb-space-md">
+<div>
+<div class="flex items-center gap-space-xs mb-1">
+<span class="material-symbols-outlined text-[20px] text-tertiary">send_time_extension</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Multi-Channel Invitation Dispatcher</h2>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Preview how your VIP invite renders in WhatsApp, HTML Email with calendar attachments, and instant SMS Fast Pass.</p>
+</div>
+<!-- Channel Switcher Tabs -->
+<div class="flex items-center gap-1.5 p-1 rounded-xl bg-surface-container">
+<button class="px-space-md py-2 rounded-lg font-title-md text-body-sm bg-surface-container-lowest text-primary shadow-sm flex items-center gap-1.5" id="btn-chan-whatsapp" onclick="setChannel('whatsapp')" type="button">
+<span class="material-symbols-outlined text-[18px] text-[#25D366]">chat</span>
+<span>WhatsApp VIP Dispatch</span>
+</button>
+<button class="px-space-md py-2 rounded-lg font-title-md text-body-sm text-on-surface-variant hover:text-on-surface flex items-center gap-1.5 transition-colors" id="btn-chan-email" onclick="setChannel('email')" type="button">
+<span class="material-symbols-outlined text-[18px] text-tertiary">mail</span>
+<span>Editorial Email (HTML)</span>
+</button>
+<button class="px-space-md py-2 rounded-lg font-title-md text-body-sm text-on-surface-variant hover:text-on-surface flex items-center gap-1.5 transition-colors" id="btn-chan-sms" onclick="setChannel('sms')" type="button">
+<span class="material-symbols-outlined text-[18px]">sms</span>
+<span>SMS Fast Pass</span>
+</button>
+</div>
+</div>
+<!-- Dispatch Channel Views -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-start">
+<!-- Live Render Mockup (7 Cols) -->
+<div class="lg:col-span-7">
+<!-- WhatsApp Panel -->
+<div class="p-space-md rounded-xl bg-[#ece5dd] shadow-inner text-on-surface space-y-space-sm" id="channel-whatsapp">
+<div class="flex items-center justify-between pb-2 border-b-0 text-on-surface-variant font-label-sm text-[11px]">
+<span class="flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+              WhatsApp Business API Concierge Verified
+            </span>
+<span>Villa San Valentino Tuscan Gala Bot</span>
+</div>
+<!-- WhatsApp Chat Bubble -->
+<div class="bg-surface-container-lowest rounded-xl p-4 shadow-sm max-w-lg space-y-3">
+<!-- Media Header -->
+<div class="relative rounded-lg overflow-hidden h-36 bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Evening panoramic view of Villa San Valentino with fairy lights draped across Tuscan garden terrace and attendees in black tie suits and dresses." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBf3zC-N8dVhwvDt9zK0IDbYul6PXqqZWBxDU7x4JixpZ_tvtwSYEuFUMFiQchx7JWIeflZlkiZT3v7TPWRw9bzPbb9M1w3WKGdB7pACkgK4sA9h5YnU278_dCJTDbmBhcDx0qSIoH4xg50riftS9bUBPiBX0gMMTT6IHRmBI7Tw2582s9EQBiYN8MFPG4hhFFT3HbAkNQ87UBB_F3JhjeLu0rvhI_nHXBCGVLZhCg"/>
+<div class="absolute bottom-2 left-2 px-2 py-0.5 rounded bg-black/60 text-white font-label-sm text-[10px]">
+                Villa San Valentino Gala • Oct 24–27
+              </div>
+</div>
+<div>
+<p class="font-title-md text-title-md text-on-surface font-semibold mb-1">
+                Cordially Invited: Villa San Valentino Tuscan Gala 2025
+              </p>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+                Dear <span class="font-semibold text-primary">{Guest Name}</span>, on behalf of Eleanor Vance &amp; Julian Sterling, we invite you to an exclusive three-day celebration in the Chianti Hills.
+              </p>
+</div>
+<!-- WhatsApp Interactive Action Buttons -->
+<div class="pt-2 space-y-1.5 border-t border-surface-variant/40">
+<button class="w-full py-2 rounded-lg bg-surface-container-low hover:bg-surface-container text-primary font-title-md text-title-md flex items-center justify-center gap-2" type="button">
+<span class="material-symbols-outlined text-[18px]">check_circle</span>
+<span>Accept with Pleasure (RSVP Online)</span>
+</button>
+<button class="w-full py-2 rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface-variant font-title-md text-body-sm flex items-center justify-center gap-2" type="button">
+<span class="material-symbols-outlined text-[18px]">calendar_month</span>
+<span>Add 3-Day Gala to Google / Apple Calendar</span>
+</button>
+</div>
+<div class="text-right">
+<span class="font-label-sm text-[10px] text-on-surface-variant">14:02 • Delivered with EVARA Concierge</span>
+</div>
+</div>
+</div>
+<!-- Email Panel (Hidden by default) -->
+<div class="hidden p-space-md rounded-xl bg-surface-container-lowest shadow-sm space-y-space-md" id="channel-email">
+<div class="p-3 bg-surface-container-low rounded-lg text-body-sm space-y-1">
+<p><span class="font-semibold text-on-surface">Subject:</span> You are invited: Villa San Valentino Tuscan Gala 2025 (October 24–27)</p>
+<p><span class="font-semibold text-on-surface">Attachments:</span> villa-san-valentino-itinerary.pdf (3.4 MB), Gala-Residency.ics</p>
+</div>
+<div class="p-6 rounded-lg bg-surface text-center space-y-4">
+<span class="font-headline-sm text-headline-sm text-primary">EVARA Private Host</span>
+<h4 class="font-headline-md text-headline-md text-on-surface">Villa San Valentino Gala</h4>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-md mx-auto">
+              Please join us for an editorial celebration in San Gimignano. Tap below to confirm dietary requests, suite accommodations, and transfer preferences.
+            </p>
+<button class="px-space-lg py-2.5 rounded-lg bg-primary text-on-primary font-title-md text-title-md shadow-md" type="button">
+              Confirm Your Attendance
+            </button>
+</div>
+</div>
+<!-- SMS Panel (Hidden by default) -->
+<div class="hidden p-space-md rounded-xl bg-surface-container-high shadow-inner space-y-3" id="channel-sms">
+<div class="bg-surface-container-lowest p-4 rounded-2xl max-w-sm ml-auto space-y-2">
+<p class="font-body-sm text-body-sm text-on-surface">
+              EVARA CONCIERGE: Eleanor &amp; Julian invite you to the Villa San Valentino Tuscan Gala (Oct 24-27). Secure VIP Fast Pass &amp; RSVP: <span class="text-primary underline">https://evara.events/vsv-2025/pass</span>
+</p>
+<p class="font-label-sm text-[10px] text-on-surface-variant text-right">Delivered via Private Shortcode • Reply STOP to opt out</p>
+</div>
+</div>
+</div>
+<!-- Action & Variable Controls (5 Cols) -->
+<div class="lg:col-span-5 space-y-space-md">
+<div class="p-space-md rounded-xl bg-surface-container shadow-sm space-y-space-sm">
+<h3 class="font-title-lg text-title-lg text-on-surface">Template Dynamic Variables</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">These fields inject directly into each attendee's bespoke dispatch link.</p>
+<div class="space-y-2">
+<div class="flex items-center justify-between p-2 rounded-lg bg-surface-container-lowest font-body-sm text-body-sm">
+<span class="font-mono text-primary">{Guest Name}</span>
+<span class="text-on-surface-variant">Lord &amp; Lady Sterling</span>
+</div>
+<div class="flex items-center justify-between p-2 rounded-lg bg-surface-container-lowest font-body-sm text-body-sm">
+<span class="font-mono text-primary">{Villa Suite Allocation}</span>
+<span class="text-on-surface-variant">Suite 12 — Olive Terrace</span>
+</div>
+<div class="flex items-center justify-between p-2 rounded-lg bg-surface-container-lowest font-body-sm text-body-sm">
+<span class="font-mono text-primary">{Dietary Preferences URL}</span>
+<span class="text-on-surface-variant">Dynamic Token Link</span>
+</div>
+</div>
+</div>
+<!-- Dispatch Actions -->
+<div class="grid grid-cols-2 gap-space-xs">
+<button class="p-3 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-title-md text-body-sm flex items-center justify-center gap-1.5 transition-colors" onclick="copyFormattedText()" type="button">
+<span class="material-symbols-outlined text-[18px]">content_copy</span>
+<span>Copy Text</span>
+</button>
+<button class="p-3 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-title-md text-body-sm flex items-center justify-center gap-1.5 transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px] text-tertiary">send</span>
+<span>Send Test Invite</span>
+</button>
+<button class="p-3 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-title-md text-body-sm flex items-center justify-center gap-1.5 transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">open_in_new</span>
+<span>Preview Live Link</span>
+</button>
+<button class="p-3 rounded-lg bg-primary text-on-primary font-title-md text-body-sm flex items-center justify-center gap-1.5 hover:bg-primary-container transition-colors shadow-sm" type="button">
+<span class="material-symbols-outlined text-[18px]">forward_to_inbox</span>
+<span>Dispatch to All (84)</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- SECTION 3: Curated Invitation Template Gallery (Visual Carousel / Grid) -->
+<div class="mb-space-xl space-y-space-md">
+<div class="flex flex-col sm:flex-row sm:items-end justify-between gap-space-xs">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-tertiary">The Heritage Archives</span>
+<h2 class="font-headline-md text-headline-md text-on-surface">Curated Invitation Template Gallery</h2>
+</div>
+<div class="flex items-center gap-2">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Filter by theme:</span>
+<select class="bg-surface-container-low text-on-surface font-body-sm text-body-sm px-3 py-1.5 rounded-lg focus:outline-none">
+<option>All Aesthetics (7)</option>
+<option>Gala &amp; Royal Wedding</option>
+<option>Modern Minimal</option>
+<option>Botanical Estate</option>
+<option>Corporate Summit</option>
+</select>
+</div>
+</div>
+<!-- Gallery Cards Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-space-md">
+<!-- Card 1: Golden Hour Tuscan Soirée (Active Pick) -->
+<div class="group rounded-2xl bg-surface-container-low overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between">
+<div class="relative h-60 overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="High-end stationery paper card with delicate olive leaf line art, serif embossed letterpress typography, and gold foil borders on Italian warm cream parchment." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAh5KTaqKJfC26pcqnTYN84WNiZXy_4_slyJ64X07qSnoUmUJ9bFqQIa2LKWFEppXutsuW2uHKsm1d5Ur_u1bL5Op18dcLbModD_NCQjcW3mSBj7gXWBRZEHDz6F_AyxEmBySAD3tZX1yORgUTanVidEsdn7J-25AT7dNhd21x-gW1znciTHOc1ps4KZ4yviwXFpUFM4KF-R1wxaEfzMbYG-EHBBvcgS5mc5ueZnp8"/>
+<span class="absolute top-3 left-3 px-2.5 py-1 rounded-full bg-secondary text-on-secondary font-label-sm text-[10px] font-semibold uppercase tracking-wider">
+            Active Selection
+          </span>
+<span class="absolute top-3 right-3 px-2 py-0.5 rounded bg-black/50 text-white font-label-sm text-[10px]">
+            Double-Sided 450g
+          </span>
+</div>
+<div class="p-space-md space-y-space-xs flex-1 flex flex-col justify-between">
+<div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface group-hover:text-primary transition-colors">Golden Hour Tuscan Soirée</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2 mt-1">
+              Sun-drenched Terracotta tones, deckled handmade paper texture, and antique bronze calligraphy accents.
+            </p>
+</div>
+<div class="pt-space-xs flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-tertiary">3 Layout Options</span>
+<button class="px-space-sm py-1.5 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-title-md text-body-sm" type="button">
+              Selected
+            </button>
+</div>
+</div>
+</div>
+<!-- Card 2: Modern Editorial Minimal -->
+<div class="group rounded-2xl bg-surface-container-low overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between">
+<div class="relative h-60 overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Contemporary editorial black-and-white gala invitation stationery card with ultra-bold grotesque typography, asymmetric white space layout, and blind deboss monogram." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCMJWgvmq4KFCOmidvuAZdxFNCMBL9MUyzBGdOGpRFPRnbZB53ALS0HQafsTvhbfMj_SBjxmV2t4Qtkxh6f_56sCvgD01MNCuWvwhdMsHf7OdVUrwlE9T8-ISxbKqVYr6YaKASqWpKqcnb7Ss-TKwi-PehqEq_Nl7Jqid7hpB0vDZ1993xbKwL4Vt6lEoT54n_vSKf-w9ztHor6YJ0GwNjr6i7I9ISksURA2YICgrs"/>
+<span class="absolute top-3 left-3 px-2.5 py-1 rounded-full bg-surface-container-highest text-on-surface font-label-sm text-[10px] font-semibold uppercase tracking-wider">
+            Contemporary
+          </span>
+</div>
+<div class="p-space-md space-y-space-xs flex-1 flex flex-col justify-between">
+<div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface group-hover:text-primary transition-colors">Modern Editorial Minimal</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2 mt-1">
+              Architectural grid structure, stark geometric proportions, and dramatic scale typography for gallery summits.
+            </p>
+</div>
+<div class="pt-space-xs flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-tertiary">Monochrome &amp; Sand</span>
+<button class="px-space-sm py-1.5 rounded-lg bg-surface-container hover:bg-primary hover:text-on-primary text-on-surface font-title-md text-body-sm transition-colors" type="button">
+              Customize
+            </button>
+</div>
+</div>
+</div>
+<!-- Card 3: Royal Wedding & Gala -->
+<div class="group rounded-2xl bg-surface-container-low overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between">
+<div class="relative h-60 overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Opulent regal gala invitation with intricate floral filigree border in metallic gold leaf, deep navy crest emblem, and hand-torn deckle paper." src="https://lh3.googleusercontent.com/aida-public/AB6AXuArnl3HNdNzMWHdPEiRF6xMAZrNW0kSQwybklnDQYfc6kZsSu5crCUge_5Wm46ISRSYP5TrB525i3bOyhEvHXqYuoKZX7yxkmsvFhSN4NKSUkSsYZOyBm3gmWfyBfybJoc6Yr4DzFzBbGm5tE-k88sQZEVeIJJPtw8HmepKKLGDyOaQ7nmLp_jEU6MNEJSEU9gDdULStuEJ9rm6PvlVKzok28UwMnIbzlpAg4ftGFw"/>
+<span class="absolute top-3 left-3 px-2.5 py-1 rounded-full bg-tertiary text-on-tertiary font-label-sm text-[10px] font-semibold uppercase tracking-wider">
+            Grand Gala
+          </span>
+</div>
+<div class="p-space-md space-y-space-xs flex-1 flex flex-col justify-between">
+<div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface group-hover:text-primary transition-colors">Royal Wedding &amp; Gala</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2 mt-1">
+              Intricate heraldic filigree, midnight velvet envelope liners, and elevated letterpress RSVP cards.
+            </p>
+</div>
+<div class="pt-space-xs flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-tertiary">Foil Emboss Gold</span>
+<button class="px-space-sm py-1.5 rounded-lg bg-surface-container hover:bg-primary hover:text-on-primary text-on-surface font-title-md text-body-sm transition-colors" type="button">
+              Customize
+            </button>
+</div>
+</div>
+</div>
+<!-- Card 4: Romantic Floral Arch -->
+<div class="group rounded-2xl bg-surface-container-low overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between">
+<div class="relative h-60 overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Soft watercolor botanical illustration invitation card featuring garden roses, cypress needles, lavender buds, and hand-written script accents." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCpWa54X4RtAw-MFHqThX0Z_uHjHNmOnk81UvWG23ihcumqC0hfoKB6daOvH84nMbP15ybKbre3CUbzD7M43FlaZboOvURuXBG9MTGliWsfSIJ_TwZy-H0GCeGn7MIAystdQAM9_i-MJ5Ef8bZajmAKzi6pOHi0ljmd32LCEY7XyAcoaWg7UENdhurB8U6fJs2HIAwPBs_RR0Eu5mA9gHfylrJixoFdwhmUgtu2ONo"/>
+<span class="absolute top-3 left-3 px-2.5 py-1 rounded-full bg-surface-container-highest text-on-surface font-label-sm text-[10px] font-semibold uppercase tracking-wider">
+            Estate Flora
+          </span>
+</div>
+<div class="p-space-md space-y-space-xs flex-1 flex flex-col justify-between">
+<div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface group-hover:text-primary transition-colors">Romantic Floral Arch</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2 mt-1">
+              Hand-painted botanical watercolors of San Gimignano flora, soft lilac silk ribbons, and pastel foil touches.
+            </p>
+</div>
+<div class="pt-space-xs flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-tertiary">Hand-Painted Art</span>
+<button class="px-space-sm py-1.5 rounded-lg bg-surface-container hover:bg-primary hover:text-on-primary text-on-surface font-title-md text-body-sm transition-colors" type="button">
+              Customize
+            </button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- SECTION 4: My Saved Invitations Section (Drafts & Telemetry Ledger) -->
+<div class="w-full mb-space-xl space-y-space-md">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-xs">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-tertiary">Event Stationery Portfolio</span>
+<h2 class="font-headline-md text-headline-md text-on-surface">My Saved Invitations (3 Active Drafts)</h2>
+</div>
+<div class="flex items-center gap-space-xs">
+<button class="px-space-md py-space-xs rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface font-title-md text-body-sm flex items-center gap-1.5" type="button">
+<span class="material-symbols-outlined text-[16px]">file_copy</span>
+<span>Duplicate Suite</span>
+</button>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md">
+<!-- Draft 1: Official Tuscan Gala Pass -->
+<div class="p-space-md rounded-2xl bg-surface-container-low shadow-sm flex flex-col justify-between space-y-space-md">
+<div class="space-y-space-xs">
+<div class="flex items-center justify-between">
+<span class="px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-[10px] uppercase font-bold">Official Pass • Active</span>
+<span class="material-symbols-outlined text-[18px] text-secondary">star</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Official Tuscan Gala Pass</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">The 4-day grand itinerary invitation dispatched to primary VIP patrons and dignitaries.</p>
+</div>
+<div class="p-3 rounded-lg bg-surface-container space-y-1.5 font-label-sm text-label-sm text-on-surface-variant">
+<div class="flex items-center justify-between">
+<span>Dispatched Count:</span>
+<span class="font-semibold text-on-surface font-title-md">84 / 120 Guests</span>
+</div>
+<div class="flex items-center justify-between">
+<span>RSVP Confirmation Rate:</span>
+<span class="font-semibold text-secondary font-title-md">92.8% Confirmed</span>
+</div>
+<div class="w-full bg-surface-container-highest h-1.5 rounded-full overflow-hidden">
+<div class="bg-secondary h-full rounded-full" style="width: 92%"></div>
+</div>
+</div>
+<div class="flex items-center justify-between pt-2 border-t-0">
+<div class="flex items-center gap-2">
+<button class="p-2 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface transition-colors" title="Edit Suite" type="button">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+<button class="p-2 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface transition-colors" title="View Telemetry" type="button">
+<span class="material-symbols-outlined text-[18px]">insights</span>
+</button>
+</div>
+<button class="px-space-md py-1.5 rounded-lg bg-primary text-on-primary font-title-md text-body-sm hover:bg-primary-container transition-colors" type="button">
+            Manage Dispatch
+          </button>
+</div>
+</div>
+<!-- Draft 2: Welcome Sunset Spritz Card -->
+<div class="p-space-md rounded-2xl bg-surface-container-low shadow-sm flex flex-col justify-between space-y-space-md">
+<div class="space-y-space-xs">
+<div class="flex items-center justify-between">
+<span class="px-2 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-[10px] uppercase font-bold">Sub-Event Card</span>
+<span class="font-label-sm text-[11px] text-on-surface-variant">Friday Oct 24</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Welcome Sunset Spritz Card</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Aperitivo reception at the Belvedere panoramic pool terrace overlooking the valley towers.</p>
+</div>
+<div class="p-3 rounded-lg bg-surface-container space-y-1.5 font-label-sm text-label-sm text-on-surface-variant">
+<div class="flex items-center justify-between">
+<span>Dispatched Count:</span>
+<span class="font-semibold text-on-surface font-title-md">115 / 120 Guests</span>
+</div>
+<div class="flex items-center justify-between">
+<span>RSVP Confirmation Rate:</span>
+<span class="font-semibold text-secondary font-title-md">88.5% Confirmed</span>
+</div>
+<div class="w-full bg-surface-container-highest h-1.5 rounded-full overflow-hidden">
+<div class="bg-primary h-full rounded-full" style="width: 88%"></div>
+</div>
+</div>
+<div class="flex items-center justify-between pt-2 border-t-0">
+<div class="flex items-center gap-2">
+<button class="p-2 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface transition-colors" title="Edit Suite" type="button">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+<button class="p-2 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface transition-colors" title="View Telemetry" type="button">
+<span class="material-symbols-outlined text-[18px]">insights</span>
+</button>
+</div>
+<button class="px-space-md py-1.5 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-title-md text-body-sm transition-colors" type="button">
+            Edit Card
+          </button>
+</div>
+</div>
+<!-- Draft 3: Farewell Tuscan Truffle Brunch -->
+<div class="p-space-md rounded-2xl bg-surface-container-low shadow-sm flex flex-col justify-between space-y-space-md">
+<div class="space-y-space-xs">
+<div class="flex items-center justify-between">
+<span class="px-2 py-0.5 rounded-full bg-surface-container-highest text-on-surface font-label-sm text-[10px] uppercase font-bold">Draft Ready</span>
+<span class="font-label-sm text-[11px] text-on-surface-variant">Monday Oct 27</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Farewell Truffle Brunch Card</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Informal harvest breakfast under the pergola with live jazz ensemble and departure shuttles.</p>
+</div>
+<div class="p-3 rounded-lg bg-surface-container space-y-1.5 font-label-sm text-label-sm text-on-surface-variant">
+<div class="flex items-center justify-between">
+<span>Dispatched Count:</span>
+<span class="font-semibold text-on-surface font-title-md">Pending Schedule</span>
+</div>
+<div class="flex items-center justify-between">
+<span>Automated Trigger:</span>
+<span class="font-semibold text-tertiary font-title-md">T-24h to Event</span>
+</div>
+<div class="w-full bg-surface-container-highest h-1.5 rounded-full overflow-hidden">
+<div class="bg-secondary-fixed-dim h-full rounded-full" style="width: 35%"></div>
+</div>
+</div>
+<div class="flex items-center justify-between pt-2 border-t-0">
+<div class="flex items-center gap-2">
+<button class="p-2 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface transition-colors" title="Edit Suite" type="button">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+<button class="p-2 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface transition-colors" title="Delete Draft" type="button">
+<span class="material-symbols-outlined text-[18px]">delete</span>
+</button>
+</div>
+<button class="px-space-md py-1.5 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-title-md text-body-sm transition-colors" type="button">
+            Configure Send
+          </button>
+</div>
+</div>
+</div>
+</div>
+<!-- Interactive JavaScript Logic -->
+<script>
+    // Live input synchronization to right-hand canvas card
+    const inputTitle = document.getElementById('input-title');
+    const inputDate = document.getElementById('input-date');
+    const inputDress = document.getElementById('input-dress');
+    const inputRsvp = document.getElementById('input-rsvp');
+
+    const previewTitle = document.getElementById('card-title-preview');
+    const previewDate = document.getElementById('card-date-preview');
+    const previewDress = document.getElementById('card-dress-preview');
+    const previewRsvp = document.getElementById('card-rsvp-preview');
+    const previewProse = document.getElementById('card-prose-preview');
+
+    if (inputTitle) {
+      inputTitle.addEventListener('input', (e) => {
+        previewTitle.textContent = e.target.value || 'Villa San Valentino Tuscan Gala';
+      });
+    }
+
+    if (inputDate) {
+      inputDate.addEventListener('input', (e) => {
+        previewDate.textContent = e.target.value || 'Oct 24–27, 2025';
+      });
+    }
+
+    if (inputDress) {
+      inputDress.addEventListener('input', (e) => {
+        previewDress.textContent = e.target.value || 'Tuscan Black Tie';
+      });
+    }
+
+    if (inputRsvp) {
+      inputRsvp.addEventListener('input', (e) => {
+        previewRsvp.textContent = e.target.value || 'October 10, 2025';
+      });
+    }
+
+    // Typography toggle
+    function setTypo(style) {
+      if (style === 'serif') {
+        previewTitle.className = "font-headline-lg text-headline-lg text-on-surface leading-tight tracking-tight mb-4 font-normal font-serif";
+      } else {
+        previewTitle.className = "font-title-lg text-headline-lg text-on-surface leading-tight tracking-tight mb-4 font-bold font-sans";
+      }
+    }
+
+    // Color theme toggle on preview card
+    function setTheme(theme) {
+      const card = document.getElementById('card-surface');
+      if (!card) return;
+
+      if (theme === 'tuscan') {
+        card.style.backgroundColor = '#fff8f6';
+        card.style.color = '#221a17';
+      } else if (theme === 'indigo') {
+        card.style.backgroundColor = '#1f242d';
+        card.style.color = '#fff8f6';
+      } else if (theme === 'champagne') {
+        card.style.backgroundColor = '#fdfbf7';
+        card.style.color = '#39302d';
+      } else if (theme === 'botanical') {
+        card.style.backgroundColor = '#f1f4f1';
+        card.style.color = '#243427';
+      }
+    }
+
+    // AI Copy Generation Simulation
+    const aiTexts = {
+      regal: '"Under the noble Tuscan skies and sacred cypress avenues of San Gimignano, Eleanor Vance requests your esteemed presence for an immortal harvest celebration."',
+      intimate: '"Join us for intimate toasts under the Chianti stars. Good wine, warm company, and effortless laughter await your arrival at Villa San Valentino."',
+      contemporary: '"High fashion meets rustic heritage. Four days of modern gastronomy, bespoke soundscapes, and curated leisure in the heart of Tuscany."'
+    };
+
+    function generateAiCopy() {
+      const toneSelect = document.getElementById('ai-tone');
+      const status = document.getElementById('ai-status');
+      const selected = toneSelect ? toneSelect.value : 'regal';
+
+      if (previewProse && aiTexts[selected]) {
+        previewProse.textContent = aiTexts[selected];
+      }
+
+      if (status) {
+        status.classList.remove('hidden');
+        setTimeout(() => {
+          status.classList.add('hidden');
+        }, 2500);
+      }
+    }
+
+    // Wax Seal Toggle Interaction
+    let sealBroken = false;
+    function triggerWaxSeal() {
+      const seal = document.getElementById('wax-seal');
+      if (!seal) return;
+      sealBroken = !sealBroken;
+      if (sealBroken) {
+        seal.style.transform = 'translateY(-12px) scale(0.9) rotate(8deg)';
+        seal.style.opacity = '0.7';
+      } else {
+        seal.style.transform = 'none';
+        seal.style.opacity = '1';
+      }
+    }
+
+    // Multi-Channel Dispatch Tabs
+    function setChannel(channel) {
+      const chanW = document.getElementById('channel-whatsapp');
+      const chanE = document.getElementById('channel-email');
+      const chanS = document.getElementById('channel-sms');
+
+      const btnW = document.getElementById('btn-chan-whatsapp');
+      const btnE = document.getElementById('btn-chan-email');
+      const btnS = document.getElementById('btn-chan-sms');
+
+      chanW.classList.add('hidden');
+      chanE.classList.add('hidden');
+      chanS.classList.add('hidden');
+
+      btnW.className = "px-space-md py-2 rounded-lg font-title-md text-body-sm text-on-surface-variant hover:text-on-surface flex items-center gap-1.5 transition-colors";
+      btnE.className = "px-space-md py-2 rounded-lg font-title-md text-body-sm text-on-surface-variant hover:text-on-surface flex items-center gap-1.5 transition-colors";
+      btnS.className = "px-space-md py-2 rounded-lg font-title-md text-body-sm text-on-surface-variant hover:text-on-surface flex items-center gap-1.5 transition-colors";
+
+      if (channel === 'whatsapp') {
+        chanW.classList.remove('hidden');
+        btnW.className = "px-space-md py-2 rounded-lg font-title-md text-body-sm bg-surface-container-lowest text-primary shadow-sm flex items-center gap-1.5";
+      } else if (channel === 'email') {
+        chanE.classList.remove('hidden');
+        btnE.className = "px-space-md py-2 rounded-lg font-title-md text-body-sm bg-surface-container-lowest text-primary shadow-sm flex items-center gap-1.5";
+      } else if (channel === 'sms') {
+        chanS.classList.remove('hidden');
+        btnS.className = "px-space-md py-2 rounded-lg font-title-md text-body-sm bg-surface-container-lowest text-primary shadow-sm flex items-center gap-1.5";
+      }
+    }
+
+    // Quick text copy notice
+    function copyFormattedText() {
+      navigator.clipboard?.writeText(previewTitle.textContent + " - " + previewProse.textContent);
+      alert("Invitation dispatch copy copied to clipboard.");
+    }
+
+    // Toggle fullscreen preview emulation
+    function toggleFullscreenPreview() {
+      const stage = document.getElementById('stationery-stage');
+      if (stage) {
+        stage.scrollIntoView({ behavior: 'smooth' });
+        stage.classList.add('ring-4', 'ring-secondary');
+        setTimeout(() => {
+          stage.classList.remove('ring-4', 'ring-secondary');
+        }, 1500);
+      }
+    }
+  </script>
+</div></main></div></body></html>

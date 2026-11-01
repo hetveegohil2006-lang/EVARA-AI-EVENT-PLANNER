@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60" fill="none">
+  <defs>
+    <linearGradient id="evaraGoldMono" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#C5A477"/>
+      <stop offset="50%" stop-color="#B88D72"/>
+      <stop offset="100%" stop-color="#80604F"/>
+    </linearGradient>
+  </defs>
+  <rect x="0" y="0" width="60" height="60" rx="16" fill="#39302D"/>
+  <path d="M18 17 H42 C44 17 45 18 45 20 C45 22 44 23 42 23 H24 V28 H38 C40 28 41 29 41 30.5 C41 32 40 33 38 33 H24 V37 H43 C45 37 46 38 46 40 C46 42 45 43 43 43 H18 C16.5 43 15.5 42 15.5 40.5 V19.5 C15.5 18 16.5 17 18 17 Z" fill="url(#evaraGoldMono)"/>
+  <path d="M38 15 C38 12 39 11 42 11 C39 11 38 10 38 7 C38 10 37 11 34 11 C37 11 38 12 38 15 Z" fill="#E9D8C8"/>
+  <circle cx="43" cy="27" r="1.5" fill="#E9D8C8"/>
+</svg>

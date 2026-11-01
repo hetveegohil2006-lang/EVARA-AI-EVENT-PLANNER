@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard — EVARA Private Concierge</title>
+  <link rel="stylesheet" href="css/variables.css" />
+  <link rel="stylesheet" href="css/global.css" />
+  <link rel="stylesheet" href="css/layout.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+  <link rel="stylesheet" href="css/pages/dashboard.css" />
+  <link rel="icon" type="image/svg+xml" href="assets/icons/evara-monogram.svg" />
+</head>
+<body class="bg-surface">
+
+  <div class="app-shell">
+    <!-- LEFT SIDEBAR NAVIGATION -->
+    <aside class="app-sidebar">
+      <div>
+        <!-- Sidebar Brand Header -->
+        <div class="sidebar-header">
+          <a href="index.html" class="brand-lockup">
+            <div class="brand-monogram">
+              <svg viewBox="0 0 60 60" width="22" height="22" fill="none">
+                <path d="M18 17 H42 C44 17 45 18 45 20 C45 22 44 23 42 23 H24 V28 H38 C40 28 41 29 41 30.5 C41 32 40 33 38 33 H24 V37 H43 C45 37 46 38 46 40 C46 42 45 43 43 43 H18 C16.5 43 15.5 42 15.5 40.5 V19.5 C15.5 18 16.5 17 18 17 Z" fill="#E9D8C8"/>
+              </svg>
+            </div>
+            <div class="brand-text">
+              <span class="brand-name">EVARA</span>
+              <span class="brand-tagline">Private Concierge</span>
+            </div>
+          </a>
+        </div>
+
+        <!-- Primary Action CTA -->
+        <div style="padding: 0.5rem 1.25rem 0.75rem;">
+          <a href="pages/create-event.html" class="btn btn-primary btn-full" style="padding: 0.75rem 1rem;">
+            <span class="material-symbols-outlined" style="font-size: 18px;">add</span>
+            <span class="font-label-md" style="letter-spacing: 0.08em;">Create New Event</span>
+          </a>
+        </div>
+
+        <!-- Navigation Group 1: Curation -->
+        <div class="sidebar-nav">
+          <span class="nav-section-title">Curation</span>
+          <a href="dashboard.html" class="nav-item active">
+            <span class="material-symbols-outlined">grid_view</span>
+            <span>Dashboard</span>
+          </a>
+          <a href="pages/event-overview.html" class="nav-item">
+            <span class="material-symbols-outlined">dashboard</span>
+            <span>Event Overview</span>
+          </a>
+          <a href="pages/checklist.html" class="nav-item">
+            <span class="material-symbols-outlined">checklist</span>
+            <span>Checklist & Timeline</span>
+          </a>
+          <a href="pages/budget.html" class="nav-item">
+            <span class="material-symbols-outlined">account_balance_wallet</span>
+            <span>Budget Management</span>
+          </a>
+          <a href="pages/payments.html" class="nav-item">
+            <span class="material-symbols-outlined">payments</span>
+            <span>Payments & QR</span>
+          </a>
+          <a href="pages/guests.html" class="nav-item">
+            <span class="material-symbols-outlined">how_to_reg</span>
+            <span>Guest Management</span>
+          </a>
+          <a href="pages/invitations.html" class="nav-item">
+            <span class="material-symbols-outlined">mark_email_read</span>
+            <span>Invitation Designer</span>
+          </a>
+          <a href="pages/vendors.html" class="nav-item">
+            <span class="material-symbols-outlined">storefront</span>
+            <span>Vendor Discovery</span>
+          </a>
+          <a href="pages/shopping.html" class="nav-item">
+            <span class="material-symbols-outlined">shopping_bag</span>
+            <span>Shopping Assistant</span>
+          </a>
+
+          <!-- Navigation Group 2: Intelligence & Archive -->
+          <span class="nav-section-title" style="margin-top: 0.75rem;">Intelligence & Archive</span>
+          <a href="pages/ai-assistant.html" class="nav-item">
+            <span class="material-symbols-outlined" style="color: var(--tertiary-gold);">auto_awesome</span>
+            <span>AI Concierge</span>
+          </a>
+          <a href="pages/team-chat.html" class="nav-item">
+            <span class="material-symbols-outlined">forum</span>
+            <span>Team Chat</span>
+          </a>
+          <a href="pages/reports.html" class="nav-item">
+            <span class="material-symbols-outlined">lab_profile</span>
+            <span>Reports & Exports</span>
+          </a>
+          <a href="pages/event-history.html" class="nav-item">
+            <span class="material-symbols-outlined">history_edu</span>
+            <span>Event History</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Sidebar Footer -->
+      <div class="sidebar-footer">
+        <a href="pages/notifications.html" class="nav-item">
+          <span class="material-symbols-outlined">notifications</span>
+          <span>Notifications</span>
+        </a>
+        <a href="pages/profile-settings.html" class="nav-item">
+          <span class="material-symbols-outlined">settings</span>
+          <span>Profile & Settings</span>
+        </a>
+        <a href="pages/about.html" class="nav-item">
+          <span class="material-symbols-outlined">info</span>
+          <span>About EVARA</span>
+        </a>
+
+        <div class="concierge-pill mt-xs">
+          <div class="concierge-info">
+            <span class="material-symbols-outlined">auto_awesome</span>
+            <div>
+              <span class="concierge-title">Concierge AI v2.4</span>
+              <span class="concierge-sub">Private Model Active</span>
+            </div>
+          </div>
+          <div class="status-beacon"></div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- MAIN APP VIEWPORT -->
+    <div class="app-main">
+      <!-- Fixed Header -->
+      <header class="app-header">
+        <div class="header-left">
+          <button class="mobile-menu-btn" aria-label="Toggle Navigation">
+            <span class="material-symbols-outlined">menu</span>
+          </button>
+          
+          <button class="header-scope-btn" onclick="window.location.href='pages/event-overview.html'">
+            <div class="header-scope-text">
+              <div class="header-scope-title">
+                <span>Villa San Valentino Tuscan Gala 2025</span>
+                <span class="material-symbols-outlined" style="font-size: 16px; color: var(--outline);">expand_more</span>
+              </div>
+              <span class="header-scope-subtitle">Oct 24–27, 2025</span>
+            </div>
+            <span class="badge badge-secondary" style="font-size: 9.5px; padding: 2px 6px;">Planning Active</span>
+          </button>
+
+          <div class="header-search">
+            <span class="material-symbols-outlined">search</span>
+            <input type="text" placeholder="Search tasks, guests, vendors, ledger..." />
+          </div>
+        </div>
+
+        <div class="header-right">
+          <a href="index.html#platform-tour" class="btn btn-subtle btn-sm" style="display: inline-flex; align-items: center; gap: 6px; border: 1px solid var(--color-champagne); background: rgba(184, 141, 114, 0.08); color: var(--color-espresso); padding: 0.35rem 0.75rem; border-radius: var(--radius-full);">
+            <span class="material-symbols-outlined" style="font-size: 16px; color: var(--color-terracotta);">play_circle</span>
+            <span class="font-label-sm">Video Tour & Guide</span>
+          </a>
+
+          <div class="currency-badge">
+            <span class="material-symbols-outlined" style="font-size: 16px; color: var(--outline);">payments</span>
+            <span>INR (₹)</span>
+          </div>
+
+          <a href="pages/notifications.html" class="icon-btn" aria-label="Notifications">
+            <span class="material-symbols-outlined">notifications</span>
+            <span class="icon-badge"></span>
+          </a>
+
+          <div class="header-divider"></div>
+
+          <a href="pages/profile-settings.html" class="user-profile-lockup">
+            <div class="user-profile-text">
+              <div class="user-name">Eleanor Vance</div>
+              <div class="user-role">Principal Host</div>
+            </div>
+            <div class="user-avatar">
+              <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCblbJh5I878bB-SpKIAcY8gMe7Y6eDKxYbJLsCd9KulLzbHxlhTUyWD5y9ceH4RVYJjOwQwtyWCKA1CYDUwJB_eJeVVu7wvrhkUuvh1Pyxt159059DQaD3CoEXwd7iI0KGXa-OjhGk0K7YVTDOh5o9-gXmjcddhmp-tkv3nw1ee6SCxaERRbWfk-HgXJU9movKZDcCDa0ptrrt2gazDwN_0Sc6KueuTqtYp3fikBU" alt="Eleanor Vance" />
+            </div>
+          </a>
+        </div>
+      </header>
+
+      <!-- Main Scrollable Stage -->
+      <main class="main-container">
+        <!-- 1. WELCOME HEADER -->
+        <div class="flex items-end justify-between flex-wrap gap-md mb-lg">
+          <div>
+            <div class="flex items-center gap-xs font-label-md mb-xs" style="color: var(--outline);">
+              <span style="color: var(--color-terracotta);">Tuesday, October 24</span>
+              <span>•</span>
+              <div class="inline-flex items-center gap-2xs badge badge-primary" style="font-size: 10px; padding: 2px 6px;">
+                <span class="status-beacon" style="width: 6px; height: 6px;"></span>
+                <span>All 4 active events on track</span>
+              </div>
+            </div>
+            <h1 class="font-display">Welcome back, <span class="italic font-normal">Eleanor.</span></h1>
+            <p class="font-body-lg text-outline" style="max-width: 640px; margin-top: 4px;">
+              Let’s make something unforgettable. Your bespoke celebrations are flowing smoothly across Tuscany, Paris, and Zurich.
+            </p>
+          </div>
+
+          <div class="flex items-center gap-sm">
+            <button class="btn btn-surface" onclick="window.location.href='pages/ai-assistant.html'">
+              <span class="material-symbols-outlined" style="color: var(--tertiary-gold);">auto_awesome</span>
+              <span class="font-label-md">Ask EVARA AI</span>
+            </button>
+            <a href="pages/create-event.html" class="btn btn-primary">
+              <span class="material-symbols-outlined">add</span>
+              <span class="font-label-md">Plan New Event</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- 2. CINEMATIC SHOWCASE HERO -->
+        <section class="hero-banner mb-xl">
+          <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCvjZQItqiS8GJ3QchcKVAHePoS18FihFoH1Bmagr6yAPsLwUNiaxnltiY05dq-UurSr80BIpwmOKL3jPnyYoXYdsPfPIXJNsN_6sKyeKCKjB0uDR_aNi4DL_TsyTYqfqXcERQgGBqON19SarToHP3WzG3aKCMYv5pRwp_oRi9XCg9-pshuKy12_etdLmsvishFmK-dZ_9cFKs7kNF5HYbWn5yNgrkb50F5Epk53kc" 
+               alt="An exquisite Tuscan banquet under suspended lighting" class="hero-banner-image" />
+          <div class="hero-scrim">
+            <div class="flex items-center justify-between">
+              <div class="badge badge-gold" style="background: rgba(255,255,255,0.85); color: var(--primary);">
+                <span class="status-beacon" style="width: 6px; height: 6px; background-color: var(--tertiary-gold);"></span>
+                <span>Cinematic Atmosphere • Villa San Valentino, Tuscany</span>
+              </div>
+            </div>
+            <div class="flex items-end justify-between flex-wrap gap-md">
+              <div style="max-width: 680px;">
+                <span class="font-label-sm" style="color: var(--tertiary-fixed); letter-spacing: 0.15em;">Featured Celebration</span>
+                <h2 class="font-display text-white" style="font-size: 38px; line-height: 1.15; margin: 4px 0 8px;">
+                  Every moment, <span class="italic font-normal">beautifully planned.</span>
+                </h2>
+                <p class="font-body-md" style="color: var(--surface-dim); margin: 0;">
+                  Curating Tuscan Villa Wedding & 3 other bespoke celebrations. 28 days until guest arrivals in Florence.
+                </p>
+              </div>
+              <a href="pages/event-overview.html" class="btn btn-secondary" style="background-color: var(--surface-bright); color: var(--color-espresso);">
+                <span>Explore Operational Command</span>
+                <span class="material-symbols-outlined">arrow_forward</span>
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <!-- 3. VIRTUAL AI CONCIERGE STAR FEATURE -->
+        <section class="card card-low mb-xl" style="padding: 2rem; position: relative; overflow: hidden;">
+          <div class="dashboard-hero-ambient"></div>
+          <div class="flex items-start gap-lg flex-col lg:flex-row relative z-10">
+            <div class="flex items-center gap-md shrink-0">
+              <div class="concierge-avatar-frame">
+                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuA_lJKilqzQz2AM1V9uAcF80Cp6TcCb3bWi4k5Gg29FotPpcnGtvwVvqpbquqtPA2OgLq3_lf5CxnhFXu4O8Xzdp_u3nTZw_14Nzph80GFvOKtQ2UU-pdzc2IlqRGffC3kpKGoC6JvmTls1ahzzIY6tdS9UVoCw37m272Z8rGVICaMrxVpJEPfe8lBfrHdw-PpbvDcdzoOeeoNr7H3J2ITICYXPDCbRuHwHdR_cKmk" alt="Aria Concierge" />
+              </div>
+              <div>
+                <div class="flex items-center gap-2xs">
+                  <h3 class="font-title-lg" style="font-size: 19px;">Aria</h3>
+                  <span class="material-symbols-outlined fill" style="font-size: 16px; color: var(--tertiary-gold);">verified</span>
+                </div>
+                <span class="font-label-sm text-outline">Lead AI Concierge</span>
+                <div class="voice-wave mt-xs">
+                  <div class="voice-wave-bar"></div>
+                  <div class="voice-wave-bar"></div>
+                  <div class="voice-wave-bar"></div>
+                  <div class="voice-wave-bar"></div>
+                  <span class="font-label-sm text-secondary" style="font-size: 10px; margin-left: 4px;">Ready & Synced</span>
+                </div>
+              </div>
+            </div>
+
+            <div style="flex: 1; width: 100%;">
+              <div class="card mb-md" style="padding: 1.25rem 1.5rem; background-color: var(--surface-container-lowest); border-color: rgba(197, 164, 119, 0.4);">
+                <div class="flex items-center justify-between mb-xs">
+                  <span class="font-label-sm text-outline flex items-center gap-2xs">
+                    <span class="material-symbols-outlined" style="font-size: 14px; color: var(--tertiary-gold);">auto_awesome</span>
+                    <span>Autonomous Dispatch</span>
+                  </span>
+                  <span class="font-body-sm text-outline" style="font-size: 11px;">Just now</span>
+                </div>
+                <p class="font-headline-sm" style="font-weight: 400; line-height: 1.5; color: var(--primary); margin: 0;">
+                  “Good morning Eleanor! Your <span class="font-semibold text-on-surface">Villa San Valentino</span> caterer confirmed the tasting menu for Thursday. Would you like me to review the guest RSVPs or reconcile the champagne budget?”
+                </p>
+              </div>
+
+              <!-- Quick prompt chips -->
+              <div class="flex items-center gap-xs flex-wrap">
+                <span class="font-label-sm text-outline">Suggested:</span>
+                <button class="prompt-chip" onclick="window.location.href='pages/ai-assistant.html?prompt=Find best venue within budget'">
+                  <span class="material-symbols-outlined" style="font-size: 15px; color: var(--secondary);">villa</span>
+                  <span>Find best venue within budget</span>
+                </button>
+                <button class="prompt-chip" onclick="window.location.href='pages/ai-assistant.html?prompt=Draft wedding RSVP reminder'">
+                  <span class="material-symbols-outlined" style="font-size: 15px; color: var(--secondary);">mail</span>
+                  <span>Draft wedding RSVP reminder</span>
+                </button>
+                <button class="prompt-chip" onclick="window.location.href='pages/ai-assistant.html?prompt=Audit liquid contingency headroom'">
+                  <span class="material-symbols-outlined" style="font-size: 15px; color: var(--secondary);">account_balance_wallet</span>
+                  <span>Audit liquid contingency headroom</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 4. CORE TELEMETRY KPIS -->
+        <div class="grid grid-cols-4 gap-md mb-xl">
+          <!-- KPI 1 -->
+          <div class="metric-bento-card">
+            <div class="metric-header">
+              <span>Liquid Contingency</span>
+              <span class="material-symbols-outlined text-secondary" style="font-size: 18px;">account_balance_wallet</span>
+            </div>
+            <div>
+              <div class="metric-value">₹4,55,000 <span class="font-body-sm text-outline" style="font-size: 13px;">/ ₹15,00,000</span></div>
+              <div class="progress-bar-container mt-xs">
+                <div class="progress-bar-fill" style="width: 30.3%;"></div>
+              </div>
+            </div>
+            <div class="metric-caption flex items-center gap-2xs">
+              <span class="material-symbols-outlined" style="font-size: 14px; color: var(--success);">check_circle</span>
+              <span>69.7% Master Budget Committed</span>
+            </div>
+          </div>
+
+          <!-- KPI 2 -->
+          <div class="metric-bento-card">
+            <div class="metric-header">
+              <span>Confirmed Attendees</span>
+              <span class="material-symbols-outlined text-secondary" style="font-size: 18px;">how_to_reg</span>
+            </div>
+            <div>
+              <div class="metric-value">40 Pax <span class="badge badge-secondary" style="font-size: 10px;">83% Escrow</span></div>
+              <div class="progress-bar-container mt-xs">
+                <div class="progress-bar-fill secondary" style="width: 83%;"></div>
+              </div>
+            </div>
+            <div class="metric-caption flex items-center gap-2xs">
+              <span class="material-symbols-outlined" style="font-size: 14px; color: var(--tertiary-gold);">verified</span>
+              <span>34 Dietary Profiles Cleared</span>
+            </div>
+          </div>
+
+          <!-- KPI 3 -->
+          <div class="metric-bento-card">
+            <div class="metric-header">
+              <span>Fleet Milestone</span>
+              <span class="material-symbols-outlined text-secondary" style="font-size: 18px;">airport_shuttle</span>
+            </div>
+            <div>
+              <div class="metric-value">8 Days <span class="font-body-sm text-outline" style="font-size: 13px;">to Hub</span></div>
+              <p class="font-body-sm text-outline" style="margin: 4px 0 0;">Sprinter transfers scheduled</p>
+            </div>
+            <div class="metric-caption flex items-center gap-2xs">
+              <span class="material-symbols-outlined" style="font-size: 14px; color: var(--tertiary-gold);">schedule</span>
+              <span>12 Private Arrivals Tracked</span>
+            </div>
+          </div>
+
+          <!-- KPI 4 -->
+          <div class="metric-bento-card">
+            <div class="metric-header">
+              <span>Pending Endorsements</span>
+              <span class="material-symbols-outlined text-warning" style="font-size: 18px;">pending_actions</span>
+            </div>
+            <div>
+              <div class="metric-value" style="color: var(--warning);">1 Vendor <span class="font-body-sm text-outline" style="font-size: 13px;">Under Review</span></div>
+              <p class="font-body-sm text-outline" style="margin: 4px 0 0;">Festoon Pergola Illuminations</p>
+            </div>
+            <div class="metric-caption flex items-center gap-2xs" style="color: var(--warning);">
+              <span class="material-symbols-outlined" style="font-size: 14px;">warning</span>
+              <span>Florence quote needs sign-off</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 5. ACTIVE EVENTS DOSSIER -->
+        <section class="mb-xl">
+          <div class="flex items-center justify-between mb-md">
+            <div>
+              <span class="font-label-md text-secondary">Active Celebrations</span>
+              <h2 class="font-headline-md">Your Curated Portfolio</h2>
+            </div>
+            <a href="pages/event-history.html" class="btn btn-subtle font-title-md" style="font-size: 14px;">View Archive (6)</a>
+          </div>
+
+          <div class="grid grid-cols-3 gap-md" id="dashboardEventsGrid">
+            <!-- Event 1 -->
+            <div class="card card-interactive" onclick="window.location.href='pages/event-overview.html'">
+              <div style="height: 180px; border-radius: var(--radius-lg); overflow: hidden; margin-bottom: 1rem; position: relative;">
+                <img src="https://lh3.googleusercontent.com/aida/AEtjO1UKPjxXQ36u-3fZ_xMpJolfuPHmL0oFqfip-AmFeUU2dZeq9gpTkIYwquIZIIZ1WTJZzaSEEDBDU61lk6KkBdq3CvgoK1JAqzc8oqXZSPbGF5Yjx65Q6ZZkH4wwPOKyWYL43MBfr4Mx6wT5yzZDyv7Qz2M0qZiFWGbR_cFigogoBqCgaMc7TtL2SFCIEaVsHO4O5zmLC97i9iPDwwvC6Nj6dWvyXTxr7ppsZ3ZozJG3" alt="Villa San Valentino" style="width: 100%; height: 100%; object-fit: cover;" />
+                <span class="badge badge-secondary" style="position: absolute; top: 10px; left: 10px;">Planning Active</span>
+              </div>
+              <h3 class="font-headline-sm" style="font-size: 20px; margin-bottom: 4px;">Villa San Valentino Tuscan Gala</h3>
+              <p class="font-body-sm text-outline flex items-center gap-xs">
+                <span class="material-symbols-outlined" style="font-size: 16px;">calendar_month</span>
+                <span>Oct 24–27, 2025 • Chianti Hills, Italy</span>
+              </p>
+              <div class="flex items-center justify-between pt-sm mt-sm" style="border-top: 1px solid var(--surface-container-high);">
+                <span class="font-body-sm font-semibold">₹15,00,000 Budget</span>
+                <span class="font-label-sm text-secondary">40 Confirmed Guests</span>
+              </div>
+            </div>
+
+            <!-- Event 2 -->
+            <div class="card card-interactive" onclick="window.location.href='pages/event-history.html'">
+              <div style="height: 180px; border-radius: var(--radius-lg); overflow: hidden; margin-bottom: 1rem; position: relative;">
+                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDCoKIpmSrrmsUFK_KkwTgrenPcK6xN8dftD0pCZki6MlCA-zpnmlyCA1huwW94isQsNfPr-8VWXyhUhXDcMrTninx_dRD7-gXKBUsRxq6WlRybJcgGpzrKM1PtyawAGf_Dv9ys8VSZ7P43VYgOkoGwr7r68YLnZHzN-HnTrXrizLX7Evsi_WUSF--Bq_FN8we9ICtLkll_YYwK-WKc4jaa_DUwkfk3hJfm-0VYD04" alt="Cap d'Antibes" style="width: 100%; height: 100%; object-fit: cover;" />
+                <span class="badge badge-success" style="position: absolute; top: 10px; left: 10px;">Executed</span>
+              </div>
+              <h3 class="font-headline-sm" style="font-size: 20px; margin-bottom: 4px;">Cap d’Antibes Solstice Birthday</h3>
+              <p class="font-body-sm text-outline flex items-center gap-xs">
+                <span class="material-symbols-outlined" style="font-size: 16px;">calendar_month</span>
+                <span>Jul 14–16, 2025 • French Riviera</span>
+              </p>
+              <div class="flex items-center justify-between pt-sm mt-sm" style="border-top: 1px solid var(--surface-container-high);">
+                <span class="font-body-sm font-semibold">₹8,50,000 Settled</span>
+                <span class="font-label-sm text-outline">24 Guests Attended</span>
+              </div>
+            </div>
+
+            <!-- Event 3 -->
+            <div class="card card-interactive" onclick="window.location.href='pages/event-history.html'">
+              <div style="height: 180px; border-radius: var(--radius-lg); overflow: hidden; margin-bottom: 1rem; position: relative;">
+                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCvjZQItqiS8GJ3QchcKVAHePoS18FihFoH1Bmagr6yAPsLwUNiaxnltiY05dq-UurSr80BIpwmOKL3jPnyYoXYdsPfPIXJNsN_6sKyeKCKjB0uDR_aNi4DL_TsyTYqfqXcERQgGBqON19SarToHP3WzG3aKCMYv5pRwp_oRi9XCg9-pshuKy12_etdLmsvishFmK-dZ_9cFKs7kNF5HYbWn5yNgrkb50F5Epk53kc" alt="St. Moritz Summit" style="width: 100%; height: 100%; object-fit: cover;" />
+                <span class="badge badge-gold" style="position: absolute; top: 10px; left: 10px;">Upcoming 2026</span>
+              </div>
+              <h3 class="font-headline-sm" style="font-size: 20px; margin-bottom: 4px;">St. Moritz Alpine Winter Summit</h3>
+              <p class="font-body-sm text-outline flex items-center gap-xs">
+                <span class="material-symbols-outlined" style="font-size: 16px;">calendar_month</span>
+                <span>Jan 18–22, 2026 • Switzerland</span>
+              </p>
+              <div class="flex items-center justify-between pt-sm mt-sm" style="border-top: 1px solid var(--surface-container-high);">
+                <span class="font-body-sm font-semibold">₹22,00,000 Target</span>
+                <span class="font-label-sm text-outline">16 Keynote Attendees</span>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+  </div>
+
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+  <script src="js/firebaseConfig.js"></script>
+  <script src="js/storage.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/navigation.js"></script>
+  <script>
+    function renderDashboardEvents() {
+      const grid = document.getElementById('dashboardEventsGrid');
+      if (!grid) return;
+      const events = Storage.get(STORAGE_KEYS.EVENTS, DEFAULT_EVENTS);
+      if (!events || !events.length) return;
+
+      grid.innerHTML = events.slice(0, 3).map((evt) => {
+        const isExecuted = evt.status === 'Executed';
+        const isUpcoming = (evt.status || '').includes('Upcoming');
+        const badgeClass = isExecuted ? 'badge-success' : (isUpcoming ? 'badge-gold' : 'badge-secondary');
+        const targetUrl = isExecuted ? 'pages/event-history.html' : 'pages/event-overview.html';
+
+        return `
+          <div class="card card-interactive" onclick="Storage.set(STORAGE_KEYS.CURRENT_EVENT_ID, '${evt.id}'); window.location.href='${targetUrl}'">
+            <div style="height: 180px; border-radius: var(--radius-lg); overflow: hidden; margin-bottom: 1rem; position: relative;">
+              <img src="${evt.coverImage || DEFAULT_EVENTS[0].coverImage}" alt="${evt.title}" style="width: 100%; height: 100%; object-fit: cover;" />
+              <span class="badge ${badgeClass}" style="position: absolute; top: 10px; left: 10px;">${evt.status}</span>
+            </div>
+            <h3 class="font-headline-sm" style="font-size: 20px; margin-bottom: 4px;">${evt.title}</h3>
+            <p class="font-body-sm text-outline flex items-center gap-xs">
+              <span class="material-symbols-outlined" style="font-size: 16px;">calendar_month</span>
+              <span>${evt.dates || (evt.startDate + ' – ' + evt.endDate)} • ${evt.location || 'Chianti Hills'}</span>
+            </p>
+            <div class="flex items-center justify-between pt-sm mt-sm" style="border-top: 1px solid var(--surface-container-high);">
+              <span class="font-body-sm font-semibold">${App.formatINR(evt.targetBudget || 1500000)} Budget</span>
+              <span class="font-label-sm ${isExecuted ? 'text-outline' : 'text-secondary'}">${evt.guestCount || 36} Attendees</span>
+            </div>
+          </div>
+        `;
+      }).join('');
+    }
+
+    Storage.subscribe(STORAGE_KEYS.EVENTS, renderDashboardEvents);
+    document.addEventListener('DOMContentLoaded', renderDashboardEvents);
+  </script>
+</body>
+</html>

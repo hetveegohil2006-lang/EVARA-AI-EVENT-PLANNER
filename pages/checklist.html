@@ -1,0 +1,835 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>Event Checklist &amp; Timeline — Villa San Valentino Gala — EVARA</title>
+  <meta name="description" content="Chronological milestone run-sheet and production checklist for Villa San Valentino Tuscan Gala 2025."/>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+  
+  <link rel="stylesheet" href="../css/variables.css"/>
+  <link rel="stylesheet" href="../css/global.css"/>
+  <link rel="stylesheet" href="../css/layout.css"/>
+  <link rel="stylesheet" href="../css/components.css"/>
+  <link rel="stylesheet" href="../css/responsive.css"/>
+  <link rel="stylesheet" href="../css/pages/events.css"/>
+  <link rel="stylesheet" href="../css/pages/dashboard.css"/>
+</head>
+<body class="bg-[#F8F4EF]">
+  <!-- Mobile Menu Button -->
+  <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle navigation">
+    <span class="material-symbols-outlined">menu</span>
+  </button>
+  <div class="sidebar-backdrop" id="sidebarBackdrop"></div>
+
+  <!-- FIXED EVENT-SCOPED SIDEBAR -->
+  <aside class="sidebar">
+    <div class="px-md pt-lg pb-sm">
+      <a href="../dashboard.html" class="flex items-center gap-xs text-muted hover:text-primary" style="font-size: 13px; font-weight: 600; text-decoration: none;">
+        <span class="material-symbols-outlined" style="font-size: 16px;">arrow_back</span>
+        <span>Back to All Events</span>
+      </a>
+    </div>
+
+    <!-- Workspace Scope Card -->
+    <div class="px-md pb-sm">
+      <div class="p-sm rounded-lg" style="background: var(--color-champagne-light); border: 1px solid var(--color-champagne);">
+        <span class="text-xs uppercase text-muted font-bold tracking-wider block" style="font-size: 10px;">Workspace Scope</span>
+        <span class="font-bold text-sm truncate block" style="color: var(--color-espresso);">Tuscan Gala 2025</span>
+      </div>
+    </div>
+
+    <div class="sidebar-section-label" style="padding-top: 4px;">Event Navigation</div>
+    <ul class="sidebar-nav">
+      <li class="sidebar-item">
+        <a href="event-overview.html" class="sidebar-link" data-path="event-overview">
+          <span class="material-symbols-outlined">dashboard</span>
+          <span>Event Overview</span>
+        </a>
+      </li>
+      <li class="sidebar-item">
+        <a href="checklist.html" class="sidebar-link active" data-path="checklist">
+          <span class="material-symbols-outlined">checklist</span>
+          <span>Event Checklist</span>
+        </a>
+      </li>
+      <li class="sidebar-item">
+        <a href="guests.html" class="sidebar-link" data-path="guests">
+          <span class="material-symbols-outlined">mark_email_read</span>
+          <span>Guests &amp; Invitations</span>
+        </a>
+      </li>
+      <li class="sidebar-item">
+        <a href="budget.html" class="sidebar-link" data-path="budget">
+          <span class="material-symbols-outlined">account_balance_wallet</span>
+          <span>Budget &amp; Payments</span>
+        </a>
+      </li>
+      <li class="sidebar-item">
+        <a href="vendors.html" class="sidebar-link" data-path="vendors">
+          <span class="material-symbols-outlined">storefront</span>
+          <span>Vendors</span>
+        </a>
+      </li>
+      <li class="sidebar-item">
+        <a href="shopping.html" class="sidebar-link" data-path="shopping">
+          <span class="material-symbols-outlined">shopping_bag</span>
+          <span>Shopping Assistant</span>
+        </a>
+      </li>
+      <li class="sidebar-item">
+        <a href="checklist.html" class="sidebar-link" data-path="timeline">
+          <span class="material-symbols-outlined">calendar_today</span>
+          <span>Timeline</span>
+        </a>
+      </li>
+      <li class="sidebar-item">
+        <a href="team-chat.html" class="sidebar-link" data-path="team">
+          <span class="material-symbols-outlined">groups</span>
+          <span>Team &amp; Volunteers</span>
+        </a>
+      </li>
+      <li class="sidebar-item">
+        <a href="team-chat.html" class="sidebar-link" data-path="chat">
+          <span class="material-symbols-outlined">forum</span>
+          <span>Event Chat</span>
+        </a>
+      </li>
+      <li class="sidebar-item">
+        <a href="reports.html" class="sidebar-link" data-path="reports">
+          <span class="material-symbols-outlined">lab_profile</span>
+          <span>Reports &amp; Exports</span>
+        </a>
+      </li>
+    </ul>
+
+    <div class="sidebar-footer">
+      <ul class="sidebar-nav">
+        <li class="sidebar-item">
+          <a href="profile-settings.html" class="sidebar-link" data-path="settings">
+            <span class="material-symbols-outlined">settings</span>
+            <span>Event Settings</span>
+          </a>
+        </li>
+      </ul>
+      <div class="concierge-status">
+        <span class="status-dot"></span>
+        <span class="status-text">Concierge AI v2.4 Active</span>
+      </div>
+    </div>
+  </aside>
+
+  <!-- MAIN CONTENT WRAPPER -->
+  <div class="main-wrapper">
+    <!-- BLURRED HEADER WITH EVENT SCOPE DROPDOWN -->
+    <header class="top-header">
+      <div class="flex items-center gap-md">
+        <div class="flex items-center gap-xs">
+          <img src="../assets/icons/evara-logo.svg" alt="EVARA Logo" style="height: 28px; width: auto;"/>
+          <div class="flex flex-col">
+            <span class="font-serif" style="font-weight: 700; color: var(--color-espresso); line-height: 1; font-size: 18px;">EVARA</span>
+            <span class="text-muted uppercase tracking-widest" style="font-size: 9px; font-weight: 600;">Private Concierge</span>
+          </div>
+        </div>
+
+        <div style="height: 24px; width: 1px; background: var(--color-champagne);" class="hidden sm:block"></div>
+
+        <div class="flex items-center gap-xs px-sm py-xs rounded-lg" style="background: var(--color-champagne-light); border: 1px solid var(--color-champagne);">
+          <div class="flex flex-col">
+            <div class="flex items-center gap-xs">
+              <span class="font-bold text-sm" style="color: var(--color-espresso);">Villa San Valentino Tuscan Gala 2025</span>
+              <span class="material-symbols-outlined" style="font-size: 16px; color: var(--color-muted);">expand_more</span>
+            </div>
+            <span class="text-muted text-xs">Oct 24–27, 2025</span>
+          </div>
+          <span class="badge badge-accent" style="font-size: 10px; margin-left: 6px;">Planning Active</span>
+        </div>
+      </div>
+
+      <div class="header-search hidden md:block" style="max-width: 320px;">
+        <span class="material-symbols-outlined search-icon">search</span>
+        <input type="text" class="search-input" id="checklistSearch" placeholder="Search milestones, leads, tags..."/>
+      </div>
+
+      <div class="header-actions">
+        <div class="flex items-center px-xs py-1 rounded bg-surface-container text-xs font-semibold text-muted">
+          <span class="material-symbols-outlined mr-1" style="font-size: 15px;">payments</span>
+          <span>INR (₹)</span>
+        </div>
+        <button class="icon-btn" aria-label="Notifications" onclick="window.location.href='notifications.html'">
+          <span class="material-symbols-outlined">notifications</span>
+          <span class="notification-badge"></span>
+        </button>
+        <div class="profile-pill" onclick="window.location.href='profile-settings.html'">
+          <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCblbJh5I878bB-SpKIAcY8gMe7Y6eDKxYbJLsCd9KulLzbHxlhTUyWD5y9ceH4RVYJjOwQwtyWCKA1CYDUwJB_eJeVVu7wvrhkUuvh1Pyxt159059DQaD3CoEXwd7iI0KGXa-OjhGk0K7YVTDOh5o9-gXmjcddhmp-tkv3nw1ee6SCxaERRbWfk-HgXJU9movKZDcCDa0ptrrt2gazDwN_0Sc6KueuTqtYp3fikBU" alt="Eleanor Vance" class="profile-avatar"/>
+          <div class="profile-info hidden xl:block">
+            <span class="profile-name">Eleanor Vance</span>
+            <span class="profile-role">Principal Host</span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- MAIN BODY -->
+    <main class="main-content">
+      <!-- 1. EDITORIAL HEADER & ACTION BAR -->
+      <section class="section" style="padding-top: var(--space-md); padding-bottom: var(--space-md);">
+        <div class="flex items-end justify-between flex-wrap gap-md">
+          <div>
+            <div class="flex items-center gap-xs mb-xs">
+              <span class="badge badge-accent" style="font-size: 11px;">
+                <span class="status-dot" style="background: var(--color-terracotta); animation: pulse 2s infinite;"></span>
+                Live Operational Ledger
+              </span>
+              <span class="text-muted">•</span>
+              <span class="text-muted text-xs uppercase tracking-wider font-bold">Villa San Valentino Tuscan Gala 2025</span>
+            </div>
+            <h1 class="page-title" style="font-size: 34px; margin-bottom: 4px;">Your Event Plan</h1>
+            <p class="section-desc" style="font-size: 15px; margin: 0;">Every detail, thoughtfully organized across high Tuscan summer twilight.</p>
+          </div>
+
+          <div class="flex items-center flex-wrap gap-sm">
+            <div class="p-xs rounded-xl flex items-center gap-xs" style="background: var(--color-champagne-light); border: 1px solid var(--color-champagne);">
+              <button class="btn btn-primary" id="viewChronoBtn" style="padding: 6px 14px; font-size: 12px;">
+                <span class="material-symbols-outlined" style="font-size: 16px;">timeline</span>
+                <span>Chronological</span>
+              </button>
+              <button class="btn btn-ghost" id="viewCatBtn" style="padding: 6px 14px; font-size: 12px;" onclick="App.toast('Switching to Category matrix view', 'grid_view')">
+                <span class="material-symbols-outlined" style="font-size: 16px;">grid_view</span>
+                <span>Category</span>
+              </button>
+              <button class="btn btn-ghost" id="viewCalBtn" style="padding: 6px 14px; font-size: 12px;" onclick="App.toast('Switching to Calendar timeline view', 'calendar_today')">
+                <span class="material-symbols-outlined" style="font-size: 16px;">calendar_view_week</span>
+                <span>Calendar</span>
+              </button>
+            </div>
+
+            <button class="btn btn-secondary" onclick="ReportsModule.exportExpensesCSV()">
+              <span class="material-symbols-outlined" style="font-size: 18px; color: var(--color-terracotta);">picture_as_pdf</span>
+              <span>Export Plan PDF</span>
+            </button>
+
+            <button class="btn btn-primary" onclick="App.toast('New Milestone Modal initialized', 'add')">
+              <span class="material-symbols-outlined" style="font-size: 18px;">add</span>
+              <span>Add Task</span>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- 2. LIVE EVENT PULSE & COMPLETION VELOCITY CARD -->
+      <section class="section" style="padding-top: 0; padding-bottom: var(--space-md);">
+        <div class="card p-lg shadow-sm flex items-center justify-between flex-wrap gap-lg" style="background: var(--color-champagne-light); border: 1px solid var(--color-champagne);">
+          <div class="flex items-center gap-md">
+            <div class="feature-icon" style="width: 52px; height: 52px; background: var(--color-espresso); color: #fff; border-radius: 14px;">
+              <span class="material-symbols-outlined" style="font-size: 28px;">hourglass_top</span>
+            </div>
+            <div>
+              <div class="flex items-center gap-xs">
+                <span class="font-serif" style="font-size: 26px; font-weight: 700; color: var(--color-espresso);">12 Days</span>
+                <span class="badge badge-accent" style="font-size: 11px;">T-Minus</span>
+              </div>
+              <p class="text-muted text-xs" style="margin: 2px 0 0 0;">Until Day 1 Welcome Lawn Spritz &amp; Cypress Terrace Reception (Oct 24, 2025)</p>
+            </div>
+          </div>
+
+          <div class="flex flex-col gap-xs" style="min-width: 280px;">
+            <div class="flex justify-between items-baseline text-xs">
+              <span class="font-bold" style="color: var(--color-espresso);">18 of 26 Tasks Completed</span>
+              <span class="text-success font-bold">69% Velocity</span>
+            </div>
+            <div class="progress-bar-bg" style="height: 10px;">
+              <div class="progress-bar-fill" style="width: 69%; background: var(--color-espresso);"></div>
+            </div>
+            <div class="flex justify-between text-muted text-xs">
+              <span>Target baseline: 65% by Oct 15</span>
+              <span class="text-success font-bold">+4% Delta ahead</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 3. QUICK METRIC BENTO CARDS -->
+      <section class="section" style="padding-top: 0; padding-bottom: var(--space-md);">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-md">
+          <div class="card p-md shadow-sm">
+            <div class="flex items-center justify-between text-muted text-xs mb-xs">
+              <span class="font-bold uppercase">Total Ledger</span>
+              <span class="material-symbols-outlined text-primary" style="font-size: 20px;">assignment</span>
+            </div>
+            <div class="font-serif" style="font-size: 28px; font-weight: 700;">26</div>
+            <p class="text-muted text-xs mt-xs" style="margin: 0;">Curated milestones across 5 production phases</p>
+          </div>
+
+          <div class="card p-md shadow-sm">
+            <div class="flex items-center justify-between text-muted text-xs mb-xs">
+              <span class="font-bold uppercase">Completed</span>
+              <span class="material-symbols-outlined text-success" style="font-size: 20px;">check_circle</span>
+            </div>
+            <div class="font-serif text-success" style="font-size: 28px; font-weight: 700;">18</div>
+            <p class="text-muted text-xs mt-xs" style="margin: 0;">Verified with venue host &amp; executive vendors</p>
+          </div>
+
+          <div class="card p-md shadow-sm">
+            <div class="flex items-center justify-between text-muted text-xs mb-xs">
+              <span class="font-bold uppercase">Active Assignments</span>
+              <span class="material-symbols-outlined text-primary" style="font-size: 20px;">pending_actions</span>
+            </div>
+            <div class="font-serif" style="font-size: 28px; font-weight: 700; color: var(--color-espresso);">6</div>
+            <p class="text-muted text-xs mt-xs" style="margin: 0;">In dispatch or review stage with assigned leads</p>
+          </div>
+
+          <div class="card p-md shadow-sm" style="background: #ffdad6; border: 1px solid rgba(186,26,26,0.2);">
+            <div class="flex items-center justify-between text-muted text-xs mb-xs">
+              <span class="font-bold uppercase" style="color: var(--color-error);">Attention Required</span>
+              <span class="material-symbols-outlined text-error" style="font-size: 20px;">warning</span>
+            </div>
+            <div class="font-serif text-error" style="font-size: 28px; font-weight: 700;">2</div>
+            <p class="text-muted text-xs mt-xs" style="margin: 0;">Escrow payment milestone &amp; guest RSVP delta</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 4. CONTROLS & FILTER BAR -->
+      <section class="section" style="padding-top: 0; padding-bottom: var(--space-md);">
+        <div class="flex flex-col gap-sm">
+          <div class="flex items-center flex-wrap gap-xs overflow-x-auto pb-xs">
+            <button class="btn btn-primary" style="font-size: 12px; padding: 6px 14px;">All Statuses</button>
+            <button class="btn btn-secondary" style="font-size: 12px; padding: 6px 14px; color: var(--color-error);">Overdue (2)</button>
+            <button class="btn btn-secondary" style="font-size: 12px; padding: 6px 14px;">In Progress (6)</button>
+            <button class="btn btn-secondary" style="font-size: 12px; padding: 6px 14px;">Completed (18)</button>
+          </div>
+
+          <div class="flex items-center gap-xs overflow-x-auto pb-xs text-xs">
+            <span class="badge badge-primary cursor-pointer">All (26)</span>
+            <span class="badge cursor-pointer">Venue &amp; Logistics (5)</span>
+            <span class="badge cursor-pointer">Decoration &amp; Ambience (4)</span>
+            <span class="badge cursor-pointer">Food &amp; Catering (5)</span>
+            <span class="badge cursor-pointer">Guest Management (4)</span>
+            <span class="badge cursor-pointer">Invitations &amp; RSVPs (3)</span>
+            <span class="badge cursor-pointer">Shopping &amp; Stationery (3)</span>
+            <span class="badge cursor-pointer">Payments &amp; Escrow (2)</span>
+            <span class="badge cursor-pointer">Transportation (3)</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- 5. MAIN TIMELINE & COLLABORATION DRAWER SPLIT -->
+      <section class="section" style="padding-top: 0; padding-bottom: var(--space-xl);">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-lg items-start">
+          <!-- LEFT 8-COLUMN: 5 CHRONOLOGICAL PLANNING STAGES -->
+          <div class="lg:col-span-8 flex flex-col gap-xl">
+            <!-- STAGE 1: BEFORE THE EVENT -->
+            <div class="flex flex-col gap-md">
+              <div class="flex items-center gap-md">
+                <div class="feature-icon" style="background: var(--color-espresso); color: #fff; width: 40px; height: 40px; border-radius: 50%;">
+                  01
+                </div>
+                <div>
+                  <div class="flex items-center gap-xs">
+                    <h2 class="font-serif" style="font-size: 22px; margin: 0;">Before the Event</h2>
+                    <span class="badge" style="font-size: 10px;">Weeks Out • Oct 1 – Oct 16</span>
+                  </div>
+                  <p class="text-muted text-xs" style="margin: 2px 0 0 0;">Foundational supplier locks, dietary rosters, and structural atmospheric setup.</p>
+                </div>
+              </div>
+
+              <div class="flex flex-col gap-sm pl-md" style="border-left: 2px solid var(--color-champagne); margin-left: 20px;">
+                <!-- Task 1 -->
+                <div class="card p-md shadow-sm flex items-center justify-between flex-wrap gap-sm">
+                  <div class="flex items-center gap-sm">
+                    <input type="checkbox" checked class="task-checkbox cursor-pointer"/>
+                    <div>
+                      <strong class="task-title" style="text-decoration: line-through; opacity: 0.6; font-size: 14px;">Lock 34 guest dietary profiles with Chef Fabrizio</strong>
+                      <div class="flex items-center gap-xs text-xs text-muted mt-xs">
+                        <span class="badge" style="font-size: 10px;">Catering</span>
+                        <span>•</span>
+                        <span class="text-success font-bold">Completed Oct 15</span>
+                        <span>•</span>
+                        <span>2 Menus attached</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="flex items-center gap-xs">
+                    <div style="width: 28px; height: 28px; border-radius: 50%; background: var(--color-champagne); display: flex; items-center; justify-content: center; font-size: 11px; font-weight: 700;">
+                      AC
+                    </div>
+                    <span class="text-muted text-xs hidden sm:inline">Aria Concierge</span>
+                  </div>
+                </div>
+
+                <!-- Task 2 -->
+                <div class="card p-md shadow-sm flex items-center justify-between flex-wrap gap-sm">
+                  <div class="flex items-center gap-sm">
+                    <input type="checkbox" checked class="task-checkbox cursor-pointer"/>
+                    <div>
+                      <strong class="task-title" style="text-decoration: line-through; opacity: 0.6; font-size: 14px;">Approve 120m festoon string canopy &amp; terracotta vessels</strong>
+                      <div class="flex items-center gap-xs text-xs text-muted mt-xs">
+                        <span class="badge" style="font-size: 10px;">Decoration</span>
+                        <span>•</span>
+                        <span class="text-success font-bold">Completed Oct 12</span>
+                        <span>•</span>
+                        <span>3/3 subtasks</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="flex items-center gap-xs">
+                    <div style="width: 28px; height: 28px; border-radius: 50%; background: var(--color-champagne-light); display: flex; items-center; justify-content: center; font-size: 11px; font-weight: 700;">
+                      MB
+                    </div>
+                    <span class="text-muted text-xs hidden sm:inline">Marco Bellini</span>
+                  </div>
+                </div>
+
+                <!-- Task 3 (Active Focus Item) -->
+                <div class="card p-md shadow-md flex items-center justify-between flex-wrap gap-sm" style="border: 2px solid var(--color-terracotta); background: #fff;">
+                  <div class="flex items-center gap-sm">
+                    <input type="checkbox" class="task-checkbox cursor-pointer"/>
+                    <div>
+                      <div class="flex items-center gap-xs">
+                        <strong class="task-title" style="font-size: 15px; color: var(--color-espresso);">Consolidate 14 inbound flight transfers into Mercedes Sprinters</strong>
+                        <span class="badge badge-accent" style="font-size: 10px;">Active Focus</span>
+                      </div>
+                      <div class="flex items-center gap-xs text-xs text-muted mt-xs">
+                        <span class="badge" style="font-size: 10px;">Transportation</span>
+                        <span>•</span>
+                        <span style="color: var(--color-terracotta); font-weight: 600;">Due in 6 days (Oct 18)</span>
+                        <span>•</span>
+                        <span class="badge badge-accent" style="font-size: 9px;">High Priority</span>
+                        <span>•</span>
+                        <span>1/3 subtasks</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="flex items-center gap-sm">
+                    <div class="flex items-center gap-xs">
+                      <div style="width: 28px; height: 28px; border-radius: 50%; background: var(--color-champagne); display: flex; items-center; justify-content: center; font-size: 11px; font-weight: 700;">
+                        MR
+                      </div>
+                      <span class="font-bold text-xs" style="color: var(--color-espresso);">Matteo Rossi</span>
+                    </div>
+                    <span class="material-symbols-outlined text-primary" style="font-size: 20px;">arrow_forward</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- STAGE 2: ONE WEEK BEFORE -->
+            <div class="flex flex-col gap-md">
+              <div class="flex items-center gap-md">
+                <div class="feature-icon" style="background: var(--color-champagne); color: var(--color-espresso); width: 40px; height: 40px; border-radius: 50%;">
+                  02
+                </div>
+                <div>
+                  <div class="flex items-center gap-xs">
+                    <h2 class="font-serif" style="font-size: 22px; margin: 0;">One Week Before</h2>
+                    <span class="badge" style="font-size: 10px;">Oct 17 – Oct 22</span>
+                  </div>
+                  <p class="text-muted text-xs" style="margin: 2px 0 0 0;">Print approvals, escrow tranches, sound ordinance rehearsals.</p>
+                </div>
+              </div>
+
+              <div class="flex flex-col gap-sm pl-md" style="border-left: 2px solid var(--color-champagne); margin-left: 20px;">
+                <!-- Overdue Task -->
+                <div class="card p-md shadow-sm flex items-center justify-between flex-wrap gap-sm" style="background: #ffdad6; border: 1px solid rgba(186,26,26,0.3);">
+                  <div class="flex items-center gap-sm">
+                    <input type="checkbox" class="task-checkbox cursor-pointer"/>
+                    <div>
+                      <div class="flex items-center gap-xs">
+                        <strong class="task-title" style="font-size: 14px; color: var(--color-espresso);">Escrow Milestone 2 Release authorization (Catering deposit)</strong>
+                        <span class="badge" style="background: var(--color-error); color: #fff; font-size: 10px;">Overdue (2d)</span>
+                      </div>
+                      <div class="flex items-center gap-xs text-xs text-muted mt-xs">
+                        <span class="badge" style="font-size: 10px;">Payments</span>
+                        <span>•</span>
+                        <span class="text-error font-bold">Was due Oct 16</span>
+                        <span>•</span>
+                        <span class="font-bold" style="color: var(--color-espresso);">₹1,50,000.00 Outstanding</span>
+                      </div>
+                    </div>
+                  </div>
+                  <button class="btn btn-primary" style="background: var(--color-error); border-color: var(--color-error); font-size: 12px; padding: 4px 12px;" onclick="App.toast('Milestone 2 Escrow Release authorized', 'verified_user')">
+                    Authorize
+                  </button>
+                </div>
+
+                <!-- Task 2 -->
+                <div class="card p-md shadow-sm flex items-center justify-between flex-wrap gap-sm">
+                  <div class="flex items-center gap-sm">
+                    <input type="checkbox" class="task-checkbox cursor-pointer"/>
+                    <div>
+                      <strong class="task-title" style="font-size: 14px;">Acoustic and sound ordinance dry run (02:00 AM limit verification)</strong>
+                      <div class="flex items-center gap-xs text-xs text-muted mt-xs">
+                        <span class="badge" style="font-size: 10px;">Entertainment</span>
+                        <span>•</span>
+                        <span>Due Oct 22</span>
+                        <span>•</span>
+                        <span class="badge badge-accent" style="font-size: 10px;">Medium Priority</span>
+                      </div>
+                    </div>
+                  </div>
+                  <span class="text-muted text-xs">Production Team</span>
+                </div>
+
+                <!-- Task 3 -->
+                <div class="card p-md shadow-sm flex items-center justify-between flex-wrap gap-sm">
+                  <div class="flex items-center gap-sm">
+                    <input type="checkbox" class="task-checkbox cursor-pointer"/>
+                    <div>
+                      <strong class="task-title" style="font-size: 14px;">Print bespoke letterpress dinner menus &amp; escort calligraphy cards</strong>
+                      <div class="flex items-center gap-xs text-xs text-muted mt-xs">
+                        <span class="badge" style="font-size: 10px;">Stationery</span>
+                        <span>•</span>
+                        <span>Due Oct 20</span>
+                        <span>•</span>
+                        <span>Florence Atelier Rossi</span>
+                      </div>
+                    </div>
+                  </div>
+                  <span class="text-muted text-xs">Eleanor Vance</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- STAGE 3: ONE DAY BEFORE -->
+            <div class="flex flex-col gap-md">
+              <div class="flex items-center gap-md">
+                <div class="feature-icon" style="background: var(--color-champagne); color: var(--color-espresso); width: 40px; height: 40px; border-radius: 50%;">
+                  03
+                </div>
+                <div>
+                  <div class="flex items-center gap-xs">
+                    <h2 class="font-serif" style="font-size: 22px; margin: 0;">One Day Before</h2>
+                    <span class="badge" style="font-size: 10px;">Oct 23</span>
+                  </div>
+                  <p class="text-muted text-xs" style="margin: 2px 0 0 0;">Grounds walk-through, VIP welcome gift baskets, spritz tasting bar.</p>
+                </div>
+              </div>
+
+              <div class="flex flex-col gap-sm pl-md" style="border-left: 2px solid var(--color-champagne); margin-left: 20px;">
+                <div class="card p-md shadow-sm flex items-center justify-between flex-wrap gap-sm">
+                  <div class="flex items-center gap-sm">
+                    <input type="checkbox" class="task-checkbox cursor-pointer"/>
+                    <div>
+                      <strong class="task-title" style="font-size: 14px;">Villa grounds inspection &amp; lawn spritz station setup</strong>
+                      <div class="flex items-center gap-xs text-xs text-muted mt-xs">
+                        <span class="badge" style="font-size: 10px;">Venue</span>
+                        <span>•</span>
+                        <span>Oct 23 (10:00 CET)</span>
+                        <span>•</span>
+                        <span class="badge badge-accent" style="font-size: 10px;">High Priority</span>
+                      </div>
+                    </div>
+                  </div>
+                  <span class="text-muted text-xs">Matteo Rossi</span>
+                </div>
+
+                <div class="card p-md shadow-sm flex items-center justify-between flex-wrap gap-sm">
+                  <div class="flex items-center gap-sm">
+                    <input type="checkbox" class="task-checkbox cursor-pointer"/>
+                    <div>
+                      <strong class="task-title" style="font-size: 14px;">Assemble VIP welcome tote bags (Tuscan olive oil, linen maps, sun balm)</strong>
+                      <div class="flex items-center gap-xs text-xs text-muted mt-xs">
+                        <span class="badge" style="font-size: 10px;">Gifts</span>
+                        <span>•</span>
+                        <span>Oct 23 (14:00 CET)</span>
+                        <span>•</span>
+                        <span>34 Suites</span>
+                      </div>
+                    </div>
+                  </div>
+                  <span class="text-muted text-xs">Sofia Sterling</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- STAGE 4: EVENT DAY EXECUTION -->
+            <div class="flex flex-col gap-md">
+              <div class="flex items-center gap-md">
+                <div class="feature-icon" style="background: var(--color-terracotta); color: #fff; width: 40px; height: 40px; border-radius: 50%;">
+                  04
+                </div>
+                <div>
+                  <div class="flex items-center gap-xs">
+                    <h2 class="font-serif" style="font-size: 22px; margin: 0;">Event Day Execution</h2>
+                    <span class="badge badge-accent" style="font-size: 10px;">Oct 24 – 27</span>
+                  </div>
+                  <p class="text-muted text-xs" style="margin: 2px 0 0 0;">Real-time guest logistics, banquet course pacing, golden hour lighting switchover.</p>
+                </div>
+              </div>
+
+              <div class="flex flex-col gap-sm pl-md" style="border-left: 2px solid var(--color-champagne); margin-left: 20px;">
+                <div class="card p-md shadow-sm flex items-center justify-between flex-wrap gap-sm">
+                  <div class="flex items-center gap-sm">
+                    <input type="checkbox" class="task-checkbox cursor-pointer"/>
+                    <div>
+                      <div class="flex items-center gap-xs">
+                        <strong class="task-title" style="font-size: 14px;">Day 1 Kickoff: Lawn Spritz &amp; Cypress Terrace Canapés</strong>
+                        <span class="badge badge-primary" style="font-size: 10px;">Milestone</span>
+                      </div>
+                      <div class="flex items-center gap-xs text-xs text-muted mt-xs">
+                        <span class="badge" style="font-size: 10px;">Execution</span>
+                        <span>•</span>
+                        <span>Oct 24 (17:30)</span>
+                        <span>•</span>
+                        <span class="text-secondary font-bold">34 Principals</span>
+                      </div>
+                    </div>
+                  </div>
+                  <span class="text-muted text-xs">Eleanor Vance</span>
+                </div>
+
+                <div class="card p-md shadow-sm flex items-center justify-between flex-wrap gap-sm">
+                  <div class="flex items-center gap-sm">
+                    <input type="checkbox" class="task-checkbox cursor-pointer"/>
+                    <div>
+                      <strong class="task-title" style="font-size: 14px;">Evening Vow Golden Hour Ceremony lighting check</strong>
+                      <div class="flex items-center gap-xs text-xs text-muted mt-xs">
+                        <span class="badge" style="font-size: 10px;">Production</span>
+                        <span>•</span>
+                        <span>Oct 25 (18:15 CET)</span>
+                        <span>•</span>
+                        <span>Warm amber 2400K</span>
+                      </div>
+                    </div>
+                  </div>
+                  <span class="text-muted text-xs">Marco Bellini</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- STAGE 5: AFTER THE EVENT -->
+            <div class="flex flex-col gap-md">
+              <div class="flex items-center gap-md">
+                <div class="feature-icon" style="background: var(--color-champagne-light); color: var(--color-espresso); width: 40px; height: 40px; border-radius: 50%;">
+                  05
+                </div>
+                <div>
+                  <div class="flex items-center gap-xs">
+                    <h2 class="font-serif" style="font-size: 22px; margin: 0;">After the Event</h2>
+                    <span class="badge" style="font-size: 10px;">Post-Gala • Oct 28+</span>
+                  </div>
+                  <p class="text-muted text-xs" style="margin: 2px 0 0 0;">Supplier settlements, escrow wrap-up, and artisanal photo keepsakes.</p>
+                </div>
+              </div>
+
+              <div class="flex flex-col gap-sm pl-md" style="margin-left: 20px;">
+                <div class="card p-md shadow-sm flex items-center justify-between flex-wrap gap-sm">
+                  <div class="flex items-center gap-sm">
+                    <input type="checkbox" class="task-checkbox cursor-pointer"/>
+                    <div>
+                      <strong class="task-title" style="font-size: 14px;">Finalize vendor settlement &amp; escrow balance release</strong>
+                      <div class="flex items-center gap-xs text-xs text-muted mt-xs">
+                        <span class="badge" style="font-size: 10px;">Payments</span>
+                        <span>•</span>
+                        <span>Oct 29</span>
+                        <span>•</span>
+                        <span>6 Vendors</span>
+                      </div>
+                    </div>
+                  </div>
+                  <span class="badge" style="font-size: 10px;">Pending Wrap</span>
+                </div>
+
+                <div class="card p-md shadow-sm flex items-center justify-between flex-wrap gap-sm">
+                  <div class="flex items-center gap-sm">
+                    <input type="checkbox" class="task-checkbox cursor-pointer"/>
+                    <div>
+                      <strong class="task-title" style="font-size: 14px;">Send personalized handwritten thank-you notes &amp; digital photo gallery</strong>
+                      <div class="flex items-center gap-xs text-xs text-muted mt-xs">
+                        <span class="badge" style="font-size: 10px;">Guests</span>
+                        <span>•</span>
+                        <span>Oct 30</span>
+                        <span>•</span>
+                        <span>34 recipients</span>
+                      </div>
+                    </div>
+                  </div>
+                  <span class="badge" style="font-size: 10px;">Pending Wrap</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- RIGHT 4-COLUMN: TASK DETAIL DRAWER & ARIA CONCIERGE -->
+          <div class="lg:col-span-4 flex flex-col gap-lg sticky top-24">
+            <!-- ACTIVE MILESTONE INSPECTION DRAWER -->
+            <div class="card p-lg shadow-md" style="background: #fff; border: 1px solid var(--color-champagne);">
+              <div class="flex items-start justify-between gap-sm mb-md">
+                <div>
+                  <span class="section-tag">Active Milestone Inspection</span>
+                  <h3 class="font-serif" style="font-size: 18px; margin: 4px 0 0 0; line-height: 1.3;">
+                    Consolidate 14 inbound flight transfers into Mercedes Sprinters
+                  </h3>
+                </div>
+                <button class="icon-btn" style="width: 28px; height: 28px;">
+                  <span class="material-symbols-outlined" style="font-size: 16px;">close</span>
+                </button>
+              </div>
+
+              <!-- Metadata Chips -->
+              <div class="grid grid-cols-2 gap-xs mb-md text-xs">
+                <div class="p-xs rounded-lg" style="background: var(--color-champagne-light);">
+                  <span class="text-muted block" style="font-size: 10px; text-transform: uppercase;">Lead Assignee</span>
+                  <div class="flex items-center gap-xs mt-xs">
+                    <div style="width: 20px; height: 20px; border-radius: 50%; background: var(--color-champagne); display: flex; items-center; justify-content: center; font-size: 9px; font-weight: bold;">
+                      MR
+                    </div>
+                    <strong>Matteo Rossi</strong>
+                  </div>
+                </div>
+
+                <div class="p-xs rounded-lg" style="background: var(--color-champagne-light);">
+                  <span class="text-muted block" style="font-size: 10px; text-transform: uppercase;">Timeline Due</span>
+                  <div class="flex items-center gap-xs mt-xs">
+                    <span class="material-symbols-outlined text-primary" style="font-size: 14px;">event</span>
+                    <strong>Oct 18, 2025</strong>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Scope of Work -->
+              <div class="mb-md">
+                <span class="text-xs uppercase text-muted font-bold tracking-wider block mb-xs">Scope of Work</span>
+                <p class="text-xs text-muted p-sm rounded-lg" style="background: var(--color-champagne-light); line-height: 1.5; margin: 0;">
+                  Group 34 confirmed guests arriving at Florence Peretola (FLR) into 4 luxury Mercedes V-Class shuttles with luggage support. Ensure cold bottled still water and personalized welcome envelopes upon pickup.
+                </p>
+              </div>
+
+              <!-- Subtasks -->
+              <div class="mb-md">
+                <div class="flex items-center justify-between text-xs mb-xs">
+                  <span class="uppercase text-muted font-bold">Execution Sub-items</span>
+                  <span style="color: var(--color-terracotta); font-weight: 700;">1 / 3 Done</span>
+                </div>
+                <div class="flex flex-col gap-xs text-xs">
+                  <label class="flex items-start gap-xs p-xs rounded bg-surface cursor-pointer">
+                    <input type="checkbox" checked class="task-checkbox cursor-pointer" style="margin-top: 2px;"/>
+                    <span style="text-decoration: line-through; opacity: 0.6;">Collect flight numbers from guest mobile RSVPs (14/14 logged)</span>
+                  </label>
+                  <label class="flex items-start gap-xs p-xs rounded bg-surface cursor-pointer">
+                    <input type="checkbox" class="task-checkbox cursor-pointer" style="margin-top: 2px;"/>
+                    <span>Assign driver dispatch contacts to guest WhatsApp concierge threads</span>
+                  </label>
+                  <label class="flex items-start gap-xs p-xs rounded bg-surface cursor-pointer">
+                    <input type="checkbox" class="task-checkbox cursor-pointer" style="margin-top: 2px;"/>
+                    <span>Place chilled San Pellegrino &amp; San Valentino maps in each vehicle</span>
+                  </label>
+                </div>
+              </div>
+
+              <!-- Attachments -->
+              <div class="mb-md">
+                <span class="text-xs uppercase text-muted font-bold tracking-wider block mb-xs">Attachments (2)</span>
+                <div class="flex items-center gap-xs">
+                  <div class="flex items-center gap-xs p-xs rounded bg-surface text-xs flex-1 cursor-pointer" onclick="ReportsModule.exportExpensesCSV()">
+                    <span class="material-symbols-outlined text-primary" style="font-size: 16px;">table_view</span>
+                    <span class="truncate">flr_flight_roster.csv</span>
+                  </div>
+                  <div class="flex items-center gap-xs p-xs rounded bg-surface text-xs flex-1 cursor-pointer" onclick="App.toast('Opening transit route guide', 'map')">
+                    <span class="material-symbols-outlined text-primary" style="font-size: 16px;">map</span>
+                    <span class="truncate">villa_transit.pdf</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Drawer Action Buttons -->
+              <div class="flex items-center gap-xs pt-sm border-t border-champagne">
+                <button class="btn btn-primary flex-1 justify-center" style="font-size: 12px; padding: 8px 12px;" onclick="App.toast('Milestone marked complete', 'task_alt')">
+                  Mark Complete
+                </button>
+                <button class="btn btn-secondary" style="font-size: 12px; padding: 8px 12px;" onclick="App.toast('Reassignment dialog opened', 'person')">
+                  Reassign
+                </button>
+              </div>
+            </div>
+
+            <!-- ARIA CONCIERGE ASSISTANT MODULE -->
+            <div class="card p-lg shadow-sm" style="background: linear-gradient(135deg, var(--color-champagne-light) 0%, #fff 100%); border: 1px solid var(--color-champagne);">
+              <div class="flex items-center justify-between mb-md">
+                <div class="flex items-center gap-xs">
+                  <div class="feature-icon" style="background: var(--color-espresso); color: #fff; width: 34px; height: 34px;">
+                    <span class="material-symbols-outlined" style="font-size: 18px;">auto_awesome</span>
+                  </div>
+                  <div>
+                    <strong style="font-size: 14px; display: block;">Aria Concierge</strong>
+                    <span class="text-muted text-xs">Tuscan Event Intelligence</span>
+                  </div>
+                </div>
+                <span class="badge badge-accent" style="font-size: 10px;">Online</span>
+              </div>
+
+              <!-- Proactive Alerts -->
+              <div class="flex flex-col gap-xs mb-md">
+                <div class="p-sm rounded-lg flex items-start gap-xs text-xs" style="background: #ffdad6;">
+                  <span class="material-symbols-outlined text-error" style="font-size: 18px; margin-top: 2px;">priority_high</span>
+                  <div>
+                    <strong style="display: block; color: var(--color-espresso);">Overdue Escrow Settlement</strong>
+                    <span class="text-muted">Milestone 2 for Chef Fabrizio is 2 days past due. Would you like me to synthesize the release voucher?</span>
+                    <button class="btn btn-ghost text-left" style="padding: 2px 0; font-size: 11px; color: var(--color-terracotta); font-weight: bold; margin-top: 4px;" onclick="App.toast('Voucher generated for Chef Fabrizio', 'verified_user')">
+                      Draft release voucher →
+                    </button>
+                  </div>
+                </div>
+
+                <div class="p-sm rounded-lg flex items-start gap-xs text-xs" style="background: var(--color-champagne-light);">
+                  <span class="material-symbols-outlined text-primary" style="font-size: 18px; margin-top: 2px;">sunny</span>
+                  <div>
+                    <strong style="display: block; color: var(--color-espresso);">Weather Forecast: 22°C Chianti</strong>
+                    <span class="text-muted">High probability of clear sunset for Oct 24 lawn spritz. Outdoor festoon rigging approved.</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Input -->
+              <div class="relative">
+                <input type="text" class="search-input w-full" id="checklistAriaInput" placeholder="Ask Aria regarding run-sheet..." style="font-size: 12px; padding-right: 60px;"/>
+                <button class="btn btn-primary" style="position: absolute; right: 4px; top: 50%; transform: translateY(-50%); padding: 4px 8px; font-size: 11px;" onclick="const val = document.getElementById('checklistAriaInput').value; if(val){ App.toast('Aria: Adjusting schedule for «' + val + '»', 'auto_awesome'); document.getElementById('checklistAriaInput').value = ''; }">
+                  Ask
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <!-- SCRIPTS -->
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+  <script src="../js/firebaseConfig.js"></script>
+  <script src="../js/storage.js"></script>
+  <script src="../js/app.js"></script>
+  <script src="../js/navigation.js"></script>
+  <script src="../js/checklist.js"></script>
+  <script src="../js/reports.js"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Micro-interactions for task completion
+      document.querySelectorAll('.task-checkbox').forEach(cb => {
+        cb.addEventListener('change', (e) => {
+          const card = e.target.closest('.card');
+          const title = card ? card.querySelector('.task-title') : null;
+          if (title) {
+            if (e.target.checked) {
+              title.style.textDecoration = 'line-through';
+              title.style.opacity = '0.5';
+              App.toast('Milestone marked complete', 'task_alt');
+            } else {
+              title.style.textDecoration = 'none';
+              title.style.opacity = '1';
+            }
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>

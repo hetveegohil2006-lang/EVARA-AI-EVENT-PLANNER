@@ -1,0 +1,1011 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&amp;family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"surface-container-lowest":"#ffffff","on-error":"#ffffff","tertiary-container":"#7e623b","error-container":"#ffdad6","surface-container-high":"#f5e5e0","secondary-fixed":"#ffdcc7","outline":"#82746e","on-surface":"#221a17","inverse-surface":"#372e2b","error":"#ba1a1a","surface-bright":"#fff8f6","on-primary-fixed":"#2c1609","secondary":"#7b563f","inverse-primary":"#e7beaa","on-error-container":"#93000a","on-secondary-fixed-variant":"#603f29","on-primary":"#ffffff","surface":"#fff8f6","on-tertiary":"#ffffff","on-primary-fixed-variant":"#5d4031","on-tertiary-container":"#ffe2bc","surface-container-highest":"#efdfda","tertiary-fixed":"#ffddb1","surface-tint":"#775847","surface-container-low":"#fff1ec","inverse-on-surface":"#fdede9","primary-fixed-dim":"#e7beaa","tertiary-fixed-dim":"#e4c192","primary-container":"#80604f","secondary-container":"#fecdaf","surface-variant":"#efdfda","on-secondary-container":"#7a553e","on-background":"#221a17","on-secondary-fixed":"#2e1504","on-primary-container":"#ffe0d1","background":"#fff8f6","primary":"#664839","surface-container":"#fbebe6","on-tertiary-fixed":"#291800","secondary-fixed-dim":"#ecbd9f","outline-variant":"#d4c3bc","on-surface-variant":"#50443f","tertiary":"#634a25","on-tertiary-fixed-variant":"#5a421e","surface-dim":"#e6d7d2","primary-fixed":"#ffdbca","on-secondary":"#ffffff"},borderRadius:{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},spacing:{"space-md":"1.25rem","margin":"3rem","space-xs":"0.375rem","gutter":"1.5rem","space-sm":"0.75rem","space-lg":"2rem","gutter-mobile":"1rem","margin-mobile":"1.25rem","space-xl":"3.5rem"},fontFamily:{"headline-sm":["Playfair Display"],"headline-md":["Playfair Display"],"display-hero-mobile":["Playfair Display"],"label-sm":["Plus Jakarta Sans"],"headline-lg":["Playfair Display"],"body-lg":["Plus Jakarta Sans"],"headline-lg-mobile":["Playfair Display"],"display-hero":["Playfair Display"],"label-md":["Plus Jakarta Sans"],"body-md":["Plus Jakarta Sans"],"title-md":["Plus Jakarta Sans"],"title-lg":["Plus Jakarta Sans"],"body-sm":["Plus Jakarta Sans"]},fontSize:{"headline-sm":["22px",{lineHeight:"28px",letterSpacing:"0em",fontWeight:"600"}],"headline-md":["28px",{lineHeight:"36px",letterSpacing:"-0.01em",fontWeight:"500"}],"display-hero-mobile":["36px",{lineHeight:"44px",letterSpacing:"-0.01em",fontWeight:"400"}],"label-sm":["11px",{lineHeight:"14px",letterSpacing:"0.06em",fontWeight:"600"}],"headline-lg":["40px",{lineHeight:"48px",letterSpacing:"-0.015em",fontWeight:"400"}],"body-lg":["18px",{lineHeight:"28px",letterSpacing:"0em",fontWeight:"400"}],"headline-lg-mobile":["28px",{lineHeight:"36px",letterSpacing:"-0.01em",fontWeight:"400"}],"display-hero":["56px",{lineHeight:"64px",letterSpacing:"-0.02em",fontWeight:"400"}],"label-md":["12px",{lineHeight:"16px",letterSpacing:"0.08em",fontWeight:"600"}],"body-md":["15px",{lineHeight:"24px",letterSpacing:"0em",fontWeight:"400"}],"title-md":["16px",{lineHeight:"24px",letterSpacing:"-0.005em",fontWeight:"600"}],"title-lg":["18px",{lineHeight:"26px",letterSpacing:"-0.01em",fontWeight:"600"}],"body-sm":["13px",{lineHeight:"20px",letterSpacing:"0.01em",fontWeight:"400"}]}}}};</script></head><body class="bg-background font-body-md text-on-surface antialiased min-h-screen selection:bg-secondary-container selection:text-on-secondary-container"><aside class="fixed left-0 top-0 h-screen w-72 bg-surface-container-low z-50 flex flex-col justify-between shadow-[0_1px_8px_rgba(57,48,45,0.04)]"><div class="flex flex-col flex-1 overflow-y-auto"><div class="px-space-md pt-space-lg pb-space-sm"><a class="inline-flex items-center gap-space-xs text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-colors" data-path="all-events" href="#"><span class="material-symbols-outlined text-[16px]">arrow_back</span><span>Back to All Events</span></a></div><div class="px-space-md py-space-xs"><div class="px-space-sm py-space-xs bg-surface-container rounded-lg"><span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider block">Workspace Scope</span><span class="font-title-md text-title-md text-on-surface truncate block">Tuscan Gala 2025</span></div></div><nav class="flex-1 px-space-md py-space-sm space-y-1" data-active-classes="bg-primary-container text-on-primary-container font-title-md shadow-sm rounded-lg"><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface font-title-md text-title-md transition-colors" data-path="event-overview" href="#"><span class="material-symbols-outlined text-[20px]">dashboard</span><span>Event Overview</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface font-title-md text-title-md transition-colors" data-path="event-checklist" href="#"><span class="material-symbols-outlined text-[20px]">checklist</span><span>Event Checklist</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface font-title-md text-title-md transition-colors" data-path="guests-and-invitations" href="#"><span class="material-symbols-outlined text-[20px]">mark_email_read</span><span>Guests &amp; Invitations</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface font-title-md text-title-md transition-colors" data-path="budget-and-payments" href="#"><span class="material-symbols-outlined text-[20px]">account_balance_wallet</span><span>Budget &amp; Payments</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface font-title-md text-title-md transition-colors" data-path="vendors" href="#"><span class="material-symbols-outlined text-[20px]">storefront</span><span>Vendors</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface font-title-md text-title-md transition-colors" data-path="shopping-assistant" href="#"><span class="material-symbols-outlined text-[20px]">shopping_bag</span><span>Shopping Assistant</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface font-title-md text-title-md transition-colors" data-path="timeline" href="#"><span class="material-symbols-outlined text-[20px]">calendar_today</span><span>Timeline</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface font-title-md text-title-md transition-colors" data-path="team-and-volunteers" href="#"><span class="material-symbols-outlined text-[20px]">groups</span><span>Team &amp; Volunteers</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface font-title-md text-title-md transition-colors" data-path="event-chat" href="#"><span class="material-symbols-outlined text-[20px]">forum</span><span>Event Chat</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface font-title-md text-title-md transition-colors" data-path="reports-and-exports" href="#"><span class="material-symbols-outlined text-[20px]">lab_profile</span><span>Reports &amp; Exports</span></a></nav></div><div class="px-space-md pb-space-lg pt-space-sm space-y-space-sm"><nav class="space-y-1" data-active-classes="bg-primary-container text-on-primary-container font-title-md rounded-lg"><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface font-title-md text-title-md transition-colors" data-path="event-settings" href="#"><span class="material-symbols-outlined text-[20px]">settings</span><span>Event Settings</span></a></nav><div class="p-space-sm rounded-lg bg-surface-container flex items-center justify-between"><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-[18px] text-tertiary">auto_awesome</span><div class="flex flex-col"><span class="font-label-sm text-label-sm text-on-surface font-semibold">Concierge AI v2.4</span><span class="font-label-sm text-[10px] text-on-surface-variant leading-none">Private Model Active</span></div></div><div class="w-2 h-2 rounded-full bg-secondary animate-pulse"></div></div></div></aside><div class="pl-72 flex flex-col min-h-screen"><header class="fixed top-0 left-72 right-0 h-20 bg-surface/85 backdrop-blur-xl z-40 shadow-[0_1px_8px_rgba(57,48,45,0.04)]"><div class="w-full h-full px-gutter flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-md min-w-max"><div class="flex items-center gap-space-xs"><img alt="Sophisticated luxury floral-intertwined letter E monogram logo for EVARA event planning, Warm Luxury palette with champagne, terracotta, and espresso accents.. Brand logo. - Primary color: #80604f
+- Font: playfairDisplay
+- Mode: light
+- Roundness: rounded-sm
+" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1VVJya-TjrqzKuzx19rXDIelDK7TXBIPXGpLxu1kCmnFkWC26I5xyi9GdXsYjZc1UurkqBs-WFaWa0QS2qZ6Dj58I8mn3di7NQ0c43y-fazru-jC-uSh0qCwr1Vc20gZ3lP42LyGsS4SC88vT02AW5TVEFaFbZ475xHHZAraf3Ju7cWcg0e7VyodEofqbljjMszcmWy9kuQ45WF9TLj8vS__95rGPys9nkdQ9sJIdE"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-primary tracking-tight leading-none">EVARA</span><span class="font-label-sm text-[10px] text-on-surface-variant tracking-widest uppercase">Private Concierge</span></div></div><div class="h-6 w-px bg-surface-variant hidden sm:block"></div><button class="flex items-center gap-space-xs px-space-sm py-space-xs bg-surface-container-low hover:bg-surface-container rounded-lg text-left transition-colors" type="button"><div class="flex flex-col"><div class="flex items-center gap-space-xs"><span class="font-title-md text-title-md text-on-surface">Villa San Valentino Tuscan Gala 2025</span><span class="material-symbols-outlined text-[18px] text-on-surface-variant">expand_more</span></div><span class="font-label-sm text-label-sm text-on-surface-variant">Oct 24–27, 2025</span></div><span class="px-space-xs py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-[10px] uppercase font-semibold">Planning Active</span></button></div><div class="flex-1 max-w-md hidden md:block"><div class="relative"><span class="material-symbols-outlined absolute left-space-sm top-1/2 -translate-y-1/2 text-on-surface-variant text-[18px]">search</span><input class="w-full bg-surface-container-low text-on-surface font-body-sm text-body-sm pl-9 pr-space-sm py-space-xs rounded-lg placeholder:text-on-surface-variant focus:outline-none focus:bg-surface-container-lowest transition-colors" placeholder="Search tasks, guests, vendors, ledger..." type="text"/></div></div><div class="flex items-center gap-space-sm min-w-max"><div class="flex items-center px-space-xs py-1 rounded-lg bg-surface-container-low text-on-surface-variant font-label-md text-label-md"><span class="material-symbols-outlined text-[16px] mr-1">payments</span><span>INR (₹)</span></div><button class="relative p-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-low transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-error"></span></button><div class="h-6 w-px bg-surface-variant"></div><div class="flex items-center gap-space-xs"><div class="text-right hidden xl:block"><span class="font-title-md text-body-sm text-on-surface block leading-tight font-semibold">Eleanor Vance</span><span class="font-label-sm text-label-sm text-on-surface-variant block">Principal Host</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></div></header><main class="flex-1 w-full pt-20 px-gutter py-space-lg bg-background"><div class="flex flex-col w-full space-y-space-lg">
+<!-- Active Sidebar Highlighter Micro-script -->
+<script>
+    (function highlightNav() {
+      try {
+        const navLinks = document.querySelectorAll('aside nav a');
+        navLinks.forEach(link => {
+          if (link.getAttribute('data-path') === 'budget-and-payments') {
+            link.className = 'flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg bg-primary-container text-on-primary-container font-title-md text-title-md shadow-sm transition-colors';
+          }
+        });
+      } catch (e) {}
+    })();
+  </script>
+<!-- TOP BREADCRUMB & CONCIERGE HEADER -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md">
+<div class="space-y-space-xs">
+<div class="flex items-center gap-2 flex-wrap">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Financial Vault</span>
+<span class="text-on-surface-variant/40 text-xs">/</span>
+<span class="font-label-sm text-label-sm text-primary font-semibold">Tuscan Gala 2025 Ledger</span>
+<span class="px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-[10px] uppercase font-bold tracking-wider">Escrow Protected</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">Budget &amp; Expenses</h1>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-xl">
+        Stay in immaculate control of every rupee. Real-time reconciliation across guest splits, vendor escrow tranches, and curated hospitality reserves.
+      </p>
+</div>
+<!-- Header Actions -->
+<div class="flex items-center gap-space-sm flex-wrap">
+<button class="px-space-md py-2.5 rounded bg-surface-container-high hover:bg-surface-variant text-primary font-title-md text-body-sm flex items-center gap-2 transition-all shadow-sm" onclick="toggleAriaDrawer()">
+<span class="material-symbols-outlined text-[18px] text-tertiary">auto_awesome</span>
+<span>Analyze with Aria AI</span>
+</button>
+<button class="px-space-md py-2.5 rounded bg-surface-container-high hover:bg-surface-variant text-on-surface font-title-md text-body-sm flex items-center gap-2 transition-colors">
+<span class="material-symbols-outlined text-[18px] text-on-surface-variant">file_download</span>
+<span>Export Statement</span>
+</button>
+<button class="px-space-md py-2.5 rounded bg-on-surface hover:bg-primary-container text-surface-container-lowest font-title-md text-body-sm flex items-center gap-2 transition-all shadow-md" onclick="toggleExpenseDrawer()">
+<span class="material-symbols-outlined text-[18px]">add</span>
+<span>Record Expense</span>
+</button>
+</div>
+</div>
+<!-- ATMOSPHERIC RECONCILIATION SUMMARY BAR -->
+<div class="bg-surface-container p-space-md rounded-xl shadow-sm">
+<div class="grid grid-cols-2 md:grid-cols-5 gap-space-sm divide-y md:divide-y-0 md:divide-x divide-outline-variant/30 text-center">
+<div class="px-space-xs pt-1 md:pt-0">
+<span class="font-label-sm text-[11px] text-on-surface-variant uppercase tracking-wider block">Target Budget</span>
+<span class="font-headline-sm text-headline-sm text-on-surface block mt-1">₹15,00,000</span>
+<span class="font-label-sm text-[10px] text-on-surface-variant">Allocated Cap</span>
+</div>
+<div class="px-space-xs pt-2 md:pt-0">
+<span class="font-label-sm text-[11px] text-tertiary uppercase tracking-wider block font-semibold">Guest Pool Collected</span>
+<span class="font-headline-sm text-headline-sm text-on-surface block mt-1">+₹10,83,316</span>
+<span class="font-label-sm text-[10px] text-secondary">26 / 36 Settled</span>
+</div>
+<div class="px-space-xs pt-2 md:pt-0">
+<span class="font-label-sm text-[11px] text-on-surface-variant uppercase tracking-wider block">Disbursed Expenses</span>
+<span class="font-headline-sm text-headline-sm text-on-surface block mt-1">-₹7,15,000</span>
+<span class="font-label-sm text-[10px] text-on-surface-variant">Direct Remitted</span>
+</div>
+<div class="px-space-xs pt-2 md:pt-0">
+<span class="font-label-sm text-[11px] text-secondary uppercase tracking-wider block font-semibold">Pending Escrow</span>
+<span class="font-headline-sm text-headline-sm text-on-surface block mt-1">-₹3,30,000</span>
+<span class="font-label-sm text-[10px] text-tertiary">Milestone Gated</span>
+</div>
+<div class="col-span-2 md:col-span-1 px-space-xs pt-2 md:pt-0">
+<span class="font-label-sm text-[11px] text-primary uppercase tracking-wider block font-bold">Net Liquid Reserve</span>
+<span class="font-headline-sm text-headline-sm text-primary block mt-1">₹4,55,000</span>
+<span class="font-label-sm text-[10px] text-secondary-container bg-primary px-2 py-0.5 rounded font-semibold inline-block mt-0.5">30.3% Headroom</span>
+</div>
+</div>
+</div>
+<!-- FOUR LUXURY KPI METRIC TILES -->
+<div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-space-md">
+<!-- Card 1 -->
+<div class="bg-surface-container-low p-space-md rounded-xl shadow-sm relative overflow-hidden flex flex-col justify-between">
+<div class="flex items-start justify-between">
+<div class="space-y-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Total Event Budget</span>
+<div class="font-headline-md text-headline-md text-on-surface">₹15,00,000</div>
+</div>
+<div class="w-9 h-9 rounded-lg bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">account_balance</span>
+</div>
+</div>
+<div class="mt-space-md pt-space-xs flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-secondary">verified</span>
+          Villa Escrow Locked
+        </span>
+<span class="font-label-md text-label-md text-primary font-bold">100% Target</span>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="bg-surface-container-low p-space-md rounded-xl shadow-sm relative overflow-hidden flex flex-col justify-between">
+<div class="flex items-start justify-between">
+<div class="space-y-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Spent &amp; Committed</span>
+<div class="font-headline-md text-headline-md text-on-surface">₹10,45,000</div>
+</div>
+<div class="w-9 h-9 rounded-lg bg-secondary-container/60 flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[20px]">trending_up</span>
+</div>
+</div>
+<div class="mt-space-md pt-space-xs flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant">69.7% of budget utilized</span>
+<span class="px-2 py-0.5 rounded bg-secondary-container text-on-secondary-container font-label-sm text-[11px] font-semibold">On Pace</span>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="bg-surface-container-low p-space-md rounded-xl shadow-sm relative overflow-hidden flex flex-col justify-between">
+<div class="flex items-start justify-between">
+<div class="space-y-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Available Liquidity</span>
+<div class="font-headline-md text-headline-md text-primary">₹4,55,000</div>
+</div>
+<div class="w-9 h-9 rounded-lg bg-surface-container-high flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">savings</span>
+</div>
+</div>
+<div class="mt-space-md pt-space-xs flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Remaining buffer</span>
+<span class="font-label-md text-label-md text-primary font-semibold">₹50,000 Misc Safe</span>
+</div>
+</div>
+<!-- Card 4 -->
+<div class="bg-surface-container-low p-space-md rounded-xl shadow-sm relative overflow-hidden flex flex-col justify-between">
+<div class="flex items-start justify-between">
+<div class="space-y-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Escrow Verifications Due</span>
+<div class="font-headline-md text-headline-md text-secondary">₹2,80,000</div>
+</div>
+<div class="w-9 h-9 rounded-lg bg-tertiary-container/30 flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined text-[20px]">hourglass_top</span>
+</div>
+</div>
+<div class="mt-space-md pt-space-xs flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant">2 Milestones pending sign-off</span>
+<span class="px-2 py-0.5 rounded bg-surface-container text-secondary font-label-sm text-[11px] font-bold">Awaiting Audit</span>
+</div>
+</div>
+</div>
+<!-- BENTO VISUALIZATION: CIRCULAR GAUGE & CATEGORY ALLOCATION BREAKDOWN -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-md">
+<!-- Visual Donut & Concierge Snapshot (5 Cols) -->
+<div class="lg:col-span-5 bg-surface-container-low p-space-md rounded-xl shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-space-sm">
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Capital Allocation</h3>
+<span class="font-label-sm text-label-sm text-on-surface-variant">₹10.45L Committed / ₹15.00L Cap</span>
+</div>
+<span class="px-2.5 py-1 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm">Dynamic Ratio</span>
+</div>
+<!-- Inline SVG High-Fidelity Donut Gauge -->
+<div class="relative flex items-center justify-center py-space-sm">
+<svg class="w-56 h-56 transform -rotate-90" viewbox="0 0 120 120">
+<!-- Background Track -->
+<circle cx="60" cy="60" fill="none" r="48" stroke="#efdfda" stroke-width="11"></circle>
+<!-- Venue (45%) -->
+<circle cx="60" cy="60" fill="none" r="48" stroke="#80604f" stroke-dasharray="301.59" stroke-dashoffset="165.87" stroke-linecap="round" stroke-width="11"></circle>
+<!-- Catering (15%) -->
+<circle class="opacity-90" cx="60" cy="60" fill="none" r="48" stroke="#7b563f" stroke-dasharray="301.59" stroke-dashoffset="256.35" stroke-width="11"></circle>
+<!-- Decoration (14%) -->
+<circle class="opacity-80" cx="60" cy="60" fill="none" r="48" stroke="#b88d72" stroke-dasharray="301.59" stroke-dashoffset="259.36" stroke-width="11"></circle>
+<!-- Transport & Others (10%) -->
+<circle class="opacity-70" cx="60" cy="60" fill="none" r="48" stroke="#634a25" stroke-dasharray="301.59" stroke-dashoffset="271.43" stroke-width="11"></circle>
+</svg>
+<div class="absolute flex flex-col items-center justify-center text-center">
+<span class="font-headline-md text-headline-md text-on-surface leading-none font-semibold">69.7%</span>
+<span class="font-label-sm text-[11px] text-on-surface-variant tracking-wider uppercase mt-1">Utilized</span>
+<span class="font-title-md text-[13px] text-primary font-bold mt-1">₹4.55L Free</span>
+</div>
+</div>
+<!-- Legend Pills -->
+<div class="grid grid-cols-2 gap-2 pt-2 text-xs">
+<div class="flex items-center gap-2">
+<span class="w-3 h-3 rounded-full bg-primary-container"></span>
+<span class="font-body-sm text-on-surface-variant truncate">Venue Buyout (45%)</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="w-3 h-3 rounded-full bg-secondary"></span>
+<span class="font-body-sm text-on-surface-variant truncate">Catering &amp; Wines (25%)</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="w-3 h-3 rounded-full bg-[#b88d72]"></span>
+<span class="font-body-sm text-on-surface-variant truncate">Decor &amp; Floral (18%)</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="w-3 h-3 rounded-full bg-tertiary"></span>
+<span class="font-body-sm text-on-surface-variant truncate">Ops &amp; Shuttles (12%)</span>
+</div>
+</div>
+</div>
+<!-- Editorial Villa Venue Teaser Card -->
+<div class="mt-space-md p-space-sm rounded-lg bg-surface-container flex items-center gap-space-sm">
+<img class="w-16 h-16 rounded object-cover flex-shrink-0" data-alt="Warm golden hour photography of Villa San Valentino outdoor dinner table surrounded by Italian cypress trees and Tuscan architecture with soft glowing fairy lights and terracotta urns." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDpS4lk2PZ5aBJ1U9whNOZRviO-wZBir6-w3Ie2yb--FRtyk5AM1x80XSjTouZpWU7IArDbfziIcEQj7HJBKVmCE3NQAZY5hjy2cQEeWrdiVtVafj7ZYez40186mwQtYJlsoXWfb8Tqfnq3VQjmP4OPbzBAyyM62AzivVdV4Fl4ky2-kBQpRHb3bLRiPIFbYcfp_yiGt0bk3e6HzT0DmnqIDDTB2CA_j2nwqU3gwoU"/>
+<div class="flex-1 min-w-0">
+<div class="flex items-center justify-between">
+<span class="font-title-md text-body-sm font-semibold text-on-surface truncate">San Valentino Estate</span>
+<span class="font-label-sm text-[10px] text-secondary font-bold">Locked</span>
+</div>
+<p class="font-body-sm text-[12px] text-on-surface-variant line-clamp-1 mt-0.5">3-Day Private Courtyard, Loggia &amp; Vineyards</p>
+<div class="flex items-center justify-between mt-1 text-xs">
+<span class="font-label-sm text-[11px] text-on-surface">Contract Value: ₹6,75,000</span>
+<span class="text-tertiary font-medium">100% Escrowed</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Category Budget Progress Bars (7 Cols) -->
+<div class="lg:col-span-7 bg-surface-container-low p-space-md rounded-xl shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-space-sm">
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Budget Line Allocations</h3>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Prorated against the ₹15,00,000 master ceiling</span>
+</div>
+<button class="font-label-md text-label-md text-primary hover:text-on-surface font-semibold flex items-center gap-1 transition-colors">
+<span>Reallocate Caps</span>
+<span class="material-symbols-outlined text-[16px]">tune</span>
+</button>
+</div>
+<div class="space-y-3.5">
+<!-- Item 1: Venue -->
+<div class="space-y-1">
+<div class="flex justify-between text-xs">
+<span class="font-title-md text-body-sm text-on-surface font-medium flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-primary">domain</span>
+                Venue Buyout &amp; Estate Grounds
+              </span>
+<div class="font-body-sm text-on-surface">
+<span class="font-bold">₹6,75,000</span> <span class="text-on-surface-variant">/ ₹6,75,000</span>
+<span class="ml-2 font-label-sm text-[11px] px-1.5 py-0.2 rounded bg-surface-variant text-on-surface font-semibold">100% Locked</span>
+</div>
+</div>
+<div class="w-full h-2 rounded-full bg-surface-container overflow-hidden">
+<div class="h-full bg-primary-container rounded-full" style="width: 100%;"></div>
+</div>
+</div>
+<!-- Item 2: Food & Catering -->
+<div class="space-y-1">
+<div class="flex justify-between text-xs">
+<span class="font-title-md text-body-sm text-on-surface font-medium flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-secondary">restaurant</span>
+                Food, Chianti Wine &amp; Banquet Catering
+              </span>
+<div class="font-body-sm text-on-surface">
+<span class="font-bold">₹2,25,000</span> <span class="text-on-surface-variant">/ ₹3,75,000</span>
+<span class="ml-2 font-label-sm text-[11px] text-tertiary font-medium">₹1,50,000 headroom (60%)</span>
+</div>
+</div>
+<div class="w-full h-2 rounded-full bg-surface-container overflow-hidden">
+<div class="h-full bg-secondary rounded-full" style="width: 60%;"></div>
+</div>
+</div>
+<!-- Item 3: Decoration & Floral -->
+<div class="space-y-1">
+<div class="flex justify-between text-xs">
+<span class="font-title-md text-body-sm text-on-surface font-medium flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-secondary">yard</span>
+                Decoration, Festoons &amp; Floral Design
+              </span>
+<div class="font-body-sm text-on-surface">
+<span class="font-bold text-secondary">₹2,10,000</span> <span class="text-on-surface-variant">/ ₹2,70,000</span>
+<span class="ml-2 font-label-sm text-[11px] px-1.5 py-0.5 rounded bg-secondary-container text-on-secondary-container font-semibold">77.8% • Approaching Limit</span>
+</div>
+</div>
+<div class="w-full h-2 rounded-full bg-surface-container overflow-hidden">
+<div class="h-full bg-secondary-container rounded-full" style="width: 77.8%;"></div>
+</div>
+</div>
+<!-- Item 4: Photography -->
+<div class="space-y-1">
+<div class="flex justify-between text-xs">
+<span class="font-title-md text-body-sm text-on-surface font-medium flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-primary">photo_camera</span>
+                Editorial Photography &amp; Drone Cinematography
+              </span>
+<div class="font-body-sm text-on-surface">
+<span class="font-bold">₹1,00,000</span> <span class="text-on-surface-variant">/ ₹1,50,000</span>
+<span class="ml-2 font-label-sm text-[11px] text-on-surface-variant font-medium">₹50,000 left (66%)</span>
+</div>
+</div>
+<div class="w-full h-2 rounded-full bg-surface-container overflow-hidden">
+<div class="h-full bg-primary-container rounded-full" style="width: 66.6%;"></div>
+</div>
+</div>
+<!-- Item 5: Transportation -->
+<div class="space-y-1">
+<div class="flex justify-between text-xs">
+<span class="font-title-md text-body-sm text-on-surface font-medium flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-tertiary">airport_shuttle</span>
+                Mercedes Sprinter Chauffeurs FLR - Villa
+              </span>
+<div class="font-body-sm text-on-surface">
+<span class="font-bold">₹1,20,000</span> <span class="text-on-surface-variant">/ ₹1,80,000</span>
+<span class="ml-2 font-label-sm text-[11px] text-on-surface-variant font-medium">₹60,000 left (66%)</span>
+</div>
+</div>
+<div class="w-full h-2 rounded-full bg-surface-container overflow-hidden">
+<div class="h-full bg-tertiary rounded-full" style="width: 66.6%;"></div>
+</div>
+</div>
+<!-- Item 6: Entertainment & Favors -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-sm pt-1">
+<div class="space-y-1">
+<div class="flex justify-between text-xs">
+<span class="font-title-md text-body-sm text-on-surface truncate">Acoustic Quartet &amp; DJ</span>
+<span class="font-body-sm font-semibold">₹75,000 / ₹1.2L</span>
+</div>
+<div class="w-full h-1.5 rounded-full bg-surface-container overflow-hidden">
+<div class="h-full bg-primary-container rounded-full" style="width: 62.5%;"></div>
+</div>
+</div>
+<div class="space-y-1">
+<div class="flex justify-between text-xs">
+<span class="font-title-md text-body-sm text-on-surface truncate">Custom Favors &amp; Paper</span>
+<span class="font-body-sm font-semibold">₹40,000 / ₹80k</span>
+</div>
+<div class="w-full h-1.5 rounded-full bg-surface-container overflow-hidden">
+<div class="h-full bg-secondary rounded-full" style="width: 50%;"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Contingency Cushion Note -->
+<div class="mt-space-md pt-space-xs flex items-center justify-between text-xs bg-surface-container p-2.5 rounded-lg">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-tertiary">shield_lock</span>
+<span class="font-body-sm text-on-surface font-medium">Emergency Contingency Reserve: <strong>₹50,000 unallocated buffer</strong></span>
+</div>
+<span class="font-label-sm text-[11px] text-primary font-bold">100% Intact</span>
+</div>
+</div>
+</div>
+<!-- ARIA FISCAL INTELLIGENCE & CONCIERGE RECOMMENDATIONS -->
+<div class="bg-gradient-to-r from-surface-container-high via-surface-container to-surface-container-low p-space-md rounded-xl shadow-sm relative overflow-hidden">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-sm pb-space-sm">
+<div class="flex items-center gap-space-xs">
+<div class="w-8 h-8 rounded-full bg-surface-container-lowest flex items-center justify-center text-tertiary shadow-sm">
+<span class="material-symbols-outlined text-[18px]">auto_awesome</span>
+</div>
+<div>
+<div class="flex items-center gap-2">
+<span class="font-title-md text-title-md text-on-surface font-bold">Aria Fiscal Intelligence</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-lowest text-tertiary font-label-sm text-[10px] uppercase font-bold tracking-wider">Active Concierge</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Autonomous audit ran today at 08:30 CEST</span>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<button class="px-space-sm py-1.5 rounded bg-surface-container-lowest hover:bg-surface-variant text-on-surface font-label-md text-label-md transition-colors">
+          Run Scenario Simulation
+        </button>
+<button class="px-space-sm py-1.5 rounded bg-primary-container text-on-primary-container font-label-md text-label-md transition-colors shadow-sm">
+          Apply Suggested Rebalances
+        </button>
+</div>
+</div>
+<!-- Recommendation Cards Grid -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-sm pt-2">
+<div class="bg-surface-container-lowest/80 backdrop-blur p-space-sm rounded-lg flex flex-col justify-between space-y-2">
+<div class="flex items-start gap-2">
+<span class="material-symbols-outlined text-[18px] text-secondary mt-0.5">warning</span>
+<div>
+<span class="font-title-md text-body-sm font-semibold text-on-surface block">Decor Approaching Ceiling</span>
+<p class="font-body-sm text-[13px] text-on-surface-variant leading-relaxed mt-0.5">
+              Decoration is at 77.8% of allocated cap. You have ₹60,000 remaining for night festoon lighting installations.
+            </p>
+</div>
+</div>
+<div class="pt-1 flex items-center justify-between">
+<span class="font-label-sm text-[11px] text-secondary font-bold">Alert Triggered</span>
+<a class="font-label-sm text-[11px] text-primary hover:underline font-semibold" href="#">Review Decor Quotes</a>
+</div>
+</div>
+<div class="bg-surface-container-lowest/80 backdrop-blur p-space-sm rounded-lg flex flex-col justify-between space-y-2">
+<div class="flex items-start gap-2">
+<span class="material-symbols-outlined text-[18px] text-tertiary mt-0.5">verified_user</span>
+<div>
+<span class="font-title-md text-body-sm font-semibold text-on-surface block">Escrow Milestone Gate</span>
+<p class="font-body-sm text-[13px] text-on-surface-variant leading-relaxed mt-0.5">
+              ₹2,80,000 remains paused until Florence Transport inspection and Chef Fabrizio tasting sign-offs are confirmed.
+            </p>
+</div>
+</div>
+<div class="pt-1 flex items-center justify-between">
+<span class="font-label-sm text-[11px] text-tertiary font-bold">Escrow Intact</span>
+<a class="font-label-sm text-[11px] text-primary hover:underline font-semibold" href="#">Release Terms</a>
+</div>
+</div>
+<div class="bg-surface-container-lowest/80 backdrop-blur p-space-sm rounded-lg flex flex-col justify-between space-y-2">
+<div class="flex items-start gap-2">
+<span class="material-symbols-outlined text-[18px] text-primary mt-0.5">send_and_archive</span>
+<div>
+<span class="font-title-md text-body-sm font-semibold text-on-surface block">Pending Member Contributions</span>
+<p class="font-body-sm text-[13px] text-on-surface-variant leading-relaxed mt-0.5">
+              10 members (₹4,16,684 balance) have upcoming payment deadlines. Aria can dispatch respectful WhatsApp invitations.
+            </p>
+</div>
+</div>
+<div class="pt-1 flex items-center justify-between">
+<span class="font-label-sm text-[11px] text-primary font-bold">1-Click Dispatch</span>
+<button class="font-label-sm text-[11px] px-2 py-0.5 rounded bg-surface-container hover:bg-surface-container-high text-on-surface font-semibold transition-colors">
+            Send Reminders
+          </button>
+</div>
+</div>
+</div>
+</div>
+<!-- EXPENSE LEDGER & TRANSACTIONS TABLE -->
+<div class="bg-surface-container-low rounded-xl shadow-sm overflow-hidden flex flex-col">
+<!-- Table Toolbar -->
+<div class="p-space-md flex flex-col md:flex-row md:items-center justify-between gap-space-sm bg-surface-container-low">
+<div class="flex items-center gap-space-xs">
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Expense Ledger</h3>
+<span class="px-2.5 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm font-semibold">24 Transactions</span>
+</div>
+<!-- Controls: Search & Filters -->
+<div class="flex items-center gap-2 flex-wrap">
+<div class="relative min-w-[220px]">
+<span class="material-symbols-outlined absolute left-2.5 top-1/2 -translate-y-1/2 text-on-surface-variant text-[18px]">search</span>
+<input class="w-full bg-surface-container pl-9 pr-3 py-1.5 rounded-lg text-on-surface font-body-sm text-body-sm placeholder:text-on-surface-variant focus:outline-none focus:bg-surface-container-lowest transition-colors" placeholder="Search expense, vendor, tranche..." type="text"/>
+</div>
+<select class="bg-surface-container text-on-surface font-body-sm text-body-sm px-3 py-1.5 rounded-lg focus:outline-none cursor-pointer">
+<option>All Categories</option>
+<option>Venue</option>
+<option>Catering</option>
+<option>Decoration</option>
+<option>Transportation</option>
+<option>Favors &amp; Paper</option>
+</select>
+<select class="bg-surface-container text-on-surface font-body-sm text-body-sm px-3 py-1.5 rounded-lg focus:outline-none cursor-pointer">
+<option>All Statuses</option>
+<option>Paid</option>
+<option>Pending Escrow</option>
+<option>Partially Paid</option>
+</select>
+<button class="p-1.5 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface-variant transition-colors" title="Filter options">
+<span class="material-symbols-outlined text-[20px]">tune</span>
+</button>
+</div>
+</div>
+<!-- Data Table Container -->
+<div class="w-full overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container text-on-surface-variant font-label-sm text-[11px] uppercase tracking-wider">
+<th class="py-3 px-space-md">Expense Item &amp; Vendor</th>
+<th class="py-3 px-space-sm">Category</th>
+<th class="py-3 px-space-sm text-right">Amount (₹)</th>
+<th class="py-3 px-space-sm">Payer / Source</th>
+<th class="py-3 px-space-sm">Date</th>
+<th class="py-3 px-space-sm">Status</th>
+<th class="py-3 px-space-sm">Voucher / Invoice</th>
+<th class="py-3 px-space-md text-right">Action</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container font-body-sm text-body-sm text-on-surface">
+<!-- Row 1 -->
+<tr class="hover:bg-surface-container/50 transition-colors">
+<td class="py-3.5 px-space-md">
+<div class="flex items-center gap-space-xs">
+<div class="w-8 h-8 rounded bg-surface-container flex items-center justify-center text-primary font-bold">
+<span class="material-symbols-outlined text-[18px]">castle</span>
+</div>
+<div>
+<span class="font-title-md text-body-sm font-semibold block leading-tight text-on-surface">Villa Buyout Tranche 1</span>
+<span class="font-label-sm text-[11px] text-on-surface-variant">Tenuta San Valentino Estate S.r.l</span>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-space-sm">
+<span class="px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-[11px]">Venue</span>
+</td>
+<td class="py-3.5 px-space-sm text-right font-semibold text-on-surface">
+              ₹4,50,000
+            </td>
+<td class="py-3.5 px-space-sm">
+<span class="font-title-md text-[13px] text-on-surface flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+                EVARA Vault (Escrow)
+              </span>
+</td>
+<td class="py-3.5 px-space-sm text-on-surface-variant">Oct 01, 2025</td>
+<td class="py-3.5 px-space-sm">
+<span class="px-2 py-0.5 rounded bg-surface-container text-primary font-label-sm text-[11px] font-bold">Paid</span>
+</td>
+<td class="py-3.5 px-space-sm">
+<button class="inline-flex items-center gap-1 px-2 py-1 rounded bg-surface-container text-on-surface hover:bg-surface-container-high transition-colors font-label-sm text-[11px]">
+<span class="material-symbols-outlined text-[14px] text-primary">picture_as_pdf</span>
+<span>invoice_01.pdf</span>
+</button>
+</td>
+<td class="py-3.5 px-space-md text-right">
+<button class="p-1 text-on-surface-variant hover:text-on-surface rounded">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</td>
+</tr>
+<!-- Row 2 -->
+<tr class="hover:bg-surface-container/50 transition-colors">
+<td class="py-3.5 px-space-md">
+<div class="flex items-center gap-space-xs">
+<div class="w-8 h-8 rounded bg-surface-container flex items-center justify-center text-secondary font-bold">
+<span class="material-symbols-outlined text-[18px]">restaurant_menu</span>
+</div>
+<div>
+<span class="font-title-md text-body-sm font-semibold block leading-tight text-on-surface">Chef Fabrizio Private Catering Deposit</span>
+<span class="font-label-sm text-[11px] text-on-surface-variant">Cucina Toscana &amp; Sommelier Service</span>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-space-sm">
+<span class="px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-[11px]">Catering</span>
+</td>
+<td class="py-3.5 px-space-sm text-right font-semibold text-on-surface">
+              ₹2,25,000
+            </td>
+<td class="py-3.5 px-space-sm">
+<span class="font-title-md text-[13px] text-on-surface flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+                Eleanor Vance (Host Direct)
+              </span>
+</td>
+<td class="py-3.5 px-space-sm text-on-surface-variant">Oct 08, 2025</td>
+<td class="py-3.5 px-space-sm">
+<span class="px-2 py-0.5 rounded bg-surface-container text-primary font-label-sm text-[11px] font-bold">Paid</span>
+</td>
+<td class="py-3.5 px-space-sm">
+<button class="inline-flex items-center gap-1 px-2 py-1 rounded bg-surface-container text-on-surface hover:bg-surface-container-high transition-colors font-label-sm text-[11px]">
+<span class="material-symbols-outlined text-[14px] text-primary">picture_as_pdf</span>
+<span>chef_dep.pdf</span>
+</button>
+</td>
+<td class="py-3.5 px-space-md text-right">
+<button class="p-1 text-on-surface-variant hover:text-on-surface rounded">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</td>
+</tr>
+<!-- Row 3 -->
+<tr class="hover:bg-surface-container/50 transition-colors">
+<td class="py-3.5 px-space-md">
+<div class="flex items-center gap-space-xs">
+<div class="w-8 h-8 rounded bg-surface-container flex items-center justify-center text-[#b88d72] font-bold">
+<span class="material-symbols-outlined text-[18px]">local_florist</span>
+</div>
+<div>
+<span class="font-title-md text-body-sm font-semibold block leading-tight text-on-surface">Festoon Canopy &amp; Terracotta Urns</span>
+<span class="font-label-sm text-[11px] text-on-surface-variant">Fiori di Firenze Atelier</span>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-space-sm">
+<span class="px-2 py-0.5 rounded-full bg-secondary-container/40 text-on-secondary-container font-label-sm text-[11px]">Decoration</span>
+</td>
+<td class="py-3.5 px-space-sm text-right font-semibold text-secondary">
+              ₹2,10,000
+            </td>
+<td class="py-3.5 px-space-sm">
+<span class="font-title-md text-[13px] text-on-surface flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+                Eleanor Vance
+              </span>
+</td>
+<td class="py-3.5 px-space-sm text-on-surface-variant">Oct 12, 2025</td>
+<td class="py-3.5 px-space-sm">
+<span class="px-2 py-0.5 rounded bg-secondary-container text-on-secondary-container font-label-sm text-[11px] font-bold">Pending Escrow</span>
+</td>
+<td class="py-3.5 px-space-sm">
+<button class="inline-flex items-center gap-1 px-2 py-1 rounded bg-surface-container text-on-surface hover:bg-surface-container-high transition-colors font-label-sm text-[11px]">
+<span class="material-symbols-outlined text-[14px] text-primary">picture_as_pdf</span>
+<span>quote_festoon.pdf</span>
+</button>
+</td>
+<td class="py-3.5 px-space-md text-right">
+<button class="p-1 text-on-surface-variant hover:text-on-surface rounded">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</td>
+</tr>
+<!-- Row 4 -->
+<tr class="hover:bg-surface-container/50 transition-colors">
+<td class="py-3.5 px-space-md">
+<div class="flex items-center gap-space-xs">
+<div class="w-8 h-8 rounded bg-surface-container flex items-center justify-center text-tertiary font-bold">
+<span class="material-symbols-outlined text-[18px]">directions_car</span>
+</div>
+<div>
+<span class="font-title-md text-body-sm font-semibold block leading-tight text-on-surface">Mercedes Sprinter Transfers FLR-Villa</span>
+<span class="font-label-sm text-[11px] text-on-surface-variant">Tuscany Chauffeur Prestige Group</span>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-space-sm">
+<span class="px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-[11px]">Transport</span>
+</td>
+<td class="py-3.5 px-space-sm text-right font-semibold text-on-surface">
+              ₹1,20,000
+            </td>
+<td class="py-3.5 px-space-sm">
+<span class="font-title-md text-[13px] text-on-surface flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+                Shared Escrow Pool
+              </span>
+</td>
+<td class="py-3.5 px-space-sm text-on-surface-variant">Oct 14, 2025</td>
+<td class="py-3.5 px-space-sm">
+<span class="px-2 py-0.5 rounded bg-surface-variant text-on-surface-variant font-label-sm text-[11px] font-bold">Partially Paid (50%)</span>
+</td>
+<td class="py-3.5 px-space-sm">
+<button class="inline-flex items-center gap-1 px-2 py-1 rounded bg-surface-container text-on-surface hover:bg-surface-container-high transition-colors font-label-sm text-[11px]">
+<span class="material-symbols-outlined text-[14px] text-primary">picture_as_pdf</span>
+<span>sprinter_adv.pdf</span>
+</button>
+</td>
+<td class="py-3.5 px-space-md text-right">
+<button class="p-1 text-on-surface-variant hover:text-on-surface rounded">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</td>
+</tr>
+<!-- Row 5 -->
+<tr class="hover:bg-surface-container/50 transition-colors">
+<td class="py-3.5 px-space-md">
+<div class="flex items-center gap-space-xs">
+<div class="w-8 h-8 rounded bg-surface-container flex items-center justify-center text-primary font-bold">
+<span class="material-symbols-outlined text-[18px]">mark_email_read</span>
+</div>
+<div>
+<span class="font-title-md text-body-sm font-semibold block leading-tight text-on-surface">Letterpress Suite &amp; Escort Cards</span>
+<span class="font-label-sm text-[11px] text-on-surface-variant">Rossi 1931 Fine Stationery Florence</span>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-space-sm">
+<span class="px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-[11px]">Favors/Paper</span>
+</td>
+<td class="py-3.5 px-space-sm text-right font-semibold text-on-surface">
+              ₹40,000
+            </td>
+<td class="py-3.5 px-space-sm">
+<span class="font-title-md text-[13px] text-on-surface flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+                Eleanor Vance
+              </span>
+</td>
+<td class="py-3.5 px-space-sm text-on-surface-variant">Oct 15, 2025</td>
+<td class="py-3.5 px-space-sm">
+<span class="px-2 py-0.5 rounded bg-surface-container text-primary font-label-sm text-[11px] font-bold">Paid</span>
+</td>
+<td class="py-3.5 px-space-sm">
+<button class="inline-flex items-center gap-1 px-2 py-1 rounded bg-surface-container text-on-surface hover:bg-surface-container-high transition-colors font-label-sm text-[11px]">
+<span class="material-symbols-outlined text-[14px] text-primary">picture_as_pdf</span>
+<span>rossi_inv.pdf</span>
+</button>
+</td>
+<td class="py-3.5 px-space-md text-right">
+<button class="p-1 text-on-surface-variant hover:text-on-surface rounded">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Table Pagination Footer -->
+<div class="p-space-sm bg-surface-container-low flex items-center justify-between text-xs text-on-surface-variant">
+<span>Showing 5 of 24 expenses recorded</span>
+<div class="flex items-center gap-2">
+<button class="px-2.5 py-1 rounded bg-surface-container hover:bg-surface-container-high text-on-surface disabled:opacity-50">Previous</button>
+<span class="font-semibold text-on-surface">Page 1 of 5</span>
+<button class="px-2.5 py-1 rounded bg-surface-container hover:bg-surface-container-high text-on-surface">Next</button>
+</div>
+</div>
+</div>
+<!-- MEMBER FAIR SPLIT & ESCROW RECOVERY SECTION -->
+<div class="bg-surface-container-low p-space-md rounded-xl shadow-sm space-y-space-md">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-sm">
+<div>
+<div class="flex items-center gap-2">
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Member Contributions &amp; Fair Split</h3>
+<span class="px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-[10px] uppercase font-bold tracking-wider">Dynamic Escrow Pool</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+          Calculated equally across 36 invited guests. Funds flow directly into the EVARA Protected Escrow account.
+        </p>
+</div>
+<!-- Fair Split Model Selector -->
+<div class="flex items-center p-1 rounded-lg bg-surface-container">
+<button class="px-space-sm py-1 rounded font-label-sm text-label-sm font-semibold bg-primary text-on-primary shadow-xs">
+          Equal Split (₹41,666 / head)
+        </button>
+<button class="px-space-sm py-1 rounded font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface transition-colors">
+          Tiered VIP
+        </button>
+<button class="px-space-sm py-1 rounded font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface transition-colors">
+          Organizer Funded
+        </button>
+</div>
+</div>
+<!-- Escrow Collection Progress Metrics -->
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-space-sm bg-surface-container p-space-sm rounded-lg">
+<div class="space-y-0.5">
+<span class="font-label-sm text-[11px] text-on-surface-variant uppercase tracking-wider block">Confirmed Settlement</span>
+<div class="flex items-baseline gap-2">
+<span class="font-headline-sm text-headline-sm text-on-surface">26 of 36</span>
+<span class="font-label-sm text-[11px] text-secondary font-bold">72.2% Settled</span>
+</div>
+<span class="font-body-sm text-[12px] text-on-surface-variant">10 payments awaiting transfer</span>
+</div>
+<div class="space-y-0.5">
+<span class="font-label-sm text-[11px] text-on-surface-variant uppercase tracking-wider block">Escrow Deposited</span>
+<div class="flex items-baseline gap-2">
+<span class="font-headline-sm text-headline-sm text-primary">₹10,83,316</span>
+<span class="font-label-sm text-[11px] text-on-surface-variant font-medium">of ₹15,00,000</span>
+</div>
+<span class="font-body-sm text-[12px] text-on-surface-variant">Zero payout delays recorded</span>
+</div>
+<div class="space-y-0.5">
+<span class="font-label-sm text-[11px] text-on-surface-variant uppercase tracking-wider block">Unsettled Balance</span>
+<div class="flex items-baseline gap-2">
+<span class="font-headline-sm text-headline-sm text-secondary">₹4,16,684</span>
+<span class="font-label-sm text-[11px] text-secondary font-bold">Escrow Pending</span>
+</div>
+<span class="font-body-sm text-[12px] text-on-surface-variant">Next reminder batch in 48h</span>
+</div>
+</div>
+<!-- Member Roster Micro-Table -->
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="text-on-surface-variant font-label-sm text-[11px] uppercase tracking-wider border-b border-surface-container">
+<th class="pb-2">Guest / Member</th>
+<th class="pb-2">Share Allocated</th>
+<th class="pb-2 text-right">Received</th>
+<th class="pb-2 text-right">Balance Due</th>
+<th class="pb-2 text-center">Status</th>
+<th class="pb-2 text-right">Action</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container text-xs">
+<!-- Member 1 -->
+<tr class="hover:bg-surface-container/30">
+<td class="py-2.5 flex items-center gap-2">
+<div class="w-7 h-7 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center font-bold text-xs">
+                EV
+              </div>
+<div>
+<span class="font-title-md text-[13px] font-semibold text-on-surface block">Eleanor Vance</span>
+<span class="font-label-sm text-[10px] text-on-surface-variant">Principal Host</span>
+</div>
+</td>
+<td class="py-2.5 font-semibold">₹41,666</td>
+<td class="py-2.5 text-right font-semibold text-primary">₹41,666</td>
+<td class="py-2.5 text-right text-on-surface-variant">₹0</td>
+<td class="py-2.5 text-center">
+<span class="px-2 py-0.5 rounded bg-surface-container text-primary font-bold text-[10px]">Settled</span>
+</td>
+<td class="py-2.5 text-right">
+<span class="text-on-surface-variant/60 text-[11px]">Confirmed Oct 02</span>
+</td>
+</tr>
+<!-- Member 2 -->
+<tr class="hover:bg-surface-container/30">
+<td class="py-2.5 flex items-center gap-2">
+<div class="w-7 h-7 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center font-bold text-xs">
+                JR
+              </div>
+<div>
+<span class="font-title-md text-[13px] font-semibold text-on-surface block">Julian Ross</span>
+<span class="font-label-sm text-[10px] text-on-surface-variant">VIP Guest • Suite 4</span>
+</div>
+</td>
+<td class="py-2.5 font-semibold">₹41,666</td>
+<td class="py-2.5 text-right font-semibold text-primary">₹41,666</td>
+<td class="py-2.5 text-right text-on-surface-variant">₹0</td>
+<td class="py-2.5 text-center">
+<span class="px-2 py-0.5 rounded bg-surface-container text-primary font-bold text-[10px]">Settled</span>
+</td>
+<td class="py-2.5 text-right">
+<span class="text-on-surface-variant/60 text-[11px]">Confirmed Oct 05</span>
+</td>
+</tr>
+<!-- Member 3 -->
+<tr class="hover:bg-surface-container/30">
+<td class="py-2.5 flex items-center gap-2">
+<div class="w-7 h-7 rounded-full bg-surface-container text-on-surface flex items-center justify-center font-bold text-xs">
+                MC
+              </div>
+<div>
+<span class="font-title-md text-[13px] font-semibold text-on-surface block">Matteo &amp; Chiara Moretti</span>
+<span class="font-label-sm text-[10px] text-on-surface-variant">Couples Suite • 2 Seats</span>
+</div>
+</td>
+<td class="py-2.5 font-semibold">₹83,332</td>
+<td class="py-2.5 text-right font-semibold text-secondary">₹41,666</td>
+<td class="py-2.5 text-right font-bold text-secondary">₹41,666</td>
+<td class="py-2.5 text-center">
+<span class="px-2 py-0.5 rounded bg-secondary-container text-on-secondary-container font-bold text-[10px]">Partial Deposit</span>
+</td>
+<td class="py-2.5 text-right">
+<button class="px-2 py-0.5 rounded bg-surface-container hover:bg-surface-container-high text-primary font-semibold text-[11px] inline-flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]">chat</span> Remind
+              </button>
+</td>
+</tr>
+<!-- Member 4 -->
+<tr class="hover:bg-surface-container/30">
+<td class="py-2.5 flex items-center gap-2">
+<div class="w-7 h-7 rounded-full bg-surface-container text-on-surface flex items-center justify-center font-bold text-xs">
+                SL
+              </div>
+<div>
+<span class="font-title-md text-[13px] font-semibold text-on-surface block">Sophia Lindqvist</span>
+<span class="font-label-sm text-[10px] text-on-surface-variant">Confirmed Attendee</span>
+</div>
+</td>
+<td class="py-2.5 font-semibold">₹41,666</td>
+<td class="py-2.5 text-right font-semibold text-on-surface-variant">₹0</td>
+<td class="py-2.5 text-right font-bold text-secondary">₹41,666</td>
+<td class="py-2.5 text-center">
+<span class="px-2 py-0.5 rounded bg-surface-variant text-on-surface-variant font-bold text-[10px]">Escrow Pending</span>
+</td>
+<td class="py-2.5 text-right">
+<button class="px-2 py-0.5 rounded bg-primary-container text-on-primary-container hover:bg-primary font-semibold text-[11px] inline-flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]">forward_to_inbox</span> Send Notice
+              </button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<!-- FLOATING SIDE DRAWER / MODAL: RECORD NEW EXPENSE -->
+<div class="fixed inset-0 z-50 bg-black/40 backdrop-blur-sm hidden flex justify-end transition-opacity duration-300" id="expenseDrawer">
+<div class="w-full max-w-lg bg-surface h-full shadow-2xl overflow-y-auto flex flex-col justify-between p-space-lg">
+<div class="space-y-space-md">
+<!-- Drawer Header -->
+<div class="flex items-center justify-between pb-space-sm border-b border-surface-container">
+<div>
+<span class="font-label-sm text-label-sm text-tertiary uppercase tracking-wider font-semibold">Ledger Transaction</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Record New Expense</h2>
+</div>
+<button class="p-1 rounded-full text-on-surface-variant hover:bg-surface-container transition-colors" onclick="toggleExpenseDrawer()">
+<span class="material-symbols-outlined text-[22px]">close</span>
+</button>
+</div>
+<!-- Drawer Form -->
+<div class="space-y-4">
+<!-- Title -->
+<div class="space-y-1">
+<label class="font-label-md text-label-md text-on-surface uppercase tracking-wider block">Expense Title *</label>
+<input class="w-full bg-surface-container-low border-0 px-3.5 py-2.5 rounded text-on-surface font-body-sm text-body-sm focus:outline-none focus:bg-surface-container-lowest" placeholder="e.g. San Casciano Olive Oil Gifting Favors" type="text"/>
+</div>
+<!-- Category & Amount Grid -->
+<div class="grid grid-cols-2 gap-space-sm">
+<div class="space-y-1">
+<label class="font-label-md text-label-md text-on-surface uppercase tracking-wider block">Category *</label>
+<select class="w-full bg-surface-container-low px-3 py-2.5 rounded text-on-surface font-body-sm text-body-sm focus:outline-none">
+<option>Decoration &amp; Ambience</option>
+<option>Food &amp; Catering</option>
+<option>Venue Buyout</option>
+<option>Photography &amp; Drone</option>
+<option>Transportation</option>
+<option>Entertainment &amp; Music</option>
+<option>Shopping &amp; Favors</option>
+<option>Contingency / Misc</option>
+</select>
+</div>
+<div class="space-y-1">
+<label class="font-label-md text-label-md text-on-surface uppercase tracking-wider block">Amount (₹) *</label>
+<input class="w-full bg-surface-container-low px-3.5 py-2.5 rounded text-on-surface font-body-sm text-body-sm focus:outline-none font-semibold" placeholder="45,000" type="number"/>
+</div>
+</div>
+<!-- Paid By & Date -->
+<div class="grid grid-cols-2 gap-space-sm">
+<div class="space-y-1">
+<label class="font-label-md text-label-md text-on-surface uppercase tracking-wider block">Disbursed From</label>
+<select class="w-full bg-surface-container-low px-3 py-2.5 rounded text-on-surface font-body-sm text-body-sm focus:outline-none">
+<option>Eleanor Vance (Direct Host)</option>
+<option>EVARA Escrow Vault</option>
+<option>Shared Guest Pool</option>
+</select>
+</div>
+<div class="space-y-1">
+<label class="font-label-md text-label-md text-on-surface uppercase tracking-wider block">Payment Date</label>
+<input class="w-full bg-surface-container-low px-3 py-2 rounded text-on-surface font-body-sm text-body-sm focus:outline-none" type="date" value="2025-10-18"/>
+</div>
+</div>
+<!-- Payment Status -->
+<div class="space-y-1">
+<label class="font-label-md text-label-md text-on-surface uppercase tracking-wider block">Payment Status</label>
+<div class="grid grid-cols-3 gap-2">
+<label class="flex items-center gap-1.5 p-2 rounded bg-surface-container-low text-xs cursor-pointer hover:bg-surface-container">
+<input checked="" class="accent-primary" name="paystatus" type="radio" value="paid"/>
+<span class="font-medium text-on-surface">Paid</span>
+</label>
+<label class="flex items-center gap-1.5 p-2 rounded bg-surface-container-low text-xs cursor-pointer hover:bg-surface-container">
+<input class="accent-secondary" name="paystatus" type="radio" value="pending"/>
+<span class="font-medium text-on-surface">Pending Escrow</span>
+</label>
+<label class="flex items-center gap-1.5 p-2 rounded bg-surface-container-low text-xs cursor-pointer hover:bg-surface-container">
+<input class="accent-tertiary" name="paystatus" type="radio" value="partial"/>
+<span class="font-medium text-on-surface">Partial</span>
+</label>
+</div>
+</div>
+<!-- Notes -->
+<div class="space-y-1">
+<label class="font-label-md text-label-md text-on-surface uppercase tracking-wider block">Notes &amp; Vendor Contract ID</label>
+<textarea class="w-full bg-surface-container-low px-3.5 py-2 rounded text-on-surface font-body-sm text-body-sm focus:outline-none placeholder:text-on-surface-variant" placeholder="Include invoice serial numbers, deliverables, or escrow release stipulations..." rows="2"></textarea>
+</div>
+<!-- Drag and Drop Receipt Upload Zone -->
+<div class="space-y-1">
+<label class="font-label-md text-label-md text-on-surface uppercase tracking-wider block">Receipt &amp; Tax Invoice</label>
+<div class="p-6 rounded-lg bg-surface-container-low border-2 border-dashed border-secondary/40 text-center flex flex-col items-center justify-center space-y-1.5 cursor-pointer hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined text-[28px] text-secondary">cloud_upload</span>
+<span class="font-title-md text-body-sm font-semibold text-on-surface">Drop VAT Receipt or Contract here</span>
+<span class="font-label-sm text-[11px] text-on-surface-variant">Supports PDF, PNG, JPG up to 25MB • OCR Verified</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Drawer Actions -->
+<div class="pt-space-md border-t border-surface-container flex items-center justify-end gap-space-sm mt-space-md">
+<button class="px-space-md py-2.5 rounded bg-surface-container text-on-surface font-title-md text-body-sm hover:bg-surface-container-high transition-colors" onclick="toggleExpenseDrawer()">
+          Cancel
+        </button>
+<button class="px-space-lg py-2.5 rounded bg-on-surface text-surface-container-lowest font-title-md text-body-sm hover:bg-primary-container shadow-md transition-all" onclick="toggleExpenseDrawer()">
+          Save Expense to Ledger
+        </button>
+</div>
+</div>
+</div>
+<!-- ARIA CONCIERGE DRAWER -->
+<div class="fixed inset-0 z-50 bg-black/40 backdrop-blur-sm hidden flex justify-end transition-opacity duration-300" id="ariaDrawer">
+<div class="w-full max-w-md bg-surface h-full shadow-2xl p-space-lg flex flex-col justify-between overflow-y-auto">
+<div class="space-y-space-md">
+<div class="flex items-center justify-between pb-space-sm border-b border-surface-container">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[22px] text-tertiary">auto_awesome</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Aria Fiscal Audit</h2>
+</div>
+<button class="p-1 rounded-full text-on-surface-variant hover:bg-surface-container" onclick="toggleAriaDrawer()">
+<span class="material-symbols-outlined text-[22px]">close</span>
+</button>
+</div>
+<div class="space-y-4">
+<div class="p- space-sm bg-surface-container rounded-lg space-y-2 p-3">
+<span class="font-label-sm text-label-sm text-tertiary font-bold uppercase tracking-wider">Audit Summary</span>
+<p class="font-body-sm text-body-sm text-on-surface leading-relaxed">
+              Your Tuscan Gala budget of ₹15,00,000 has a healthy ₹4,55,000 net reserve. However, the floral decor and transportation categories are pacing 12% faster than planned due to airport shuttle additions.
+            </p>
+</div>
+<div class="space-y-2">
+<span class="font-title-md text-body-sm font-semibold text-on-surface">Recommended Actions</span>
+<div class="p-3 rounded bg-surface-container-low space-y-1">
+<span class="font-title-md text-[13px] font-bold text-primary block">1. Escrow Lock Extension</span>
+<p class="font-body-sm text-[12px] text-on-surface-variant">Hold the remaining ₹60,000 transport tranche until after arrival day confirmation on Oct 24.</p>
+</div>
+<div class="p-3 rounded bg-surface-container-low space-y-1">
+<span class="font-title-md text-[13px] font-bold text-secondary block">2. Reallocate ₹30k from Misc Buffer</span>
+<p class="font-body-sm text-[12px] text-on-surface-variant">Shift ₹30,000 from the unspent Contingency into the Floral Decor ceiling to clear lighting additions without overrun.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="pt-space-md border-t border-surface-container flex items-center justify-between">
+<button class="px-space-md py-2 text-on-surface font-title-md text-body-sm" onclick="toggleAriaDrawer()">Dismiss</button>
+<button class="px-space-md py-2 bg-tertiary-container text-on-tertiary-container rounded font-title-md text-body-sm font-semibold shadow-sm" onclick="toggleAriaDrawer()">
+          Execute Recommendations
+        </button>
+</div>
+</div>
+</div>
+<!-- Interactive Drawer Vanilla Scripts -->
+<script>
+    function toggleExpenseDrawer() {
+      const drawer = document.getElementById('expenseDrawer');
+      if (drawer.classList.contains('hidden')) {
+        drawer.classList.remove('hidden');
+      } else {
+        drawer.classList.add('hidden');
+      }
+    }
+
+    function toggleAriaDrawer() {
+      const drawer = document.getElementById('ariaDrawer');
+      if (drawer.classList.contains('hidden')) {
+        drawer.classList.remove('hidden');
+      } else {
+        drawer.classList.add('hidden');
+      }
+    }
+  </script>
+</div></main></div></body></html>

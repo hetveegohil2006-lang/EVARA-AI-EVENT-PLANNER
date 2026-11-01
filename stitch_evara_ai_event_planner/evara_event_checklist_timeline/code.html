@@ -1,0 +1,809 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&amp;family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"surface-container-lowest":"#ffffff","on-error":"#ffffff","tertiary-container":"#7e623b","error-container":"#ffdad6","surface-container-high":"#f5e5e0","secondary-fixed":"#ffdcc7","outline":"#82746e","on-surface":"#221a17","inverse-surface":"#372e2b","error":"#ba1a1a","surface-bright":"#fff8f6","on-primary-fixed":"#2c1609","secondary":"#7b563f","inverse-primary":"#e7beaa","on-error-container":"#93000a","on-secondary-fixed-variant":"#603f29","on-primary":"#ffffff","surface":"#fff8f6","on-tertiary":"#ffffff","on-primary-fixed-variant":"#5d4031","on-tertiary-container":"#ffe2bc","surface-container-highest":"#efdfda","tertiary-fixed":"#ffddb1","surface-tint":"#775847","surface-container-low":"#fff1ec","inverse-on-surface":"#fdede9","primary-fixed-dim":"#e7beaa","tertiary-fixed-dim":"#e4c192","primary-container":"#80604f","secondary-container":"#fecdaf","surface-variant":"#efdfda","on-secondary-container":"#7a553e","on-background":"#221a17","on-secondary-fixed":"#2e1504","on-primary-container":"#ffe0d1","background":"#fff8f6","primary":"#664839","surface-container":"#fbebe6","on-tertiary-fixed":"#291800","secondary-fixed-dim":"#ecbd9f","outline-variant":"#d4c3bc","on-surface-variant":"#50443f","tertiary":"#634a25","on-tertiary-fixed-variant":"#5a421e","surface-dim":"#e6d7d2","primary-fixed":"#ffdbca","on-secondary":"#ffffff"},borderRadius:{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},spacing:{"space-md":"1.25rem","margin":"3rem","space-xs":"0.375rem","gutter":"1.5rem","space-sm":"0.75rem","space-lg":"2rem","gutter-mobile":"1rem","margin-mobile":"1.25rem","space-xl":"3.5rem"},fontFamily:{"headline-sm":["Playfair Display"],"headline-md":["Playfair Display"],"display-hero-mobile":["Playfair Display"],"label-sm":["Plus Jakarta Sans"],"headline-lg":["Playfair Display"],"body-lg":["Plus Jakarta Sans"],"headline-lg-mobile":["Playfair Display"],"display-hero":["Playfair Display"],"label-md":["Plus Jakarta Sans"],"body-md":["Plus Jakarta Sans"],"title-md":["Plus Jakarta Sans"],"title-lg":["Plus Jakarta Sans"],"body-sm":["Plus Jakarta Sans"]},fontSize:{"headline-sm":["22px",{lineHeight:"28px",letterSpacing:"0em",fontWeight:"600"}],"headline-md":["28px",{lineHeight:"36px",letterSpacing:"-0.01em",fontWeight:"500"}],"display-hero-mobile":["36px",{lineHeight:"44px",letterSpacing:"-0.01em",fontWeight:"400"}],"label-sm":["11px",{lineHeight:"14px",letterSpacing:"0.06em",fontWeight:"600"}],"headline-lg":["40px",{lineHeight:"48px",letterSpacing:"-0.015em",fontWeight:"400"}],"body-lg":["18px",{lineHeight:"28px",letterSpacing:"0em",fontWeight:"400"}],"headline-lg-mobile":["28px",{lineHeight:"36px",letterSpacing:"-0.01em",fontWeight:"400"}],"display-hero":["56px",{lineHeight:"64px",letterSpacing:"-0.02em",fontWeight:"400"}],"label-md":["12px",{lineHeight:"16px",letterSpacing:"0.08em",fontWeight:"600"}],"body-md":["15px",{lineHeight:"24px",letterSpacing:"0em",fontWeight:"400"}],"title-md":["16px",{lineHeight:"24px",letterSpacing:"-0.005em",fontWeight:"600"}],"title-lg":["18px",{lineHeight:"26px",letterSpacing:"-0.01em",fontWeight:"600"}],"body-sm":["13px",{lineHeight:"20px",letterSpacing:"0.01em",fontWeight:"400"}]}}}};</script></head><body class="bg-background font-body-md text-on-surface antialiased min-h-screen selection:bg-secondary-container selection:text-on-secondary-container"><aside class="fixed left-0 top-0 h-screen w-72 bg-surface-container-low z-50 flex flex-col justify-between shadow-[0_1px_8px_rgba(57,48,45,0.04)]"><div class="flex flex-col flex-1 overflow-y-auto"><div class="px-space-md pt-space-lg pb-space-sm"><a class="inline-flex items-center gap-space-xs text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-colors" data-path="all-events" href="#"><span class="material-symbols-outlined text-[16px]">arrow_back</span><span>Back to All Events</span></a></div><div class="px-space-md py-space-xs"><div class="px-space-sm py-space-xs bg-surface-container rounded-lg"><span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider block">Workspace Scope</span><span class="font-title-md text-title-md text-on-surface truncate block">Tuscan Gala 2025</span></div></div><nav class="flex-1 px-space-md py-space-sm space-y-1" data-active-classes="bg-primary-container text-on-primary-container font-title-md shadow-sm rounded-lg"><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface font-title-md text-title-md transition-colors" data-path="event-overview" href="#"><span class="material-symbols-outlined text-[20px]">dashboard</span><span>Event Overview</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface font-title-md text-title-md transition-colors" data-path="event-checklist" href="#"><span class="material-symbols-outlined text-[20px]">checklist</span><span>Event Checklist</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface font-title-md text-title-md transition-colors" data-path="guests-and-invitations" href="#"><span class="material-symbols-outlined text-[20px]">mark_email_read</span><span>Guests &amp; Invitations</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface font-title-md text-title-md transition-colors" data-path="budget-and-payments" href="#"><span class="material-symbols-outlined text-[20px]">account_balance_wallet</span><span>Budget &amp; Payments</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface font-title-md text-title-md transition-colors" data-path="vendors" href="#"><span class="material-symbols-outlined text-[20px]">storefront</span><span>Vendors</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface font-title-md text-title-md transition-colors" data-path="shopping-assistant" href="#"><span class="material-symbols-outlined text-[20px]">shopping_bag</span><span>Shopping Assistant</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface font-title-md text-title-md transition-colors" data-path="timeline" href="#"><span class="material-symbols-outlined text-[20px]">calendar_today</span><span>Timeline</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface font-title-md text-title-md transition-colors" data-path="team-and-volunteers" href="#"><span class="material-symbols-outlined text-[20px]">groups</span><span>Team &amp; Volunteers</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface font-title-md text-title-md transition-colors" data-path="event-chat" href="#"><span class="material-symbols-outlined text-[20px]">forum</span><span>Event Chat</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface font-title-md text-title-md transition-colors" data-path="reports-and-exports" href="#"><span class="material-symbols-outlined text-[20px]">lab_profile</span><span>Reports &amp; Exports</span></a></nav></div><div class="px-space-md pb-space-lg pt-space-sm space-y-space-sm"><nav class="space-y-1" data-active-classes="bg-primary-container text-on-primary-container font-title-md rounded-lg"><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface font-title-md text-title-md transition-colors" data-path="event-settings" href="#"><span class="material-symbols-outlined text-[20px]">settings</span><span>Event Settings</span></a></nav><div class="p-space-sm rounded-lg bg-surface-container flex items-center justify-between"><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-[18px] text-tertiary">auto_awesome</span><div class="flex flex-col"><span class="font-label-sm text-label-sm text-on-surface font-semibold">Concierge AI v2.4</span><span class="font-label-sm text-[10px] text-on-surface-variant leading-none">Private Model Active</span></div></div><div class="w-2 h-2 rounded-full bg-secondary animate-pulse"></div></div></div></aside><div class="pl-72 flex flex-col min-h-screen"><header class="fixed top-0 left-72 right-0 h-20 bg-surface/85 backdrop-blur-xl z-40 shadow-[0_1px_8px_rgba(57,48,45,0.04)]"><div class="w-full h-full px-gutter flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-md min-w-max"><div class="flex items-center gap-space-xs"><img alt="Sophisticated luxury floral-intertwined letter E monogram logo for EVARA event planning, Warm Luxury palette with champagne, terracotta, and espresso accents.. Brand logo. - Primary color: #80604f
+- Font: playfairDisplay
+- Mode: light
+- Roundness: rounded-sm
+" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1VVJya-TjrqzKuzx19rXDIelDK7TXBIPXGpLxu1kCmnFkWC26I5xyi9GdXsYjZc1UurkqBs-WFaWa0QS2qZ6Dj58I8mn3di7NQ0c43y-fazru-jC-uSh0qCwr1Vc20gZ3lP42LyGsS4SC88vT02AW5TVEFaFbZ475xHHZAraf3Ju7cWcg0e7VyodEofqbljjMszcmWy9kuQ45WF9TLj8vS__95rGPys9nkdQ9sJIdE"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-primary tracking-tight leading-none">EVARA</span><span class="font-label-sm text-[10px] text-on-surface-variant tracking-widest uppercase">Private Concierge</span></div></div><div class="h-6 w-px bg-surface-variant hidden sm:block"></div><button class="flex items-center gap-space-xs px-space-sm py-space-xs bg-surface-container-low hover:bg-surface-container rounded-lg text-left transition-colors" type="button"><div class="flex flex-col"><div class="flex items-center gap-space-xs"><span class="font-title-md text-title-md text-on-surface">Villa San Valentino Tuscan Gala 2025</span><span class="material-symbols-outlined text-[18px] text-on-surface-variant">expand_more</span></div><span class="font-label-sm text-label-sm text-on-surface-variant">Oct 24–27, 2025</span></div><span class="px-space-xs py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-[10px] uppercase font-semibold">Planning Active</span></button></div><div class="flex-1 max-w-md hidden md:block"><div class="relative"><span class="material-symbols-outlined absolute left-space-sm top-1/2 -translate-y-1/2 text-on-surface-variant text-[18px]">search</span><input class="w-full bg-surface-container-low text-on-surface font-body-sm text-body-sm pl-9 pr-space-sm py-space-xs rounded-lg placeholder:text-on-surface-variant focus:outline-none focus:bg-surface-container-lowest transition-colors" placeholder="Search tasks, guests, vendors, ledger..." type="text"/></div></div><div class="flex items-center gap-space-sm min-w-max"><div class="flex items-center px-space-xs py-1 rounded-lg bg-surface-container-low text-on-surface-variant font-label-md text-label-md"><span class="material-symbols-outlined text-[16px] mr-1">payments</span><span>INR (₹)</span></div><button class="relative p-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-low transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-error"></span></button><div class="h-6 w-px bg-surface-variant"></div><div class="flex items-center gap-space-xs"><div class="text-right hidden xl:block"><span class="font-title-md text-body-sm text-on-surface block leading-tight font-semibold">Eleanor Vance</span><span class="font-label-sm text-label-sm text-on-surface-variant block">Principal Host</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></div></header><main class="flex-1 w-full pt-20 px-gutter py-space-lg bg-background"><div class="flex flex-col w-full">
+<!-- Active Navigation Syncer (Client-Side script for shell compatibility) -->
+<script>
+    (function() {
+      const currentNav = document.querySelectorAll('aside nav a');
+      currentNav.forEach(el => {
+        if (el.getAttribute('data-path') === 'event-checklist') {
+          el.className = 'flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg bg-primary-container text-on-primary-container font-title-md text-title-md shadow-sm transition-colors';
+        } else if (el.getAttribute('data-path') === 'event-overview') {
+          el.className = 'flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface font-title-md text-title-md transition-colors';
+        }
+      });
+    })();
+  </script>
+<!-- Editorial Top Canvas & Event Context Bar -->
+<div class="w-full flex flex-col gap-space-lg mb-space-xl">
+<!-- Header Band with Editorial Framing -->
+<div class="flex flex-col xl:flex-row xl:items-end justify-between gap-space-md">
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs mb-1.5">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm tracking-wide uppercase">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary animate-pulse"></span>
+            Live Operational Ledger
+          </span>
+<span class="text-on-surface-variant/40 text-label-sm font-label-sm">•</span>
+<span class="text-on-surface-variant font-label-sm text-label-sm tracking-wider uppercase">Villa San Valentino Tuscan Gala 2025</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">Your Event Plan</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mt-1">Every detail, thoughtfully organized across high Tuscan summer twilight.</p>
+</div>
+<!-- Action Suite & View Mode Selector -->
+<div class="flex flex-wrap items-center gap-space-sm">
+<div class="inline-flex items-center p-1 rounded-xl bg-surface-container-low shadow-sm">
+<button class="px-3 py-1.5 rounded-lg bg-surface-container-lowest text-on-surface font-label-md text-label-md shadow-sm flex items-center gap-1.5 transition-all">
+<span class="material-symbols-outlined text-[16px] text-primary">timeline</span>
+<span>Chronological</span>
+</button>
+<button class="px-3 py-1.5 rounded-lg text-on-surface-variant hover:text-on-surface font-label-md text-label-md flex items-center gap-1.5 transition-all">
+<span class="material-symbols-outlined text-[16px]">grid_view</span>
+<span>Category</span>
+</button>
+<button class="px-3 py-1.5 rounded-lg text-on-surface-variant hover:text-on-surface font-label-md text-label-md flex items-center gap-1.5 transition-all">
+<span class="material-symbols-outlined text-[16px]">calendar_view_week</span>
+<span>Calendar</span>
+</button>
+</div>
+<button class="flex items-center gap-2 px-space-md py-2.5 rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface font-label-md text-label-md shadow-sm transition-all" type="button">
+<span class="material-symbols-outlined text-[18px] text-secondary">picture_as_pdf</span>
+<span>Export Plan PDF</span>
+</button>
+<button class="flex items-center gap-2 px-space-md py-2.5 rounded-lg bg-inverse-surface hover:bg-primary-container text-surface font-title-md text-body-sm shadow-md transition-all active:scale-[0.98]" type="button">
+<span class="material-symbols-outlined text-[20px] text-surface-container-lowest">add</span>
+<span>Add Task</span>
+</button>
+</div>
+</div>
+<!-- Live Event Pulse & Completion Velocity Card -->
+<div class="w-full rounded-2xl bg-surface-container-low p-space-md xl:p-space-lg shadow-sm flex flex-col xl:flex-row items-center justify-between gap-space-lg">
+<div class="flex flex-col sm:flex-row items-start sm:items-center gap-space-md w-full xl:w-auto">
+<div class="w-14 h-14 rounded-2xl bg-surface-container flex items-center justify-center text-primary shadow-sm flex-shrink-0">
+<span class="material-symbols-outlined text-[32px]">hourglass_top</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs">
+<span class="font-headline-sm text-headline-sm text-on-surface">12 Days</span>
+<span class="px-2 py-0.5 rounded-md bg-secondary-container text-on-secondary-container font-label-sm text-label-sm uppercase font-semibold">T-Minus</span>
+</div>
+<span class="font-body-md text-body-md text-on-surface-variant">Until Day 1 Welcome Lawn Spritz &amp; Cypress Terrace Reception (Oct 24, 2025)</span>
+</div>
+</div>
+<div class="w-full xl:w-96 flex flex-col gap-2">
+<div class="flex justify-between items-baseline">
+<div class="flex items-center gap-2">
+<span class="font-title-md text-title-md text-on-surface">18 of 26 Tasks Completed</span>
+<span class="font-label-sm text-label-sm text-tertiary">On Schedule</span>
+</div>
+<span class="font-label-md text-label-md text-primary font-semibold">69% Velocity</span>
+</div>
+<div class="w-full h-2.5 rounded-full bg-surface-container-highest overflow-hidden">
+<div class="h-full rounded-full bg-primary-container transition-all duration-700 ease-out" style="width: 69%;"></div>
+</div>
+<div class="flex justify-between items-center text-on-surface-variant font-label-sm text-label-sm pt-0.5">
+<span>Target baseline: 65% by Oct 15</span>
+<span class="text-secondary font-semibold">+4% Delta ahead</span>
+</div>
+</div>
+</div>
+<!-- Quick Overview Metric Cards (4-Column Bento Row) -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-md">
+<!-- Total Tasks -->
+<div class="rounded-xl bg-surface-container-low p-space-md shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between">
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Total Ledger</span>
+<span class="p-2 rounded-lg bg-surface-container text-on-surface-variant">
+<span class="material-symbols-outlined text-[20px]">assignment</span>
+</span>
+</div>
+<div>
+<div class="font-headline-md text-headline-md text-on-surface font-semibold">26</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Curated milestones across 5 production phases</p>
+</div>
+</div>
+<!-- Completed -->
+<div class="rounded-xl bg-surface-container-low p-space-md shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between">
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Completed</span>
+<span class="p-2 rounded-lg bg-surface-container text-tertiary">
+<span class="material-symbols-outlined text-[20px]">check_circle</span>
+</span>
+</div>
+<div>
+<div class="font-headline-md text-headline-md text-tertiary font-semibold">18</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Verified with venue host &amp; executive vendors</p>
+</div>
+</div>
+<!-- In Progress -->
+<div class="rounded-xl bg-surface-container-low p-space-md shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between">
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Active Assignments</span>
+<span class="p-2 rounded-lg bg-surface-container text-primary">
+<span class="material-symbols-outlined text-[20px]">pending_actions</span>
+</span>
+</div>
+<div>
+<div class="font-headline-md text-headline-md text-primary font-semibold">6</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">In dispatch or review stage with assigned leads</p>
+</div>
+</div>
+<!-- Overdue / Action Required -->
+<div class="rounded-xl bg-error-container/40 p-space-md shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between">
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Attention Required</span>
+<span class="p-2 rounded-lg bg-error-container text-error">
+<span class="material-symbols-outlined text-[20px]">warning</span>
+</span>
+</div>
+<div>
+<div class="font-headline-md text-headline-md text-error font-semibold">2</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Escrow payment milestone &amp; guest RSVP delta</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Smart Controls & Filter Navigation Strip -->
+<div class="sticky top-20 z-30 bg-background/95 backdrop-blur-md py-space-sm mb-space-lg flex flex-col gap-space-sm">
+<div class="flex flex-col lg:flex-row items-stretch lg:items-center justify-between gap-space-sm">
+<!-- Search Input with Keyboard Indicator -->
+<div class="relative flex-1 max-w-lg">
+<span class="material-symbols-outlined absolute left-3.5 top-1/2 -translate-y-1/2 text-on-surface-variant text-[20px]">search</span>
+<input class="w-full bg-surface-container-low text-on-surface font-body-sm text-body-sm pl-11 pr-14 py-2.5 rounded-xl placeholder:text-on-surface-variant focus:outline-none focus:bg-surface-container-lowest transition-colors shadow-sm" placeholder="Filter milestones, leads, tags, or Tuscan suppliers..." type="text"/>
+<span class="absolute right-3 top-1/2 -translate-y-1/2 px-1.5 py-0.5 rounded text-[10px] font-label-sm text-on-surface-variant bg-surface-container">⌘K</span>
+</div>
+<!-- Quick Status Filters -->
+<div class="flex items-center gap-space-xs overflow-x-auto pb-1 lg:pb-0">
+<button class="px-3 py-1.5 rounded-lg bg-surface-container text-on-surface font-label-md text-label-md whitespace-nowrap">All Statuses</button>
+<button class="px-3 py-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container font-label-md text-label-md whitespace-nowrap">Overdue (2)</button>
+<button class="px-3 py-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container font-label-md text-label-md whitespace-nowrap">In Progress (6)</button>
+<button class="px-3 py-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container font-label-md text-label-md whitespace-nowrap">Completed (18)</button>
+<div class="h-5 w-px bg-surface-variant mx-1"></div>
+<button class="p-2 rounded-lg text-on-surface-variant hover:bg-surface-container-low transition-colors" title="Filter Settings">
+<span class="material-symbols-outlined text-[18px]">tune</span>
+</button>
+</div>
+</div>
+<!-- Category Pill Strip -->
+<div class="flex items-center gap-2 overflow-x-auto pb-2 scrollbar-none">
+<button class="px-3 py-1 rounded-full bg-inverse-surface text-surface font-label-sm text-label-sm whitespace-nowrap shadow-sm">All (26)</button>
+<button class="px-3 py-1 rounded-full bg-surface-container-low hover:bg-surface-container text-on-surface-variant font-label-sm text-label-sm whitespace-nowrap transition-colors">Venue &amp; Logistics (5)</button>
+<button class="px-3 py-1 rounded-full bg-surface-container-low hover:bg-surface-container text-on-surface-variant font-label-sm text-label-sm whitespace-nowrap transition-colors">Decoration &amp; Ambience (4)</button>
+<button class="px-3 py-1 rounded-full bg-surface-container-low hover:bg-surface-container text-on-surface-variant font-label-sm text-label-sm whitespace-nowrap transition-colors">Food &amp; Catering (5)</button>
+<button class="px-3 py-1 rounded-full bg-surface-container-low hover:bg-surface-container text-on-surface-variant font-label-sm text-label-sm whitespace-nowrap transition-colors">Guest Management (4)</button>
+<button class="px-3 py-1 rounded-full bg-surface-container-low hover:bg-surface-container text-on-surface-variant font-label-sm text-label-sm whitespace-nowrap transition-colors">Invitations &amp; RSVPs (3)</button>
+<button class="px-3 py-1 rounded-full bg-surface-container-low hover:bg-surface-container text-on-surface-variant font-label-sm text-label-sm whitespace-nowrap transition-colors">Shopping &amp; Stationery (3)</button>
+<button class="px-3 py-1 rounded-full bg-surface-container-low hover:bg-surface-container text-on-surface-variant font-label-sm text-label-sm whitespace-nowrap transition-colors">Payments &amp; Escrow (2)</button>
+<button class="px-3 py-1 rounded-full bg-surface-container-low hover:bg-surface-container text-on-surface-variant font-label-sm text-label-sm whitespace-nowrap transition-colors">Transportation (3)</button>
+</div>
+</div>
+<!-- Main Split Architecture: 5-Stage Timeline (Left 8 Cols) + Inspection Drawer & AI Concierge (Right 4 Cols) -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-start">
+<!-- LEFT COLUMN: 5 Chronological Planning Stages -->
+<div class="lg:col-span-7 xl:col-span-8 flex flex-col gap-space-xl">
+<!-- STAGE 1: BEFORE THE EVENT -->
+<div class="relative flex flex-col gap-space-md">
+<!-- Stage Marker & Bar -->
+<div class="flex items-center gap-space-md">
+<div class="w-10 h-10 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center font-title-md text-body-sm font-bold shadow-sm">
+            01
+          </div>
+<div>
+<div class="flex items-center gap-2">
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Before the Event</h2>
+<span class="px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm">Weeks Out • Oct 1 – Oct 16</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Foundational supplier locks, dietary rosters, and structural atmospheric setup.</p>
+</div>
+</div>
+<!-- Task List Items -->
+<div class="flex flex-col gap-space-sm pl-5 border-l-2 border-surface-variant ml-5">
+<!-- Card 1 (Completed) -->
+<div class="group rounded-xl bg-surface-container-low hover:bg-surface-container-lowest p-space-md shadow-sm transition-all flex flex-col sm:flex-row sm:items-center justify-between gap-space-md">
+<div class="flex items-start gap-space-sm min-w-0">
+<input checked="" class="mt-1 w-5 h-5 rounded text-secondary focus:ring-0 cursor-pointer accent-secondary" type="checkbox"/>
+<div class="flex flex-col min-w-0">
+<span class="font-title-md text-title-md text-on-surface line-through decoration-on-surface-variant/40 truncate">
+                  Lock 34 guest dietary profiles with Chef Fabrizio
+                </span>
+<div class="flex flex-wrap items-center gap-2 mt-1.5 font-label-sm text-label-sm text-on-surface-variant">
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface">Catering</span>
+<span>•</span>
+<span class="flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span> Completed Oct 15
+                  </span>
+<span>•</span>
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">attach_file</span> 2 Menus
+                  </span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-space-md flex-shrink-0 self-end sm:self-center">
+<div class="flex items-center gap-2">
+<div class="w-7 h-7 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center font-label-sm text-[11px] font-semibold">
+                  AC
+                </div>
+<span class="font-body-sm text-body-sm text-on-surface-variant hidden xl:inline">Aria Concierge</span>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant/40 group-hover:text-on-surface transition-colors cursor-pointer">more_vert</span>
+</div>
+</div>
+<!-- Card 2 (Completed) -->
+<div class="group rounded-xl bg-surface-container-low hover:bg-surface-container-lowest p-space-md shadow-sm transition-all flex flex-col sm:flex-row sm:items-center justify-between gap-space-md">
+<div class="flex items-start gap-space-sm min-w-0">
+<input checked="" class="mt-1 w-5 h-5 rounded text-secondary focus:ring-0 cursor-pointer accent-secondary" type="checkbox"/>
+<div class="flex flex-col min-w-0">
+<span class="font-title-md text-title-md text-on-surface line-through decoration-on-surface-variant/40 truncate">
+                  Approve 120m festoon string canopy &amp; terracotta vessels
+                </span>
+<div class="flex flex-wrap items-center gap-2 mt-1.5 font-label-sm text-label-sm text-on-surface-variant">
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface">Decoration</span>
+<span>•</span>
+<span class="flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span> Completed Oct 12
+                  </span>
+<span>•</span>
+<span>3/3 subtasks</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-space-md flex-shrink-0 self-end sm:self-center">
+<div class="flex items-center gap-2">
+<div class="w-7 h-7 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center font-label-sm text-[11px] font-semibold">
+                  MB
+                </div>
+<span class="font-body-sm text-body-sm text-on-surface-variant hidden xl:inline">Marco Bellini</span>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant/40 group-hover:text-on-surface transition-colors cursor-pointer">more_vert</span>
+</div>
+</div>
+<!-- Card 3 (Active Selection Focus) -->
+<div class="group rounded-xl bg-surface-container-lowest p-space-md shadow-md transition-all flex flex-col sm:flex-row sm:items-center justify-between gap-space-md border-2 border-secondary/20">
+<div class="flex items-start gap-space-sm min-w-0">
+<input class="mt-1 w-5 h-5 rounded focus:ring-0 cursor-pointer accent-secondary" type="checkbox"/>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-2">
+<span class="font-title-md text-title-md text-on-surface font-semibold truncate">
+                    Consolidate 14 inbound flight transfers into Mercedes Sprinters
+                  </span>
+<span class="px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-[10px] uppercase font-semibold">Active Focus</span>
+</div>
+<div class="flex flex-wrap items-center gap-2 mt-1.5 font-label-sm text-label-sm text-on-surface-variant">
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface">Transportation</span>
+<span>•</span>
+<span class="text-secondary font-medium">Due in 6 days (Oct 18)</span>
+<span>•</span>
+<span class="px-1.5 py-0.5 rounded bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-[10px] font-semibold">High Priority</span>
+<span>•</span>
+<span>1/3 subtasks</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-space-md flex-shrink-0 self-end sm:self-center">
+<div class="flex items-center gap-2">
+<div class="w-7 h-7 rounded-full bg-tertiary-container text-on-tertiary-container flex items-center justify-center font-label-sm text-[11px] font-semibold">
+                  MR
+                </div>
+<span class="font-body-sm text-body-sm text-on-surface font-medium hidden xl:inline">Matteo Rossi</span>
+</div>
+<span class="material-symbols-outlined text-primary text-[20px]">arrow_forward</span>
+</div>
+</div>
+</div>
+</div>
+<!-- STAGE 2: ONE WEEK BEFORE -->
+<div class="relative flex flex-col gap-space-md">
+<div class="flex items-center gap-space-md">
+<div class="w-10 h-10 rounded-full bg-surface-container text-on-surface flex items-center justify-center font-title-md text-body-sm font-bold shadow-sm">
+            02
+          </div>
+<div>
+<div class="flex items-center gap-2">
+<h2 class="font-headline-sm text-headline-sm text-on-surface">One Week Before</h2>
+<span class="px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm">Oct 17 – Oct 22</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Print approvals, escrow tranches, sound ordinance rehearsals.</p>
+</div>
+</div>
+<div class="flex flex-col gap-space-sm pl-5 border-l-2 border-surface-variant ml-5">
+<!-- Overdue Critical Task -->
+<div class="group rounded-xl bg-error-container/30 hover:bg-error-container/40 p-space-md shadow-sm transition-all flex flex-col sm:flex-row sm:items-center justify-between gap-space-md">
+<div class="flex items-start gap-space-sm min-w-0">
+<input class="mt-1 w-5 h-5 rounded focus:ring-0 cursor-pointer accent-error" type="checkbox"/>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-2">
+<span class="font-title-md text-title-md text-on-surface font-semibold truncate">
+                    Escrow Milestone 2 Release authorization (Catering deposit)
+                  </span>
+<span class="px-2 py-0.5 rounded-full bg-error text-on-error font-label-sm text-[10px] uppercase font-semibold">Overdue (2d)</span>
+</div>
+<div class="flex flex-wrap items-center gap-2 mt-1.5 font-label-sm text-label-sm text-on-surface-variant">
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface">Payments</span>
+<span>•</span>
+<span class="text-error font-semibold">Was due Oct 16</span>
+<span>•</span>
+<span class="font-semibold text-on-surface">€ 14,500.00 Outstanding</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-space-md flex-shrink-0 self-end sm:self-center">
+<div class="flex items-center gap-2">
+<div class="w-7 h-7 rounded-full bg-primary text-on-primary flex items-center justify-center font-label-sm text-[11px] font-semibold">
+                  EV
+                </div>
+<span class="font-body-sm text-body-sm text-on-surface-variant hidden xl:inline">Eleanor Vance</span>
+</div>
+<button class="px-2.5 py-1 rounded bg-error text-on-error font-label-sm text-label-sm shadow-sm hover:opacity-90">Authorize</button>
+</div>
+</div>
+<!-- Task 2 In Progress -->
+<div class="group rounded-xl bg-surface-container-low hover:bg-surface-container-lowest p-space-md shadow-sm transition-all flex flex-col sm:flex-row sm:items-center justify-between gap-space-md">
+<div class="flex items-start gap-space-sm min-w-0">
+<input class="mt-1 w-5 h-5 rounded focus:ring-0 cursor-pointer accent-secondary" type="checkbox"/>
+<div class="flex flex-col min-w-0">
+<span class="font-title-md text-title-md text-on-surface truncate">
+                  Acoustic and sound ordinance dry run (02:00 AM limit verification)
+                </span>
+<div class="flex flex-wrap items-center gap-2 mt-1.5 font-label-sm text-label-sm text-on-surface-variant">
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface">Entertainment</span>
+<span>•</span>
+<span>Due Oct 22</span>
+<span>•</span>
+<span class="px-1.5 py-0.5 rounded bg-secondary-container text-on-secondary-container font-label-sm text-[10px]">Medium Priority</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-space-md flex-shrink-0 self-end sm:self-center">
+<div class="flex items-center gap-2">
+<div class="w-7 h-7 rounded-full bg-surface-variant text-on-surface-variant flex items-center justify-center font-label-sm text-[11px] font-semibold">
+                  PT
+                </div>
+<span class="font-body-sm text-body-sm text-on-surface-variant hidden xl:inline">Production Team</span>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant/40 group-hover:text-on-surface transition-colors cursor-pointer">more_vert</span>
+</div>
+</div>
+<!-- Task 3 In Progress -->
+<div class="group rounded-xl bg-surface-container-low hover:bg-surface-container-lowest p-space-md shadow-sm transition-all flex flex-col sm:flex-row sm:items-center justify-between gap-space-md">
+<div class="flex items-start gap-space-sm min-w-0">
+<input class="mt-1 w-5 h-5 rounded focus:ring-0 cursor-pointer accent-secondary" type="checkbox"/>
+<div class="flex flex-col min-w-0">
+<span class="font-title-md text-title-md text-on-surface truncate">
+                  Print bespoke letterpress dinner menus &amp; escort calligraphy cards
+                </span>
+<div class="flex flex-wrap items-center gap-2 mt-1.5 font-label-sm text-label-sm text-on-surface-variant">
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface">Stationery</span>
+<span>•</span>
+<span>Due Oct 20</span>
+<span>•</span>
+<span>Florence Atelier Atelier Rossi</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-space-md flex-shrink-0 self-end sm:self-center">
+<div class="flex items-center gap-2">
+<div class="w-7 h-7 rounded-full bg-primary text-on-primary flex items-center justify-center font-label-sm text-[11px] font-semibold">
+                  EV
+                </div>
+<span class="font-body-sm text-body-sm text-on-surface-variant hidden xl:inline">Eleanor Vance</span>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant/40 group-hover:text-on-surface transition-colors cursor-pointer">more_vert</span>
+</div>
+</div>
+</div>
+</div>
+<!-- STAGE 3: ONE DAY BEFORE -->
+<div class="relative flex flex-col gap-space-md">
+<div class="flex items-center gap-space-md">
+<div class="w-10 h-10 rounded-full bg-surface-container text-on-surface flex items-center justify-center font-title-md text-body-sm font-bold shadow-sm">
+            03
+          </div>
+<div>
+<div class="flex items-center gap-2">
+<h2 class="font-headline-sm text-headline-sm text-on-surface">One Day Before</h2>
+<span class="px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm">Oct 23</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Grounds walk-through, VIP welcome gift baskets, spritz tasting bar.</p>
+</div>
+</div>
+<div class="flex flex-col gap-space-sm pl-5 border-l-2 border-surface-variant ml-5">
+<div class="group rounded-xl bg-surface-container-low hover:bg-surface-container-lowest p-space-md shadow-sm transition-all flex flex-col sm:flex-row sm:items-center justify-between gap-space-md">
+<div class="flex items-start gap-space-sm min-w-0">
+<input class="mt-1 w-5 h-5 rounded focus:ring-0 cursor-pointer accent-secondary" type="checkbox"/>
+<div class="flex flex-col min-w-0">
+<span class="font-title-md text-title-md text-on-surface truncate">
+                  Villa grounds inspection &amp; lawn spritz station setup
+                </span>
+<div class="flex flex-wrap items-center gap-2 mt-1.5 font-label-sm text-label-sm text-on-surface-variant">
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface">Venue</span>
+<span>•</span>
+<span>Oct 23 (10:00 CET)</span>
+<span>•</span>
+<span class="px-1.5 py-0.5 rounded bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-[10px] font-semibold">High Priority</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-space-md flex-shrink-0 self-end sm:self-center">
+<div class="flex items-center gap-2">
+<div class="w-7 h-7 rounded-full bg-tertiary-container text-on-tertiary-container flex items-center justify-center font-label-sm text-[11px] font-semibold">
+                  MR
+                </div>
+<span class="font-body-sm text-body-sm text-on-surface-variant hidden xl:inline">Matteo Rossi</span>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant/40 group-hover:text-on-surface transition-colors cursor-pointer">more_vert</span>
+</div>
+</div>
+<div class="group rounded-xl bg-surface-container-low hover:bg-surface-container-lowest p-space-md shadow-sm transition-all flex flex-col sm:flex-row sm:items-center justify-between gap-space-md">
+<div class="flex items-start gap-space-sm min-w-0">
+<input class="mt-1 w-5 h-5 rounded focus:ring-0 cursor-pointer accent-secondary" type="checkbox"/>
+<div class="flex flex-col min-w-0">
+<span class="font-title-md text-title-md text-on-surface truncate">
+                  Assemble VIP welcome tote bags (Tuscan olive oil, linen maps, sun balm)
+                </span>
+<div class="flex flex-wrap items-center gap-2 mt-1.5 font-label-sm text-label-sm text-on-surface-variant">
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface">Gifts</span>
+<span>•</span>
+<span>Oct 23 (14:00 CET)</span>
+<span>•</span>
+<span>34 Suites</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-space-md flex-shrink-0 self-end sm:self-center">
+<div class="flex items-center gap-2">
+<div class="w-7 h-7 rounded-full bg-secondary text-on-secondary flex items-center justify-center font-label-sm text-[11px] font-semibold">
+                  SS
+                </div>
+<span class="font-body-sm text-body-sm text-on-surface-variant hidden xl:inline">Sofia Sterling</span>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant/40 group-hover:text-on-surface transition-colors cursor-pointer">more_vert</span>
+</div>
+</div>
+</div>
+</div>
+<!-- STAGE 4: EVENT DAY (OCT 24 - 27) -->
+<div class="relative flex flex-col gap-space-md">
+<div class="flex items-center gap-space-md">
+<div class="w-10 h-10 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center font-title-md text-body-sm font-bold shadow-sm">
+            04
+          </div>
+<div>
+<div class="flex items-center gap-2">
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Event Day Execution</h2>
+<span class="px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm font-semibold">Oct 24 – 27</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Real-time guest logistics, banquet course pacing, golden hour lighting switchover.</p>
+</div>
+</div>
+<div class="flex flex-col gap-space-sm pl-5 border-l-2 border-surface-variant ml-5">
+<div class="group rounded-xl bg-surface-container-low hover:bg-surface-container-lowest p-space-md shadow-sm transition-all flex flex-col sm:flex-row sm:items-center justify-between gap-space-md">
+<div class="flex items-start gap-space-sm min-w-0">
+<input class="mt-1 w-5 h-5 rounded focus:ring-0 cursor-pointer accent-secondary" type="checkbox"/>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-2">
+<span class="font-title-md text-title-md text-on-surface font-semibold truncate">
+                    Day 1 Kickoff: Lawn Spritz &amp; Cypress Terrace Canapés (17:30 CET)
+                  </span>
+<span class="px-2 py-0.5 rounded-full bg-secondary text-on-secondary font-label-sm text-[10px] uppercase font-semibold">Milestone</span>
+</div>
+<div class="flex flex-wrap items-center gap-2 mt-1.5 font-label-sm text-label-sm text-on-surface-variant">
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface">Execution</span>
+<span>•</span>
+<span>Oct 24 (17:30)</span>
+<span>•</span>
+<span class="text-secondary font-medium">34 Principals &amp; VVIPs</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-space-md flex-shrink-0 self-end sm:self-center">
+<div class="flex items-center gap-2">
+<div class="w-7 h-7 rounded-full bg-primary text-on-primary flex items-center justify-center font-label-sm text-[11px] font-semibold">
+                  EV
+                </div>
+<span class="font-body-sm text-body-sm text-on-surface-variant hidden xl:inline">Eleanor Vance</span>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant/40 group-hover:text-on-surface transition-colors cursor-pointer">more_vert</span>
+</div>
+</div>
+<div class="group rounded-xl bg-surface-container-low hover:bg-surface-container-lowest p-space-md shadow-sm transition-all flex flex-col sm:flex-row sm:items-center justify-between gap-space-md">
+<div class="flex items-start gap-space-sm min-w-0">
+<input class="mt-1 w-5 h-5 rounded focus:ring-0 cursor-pointer accent-secondary" type="checkbox"/>
+<div class="flex flex-col min-w-0">
+<span class="font-title-md text-title-md text-on-surface truncate">
+                  Evening Vow Golden Hour Ceremony lighting check
+                </span>
+<div class="flex flex-wrap items-center gap-2 mt-1.5 font-label-sm text-label-sm text-on-surface-variant">
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface">Production</span>
+<span>•</span>
+<span>Oct 25 (18:15 CET)</span>
+<span>•</span>
+<span>Warm amber 2400K calibration</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-space-md flex-shrink-0 self-end sm:self-center">
+<div class="flex items-center gap-2">
+<div class="w-7 h-7 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center font-label-sm text-[11px] font-semibold">
+                  MB
+                </div>
+<span class="font-body-sm text-body-sm text-on-surface-variant hidden xl:inline">Marco Bellini</span>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant/40 group-hover:text-on-surface transition-colors cursor-pointer">more_vert</span>
+</div>
+</div>
+</div>
+</div>
+<!-- STAGE 5: AFTER THE EVENT -->
+<div class="relative flex flex-col gap-space-md">
+<div class="flex items-center gap-space-md">
+<div class="w-10 h-10 rounded-full bg-surface-container text-on-surface flex items-center justify-center font-title-md text-body-sm font-bold shadow-sm">
+            05
+          </div>
+<div>
+<div class="flex items-center gap-2">
+<h2 class="font-headline-sm text-headline-sm text-on-surface">After the Event</h2>
+<span class="px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm">Post-Gala • Oct 28+</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Supplier settlements, escrow wrap-up, and artisanal photo keepsakes.</p>
+</div>
+</div>
+<div class="flex flex-col gap-space-sm pl-5 ml-5">
+<div class="group rounded-xl bg-surface-container-low hover:bg-surface-container-lowest p-space-md shadow-sm transition-all flex flex-col sm:flex-row sm:items-center justify-between gap-space-md">
+<div class="flex items-start gap-space-sm min-w-0">
+<input class="mt-1 w-5 h-5 rounded focus:ring-0 cursor-pointer accent-secondary" type="checkbox"/>
+<div class="flex flex-col min-w-0">
+<span class="font-title-md text-title-md text-on-surface truncate">
+                  Finalize vendor settlement &amp; escrow balance release
+                </span>
+<div class="flex flex-wrap items-center gap-2 mt-1.5 font-label-sm text-label-sm text-on-surface-variant">
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface">Payments</span>
+<span>•</span>
+<span>Oct 29</span>
+<span>•</span>
+<span>6 Vendors in queue</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-space-md flex-shrink-0 self-end sm:self-center">
+<span class="px-2 py-1 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm">Pending Wrap</span>
+</div>
+</div>
+<div class="group rounded-xl bg-surface-container-low hover:bg-surface-container-lowest p-space-md shadow-sm transition-all flex flex-col sm:flex-row sm:items-center justify-between gap-space-md">
+<div class="flex items-start gap-space-sm min-w-0">
+<input class="mt-1 w-5 h-5 rounded focus:ring-0 cursor-pointer accent-secondary" type="checkbox"/>
+<div class="flex flex-col min-w-0">
+<span class="font-title-md text-title-md text-on-surface truncate">
+                  Send personalized handwritten thank-you notes &amp; digital photo gallery
+                </span>
+<div class="flex flex-wrap items-center gap-2 mt-1.5 font-label-sm text-label-sm text-on-surface-variant">
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface">Guests</span>
+<span>•</span>
+<span>Oct 30</span>
+<span>•</span>
+<span>34 recipients</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-space-md flex-shrink-0 self-end sm:self-center">
+<span class="px-2 py-1 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm">Pending Wrap</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- RIGHT COLUMN: Interactive Task Detail Drawer + Aria AI Assistant (4 Cols) -->
+<div class="lg:col-span-5 xl:col-span-4 flex flex-col gap-space-lg sticky top-28">
+<!-- FOCUSED TASK COLLABORATION DRAWER -->
+<div class="rounded-2xl bg-surface-container-lowest p-space-md xl:p-space-lg shadow-md flex flex-col gap-space-md">
+<!-- Drawer Header -->
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary font-semibold">Active Milestone Inspection</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mt-1 leading-snug">
+              Consolidate 14 inbound flight transfers into Mercedes Sprinters
+            </h3>
+</div>
+<button class="p-1 rounded-lg text-on-surface-variant hover:bg-surface-container-low transition-colors" title="Close Panel">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<!-- Task Metadata Chips -->
+<div class="grid grid-cols-2 gap-space-xs text-body-sm">
+<div class="p-2.5 rounded-xl bg-surface-container-low flex flex-col">
+<span class="font-label-sm text-[10px] uppercase text-on-surface-variant">Lead Assignee</span>
+<div class="flex items-center gap-2 mt-1">
+<div class="w-6 h-6 rounded-full bg-tertiary-container text-on-tertiary-container flex items-center justify-center font-label-sm text-[10px] font-bold">
+                MR
+              </div>
+<span class="font-title-md text-body-sm text-on-surface truncate">Matteo Rossi</span>
+</div>
+</div>
+<div class="p-2.5 rounded-xl bg-surface-container-low flex flex-col">
+<span class="font-label-sm text-[10px] uppercase text-on-surface-variant">Timeline Due</span>
+<div class="flex items-center gap-1.5 mt-1 text-on-surface">
+<span class="material-symbols-outlined text-[16px] text-secondary">event</span>
+<span class="font-title-md text-body-sm">Oct 18, 2025</span>
+</div>
+</div>
+</div>
+<!-- Scope & Description -->
+<div class="flex flex-col gap-1">
+<span class="font-label-sm text-label-sm uppercase tracking-wide text-on-surface-variant">Scope of Work</span>
+<p class="font-body-sm text-body-sm text-on-surface bg-surface-container-low/60 p-3 rounded-xl leading-relaxed">
+            Group 34 confirmed guests arriving at Florence Peretola (FLR) into 4 luxury Mercedes V-Class shuttles with luggage support. Ensure cold bottled still water and personalized welcome envelopes upon pickup.
+          </p>
+</div>
+<!-- Subtask Checklist with Micro-interactions -->
+<div class="flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wide text-on-surface-variant">Execution Sub-items</span>
+<span class="font-label-sm text-label-sm text-secondary font-semibold">1 / 3 Done</span>
+</div>
+<div class="flex flex-col gap-2">
+<label class="flex items-start gap-2.5 p-2 rounded-lg bg-surface-container-low/40 hover:bg-surface-container-low cursor-pointer transition-colors">
+<input checked="" class="mt-0.5 w-4 h-4 rounded accent-secondary cursor-pointer" type="checkbox"/>
+<span class="font-body-sm text-body-sm text-on-surface-variant line-through">
+                Collect flight numbers from guest mobile RSVPs (14/14 logged)
+              </span>
+</label>
+<label class="flex items-start gap-2.5 p-2 rounded-lg bg-surface-container-low/40 hover:bg-surface-container-low cursor-pointer transition-colors">
+<input class="mt-0.5 w-4 h-4 rounded accent-secondary cursor-pointer" type="checkbox"/>
+<span class="font-body-sm text-body-sm text-on-surface">
+                Assign driver dispatch contacts to guest WhatsApp concierge threads
+              </span>
+</label>
+<label class="flex items-start gap-2.5 p-2 rounded-lg bg-surface-container-low/40 hover:bg-surface-container-low cursor-pointer transition-colors">
+<input class="mt-0.5 w-4 h-4 rounded accent-secondary cursor-pointer" type="checkbox"/>
+<span class="font-body-sm text-body-sm text-on-surface">
+                Place chilled San Pellegrino &amp; San Valentino maps in each vehicle
+              </span>
+</label>
+</div>
+</div>
+<!-- Attached Documents -->
+<div class="flex flex-col gap-2">
+<span class="font-label-sm text-label-sm uppercase tracking-wide text-on-surface-variant">Attachments (2)</span>
+<div class="flex items-center gap-2">
+<div class="flex items-center gap-2 p-2 rounded-lg bg-surface-container text-on-surface font-body-sm text-body-sm cursor-pointer hover:bg-surface-container-high transition-colors flex-1 min-w-0">
+<span class="material-symbols-outlined text-[18px] text-secondary">table_view</span>
+<span class="truncate">flr_flight_roster_v3.csv</span>
+</div>
+<div class="flex items-center gap-2 p-2 rounded-lg bg-surface-container text-on-surface font-body-sm text-body-sm cursor-pointer hover:bg-surface-container-high transition-colors flex-1 min-w-0">
+<span class="material-symbols-outlined text-[18px] text-secondary">map</span>
+<span class="truncate">villa_transit_route.pdf</span>
+</div>
+</div>
+</div>
+<!-- Live Activity Stream -->
+<div class="flex flex-col gap-2 pt-space-xs">
+<span class="font-label-sm text-label-sm uppercase tracking-wide text-on-surface-variant">Activity &amp; Dispatch Feed</span>
+<div class="flex flex-col gap-2.5">
+<div class="flex items-start gap-2">
+<div class="w-6 h-6 rounded-full bg-tertiary-container text-on-tertiary-container flex items-center justify-center font-label-sm text-[10px] flex-shrink-0 mt-0.5">
+                MR
+              </div>
+<div class="flex flex-col bg-surface-container-low p-2 rounded-xl text-body-sm">
+<span class="font-title-md text-[12px] text-on-surface">Matteo Rossi <span class="font-normal text-on-surface-variant ml-1">1h ago</span></span>
+<span class="text-on-surface-variant text-[12px]">Flight LX1672 from Zurich delayed 20m. Shuttle #2 rescheduled to 15:45 CET departure.</span>
+</div>
+</div>
+<div class="flex items-start gap-2">
+<div class="w-6 h-6 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center font-label-sm text-[10px] flex-shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[14px]">auto_awesome</span>
+</div>
+<div class="flex flex-col bg-surface-container-low p-2 rounded-xl text-body-sm">
+<span class="font-title-md text-[12px] text-on-surface">Aria Concierge <span class="font-normal text-on-surface-variant ml-1">45m ago</span></span>
+<span class="text-on-surface-variant text-[12px]">Guest Claire Moreau alerted via private WhatsApp concierge thread. All set.</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Primary Task Action Buttons -->
+<div class="flex items-center gap-2 pt-space-sm border-t border-surface-variant">
+<button class="flex-1 py-2 rounded-lg bg-inverse-surface hover:bg-primary text-surface font-label-md text-label-md transition-all shadow-sm">
+            Mark Complete
+          </button>
+<button class="px-3 py-2 rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface font-label-md text-label-md transition-all">
+            Reassign
+          </button>
+<button class="p-2 rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface-variant transition-all">
+<span class="material-symbols-outlined text-[18px]">add_comment</span>
+</button>
+</div>
+</div>
+<!-- ARIA CONCIERGE — AI PLANNING ASSISTANT MODULE -->
+<div class="rounded-2xl bg-gradient-to-b from-surface-container-low via-surface-container-low to-secondary-container/20 p-space-md xl:p-space-lg shadow-sm relative overflow-hidden flex flex-col gap-space-md border border-tertiary-fixed-dim/30">
+<!-- Floating Subtle Radial Glow -->
+<div class="absolute -right-10 -bottom-10 w-44 h-44 rounded-full bg-secondary-container/40 blur-2xl pointer-events-none"></div>
+<!-- Concierge Header -->
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<div class="w-9 h-9 rounded-xl bg-tertiary-container text-on-tertiary-container flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-[20px]">auto_awesome</span>
+</div>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-on-surface">Aria Concierge</span>
+<span class="font-label-sm text-[10px] text-tertiary uppercase font-semibold">Tuscan Event Intelligence</span>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-[11px] font-semibold">Online</span>
+</div>
+<!-- Smart Proactive Alerts -->
+<div class="flex flex-col gap-2.5">
+<div class="p-3 rounded-xl bg-surface-container-lowest/80 shadow-sm flex items-start gap-2.5">
+<span class="material-symbols-outlined text-error text-[18px] mt-0.5">priority_high</span>
+<div class="flex flex-col text-body-sm">
+<span class="font-title-md text-[13px] text-on-surface">Overdue Escrow Settlement</span>
+<span class="text-on-surface-variant text-[12px]">Milestone 2 for Chef Fabrizio is 2 days past due. Would you like me to synthesize the release voucher?</span>
+<button class="mt-2 text-left font-label-md text-label-md text-secondary font-semibold hover:underline">Draft release voucher →</button>
+</div>
+</div>
+<div class="p-3 rounded-xl bg-surface-container-lowest/80 shadow-sm flex items-start gap-2.5">
+<span class="material-symbols-outlined text-tertiary text-[18px] mt-0.5">sunny</span>
+<div class="flex flex-col text-body-sm">
+<span class="font-title-md text-[13px] text-on-surface">Chianti Microclimate Forecast</span>
+<span class="text-on-surface-variant text-[12px]">Forecast shows 22°C and zero precipitation across Oct 24–27. Perfect for open-air lawn dining.</span>
+</div>
+</div>
+</div>
+<!-- Generator Utility Trigger -->
+<div class="p-3 rounded-xl bg-surface-container-lowest/90 flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Automated Synthesis</span>
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant">bolt</span>
+</div>
+<p class="font-body-sm text-[12px] text-on-surface-variant">
+            Generate customized micro-schedules for private VIP excursions, wine cellar tastings, or late-night villa acoustic sets.
+          </p>
+<button class="w-full py-2.5 px-3 rounded-lg bg-tertiary-container hover:bg-tertiary text-on-tertiary font-label-md text-label-md flex items-center justify-center gap-2 shadow-sm transition-all">
+<span class="material-symbols-outlined text-[16px]">arrow_back_ios_new</span>
+<span>Synthesize Sub-Checklist with AI</span>
+</button>
+</div>
+<!-- Contextual Quick Action Pills -->
+<div class="flex flex-wrap gap-1.5 pt-1">
+<button class="px-2.5 py-1 rounded-md bg-surface-container-lowest hover:bg-surface-container text-on-surface font-label-sm text-[11px] transition-colors">
+            + Add Olive Oil Tasting
+          </button>
+<button class="px-2.5 py-1 rounded-md bg-surface-container-lowest hover:bg-surface-container text-on-surface font-label-sm text-[11px] transition-colors">
+            Check Sound Curfew
+          </button>
+<button class="px-2.5 py-1 rounded-md bg-surface-container-lowest hover:bg-surface-container text-on-surface font-label-sm text-[11px] transition-colors">
+            Sync Villa Master Key List
+          </button>
+</div>
+</div>
+<!-- Tuscan Production Atmosphere Card -->
+<div class="rounded-2xl overflow-hidden shadow-sm relative group">
+<div class="bg-cover bg-center w-full h-44 relative" data-alt="Intimate candlelit open-air Tuscan gala dining courtyard under olive trees and warm festoon string lighting at sunset with long rustic wooden table set with wine glasses, terracotta pottery, and elegant guests chatting." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDPrDfVWdTYYMud15EZUM3bFmkb9rxFNflzBjSB3CMz1Sm1lmGd4WvkbpTrcXU-vYuyUQiyRih3DQKfZzXcRqzJ18GxawISBenXnkZMeU1lHg1n__myyBMWlt9qRBCVpHtfakHdZaipyAY1_dnqQsLNdRQt87-TSif48vyEeTnXrh2peD3EtsYZvuxKT_KvAlp7bm1c8EAyPgzW0HWV9vFox05j5v2mk4d8dLJTpBU')">
+<div class="absolute inset-0 bg-gradient-to-t from-inverse-surface/90 via-inverse-surface/40 to-transparent p-space-md flex flex-col justify-end text-surface">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary-fixed">Venue Setting</span>
+<span class="font-headline-sm text-headline-sm leading-tight text-white mt-0.5">Villa San Valentino Terrace</span>
+<span class="font-body-sm text-body-sm text-surface-variant/90">San Gimignano, Chianti Hills • Cap: 34 Guests</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Operational Footer Protocol Strip -->
+<div class="w-full mt-space-xl pt-space-md pb-space-lg flex flex-col sm:flex-row items-center justify-between text-on-surface-variant font-label-sm text-label-sm border-t border-surface-variant/50 gap-space-sm">
+<div class="flex items-center gap-space-xs">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span>EVARA Concierge Real-Time Sync v2.4 Active</span>
+<span class="text-on-surface-variant/40">•</span>
+<span>Last autosave 42 seconds ago</span>
+</div>
+<div class="flex items-center gap-space-md">
+<a class="hover:text-on-surface transition-colors" href="#">Emergency Protocol</a>
+<a class="hover:text-on-surface transition-colors" href="#">Vendor Contract Master</a>
+<a class="hover:text-on-surface transition-colors" href="#">Export All (.XLSX / .PDF)</a>
+</div>
+</div>
+</div></main></div></body></html>

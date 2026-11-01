@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&amp;family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"surface-container-lowest":"#ffffff","on-error":"#ffffff","tertiary-container":"#7e623b","error-container":"#ffdad6","surface-container-high":"#f5e5e0","secondary-fixed":"#ffdcc7","outline":"#82746e","on-surface":"#221a17","inverse-surface":"#372e2b","error":"#ba1a1a","surface-bright":"#fff8f6","on-primary-fixed":"#2c1609","secondary":"#7b563f","inverse-primary":"#e7beaa","on-error-container":"#93000a","on-secondary-fixed-variant":"#603f29","on-primary":"#ffffff","surface":"#fff8f6","on-tertiary":"#ffffff","on-primary-fixed-variant":"#5d4031","on-tertiary-container":"#ffe2bc","surface-container-highest":"#efdfda","tertiary-fixed":"#ffddb1","surface-tint":"#775847","surface-container-low":"#fff1ec","inverse-on-surface":"#fdede9","primary-fixed-dim":"#e7beaa","tertiary-fixed-dim":"#e4c192","primary-container":"#80604f","secondary-container":"#fecdaf","surface-variant":"#efdfda","on-secondary-container":"#7a553e","on-background":"#221a17","on-secondary-fixed":"#2e1504","on-primary-container":"#ffe0d1","background":"#fff8f6","primary":"#664839","surface-container":"#fbebe6","on-tertiary-fixed":"#291800","secondary-fixed-dim":"#ecbd9f","outline-variant":"#d4c3bc","on-surface-variant":"#50443f","tertiary":"#634a25","on-tertiary-fixed-variant":"#5a421e","surface-dim":"#e6d7d2","primary-fixed":"#ffdbca","on-secondary":"#ffffff"},borderRadius:{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},spacing:{"space-md":"1.25rem","margin":"3rem","space-xs":"0.375rem","gutter":"1.5rem","space-sm":"0.75rem","space-lg":"2rem","gutter-mobile":"1rem","margin-mobile":"1.25rem","space-xl":"3.5rem"},fontFamily:{"headline-sm":["Playfair Display"],"headline-md":["Playfair Display"],"display-hero-mobile":["Playfair Display"],"label-sm":["Plus Jakarta Sans"],"headline-lg":["Playfair Display"],"body-lg":["Plus Jakarta Sans"],"headline-lg-mobile":["Playfair Display"],"display-hero":["Playfair Display"],"label-md":["Plus Jakarta Sans"],"body-md":["Plus Jakarta Sans"],"title-md":["Plus Jakarta Sans"],"title-lg":["Plus Jakarta Sans"],"body-sm":["Plus Jakarta Sans"]},fontSize:{"headline-sm":["22px",{lineHeight:"28px",letterSpacing:"0em",fontWeight:"600"}],"headline-md":["28px",{lineHeight:"36px",letterSpacing:"-0.01em",fontWeight:"500"}],"display-hero-mobile":["36px",{lineHeight:"44px",letterSpacing:"-0.01em",fontWeight:"400"}],"label-sm":["11px",{lineHeight:"14px",letterSpacing:"0.06em",fontWeight:"600"}],"headline-lg":["40px",{lineHeight:"48px",letterSpacing:"-0.015em",fontWeight:"400"}],"body-lg":["18px",{lineHeight:"28px",letterSpacing:"0em",fontWeight:"400"}],"headline-lg-mobile":["28px",{lineHeight:"36px",letterSpacing:"-0.01em",fontWeight:"400"}],"display-hero":["56px",{lineHeight:"64px",letterSpacing:"-0.02em",fontWeight:"400"}],"label-md":["12px",{lineHeight:"16px",letterSpacing:"0.08em",fontWeight:"600"}],"body-md":["15px",{lineHeight:"24px",letterSpacing:"0em",fontWeight:"400"}],"title-md":["16px",{lineHeight:"24px",letterSpacing:"-0.005em",fontWeight:"600"}],"title-lg":["18px",{lineHeight:"26px",letterSpacing:"-0.01em",fontWeight:"600"}],"body-sm":["13px",{lineHeight:"20px",letterSpacing:"0.01em",fontWeight:"400"}]}}}};</script></head><body class="bg-background font-body-md text-on-surface antialiased min-h-screen selection:bg-secondary-container selection:text-on-secondary-container"><aside class="fixed left-0 top-0 h-screen w-72 bg-surface-container-low z-50 flex flex-col justify-between shadow-[0_1px_8px_rgba(57,48,45,0.04)] transition-all duration-300"><div class="flex flex-col flex-1 overflow-y-auto"><div class="px-space-md pt-space-lg pb-space-xs"><div class="flex items-center justify-between"><div class="flex items-center gap-space-xs"><img alt="Sophisticated luxury floral-intertwined letter E monogram logo for EVARA event planning, Warm Luxury palette with champagne, terracotta, and espresso accents." class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1VVJya-TjrqzKuzx19rXDIelDK7TXBIPXGpLxu1kCmnFkWC26I5xyi9GdXsYjZc1UurkqBs-WFaWa0QS2qZ6Dj58I8mn3di7NQ0c43y-fazru-jC-uSh0qCwr1Vc20gZ3lP42LyGsS4SC88vT02AW5TVEFaFbZ475xHHZAraf3Ju7cWcg0e7VyodEofqbljjMszcmWy9kuQ45WF9TLj8vS__95rGPys9nkdQ9sJIdE"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-primary tracking-tight leading-none">EVARA</span><span class="font-label-sm text-[10px] text-on-surface-variant tracking-widest uppercase">Private Concierge</span></div></div><button aria-label="Toggle navigation" class="p-space-xs text-on-surface-variant hover:text-on-surface hover:bg-surface-container rounded-lg transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">menu_open</span></button></div></div><div class="px-space-md py-space-xs"><div class="px-space-sm py-space-xs bg-surface-container rounded-lg"><span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider block">Workspace Scope</span><span class="font-title-md text-title-md text-on-surface truncate block" title="Villa San Valentino Tuscan Gala 2025">Villa San Valentino Tuscan Gala 2025</span></div></div><div class="px-space-md pt-space-xs pb-1"><span class="font-label-sm text-[11px] text-on-surface-variant uppercase tracking-wider">Navigation Modules</span></div><nav class="flex-1 px-space-md space-y-0.5" data-active-classes="bg-primary-container text-on-primary-container font-title-md shadow-sm rounded-lg"><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface font-title-md text-title-md transition-colors" data-path="dashboard" href="#">Dashboard</a><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface font-title-md text-title-md transition-colors" data-path="events-and-history" href="#">Events &amp; History</a><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface font-title-md text-title-md transition-colors" data-path="checklist-and-timeline" href="#">Checklist &amp; Timeline</a><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface font-title-md text-title-md transition-colors" data-path="budget" href="#">Budget</a><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface font-title-md text-title-md transition-colors" data-path="payments-and-qr" href="#">Payments &amp; QR</a><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface font-title-md text-title-md transition-colors" data-path="vendors" href="#">Vendors</a><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface font-title-md text-title-md transition-colors" data-path="shopping-assistant" href="#">Shopping Assistant</a><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface font-title-md text-title-md transition-colors" data-path="guest-management" href="#">Guest Management</a><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface font-title-md text-title-md transition-colors" data-path="invitation-designer" href="#">Invitation Designer</a><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface font-title-md text-title-md transition-colors" data-path="team-chat" href="#">Team Chat</a><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface font-title-md text-title-md transition-colors" data-path="ai-assistant" href="#">AI Assistant</a><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface font-title-md text-title-md transition-colors" data-path="reports-and-exports" href="#">Reports &amp; Exports</a><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface font-title-md text-title-md transition-colors" data-path="notifications" href="#">Notifications</a><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface font-title-md text-title-md transition-colors" data-path="profile-and-settings" href="#">Profile &amp; Settings</a></nav></div><div class="px-space-md pb-space-lg pt-space-xs space-y-space-xs"><div class="p-space-sm rounded-lg bg-surface-container flex items-center justify-between"><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-[18px] text-tertiary">auto_awesome</span><div class="flex flex-col"><span class="font-label-sm text-label-sm text-on-surface font-semibold">Concierge AI v2.4</span><span class="font-label-sm text-[10px] text-on-surface-variant leading-none">Private Model Active</span></div></div><div class="w-2 h-2 rounded-full bg-secondary animate-pulse"></div></div></div></aside><div class="pl-72 flex flex-col min-h-screen"><header class="fixed top-0 left-72 right-0 h-20 bg-surface/85 backdrop-blur-xl z-40 shadow-[0_1px_8px_rgba(57,48,45,0.04)]"><div class="w-full h-full px-gutter flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-md min-w-max"><button class="flex items-center gap-space-xs px-space-sm py-space-xs bg-surface-container-low hover:bg-surface-container rounded-lg text-left transition-colors" type="button"><div class="flex flex-col"><div class="flex items-center gap-space-xs"><span class="font-title-md text-title-md text-on-surface">Villa San Valentino Tuscan Gala 2025</span><span class="material-symbols-outlined text-[18px] text-on-surface-variant">expand_more</span></div><span class="font-label-sm text-label-sm text-on-surface-variant">Oct 24–27, 2025</span></div><span class="px-space-xs py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-[10px] uppercase font-semibold">Planning Active</span></button></div><div class="flex-1 max-w-md hidden md:block"><div class="relative"><span class="material-symbols-outlined absolute left-space-sm top-1/2 -translate-y-1/2 text-on-surface-variant text-[18px]">search</span><input class="w-full bg-surface-container-low text-on-surface font-body-sm text-body-sm pl-9 pr-space-sm py-space-xs rounded-lg placeholder:text-on-surface-variant focus:outline-none focus:bg-surface-container-lowest transition-colors" placeholder="Search tasks, guests, vendors, ledger..." type="text"/></div></div><div class="flex items-center gap-space-sm min-w-max"><div class="flex items-center px-space-xs py-1 rounded-lg bg-surface-container-low text-on-surface-variant font-label-md text-label-md"><span class="material-symbols-outlined text-[16px] mr-1">payments</span><span>INR (₹)</span></div><a class="relative p-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-low transition-colors" data-path="notifications" href="#"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-error"></span></a><div class="h-6 w-px bg-surface-variant"></div><a class="flex items-center gap-space-xs hover:opacity-90 transition-opacity" data-path="profile-and-settings" href="#"><div class="text-right hidden xl:block"><span class="font-title-md text-body-sm text-on-surface block leading-tight font-semibold">Eleanor Vance</span><span class="font-label-sm text-label-sm text-on-surface-variant block">Principal Host</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></a></div></div></header><main class="flex-1 w-full pt-20 px-gutter py-space-lg bg-background"><div class="flex flex-col w-full space-y-space-xl">
+<!-- Top Bar / Breadcrumb Context & Global Actions -->
+<div class="flex flex-col lg:flex-row lg:items-end justify-between gap-space-md">
+<div class="space-y-space-xs">
+<div class="flex items-center gap-2">
+<span class="px-2.5 py-1 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm uppercase tracking-wider font-semibold">Audit &amp; Intelligence</span>
+<span class="text-outline text-label-sm font-label-sm">/</span>
+<span class="text-on-surface-variant font-label-sm text-label-sm">Gala Fiscal Cycle 2025</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">Event Reports &amp; Analytics Export</h1>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl">Complete executive intelligence, audit-ready fiscal reconciliation, and multi-format exports for Villa San Valentino Tuscan Gala 2025.</p>
+</div>
+<!-- Date Range & Master Trigger -->
+<div class="flex flex-wrap items-center gap-space-sm">
+<div class="inline-flex items-center gap-2 bg-surface-container-low px-space-sm py-2 rounded-lg text-on-surface">
+<span class="material-symbols-outlined text-[18px] text-tertiary">calendar_month</span>
+<div class="text-left">
+<span class="font-label-sm text-[10px] text-on-surface-variant block uppercase tracking-wider leading-none">Time Horizon</span>
+<span class="font-title-md text-body-sm font-semibold text-on-surface">Planning Phase (Oct 1–27, 2025)</span>
+</div>
+<span class="material-symbols-outlined text-[16px] text-outline ml-1">arrow_drop_down</span>
+</div>
+<button class="group inline-flex items-center gap-2 bg-inverse-surface hover:bg-primary text-surface px-space-md py-3 rounded-lg shadow-sm transition-all duration-200" id="masterExportBtn" type="button">
+<span class="material-symbols-outlined text-[20px] text-tertiary-fixed-dim group-hover:rotate-12 transition-transform">bolt</span>
+<span class="font-title-md text-body-sm tracking-wide">Quick Export All Reports (Master ZIP)</span>
+<span class="font-label-sm text-[10px] bg-primary-container text-on-primary-container px-2 py-0.5 rounded-full ml-1">4 Dossiers</span>
+</button>
+</div>
+</div>
+<!-- Editorial Hero Visual Bar & Executive Narrative -->
+<div class="relative w-full rounded-2xl overflow-hidden bg-surface-container shadow-md">
+<div class="absolute inset-0 bg-gradient-to-r from-inverse-surface/90 via-inverse-surface/75 to-transparent z-10"></div>
+<div class="absolute inset-0 bg-cover bg-center" data-alt="Golden hour view of Villa San Valentino in Tuscany with ancient stone arches, wisteria vines climbing terracotta balustrades, and a formal banquet table with fine bone china, crystal stemware, and botanical floral runners during sunset." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAyqrc_qBBK_JNufBHTOluHYOT5OTjoDmov6m9Avz4VVWNXOYBIIxDn2sgSnKyofu7cvha9Ev35EcQdtHIRms09LcvHPM6L2CkOa3uK1Gnr1Gd6MpcEavV0ol1GxAuKNnsQB9ix_D-mVhHcVphn4Tb3OfngiLw_bZ1_6Ul27uCrwquSNqFBAQ_S3AE3RHjts8O_qTKn-Qb8iJb_mAjUWJyMI1T4ZLOW9FzvlWTD8NY')"></div>
+<div class="relative z-20 p-space-lg lg:p-space-xl max-w-2xl text-surface">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-surface-container-lowest/20 backdrop-blur-md mb-space-sm">
+<span class="w-2 h-2 rounded-full bg-secondary-fixed"></span>
+<span class="font-label-md text-label-md uppercase tracking-widest text-surface-bright">Villa San Valentino Tuscan Gala 2025</span>
+</div>
+<h2 class="font-headline-md text-headline-md text-surface-bright mb-2">Bespoke Hospitality Audit &amp; Ledger Statement</h2>
+<p class="font-body-md text-body-md text-surface-container-high/90">Curated by Evara Private Concierge for Eleanor Vance. All ledgers are synchronized across European Banking SEPA and Indian Escrow UTR nodal gateways.</p>
+</div>
+</div>
+<!-- Executive Analytics Summary Strip (6 Metrics) -->
+<section class="space-y-space-sm">
+<div class="flex items-center justify-between">
+<h3 class="font-title-lg text-title-lg text-on-surface font-semibold tracking-tight">Executive Summary Indicators</h3>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Live Real-time Reconciliation • Refresh 12m ago</span>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-space-sm">
+<!-- Metric 1 -->
+<div class="p-space-md rounded-2xl bg-surface-container shadow-sm hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between text-on-surface-variant mb-2">
+<span class="font-label-sm text-label-sm uppercase tracking-wider">Confirmed Guests</span>
+<span class="material-symbols-outlined text-[18px] text-tertiary">groups</span>
+</div>
+<div class="font-headline-md text-headline-md text-on-surface font-semibold">40 <span class="font-body-sm text-body-sm font-normal text-on-surface-variant">Pax</span></div>
+<div class="mt-2 text-on-surface-variant font-label-sm text-label-sm">34 Primary + 6 Accompanying</div>
+<div class="mt-3 w-full bg-surface-variant rounded-full h-1.5 overflow-hidden">
+<div class="bg-primary h-full rounded-full" style="width: 88%"></div>
+</div>
+</div>
+<!-- Metric 2 -->
+<div class="p-space-md rounded-2xl bg-surface-container shadow-sm hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between text-on-surface-variant mb-2">
+<span class="font-label-sm text-label-sm uppercase tracking-wider">Master Budget</span>
+<span class="material-symbols-outlined text-[18px] text-secondary">account_balance_wallet</span>
+</div>
+<div class="font-headline-md text-headline-md text-on-surface font-semibold">₹15,00,000</div>
+<div class="mt-2 text-on-surface-variant font-label-sm text-label-sm">Cap locked &amp; approved</div>
+<div class="mt-3 text-on-tertiary-fixed-variant font-label-sm text-[11px] flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">check_circle</span> 100% committed
+        </div>
+</div>
+<!-- Metric 3 -->
+<div class="p-space-md rounded-2xl bg-surface-container shadow-sm hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between text-on-surface-variant mb-2">
+<span class="font-label-sm text-label-sm uppercase tracking-wider">Settled Spend</span>
+<span class="material-symbols-outlined text-[18px] text-primary">receipt_long</span>
+</div>
+<div class="font-headline-md text-headline-md text-primary font-semibold">₹10,45,000</div>
+<div class="mt-2 text-on-surface-variant font-label-sm text-label-sm">69.7% of master allocation</div>
+<div class="mt-3 w-full bg-surface-variant rounded-full h-1.5 overflow-hidden">
+<div class="bg-primary-container h-full rounded-full" style="width: 69.7%"></div>
+</div>
+</div>
+<!-- Metric 4 -->
+<div class="p-space-md rounded-2xl bg-surface-container shadow-sm hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between text-on-surface-variant mb-2">
+<span class="font-label-sm text-label-sm uppercase tracking-wider">Escrow Inflow</span>
+<span class="material-symbols-outlined text-[18px] text-tertiary-container">verified_user</span>
+</div>
+<div class="font-headline-md text-headline-md text-on-surface font-semibold">₹10,83,316</div>
+<div class="mt-2 text-on-surface-variant font-label-sm text-label-sm">72.2% member tranches in</div>
+<div class="mt-3 w-full bg-surface-variant rounded-full h-1.5 overflow-hidden">
+<div class="bg-tertiary-container h-full rounded-full" style="width: 72.2%"></div>
+</div>
+</div>
+<!-- Metric 5 -->
+<div class="p-space-md rounded-2xl bg-surface-container shadow-sm hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between text-on-surface-variant mb-2">
+<span class="font-label-sm text-label-sm uppercase tracking-wider">Pending Dues</span>
+<span class="material-symbols-outlined text-[18px] text-error">pending</span>
+</div>
+<div class="font-headline-md text-headline-md text-on-surface font-semibold">₹4,16,684</div>
+<div class="mt-2 text-on-surface-variant font-label-sm text-label-sm">10 participant shares left</div>
+<div class="mt-3 text-secondary font-label-sm text-[11px] flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">schedule</span> Due Oct 14, 2025
+        </div>
+</div>
+<!-- Metric 6 -->
+<div class="p-space-md rounded-2xl bg-surface-container shadow-sm hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between text-on-surface-variant mb-2">
+<span class="font-label-sm text-label-sm uppercase tracking-wider">Milestone Velocity</span>
+<span class="material-symbols-outlined text-[18px] text-tertiary">speed</span>
+</div>
+<div class="font-headline-md text-headline-md text-on-surface font-semibold">18/26 <span class="font-body-sm text-body-sm font-normal text-on-surface-variant">Verified</span></div>
+<div class="mt-2 text-on-surface-variant font-label-sm text-label-sm">69% Production Complete</div>
+<div class="mt-3 w-full bg-surface-variant rounded-full h-1.5 overflow-hidden">
+<div class="bg-secondary h-full rounded-full" style="width: 69%"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- Aria Executive Insights Panel (Warm Luxury Callout) -->
+<div class="p-space-md lg:p-space-lg rounded-2xl bg-gradient-to-r from-surface-container-high via-surface-container to-surface-container-low shadow-sm flex flex-col md:flex-row items-start md:items-center justify-between gap-space-md">
+<div class="flex items-start gap-space-md max-w-3xl">
+<div class="w-12 h-12 rounded-xl bg-tertiary-container flex items-center justify-center shrink-0 shadow-sm">
+<span class="material-symbols-outlined text-on-tertiary text-[24px]">auto_awesome</span>
+</div>
+<div class="space-y-1">
+<div class="flex items-center gap-2">
+<span class="font-title-md text-title-md font-semibold text-on-surface">Aria Concierge Executive Intelligence</span>
+<span class="px-2 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-[10px] uppercase font-bold tracking-wider">Health 94/100</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">Fiscal health score is optimal at <strong class="text-on-surface font-semibold">94/100</strong>. Escrow liquid reserves currently exceed upcoming 14-day vendor obligations by <span class="text-primary font-semibold">₹1,75,000</span>. Florence Sommelier &amp; Olive Grove Lighting contracts are fully locked with nil contingent variance.</p>
+</div>
+</div>
+<div class="flex items-center gap-space-xs shrink-0 w-full md:w-auto">
+<button class="w-full md:w-auto px-4 py-2.5 rounded-lg bg-surface-container-lowest hover:bg-surface-bright text-on-surface font-title-md text-body-sm shadow-sm transition-colors text-center" type="button">
+        Review Liquidity Buffer
+      </button>
+</div>
+</div>
+<!-- Interactive Visual Analytics Section -->
+<section class="space-y-space-md">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Diagnostic Analytics</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Visual distribution of expenditure, guest commitment ratios, and escrow tranche schedule.</p>
+</div>
+<div class="hidden sm:flex items-center gap-2">
+<span class="w-3 h-3 rounded-full bg-primary"></span>
+<span class="font-label-sm text-label-sm text-on-surface-variant mr-3">Committed / Disbursed</span>
+<span class="w-3 h-3 rounded-full bg-secondary-container"></span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Allocated Ceiling</span>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-md">
+<!-- Chart 1: Budget vs Actual Breakdown across 6 categories (7 cols) -->
+<div class="lg:col-span-7 p-space-lg rounded-2xl bg-surface-container shadow-sm space-y-space-md">
+<div class="flex items-center justify-between">
+<div class="space-y-0.5">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider block">Cap Distribution</span>
+<h4 class="font-title-lg text-title-lg font-semibold text-on-surface">Budget vs. Actual Spending (6 Primary Verticals)</h4>
+</div>
+<span class="font-label-sm text-label-sm text-primary font-semibold bg-surface-container-high px-2.5 py-1 rounded-full">₹10.45L / ₹15.00L Spent</span>
+</div>
+<!-- Inline SVG Visualization: Horizontal Grouped Bars -->
+<div class="space-y-4 pt-2">
+<!-- Venue & Grounds -->
+<div class="space-y-1.5">
+<div class="flex items-center justify-between font-body-sm text-body-sm">
+<span class="font-semibold text-on-surface flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-tertiary">villa</span>
+                Venue &amp; Grounds (Villa San Valentino)
+              </span>
+<span class="text-on-surface-variant"><strong class="text-on-surface font-semibold">₹4,80,000</strong> / ₹5,50,000</span>
+</div>
+<div class="h-3 w-full bg-surface-variant rounded-full relative overflow-hidden">
+<div class="h-full bg-primary rounded-full" style="width: 87.2%"></div>
+</div>
+</div>
+<!-- Catering & Sommelier -->
+<div class="space-y-1.5">
+<div class="flex items-center justify-between font-body-sm text-body-sm">
+<span class="font-semibold text-on-surface flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-tertiary">restaurant</span>
+                Catering &amp; Chianti Sommelier
+              </span>
+<span class="text-on-surface-variant"><strong class="text-on-surface font-semibold">₹2,85,000</strong> / ₹3,50,000</span>
+</div>
+<div class="h-3 w-full bg-surface-variant rounded-full relative overflow-hidden">
+<div class="h-full bg-secondary rounded-full" style="width: 81.4%"></div>
+</div>
+</div>
+<!-- Floral & Scenography -->
+<div class="space-y-1.5">
+<div class="flex items-center justify-between font-body-sm text-body-sm">
+<span class="font-semibold text-on-surface flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-tertiary">local_florist</span>
+                Décor &amp; Tuscan Floral Scenography
+              </span>
+<span class="text-on-surface-variant"><strong class="text-on-surface font-semibold">₹1,40,000</strong> / ₹2,20,000</span>
+</div>
+<div class="h-3 w-full bg-surface-variant rounded-full relative overflow-hidden">
+<div class="h-full bg-tertiary-container rounded-full" style="width: 63.6%"></div>
+</div>
+</div>
+<!-- Private Fleet Logistics -->
+<div class="space-y-1.5">
+<div class="flex items-center justify-between font-body-sm text-body-sm">
+<span class="font-semibold text-on-surface flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-tertiary">airport_shuttle</span>
+                Logistics &amp; Florence Private Transfers
+              </span>
+<span class="text-on-surface-variant"><strong class="text-on-surface font-semibold">₹75,000</strong> / ₹1,80,000</span>
+</div>
+<div class="h-3 w-full bg-surface-variant rounded-full relative overflow-hidden">
+<div class="h-full bg-primary-container rounded-full" style="width: 41.6%"></div>
+</div>
+</div>
+<!-- Music & Italian Ensemble -->
+<div class="space-y-1.5">
+<div class="flex items-center justify-between font-body-sm text-body-sm">
+<span class="font-semibold text-on-surface flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-tertiary">music_note</span>
+                Music, String Quartet &amp; Soundscape
+              </span>
+<span class="text-on-surface-variant"><strong class="text-on-surface font-semibold">₹50,000</strong> / ₹1,20,000</span>
+</div>
+<div class="h-3 w-full bg-surface-variant rounded-full relative overflow-hidden">
+<div class="h-full bg-secondary-fixed-dim rounded-full" style="width: 41.6%"></div>
+</div>
+</div>
+<!-- Bespoke Stationery -->
+<div class="space-y-1.5">
+<div class="flex items-center justify-between font-body-sm text-body-sm">
+<span class="font-semibold text-on-surface flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-tertiary">mail</span>
+                Stationery, Calligraphy &amp; Welcome Crates
+              </span>
+<span class="text-on-surface-variant"><strong class="text-on-surface font-semibold">₹15,000</strong> / ₹80,000</span>
+</div>
+<div class="h-3 w-full bg-surface-variant rounded-full relative overflow-hidden">
+<div class="h-full bg-outline rounded-full" style="width: 18.75%"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Chart 2 & 3: Guest Distribution Gauge + Escrow Liquidity (5 cols) -->
+<div class="lg:col-span-5 flex flex-col gap-space-md">
+<!-- RSVP Gauge Card -->
+<div class="p-space-md rounded-2xl bg-surface-container shadow-sm space-y-3 flex-1">
+<div class="flex items-center justify-between">
+<h4 class="font-title-md text-title-md font-semibold text-on-surface">Guest RSVP &amp; Lodging Split</h4>
+<span class="font-label-sm text-[11px] text-on-surface-variant uppercase tracking-wider">Capacity 45 Pax</span>
+</div>
+<div class="flex items-center gap-space-md">
+<!-- Donut Gauge inline SVG -->
+<div class="relative w-28 h-28 shrink-0">
+<svg class="w-full h-full -rotate-90" viewbox="0 0 36 36">
+<!-- Background Circle -->
+<path class="text-surface-variant" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-width="3.5"></path>
+<!-- Confirmed (80%) -->
+<path class="text-primary" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-dasharray="80, 100" stroke-linecap="round" stroke-width="3.5"></path>
+<!-- Pending (15%) -->
+<path class="text-secondary-fixed-dim" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-dasharray="15, 100" stroke-dashoffset="-80" stroke-width="3.5"></path>
+</svg>
+<div class="absolute inset-0 flex flex-col items-center justify-center">
+<span class="font-headline-sm text-headline-sm text-on-surface leading-none">88%</span>
+<span class="font-label-sm text-[9px] uppercase tracking-wider text-on-surface-variant">Attending</span>
+</div>
+</div>
+<!-- Breakdown list -->
+<div class="space-y-2 flex-1">
+<div class="flex items-center justify-between text-body-sm font-body-sm">
+<span class="flex items-center gap-1.5 text-on-surface">
+<span class="w-2.5 h-2.5 rounded-full bg-primary"></span> Confirmed &amp; Suites Allocated
+                </span>
+<span class="font-semibold text-on-surface">36</span>
+</div>
+<div class="flex items-center justify-between text-body-sm font-body-sm">
+<span class="flex items-center gap-1.5 text-on-surface">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary-fixed-dim"></span> Pending Confirmation
+                </span>
+<span class="font-semibold text-on-surface">4</span>
+</div>
+<div class="flex items-center justify-between text-body-sm font-body-sm">
+<span class="flex items-center gap-1.5 text-on-surface-variant">
+<span class="w-2.5 h-2.5 rounded-full bg-surface-variant"></span> Polite Regrets
+                </span>
+<span class="font-semibold text-on-surface-variant">5</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Escrow Tranche Timeline Mini Chart -->
+<div class="p-space-md rounded-2xl bg-surface-container shadow-sm space-y-3 flex-1">
+<div class="flex items-center justify-between">
+<h4 class="font-title-md text-title-md font-semibold text-on-surface">Escrow Disbursement Tranches</h4>
+<span class="material-symbols-outlined text-tertiary text-[18px]">verified</span>
+</div>
+<div class="grid grid-cols-3 gap-2 text-center pt-1">
+<div class="p-2 rounded-lg bg-surface-container-high/60">
+<span class="font-label-sm text-[10px] text-on-surface-variant block uppercase">Tranche 1 (Aug 15)</span>
+<span class="font-title-md text-body-sm font-semibold text-on-surface block mt-0.5">₹5,00,000</span>
+<span class="font-label-sm text-[10px] text-primary font-bold">Disbursed ✓</span>
+</div>
+<div class="p-2 rounded-lg bg-surface-container-high/60">
+<span class="font-label-sm text-[10px] text-on-surface-variant block uppercase">Tranche 2 (Sep 28)</span>
+<span class="font-title-md text-body-sm font-semibold text-on-surface block mt-0.5">₹5,45,000</span>
+<span class="font-label-sm text-[10px] text-primary font-bold">Disbursed ✓</span>
+</div>
+<div class="p-2 rounded-lg bg-secondary-container/40">
+<span class="font-label-sm text-[10px] text-on-secondary-container block uppercase font-semibold">Tranche 3 (Oct 24)</span>
+<span class="font-title-md text-body-sm font-semibold text-on-secondary-container block mt-0.5">₹4,55,000</span>
+<span class="font-label-sm text-[10px] text-secondary font-bold">In Escrow Lock</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Report Category Dossiers Grid (4 modules) -->
+<section class="space-y-space-md">
+<div class="flex flex-col sm:flex-row sm:items-end justify-between gap-space-xs">
+<div>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider block">Curated Compilations</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Structured Report Dossiers</h3>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Select individual dossiers to preview parameters or customize layout export.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<!-- Dossier A: Guest Manifest -->
+<div class="p-space-lg rounded-2xl bg-surface-container hover:bg-surface-container-high transition-colors shadow-sm flex flex-col justify-between group">
+<div class="space-y-space-sm">
+<div class="flex items-center justify-between">
+<div class="w-10 h-10 rounded-xl bg-primary-container text-on-primary-container flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-[20px]">badge</span>
+</div>
+<span class="font-label-sm text-label-sm px-2.5 py-0.5 rounded-full bg-surface-container-low text-on-surface-variant">DOSSIER-A</span>
+</div>
+<div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface group-hover:text-primary transition-colors">Guest Roster &amp; Attendance Dossier</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Complete manifest with dietary mandates (Gluten-Free, Vegan Chianti pairings), Florence airport arrival timeframes, suite allocations at Villa San Valentino, and RSVP timestamps.</p>
+</div>
+<div class="grid grid-cols-2 gap-2 pt-2">
+<div class="p-2 rounded bg-surface-container-low text-on-surface">
+<span class="font-label-sm text-[10px] text-on-surface-variant block uppercase">Included Columns</span>
+<span class="font-title-md text-body-sm font-semibold">14 Fields Verified</span>
+</div>
+<div class="p-2 rounded bg-surface-container-low text-on-surface">
+<span class="font-label-sm text-[10px] text-on-surface-variant block uppercase">Private Allergies</span>
+<span class="font-title-md text-body-sm font-semibold">8 Custom Flags</span>
+</div>
+</div>
+</div>
+<div class="mt-space-md pt-space-sm flex items-center justify-between">
+<label class="flex items-center gap-2 cursor-pointer">
+<input checked="" class="w-4 h-4 rounded text-secondary focus:ring-0 cursor-pointer" type="checkbox"/>
+<span class="font-label-md text-label-md text-on-surface">Select for Multi-Export</span>
+</label>
+<button class="inline-flex items-center gap-1 text-primary hover:text-on-surface font-title-md text-body-sm font-semibold" type="button">
+<span>Inspect Table</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Dossier B: Fiscal Ledger -->
+<div class="p-space-lg rounded-2xl bg-surface-container hover:bg-surface-container-high transition-colors shadow-sm flex flex-col justify-between group">
+<div class="space-y-space-sm">
+<div class="flex items-center justify-between">
+<div class="w-10 h-10 rounded-xl bg-tertiary-container text-on-tertiary flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-[20px]">account_balance</span>
+</div>
+<span class="font-label-sm text-label-sm px-2.5 py-0.5 rounded-full bg-surface-container-low text-on-surface-variant">DOSSIER-B</span>
+</div>
+<div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface group-hover:text-tertiary transition-colors">Fiscal &amp; Escrow Contribution Ledger</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Audit-ready granular ledger showing 36 member equal shares (₹41,666.66/pax), UTR bank reference numbers, settled razorpay routes, and outstanding receivables timeline.</p>
+</div>
+<div class="grid grid-cols-2 gap-2 pt-2">
+<div class="p-2 rounded bg-surface-container-low text-on-surface">
+<span class="font-label-sm text-[10px] text-on-surface-variant block uppercase">Individual Shares</span>
+<span class="font-title-md text-body-sm font-semibold">₹41,666 / Share</span>
+</div>
+<div class="p-2 rounded bg-surface-container-low text-on-surface">
+<span class="font-label-sm text-[10px] text-on-surface-variant block uppercase">Settlement Rate</span>
+<span class="font-title-md text-body-sm font-semibold">72.2% Settled</span>
+</div>
+</div>
+</div>
+<div class="mt-space-md pt-space-sm flex items-center justify-between">
+<label class="flex items-center gap-2 cursor-pointer">
+<input checked="" class="w-4 h-4 rounded text-secondary focus:ring-0 cursor-pointer" type="checkbox"/>
+<span class="font-label-md text-label-md text-on-surface">Select for Multi-Export</span>
+</label>
+<button class="inline-flex items-center gap-1 text-primary hover:text-on-surface font-title-md text-body-sm font-semibold" type="button">
+<span>Inspect Table</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Dossier C: Vendor Procurement -->
+<div class="p-space-lg rounded-2xl bg-surface-container hover:bg-surface-container-high transition-colors shadow-sm flex flex-col justify-between group">
+<div class="space-y-space-sm">
+<div class="flex items-center justify-between">
+<div class="w-10 h-10 rounded-xl bg-secondary-container text-on-secondary-container flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-[20px]">handshake</span>
+</div>
+<span class="font-label-sm text-label-sm px-2.5 py-0.5 rounded-full bg-surface-container-low text-on-surface-variant">DOSSIER-C</span>
+</div>
+<div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface group-hover:text-secondary transition-colors">Vendor Procurement &amp; Service Agreements</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Itemized service contracts across Italian suppliers: Tenuta Decor, Florentine Strings, Chianti Cellars, and EuroShuttle VIP. Displays retainers paid, balance milestones, and performance ratings.</p>
+</div>
+<div class="grid grid-cols-2 gap-2 pt-2">
+<div class="p-2 rounded bg-surface-container-low text-on-surface">
+<span class="font-label-sm text-[10px] text-on-surface-variant block uppercase">Partner Count</span>
+<span class="font-title-md text-body-sm font-semibold">9 Active Partners</span>
+</div>
+<div class="p-2 rounded bg-surface-container-low text-on-surface">
+<span class="font-label-sm text-[10px] text-on-surface-variant block uppercase">Contract Value</span>
+<span class="font-title-md text-body-sm font-semibold">₹12,40,000 Total</span>
+</div>
+</div>
+</div>
+<div class="mt-space-md pt-space-sm flex items-center justify-between">
+<label class="flex items-center gap-2 cursor-pointer">
+<input checked="" class="w-4 h-4 rounded text-secondary focus:ring-0 cursor-pointer" type="checkbox"/>
+<span class="font-label-md text-label-md text-on-surface">Select for Multi-Export</span>
+</label>
+<button class="inline-flex items-center gap-1 text-primary hover:text-on-surface font-title-md text-body-sm font-semibold" type="button">
+<span>Inspect Table</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Dossier D: Production Timeline -->
+<div class="p-space-lg rounded-2xl bg-surface-container hover:bg-surface-container-high transition-colors shadow-sm flex flex-col justify-between group">
+<div class="space-y-space-sm">
+<div class="flex items-center justify-between">
+<div class="w-10 h-10 rounded-xl bg-surface-container-highest text-on-surface-variant flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-[20px]">checklist_rtl</span>
+</div>
+<span class="font-label-sm text-label-sm px-2.5 py-0.5 rounded-full bg-surface-container-low text-on-surface-variant">DOSSIER-D</span>
+</div>
+<div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface group-hover:text-primary transition-colors">Production Timeline &amp; Task Audit</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Full operational log of 26 chronological production checkpoints. Details accountable leads, priority tags, verified sub-items, vendor delivery sign-offs, and risk mitigations.</p>
+</div>
+<div class="grid grid-cols-2 gap-2 pt-2">
+<div class="p-2 rounded bg-surface-container-low text-on-surface">
+<span class="font-label-sm text-[10px] text-on-surface-variant block uppercase">Milestone Progress</span>
+<span class="font-title-md text-body-sm font-semibold">18 / 26 Done</span>
+</div>
+<div class="p-2 rounded bg-surface-container-low text-on-surface">
+<span class="font-label-sm text-[10px] text-on-surface-variant block uppercase">Overdue Criticals</span>
+<span class="font-title-md text-body-sm font-semibold text-primary">0 Delayed</span>
+</div>
+</div>
+</div>
+<div class="mt-space-md pt-space-sm flex items-center justify-between">
+<label class="flex items-center gap-2 cursor-pointer">
+<input checked="" class="w-4 h-4 rounded text-secondary focus:ring-0 cursor-pointer" type="checkbox"/>
+<span class="font-label-md text-label-md text-on-surface">Select for Multi-Export</span>
+</label>
+<button class="inline-flex items-center gap-1 text-primary hover:text-on-surface font-title-md text-body-sm font-semibold" type="button">
+<span>Inspect Table</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Comprehensive Export Configuration Engine -->
+<section class="p-space-lg rounded-2xl bg-surface-container shadow-md space-y-space-lg">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-sm">
+<div class="space-y-1">
+<span class="font-label-sm text-label-sm text-tertiary uppercase tracking-wider block font-semibold">Export Engine Parameters</span>
+<h3 class="font-headline-md text-headline-md text-on-surface font-semibold">Compilation &amp; Security Controls</h3>
+</div>
+<div class="flex items-center gap-2">
+<span class="font-label-md text-label-md text-on-surface-variant">Default Output: ISO-20022 Financial Standards</span>
+</div>
+</div>
+<!-- Configuration Options Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-space-lg">
+<!-- Format Selection -->
+<div class="space-y-space-xs">
+<label class="font-title-md text-title-md font-semibold text-on-surface block">1. File Format Destination</label>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Choose structured spreadsheet data or executive presentation layouts.</p>
+<div class="grid grid-cols-2 gap-2 pt-2">
+<button class="format-btn flex items-center gap-2.5 p-3 rounded-lg bg-surface-container-lowest text-on-surface shadow-sm text-left hover:bg-surface-bright transition-colors" data-format="xlsx" type="button">
+<span class="material-symbols-outlined text-[20px] text-tertiary">table_view</span>
+<div>
+<span class="font-title-md text-body-sm font-semibold block leading-tight">Excel (.xlsx)</span>
+<span class="font-label-sm text-[10px] text-on-surface-variant">Multi-sheet tabbed</span>
+</div>
+</button>
+<button class="format-btn flex items-center gap-2.5 p-3 rounded-lg bg-surface-container-low text-on-surface shadow-none text-left hover:bg-surface-container-lowest transition-colors" data-format="csv" type="button">
+<span class="material-symbols-outlined text-[20px] text-secondary">data_table</span>
+<div>
+<span class="font-title-md text-body-sm font-semibold block leading-tight">CSV Bundle</span>
+<span class="font-label-sm text-[10px] text-on-surface-variant">Raw delimiter flat</span>
+</div>
+</button>
+<button class="format-btn flex items-center gap-2.5 p-3 rounded-lg bg-surface-container-low text-on-surface shadow-none text-left hover:bg-surface-container-lowest transition-colors" data-format="pdf" type="button">
+<span class="material-symbols-outlined text-[20px] text-primary">picture_as_pdf</span>
+<div>
+<span class="font-title-md text-body-sm font-semibold block leading-tight">PDF Dossier</span>
+<span class="font-label-sm text-[10px] text-on-surface-variant">Editorial layout</span>
+</div>
+</button>
+<button class="format-btn flex items-center gap-2.5 p-3 rounded-lg bg-surface-container-low text-on-surface shadow-none text-left hover:bg-surface-container-lowest transition-colors" data-format="json" type="button">
+<span class="material-symbols-outlined text-[20px] text-outline">data_object</span>
+<div>
+<span class="font-title-md text-body-sm font-semibold block leading-tight">JSON Telemetry</span>
+<span class="font-label-sm text-[10px] text-on-surface-variant">Direct API payload</span>
+</div>
+</button>
+</div>
+</div>
+<!-- Privacy & Sanitization Controls -->
+<div class="space-y-space-xs">
+<label class="font-title-md text-title-md font-semibold text-on-surface block">2. Privacy &amp; Data Governance</label>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Apply redacting layers for non-principal stakeholders or audit partners.</p>
+<div class="space-y-2 pt-2">
+<label class="flex items-start gap-3 p-3 rounded-lg bg-surface-container-low cursor-pointer hover:bg-surface-container-lowest transition-colors">
+<input checked="" class="mt-0.5 w-4 h-4 rounded text-secondary focus:ring-0" type="checkbox"/>
+<div class="flex flex-col">
+<span class="font-title-md text-body-sm font-semibold text-on-surface">Mask Guest Phone Numbers &amp; UPI IDs</span>
+<span class="font-label-sm text-[11px] text-on-surface-variant">Replaces sensitive strings with +91 •••• 8821 for GDPR compliance.</span>
+</div>
+</label>
+<label class="flex items-start gap-3 p-3 rounded-lg bg-surface-container-low cursor-pointer hover:bg-surface-container-lowest transition-colors">
+<input checked="" class="mt-0.5 w-4 h-4 rounded text-secondary focus:ring-0" type="checkbox"/>
+<div class="flex flex-col">
+<span class="font-title-md text-body-sm font-semibold text-on-surface">Include AI Fiscal Notes &amp; Variance Audits</span>
+<span class="font-label-sm text-[11px] text-on-surface-variant">Appends Aria Concierge commentary to every cost discrepancy.</span>
+</div>
+</label>
+</div>
+</div>
+<!-- Execution Panel & Scheduling -->
+<div class="space-y-space-xs flex flex-col justify-between">
+<div>
+<label class="font-title-md text-title-md font-semibold text-on-surface block">3. Execution &amp; Dispatch</label>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Direct file download or recurring automated synchronization.</p>
+</div>
+<div class="space-y-2 pt-2">
+<button class="w-full flex items-center justify-center gap-2 bg-primary hover:bg-primary-container text-on-primary hover:text-on-primary-container py-3 px-space-md rounded-lg shadow-sm font-title-md text-body-sm transition-all" id="downloadNowBtn" type="button">
+<span class="material-symbols-outlined text-[18px]">download</span>
+<span>Download Selected Reports (.XLSX)</span>
+</button>
+<button class="w-full flex items-center justify-center gap-2 bg-surface-container-low hover:bg-surface-container-highest text-on-surface py-3 px-space-md rounded-lg font-title-md text-body-sm transition-all" id="scheduleDailyBtn" type="button">
+<span class="material-symbols-outlined text-[18px] text-secondary">schedule_send</span>
+<span>Schedule Automated Daily Digest to Email</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Recent Export Archive & Download Vault -->
+<section class="space-y-space-md">
+<div class="flex items-center justify-between">
+<div>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider block">Security Logged</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Recent Export Archive &amp; Download Vault</h3>
+</div>
+<button class="font-label-md text-label-md text-primary font-semibold hover:underline flex items-center gap-1" type="button">
+<span class="material-symbols-outlined text-[16px]">history</span>
+<span>View Full 90-Day Audit Trail</span>
+</button>
+</div>
+<!-- Table Container -->
+<div class="rounded-2xl bg-surface-container shadow-sm overflow-hidden">
+<div class="overflow-x-auto">
+<table class="w-full text-left font-body-sm text-body-sm">
+<thead class="bg-surface-container-high text-on-surface font-title-md text-[12px] uppercase tracking-wider">
+<tr>
+<th class="py-3 px-space-md font-semibold">Generated File Title</th>
+<th class="py-3 px-space-md font-semibold">Dossier Scope</th>
+<th class="py-3 px-space-md font-semibold">File Format</th>
+<th class="py-3 px-space-md font-semibold">File Size</th>
+<th class="py-3 px-space-md font-semibold">Timestamp</th>
+<th class="py-3 px-space-md font-semibold">Created By</th>
+<th class="py-3 px-space-md text-right font-semibold">Vault Action</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container-high/40 text-on-surface">
+<!-- Row 1 -->
+<tr class="hover:bg-surface-container-high/50 transition-colors">
+<td class="py-4 px-space-md font-semibold flex items-center gap-2.5">
+<span class="w-8 h-8 rounded-lg bg-surface-container-highest flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[18px]">table_chart</span>
+</span>
+<span class="truncate max-w-xs md:max-w-md font-mono text-[13px]">Tuscan_Gala_2025_Master_Budget_Reconciliation.xlsx</span>
+</td>
+<td class="py-4 px-space-md text-on-surface-variant">Fiscal Ledger (Dossier B)</td>
+<td class="py-4 px-space-md">
+<span class="px-2 py-0.5 rounded bg-surface-container-highest text-on-surface font-label-sm text-[11px] font-semibold">XLSX</span>
+</td>
+<td class="py-4 px-space-md font-mono text-on-surface-variant text-[12px]">1.4 MB</td>
+<td class="py-4 px-space-md text-on-surface-variant">Oct 08, 2025 • 14:22</td>
+<td class="py-4 px-space-md text-on-surface-variant">Eleanor Vance</td>
+<td class="py-4 px-space-md text-right">
+<button class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-surface-container-low hover:bg-surface-container-lowest text-primary font-title-md text-body-sm transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">download</span>
+<span>Fetch File</span>
+</button>
+</td>
+</tr>
+<!-- Row 2 -->
+<tr class="hover:bg-surface-container-high/50 transition-colors">
+<td class="py-4 px-space-md font-semibold flex items-center gap-2.5">
+<span class="w-8 h-8 rounded-lg bg-surface-container-highest flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[18px]">picture_as_pdf</span>
+</span>
+<span class="truncate max-w-xs md:max-w-md font-mono text-[13px]">Guest_Dietary_and_Suite_Manifest.pdf</span>
+</td>
+<td class="py-4 px-space-md text-on-surface-variant">Guest Attendance (Dossier A)</td>
+<td class="py-4 px-space-md">
+<span class="px-2 py-0.5 rounded bg-surface-container-highest text-on-surface font-label-sm text-[11px] font-semibold">PDF</span>
+</td>
+<td class="py-4 px-space-md font-mono text-on-surface-variant text-[12px]">3.8 MB</td>
+<td class="py-4 px-space-md text-on-surface-variant">Oct 07, 2025 • 09:15</td>
+<td class="py-4 px-space-md text-on-surface-variant">Aria AI Bot</td>
+<td class="py-4 px-space-md text-right">
+<button class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-surface-container-low hover:bg-surface-container-lowest text-primary font-title-md text-body-sm transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">download</span>
+<span>Fetch File</span>
+</button>
+</td>
+</tr>
+<!-- Row 3 -->
+<tr class="hover:bg-surface-container-high/50 transition-colors">
+<td class="py-4 px-space-md font-semibold flex items-center gap-2.5">
+<span class="w-8 h-8 rounded-lg bg-surface-container-highest flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined text-[18px]">format_list_bulleted</span>
+</span>
+<span class="truncate max-w-xs md:max-w-md font-mono text-[13px]">Vendor_Contracts_Summary.csv</span>
+</td>
+<td class="py-4 px-space-md text-on-surface-variant">Procurement (Dossier C)</td>
+<td class="py-4 px-space-md">
+<span class="px-2 py-0.5 rounded bg-surface-container-highest text-on-surface font-label-sm text-[11px] font-semibold">CSV</span>
+</td>
+<td class="py-4 px-space-md font-mono text-on-surface-variant text-[12px]">240 KB</td>
+<td class="py-4 px-space-md text-on-surface-variant">Oct 05, 2025 • 18:40</td>
+<td class="py-4 px-space-md text-on-surface-variant">Eleanor Vance</td>
+<td class="py-4 px-space-md text-right">
+<button class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-surface-container-low hover:bg-surface-container-lowest text-primary font-title-md text-body-sm transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">download</span>
+<span>Fetch File</span>
+</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+<!-- Interactive Feedback Notification Toast (Hidden by default, triggered via JS) -->
+<div class="fixed bottom-6 right-6 z-50 transform translate-y-24 opacity-0 transition-all duration-300 pointer-events-none" id="exportToast">
+<div class="p-4 rounded-xl bg-inverse-surface text-inverse-on-surface shadow-xl flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary-container text-[24px]">task_alt</span>
+<div class="flex flex-col">
+<span class="font-title-md text-body-sm font-semibold text-surface-bright">Master Export Compiled</span>
+<span class="font-label-sm text-[12px] text-surface-dim">All 4 dossiers bundled into Tuscan_Gala_2025_Master.zip</span>
+</div>
+</div>
+</div>
+</div>
+<script>
+  // Micro-interactions for Reports & Excel Export Screen
+  (function() {
+    const toast = document.getElementById('exportToast');
+    const masterExportBtn = document.getElementById('masterExportBtn');
+    const downloadNowBtn = document.getElementById('downloadNowBtn');
+    const scheduleDailyBtn = document.getElementById('scheduleDailyBtn');
+    const formatButtons = document.querySelectorAll('.format-btn');
+
+    function triggerToast(title, message) {
+      if (!toast) return;
+      const titleElem = toast.querySelector('span.font-title-md');
+      const msgElem = toast.querySelector('span.font-label-sm');
+      if (titleElem && title) titleElem.textContent = title;
+      if (msgElem && message) msgElem.textContent = message;
+
+      toast.classList.remove('translate-y-24', 'opacity-0', 'pointer-events-none');
+      toast.classList.add('translate-y-0', 'opacity-100');
+
+      setTimeout(() => {
+        toast.classList.add('translate-y-24', 'opacity-0', 'pointer-events-none');
+        toast.classList.remove('translate-y-0', 'opacity-100');
+      }, 4000);
+    }
+
+    if (masterExportBtn) {
+      masterExportBtn.addEventListener('click', function() {
+        triggerToast('Packaging Master ZIP Archive', 'Synchronizing 4 dossiers across Villa San Valentino ledger...');
+      });
+    }
+
+    if (downloadNowBtn) {
+      downloadNowBtn.addEventListener('click', function() {
+        triggerToast('Generating Spreadsheet', 'Compiling Tuscan_Gala_2025_Reconciliation.xlsx...');
+      });
+    }
+
+    if (scheduleDailyBtn) {
+      scheduleDailyBtn.addEventListener('click', function() {
+        triggerToast('Daily Digest Scheduled', 'Automated fiscal dispatch sent to eleanor.vance@concierge.evara.com');
+      });
+    }
+
+    // Format selection toggle
+    formatButtons.forEach(btn => {
+      btn.addEventListener('click', function() {
+        formatButtons.forEach(b => {
+          b.classList.remove('bg-surface-container-lowest', 'shadow-sm');
+          b.classList.add('bg-surface-container-low', 'shadow-none');
+        });
+        this.classList.remove('bg-surface-container-low', 'shadow-none');
+        this.classList.add('bg-surface-container-lowest', 'shadow-sm');
+
+        const fmt = this.getAttribute('data-format').toUpperCase();
+        if (downloadNowBtn) {
+          const textSpan = downloadNowBtn.querySelector('span:nth-child(2)');
+          if (textSpan) textSpan.textContent = `Download Selected Reports (.${fmt})`;
+        }
+      });
+    });
+  })();
+</script></main></div></body></html>

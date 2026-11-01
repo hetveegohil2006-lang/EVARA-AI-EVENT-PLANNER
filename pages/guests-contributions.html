@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>Step 3: Guests &amp; Contributions — EVARA</title>
+  <meta name="description" content="Coordinate attendance telemetry and keep every participant's contribution synchronized with EVARA Vault."/>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+  
+  <link rel="stylesheet" href="../css/variables.css"/>
+  <link rel="stylesheet" href="../css/global.css"/>
+  <link rel="stylesheet" href="../css/layout.css"/>
+  <link rel="stylesheet" href="../css/components.css"/>
+  <link rel="stylesheet" href="../css/responsive.css"/>
+  <link rel="stylesheet" href="../css/pages/events.css"/>
+</head>
+<body class="bg-[#F8F4EF]">
+  <!-- Mobile Menu Button -->
+  <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle navigation">
+    <span class="material-symbols-outlined">menu</span>
+  </button>
+  <div class="sidebar-backdrop" id="sidebarBackdrop"></div>
+
+  <!-- FIXED SIDEBAR -->
+  <aside class="sidebar">
+    <div class="sidebar-brand">
+      <img src="../assets/icons/evara-logo.svg" alt="EVARA Monogram Logo" class="brand-logo"/>
+      <div class="brand-text">
+        <span class="brand-name">EVARA</span>
+        <span class="brand-tagline">Private Concierge</span>
+      </div>
+    </div>
+
+    <div class="sidebar-cta">
+      <a href="create-event.html" class="btn btn-primary w-full justify-center">
+        <span class="material-symbols-outlined" style="font-size: 18px;">add</span>
+        <span>Create New Event</span>
+      </a>
+    </div>
+
+    <div class="sidebar-section-label">Curation</div>
+    <ul class="sidebar-nav">
+      <li class="sidebar-item">
+        <a href="../dashboard.html" class="sidebar-link" data-path="dashboard">
+          <span class="material-symbols-outlined">grid_view</span>
+          <span>Overview</span>
+        </a>
+      </li>
+      <li class="sidebar-item">
+        <a href="event-history.html" class="sidebar-link" data-path="events">
+          <span class="material-symbols-outlined">event_available</span>
+          <span>My Events</span>
+        </a>
+      </li>
+      <li class="sidebar-item">
+        <a href="budget.html" class="sidebar-link" data-path="budget">
+          <span class="material-symbols-outlined">payments</span>
+          <span>Budget Planner</span>
+        </a>
+      </li>
+      <li class="sidebar-item">
+        <a href="guests.html" class="sidebar-link active" data-path="guests">
+          <span class="material-symbols-outlined">mark_email_read</span>
+          <span>Guests &amp; Invitations</span>
+        </a>
+      </li>
+      <li class="sidebar-item">
+        <a href="vendors.html" class="sidebar-link" data-path="vendors">
+          <span class="material-symbols-outlined">storefront</span>
+          <span>Vendors</span>
+        </a>
+      </li>
+      <li class="sidebar-item">
+        <a href="shopping.html" class="sidebar-link" data-path="shopping">
+          <span class="material-symbols-outlined">shopping_bag</span>
+          <span>Shopping Assistant</span>
+        </a>
+      </li>
+    </ul>
+
+    <div class="sidebar-section-label">Intelligence &amp; Archive</div>
+    <ul class="sidebar-nav">
+      <li class="sidebar-item">
+        <a href="ai-assistant.html" class="sidebar-link" data-path="assistant">
+          <span class="material-symbols-outlined" style="color: var(--color-gold);">auto_awesome</span>
+          <span>AI Event Assistant</span>
+        </a>
+      </li>
+      <li class="sidebar-item">
+        <a href="event-history.html" class="sidebar-link" data-path="history">
+          <span class="material-symbols-outlined">history_edu</span>
+          <span>Event History</span>
+        </a>
+      </li>
+    </ul>
+
+    <div class="sidebar-footer">
+      <ul class="sidebar-nav">
+        <li class="sidebar-item">
+          <a href="profile-settings.html" class="sidebar-link" data-path="settings">
+            <span class="material-symbols-outlined">settings</span>
+            <span>Settings</span>
+          </a>
+        </li>
+        <li class="sidebar-item">
+          <a href="about.html" class="sidebar-link" data-path="about">
+            <span class="material-symbols-outlined">info</span>
+            <span>About EVARA</span>
+          </a>
+        </li>
+      </ul>
+      <div class="concierge-status">
+        <span class="status-dot"></span>
+        <span class="status-text">Concierge v2.4 Active</span>
+      </div>
+    </div>
+  </aside>
+
+  <!-- MAIN APP CONTAINER -->
+  <div class="app-container">
+    <!-- HEADER -->
+    <header class="app-header">
+      <div class="header-left">
+        <div class="header-scope">
+          <span class="scope-label">Workspace Scope</span>
+          <span class="scope-value">Curated Creation Suite</span>
+        </div>
+        <div class="header-search">
+          <span class="material-symbols-outlined search-icon">search</span>
+          <input type="text" placeholder="Search guests, RSVPs, dietary needs..." class="search-input" id="tableSearchInput"/>
+        </div>
+      </div>
+
+      <div class="header-actions">
+        <div class="currency-tag">
+          <span class="material-symbols-outlined" style="font-size: 16px;">payments</span>
+          <span>INR (₹)</span>
+        </div>
+        <a href="notifications.html" class="notification-btn" aria-label="Notifications">
+          <span class="material-symbols-outlined">notifications</span>
+          <span class="notification-badge"></span>
+        </a>
+        <div class="header-divider"></div>
+        <a href="profile-settings.html" class="profile-chip">
+          <div class="profile-info">
+            <span class="profile-name">Eleanor Vance</span>
+            <span class="profile-role">Principal Host</span>
+          </div>
+          <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCblbJh5I878bB-SpKIAcY8gMe7Y6eDKxYbJLsCd9KulLzbHxlhTUyWD5y9ceH4RVYJjOwQwtyWCKA1CYDUwJB_eJeVVu7wvrhkUuvh1Pyxt159059DQaD3CoEXwd7iI0KGXa-OjhGk0K7YVTDOh5o9-gXmjcddhmp-tkv3nw1ee6SCxaERRbWfk-HgXJU9movKZDcCDa0ptrrt2gazDwN_0Sc6KueuTqtYp3fikBU" alt="Eleanor Vance" class="profile-avatar"/>
+        </a>
+      </div>
+    </header>
+
+    <!-- MAIN WORKSPACE -->
+    <main class="app-main">
+      <div class="page-container pb-32">
+        <!-- TOP BREADCRUMB & STEPPER -->
+        <header class="mb-8 flex flex-col gap-4">
+          <div class="flex items-center justify-between flex-wrap gap-2">
+            <a href="event-details.html" class="inline-flex items-center gap-1.5 text-primary hover:text-secondary font-title-sm">
+              <span class="material-symbols-outlined text-[18px]">arrow_back</span>
+              <span class="font-label-md uppercase tracking-wider">Back to Venue &amp; Itinerary</span>
+            </a>
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded bg-surface-container font-label-sm text-outline">
+              <span class="w-2 h-2 rounded-full bg-secondary"></span>
+              <span class="tracking-wide">Draft Auto-Saved at 19:14 CEST • Secure Multi-Host Vault</span>
+            </div>
+          </div>
+
+          <!-- Stepper Pipeline -->
+          <nav aria-label="Creation Progress" class="w-full bg-surface-container-low rounded-xl p-4 shadow-sm border border-[#E9D8C8]">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+              <!-- Step 1 Done -->
+              <a href="create-event.html" class="flex items-center gap-3" style="text-decoration: none;">
+                <div class="w-8 h-8 rounded-full bg-[#E9D8C8] text-primary flex items-center justify-center font-label-md shadow-sm">
+                  <span class="material-symbols-outlined text-[18px]">check</span>
+                </div>
+                <div class="flex flex-col min-w-0">
+                  <span class="font-label-sm uppercase tracking-wider text-outline">Phase 01</span>
+                  <span class="font-title-md text-on-surface truncate">Event Basics</span>
+                </div>
+              </a>
+
+              <!-- Step 2 Done -->
+              <a href="event-details.html" class="flex items-center gap-3" style="text-decoration: none;">
+                <div class="w-8 h-8 rounded-full bg-[#E9D8C8] text-primary flex items-center justify-center font-label-md shadow-sm">
+                  <span class="material-symbols-outlined text-[18px]">check</span>
+                </div>
+                <div class="flex flex-col min-w-0">
+                  <span class="font-label-sm uppercase tracking-wider text-outline">Phase 02</span>
+                  <span class="font-title-md text-on-surface truncate">Details &amp; Venue</span>
+                </div>
+              </a>
+
+              <!-- Step 3 Active -->
+              <div class="flex items-center gap-3">
+                <div class="w-8 h-8 rounded-full bg-[#80604f] text-white flex items-center justify-center font-label-md shadow-md ring-4 ring-[#E9D8C8]/60">
+                  3
+                </div>
+                <div class="flex flex-col min-w-0">
+                  <span class="font-label-sm uppercase tracking-wider text-primary font-bold">Phase 03 · Current</span>
+                  <span class="font-title-md text-primary font-bold truncate">Guests &amp; Split</span>
+                </div>
+              </div>
+
+              <!-- Step 4 Upcoming -->
+              <a href="review-event.html" class="flex items-center gap-3 opacity-60" style="text-decoration: none;">
+                <div class="w-8 h-8 rounded-full bg-surface-container text-outline flex items-center justify-center font-label-md">
+                  4
+                </div>
+                <div class="flex flex-col min-w-0">
+                  <span class="font-label-sm uppercase tracking-wider text-outline">Phase 04</span>
+                  <span class="font-title-md text-on-surface-variant truncate">Review &amp; Create</span>
+                </div>
+              </a>
+            </div>
+          </nav>
+
+          <!-- Editorial Hero Title Area -->
+          <div class="mt-2 flex flex-col lg:flex-row lg:items-end justify-between gap-4">
+            <div>
+              <div class="inline-block badge badge-champagne uppercase tracking-wider mb-2">
+                Curated Creation Suite / Step 3 of 4
+              </div>
+              <h1 class="font-headline-lg text-primary font-serif">Who’s joining your celebration?</h1>
+              <p class="font-body-lg text-on-surface-variant max-w-2xl mt-1">
+                Invite your circle, coordinate attendance telemetry, and keep every participant’s contribution seamlessly synchronized through EVARA Vault.
+              </p>
+            </div>
+
+            <!-- Quick Action Pill Group -->
+            <div class="flex items-center gap-3">
+              <button class="btn btn-primary" id="open-add-guest-modal" type="button">
+                <span class="material-symbols-outlined text-[20px]">person_add</span>
+                <span>Add Guest</span>
+              </button>
+              <button class="btn btn-secondary" id="share-vip-link" type="button">
+                <span class="material-symbols-outlined text-[20px]">ios_share</span>
+                <span>Share VIP Link</span>
+              </button>
+            </div>
+          </div>
+        </header>
+
+        <!-- STATS & RSVP TELEMETRY STRIP -->
+        <section class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 mb-8">
+          <div class="card p-4 flex flex-col justify-between">
+            <div class="flex items-center justify-between text-outline mb-1">
+              <span class="font-label-sm uppercase tracking-wider">Invitations</span>
+              <span class="material-symbols-outlined text-[18px]">forward_to_inbox</span>
+            </div>
+            <div class="font-headline-lg text-on-surface font-serif">42</div>
+            <div class="font-body-sm text-on-surface-variant">Dispatched multi-channel</div>
+          </div>
+
+          <div class="card p-4 flex flex-col justify-between">
+            <div class="flex items-center justify-between text-outline mb-1">
+              <span class="font-label-sm uppercase tracking-wider">Registrations</span>
+              <span class="material-symbols-outlined text-[18px]">how_to_reg</span>
+            </div>
+            <div class="font-headline-lg text-primary font-serif">38</div>
+            <div class="font-body-sm text-on-surface-variant">90.4% response rate</div>
+          </div>
+
+          <div class="card p-4 flex flex-col justify-between">
+            <div class="flex items-center justify-between text-outline mb-1">
+              <span class="font-label-sm uppercase tracking-wider">Confirmed</span>
+              <span class="material-symbols-outlined text-[18px] text-tertiary">check_circle</span>
+            </div>
+            <div class="font-headline-lg text-on-surface font-serif" id="stat-confirmed-count">34</div>
+            <div class="font-body-sm text-secondary font-semibold">28 Primaries + 6 (+1s)</div>
+          </div>
+
+          <div class="card p-4 flex flex-col justify-between">
+            <div class="flex items-center justify-between text-outline mb-1">
+              <span class="font-label-sm uppercase tracking-wider">Pending</span>
+              <span class="material-symbols-outlined text-[18px] text-secondary">hourglass_top</span>
+            </div>
+            <div class="font-headline-lg text-secondary font-serif">4</div>
+            <div class="font-body-sm text-on-surface-variant">Automated reminders set</div>
+          </div>
+
+          <div class="card p-4 flex flex-col justify-between">
+            <div class="flex items-center justify-between text-outline mb-1">
+              <span class="font-label-sm uppercase tracking-wider">Total Pool</span>
+              <span class="material-symbols-outlined text-[18px] text-primary">account_balance_wallet</span>
+            </div>
+            <div class="font-headline-sm text-on-surface font-serif font-bold">₹10.83L</div>
+            <div class="font-body-sm text-on-surface-variant">72.2% escrow funded</div>
+          </div>
+
+          <div class="card p-4 flex flex-col justify-between">
+            <div class="flex items-center justify-between text-outline mb-1">
+              <span class="font-label-sm uppercase tracking-wider">Split / Head</span>
+              <span class="material-symbols-outlined text-[18px]">balance</span>
+            </div>
+            <div class="font-headline-sm text-primary font-serif font-bold">₹41,666</div>
+            <div class="font-body-sm text-on-surface-variant">Uniform 36 attendees</div>
+          </div>
+        </section>
+
+        <!-- GUEST LIST ROSTER TABLE CARD -->
+        <section class="card overflow-hidden shadow-sm">
+          <!-- Table Toolbar -->
+          <div class="p-5 border-b border-[#E9D8C8] flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div class="flex items-center gap-2 overflow-x-auto w-full sm:w-auto" id="rsvp-filters">
+              <button class="btn btn-primary btn-sm" data-filter="all">All Guests (38)</button>
+              <button class="btn btn-secondary btn-sm" data-filter="confirmed">Confirmed (34)</button>
+              <button class="btn btn-secondary btn-sm" data-filter="pending">Pending (4)</button>
+              <button class="btn btn-secondary btn-sm" data-filter="declined">Declined (0)</button>
+            </div>
+
+            <div class="flex items-center gap-2 w-full sm:w-auto justify-end">
+              <button class="btn btn-secondary btn-sm" id="btn-export-csv">
+                <span class="material-symbols-outlined text-[16px]">download</span>
+                <span>Export Roster CSV</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Data Table -->
+          <div class="table-container">
+            <table class="data-table" id="guests-roster-table">
+              <thead>
+                <tr>
+                  <th>Guest Name &amp; Contact</th>
+                  <th>Role / VIP Tier</th>
+                  <th>Villa Suite</th>
+                  <th>Dietary Preference</th>
+                  <th>RSVP Status</th>
+                  <th>Accompanying</th>
+                  <th style="text-align: right;">Action</th>
+                </tr>
+              </thead>
+              <tbody id="guests-tbody">
+                <!-- Injected via Guests.render() or fallback -->
+              </tbody>
+            </table>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <!-- STICKY BOTTOM NAVIGATION BAR -->
+    <footer class="fixed bottom-0 left-0 lg:left-72 right-0 bg-[#F8F4EF]/95 backdrop-blur-md px-6 py-4 border-t border-[#E9D8C8] z-40 shadow-lg">
+      <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+        <a href="event-details.html" class="inline-flex items-center gap-2 text-on-surface-variant hover:text-primary transition-colors font-title-md">
+          <span class="material-symbols-outlined text-[20px]">arrow_back</span>
+          <span>Back to Venue &amp; Itinerary</span>
+        </a>
+
+        <div class="hidden lg:flex items-center gap-2 font-label-sm text-outline">
+          <span class="material-symbols-outlined text-[16px] text-secondary">lock</span>
+          <span>Encrypted draft saved continuously • Aria holds priority bookings for 48 hours</span>
+        </div>
+
+        <div class="flex items-center gap-3 w-full sm:w-auto justify-end">
+          <button class="btn btn-secondary" type="button" id="btn-save-draft-step3">
+            Save as Draft
+          </button>
+          <a href="review-event.html" class="btn btn-primary" id="btn-continue-step4">
+            <span>Continue to Review &amp; Create</span>
+            <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+          </a>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <!-- ADD GUEST MODAL -->
+  <div class="modal-backdrop" id="addGuestModal">
+    <div class="modal-box">
+      <div class="modal-header">
+        <h3 class="modal-title font-serif font-bold">Add Guest to Celebration</h3>
+        <button class="modal-close" id="closeAddGuestModal" aria-label="Close modal">
+          <span class="material-symbols-outlined">close</span>
+        </button>
+      </div>
+      <form id="addGuestForm">
+        <div class="modal-body space-y-4">
+          <div>
+            <label class="form-label">Full Name *</label>
+            <input type="text" class="input-field" id="guestNameInput" required placeholder="e.g. Lady Vivienne Montgomery"/>
+          </div>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <div>
+              <label class="form-label">Email Address *</label>
+              <input type="email" class="input-field" id="guestEmailInput" required placeholder="vivienne@montgomery.co.uk"/>
+            </div>
+            <div>
+              <label class="form-label">Phone Number</label>
+              <input type="tel" class="input-field" id="guestPhoneInput" placeholder="+44 7911 123456"/>
+            </div>
+          </div>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <div>
+              <label class="form-label">Role / Circle</label>
+              <select class="select-field" id="guestRoleInput">
+                <option value="Family &amp; VIP">Family &amp; VIP</option>
+                <option value="Honor Guard">Honor Guard</option>
+                <option value="Executive Circle">Executive Circle</option>
+                <option value="Close Friend">Close Friend</option>
+              </select>
+            </div>
+            <div>
+              <label class="form-label">Table / Villa Suite</label>
+              <input type="text" class="input-field" id="guestTableInput" placeholder="e.g. Master Tuscan Suite 02"/>
+            </div>
+          </div>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <div>
+              <label class="form-label">Dietary Preference</label>
+              <input type="text" class="input-field" id="guestDietaryInput" placeholder="e.g. Pescatarian / GF"/>
+            </div>
+            <div>
+              <label class="form-label">Accompanying (+1s)</label>
+              <input type="number" class="input-field" id="guestPlusOneInput" value="0" min="0" max="5"/>
+            </div>
+          </div>
+          <div>
+            <label class="form-label">Initial RSVP Status</label>
+            <select class="select-field" id="guestRsvpInput">
+              <option value="confirmed">Confirmed</option>
+              <option value="pending" selected>Pending</option>
+              <option value="declined">Declined</option>
+            </select>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" id="cancelAddGuestBtn">Cancel</button>
+          <button type="submit" class="btn btn-primary">Save to Roster</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- SCRIPTS -->
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+  <script src="../js/firebaseConfig.js"></script>
+  <script src="../js/storage.js"></script>
+  <script src="../js/app.js"></script>
+  <script src="../js/navigation.js"></script>
+  <script src="../js/events.js"></script>
+  <script src="../js/guests.js"></script>
+  <script src="../js/reports.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Initialize guests module
+      if (typeof Guests !== 'undefined') {
+        Guests.init();
+      }
+
+      // Share VIP link button
+      const shareBtn = document.getElementById('share-vip-link');
+      if (shareBtn) {
+        shareBtn.addEventListener('click', () => {
+          App.copyToClipboard('https://evara.atelier/invite/tuscan-gala-2025?code=EVARA-VIP', 'VIP Private RSVP link copied to clipboard!');
+        });
+      }
+
+      // Add Guest Modal Handlers
+      const modal = document.getElementById('addGuestModal');
+      const openBtn = document.getElementById('open-add-guest-modal');
+      const closeBtn = document.getElementById('closeAddGuestModal');
+      const cancelBtn = document.getElementById('cancelAddGuestBtn');
+      const form = document.getElementById('addGuestForm');
+
+      if (openBtn) openBtn.addEventListener('click', () => App.openModal('addGuestModal'));
+      if (closeBtn) closeBtn.addEventListener('click', () => App.closeModal('addGuestModal'));
+      if (cancelBtn) cancelBtn.addEventListener('click', () => App.closeModal('addGuestModal'));
+
+      if (form) {
+        form.addEventListener('submit', (e) => {
+          e.preventDefault();
+          const newGuest = {
+            id: 'g_' + Date.now(),
+            name: document.getElementById('guestNameInput').value,
+            email: document.getElementById('guestEmailInput').value,
+            phone: document.getElementById('guestPhoneInput').value,
+            role: document.getElementById('guestRoleInput').value,
+            table: document.getElementById('guestTableInput').value || 'Unassigned',
+            dietary: document.getElementById('guestDietaryInput').value || 'None',
+            rsvp: document.getElementById('guestRsvpInput').value,
+            plusOnes: parseInt(document.getElementById('guestPlusOneInput').value, 10) || 0
+          };
+          Guests.add(newGuest);
+          form.reset();
+          App.closeModal('addGuestModal');
+          App.toast(`Guest ${newGuest.name} added to celebration roster.`);
+        });
+      }
+
+      // Export CSV
+      const exportBtn = document.getElementById('btn-export-csv');
+      if (exportBtn && typeof Reports !== 'undefined') {
+        exportBtn.addEventListener('click', () => {
+          Reports.exportGuestsCSV();
+        });
+      }
+    });
+  </script>
+</body>
+</html>

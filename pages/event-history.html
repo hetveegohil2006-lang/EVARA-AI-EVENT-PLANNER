@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>Event History &amp; Archive — EVARA</title>
+  <link rel="stylesheet" href="../css/variables.css"/>
+  <link rel="stylesheet" href="../css/global.css"/>
+  <link rel="stylesheet" href="../css/layout.css"/>
+  <link rel="stylesheet" href="../css/components.css"/>
+  <link rel="stylesheet" href="../css/responsive.css"/>
+  <link rel="stylesheet" href="../css/pages/dashboard.css"/>
+  <link rel="icon" type="image/svg+xml" href="../assets/icons/evara-monogram.svg"/>
+</head>
+<body class="bg-[#F8F4EF]">
+  <div class="app-shell">
+    <aside class="app-sidebar">
+      <div class="sidebar-header">
+        <a href="../index.html" class="brand-lockup">
+          <div class="brand-monogram">
+            <svg viewBox="0 0 60 60" width="22" height="22" fill="none"><path d="M18 17 H42 C44 17 45 18 45 20 C45 22 44 23 42 23 H24 V28 H38 C40 28 41 29 41 30.5 C41 32 40 33 38 33 H24 V37 H43 C45 37 46 38 46 40 C46 42 45 43 43 43 H18 C16.5 43 15.5 42 15.5 40.5 V19.5 C15.5 18 16.5 17 18 17 Z" fill="#E9D8C8"/></svg>
+          </div>
+          <div class="brand-text">
+            <span class="brand-name">EVARA</span>
+            <span class="brand-tagline">Private Concierge</span>
+          </div>
+        </a>
+      </div>
+      <div class="sidebar-nav">
+        <span class="nav-section-title">Navigation</span>
+        <a href="../dashboard.html" class="nav-item"><span class="material-symbols-outlined">grid_view</span><span>Dashboard</span></a>
+        <a href="event-overview.html" class="nav-item"><span class="material-symbols-outlined">dashboard</span><span>Event Overview</span></a>
+        <a href="event-history.html" class="nav-item active"><span class="material-symbols-outlined">history_edu</span><span>Event History</span></a>
+      </div>
+    </aside>
+
+    <div class="app-main">
+      <header class="app-header">
+        <h2 class="font-bold text-base" style="margin: 0;">Past Event Archives &amp; Memorial Vaults</h2>
+        <a href="../dashboard.html" class="btn btn-secondary btn-sm">Return to Dashboard</a>
+      </header>
+
+      <main class="content-wrapper">
+        <div class="mb-lg">
+          <span class="text-xs uppercase tracking-widest text-muted font-bold">Historical Curations</span>
+          <h1 class="font-headline-lg" style="margin: 4px 0 0.5rem;">Completed Celebrations Archive</h1>
+          <p class="font-body-md text-muted" style="margin: 0;">Preserved event registries, reconciled ledgers, and memories from past luxury gatherings.</p>
+        </div>
+
+        <div class="grid grid-cols-3 gap-md" id="historyEventsGrid">
+          <div class="card p-0 overflow-hidden" style="background: white; border: 1px solid var(--color-champagne);">
+            <div style="height: 180px; position: relative;">
+              <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDCoKIpmSrrmsUFK_KkwTgrenPcK6xN8dftD0pCZki6MlCA-zpnmlyCA1huwW94isQsNfPr-8VWXyhUhXDcMrTninx_dRD7-gXKBUsRxq6WlRybJcgGpzrKM1PtyawAGf_Dv9ys8VSZ7P43VYgOkoGwr7r68YLnZHzN-HnTrXrizLX7Evsi_WUSF--Bq_FN8we9ICtLkll_YYwK-WKc4jaa_DUwkfk3hJfm-0VYD04" alt="Lake Como Villa Balbiano" style="width: 100%; height: 100%; object-fit: cover;" />
+              <span class="badge badge-gold" style="position: absolute; top: 10px; left: 10px;">Completed June 2024</span>
+            </div>
+            <div class="p-md">
+              <h3 class="font-bold text-base" style="margin: 0 0 4px;">Villa Balbiano Lake Como Soirée</h3>
+              <p class="text-xs text-muted mb-sm">34 Patrons • Reconciled Spend: ₹38,50,000</p>
+              <button class="btn btn-subtle btn-xs btn-full" onclick="App.toast('Opening archival record for Villa Balbiano', 'history')">Inspect Archive</button>
+            </div>
+          </div>
+
+          <div class="card p-0 overflow-hidden" style="background: white; border: 1px solid var(--color-champagne);">
+            <div style="height: 180px; position: relative;">
+              <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCvjZQItqiS8GJ3QchcKVAHePoS18FihFoH1Bmagr6yAPsLwUNiaxnltiY05dq-UurSr80BIpwmOKL3jPnyYoXYdsPfPIXJNsN_6sKyeKCKjB0uDR_aNi4DL_TsyTYqfqXcERQgGBqON19SarToHP3WzG3aKCMYv5pRwp_oRi9XCg9-pshuKy12_etdLmsvishFmK-dZ_9cFKs7kNF5HYbWn5yNgrkb50F5Epk53kc" alt="St. Moritz" style="width: 100%; height: 100%; object-fit: cover;" />
+              <span class="badge" style="position: absolute; top: 10px; left: 10px; background: var(--color-champagne-light);">Completed Jan 2024</span>
+            </div>
+            <div class="p-md">
+              <h3 class="font-bold text-base" style="margin: 0 0 4px;">St. Moritz Alpine Winter Summit</h3>
+              <p class="text-xs text-muted mb-sm">16 Patrons • Reconciled Spend: ₹22,00,000</p>
+              <button class="btn btn-subtle btn-xs btn-full" onclick="App.toast('Opening archival record for St. Moritz', 'history')">Inspect Archive</button>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+  <script src="../js/firebaseConfig.js"></script>
+  <script src="../js/storage.js"></script>
+  <script src="../js/app.js"></script>
+  <script src="../js/navigation.js"></script>
+  <script>
+    function renderHistoryEvents() {
+      const grid = document.getElementById('historyEventsGrid');
+      if (!grid) return;
+      const events = Storage.get(STORAGE_KEYS.EVENTS, DEFAULT_EVENTS);
+      const pastEvents = events.filter(e => e.status === 'Executed' || (e.status || '').includes('Completed'));
+      if (!pastEvents.length) return;
+
+      grid.innerHTML = pastEvents.map(evt => `
+        <div class="card p-0 overflow-hidden" style="background: white; border: 1px solid var(--color-champagne);">
+          <div style="height: 180px; position: relative;">
+            <img src="${evt.coverImage || DEFAULT_EVENTS[1].coverImage}" alt="${evt.title}" style="width: 100%; height: 100%; object-fit: cover;" />
+            <span class="badge badge-gold" style="position: absolute; top: 10px; left: 10px;">${evt.status}</span>
+          </div>
+          <div class="p-md">
+            <h3 class="font-bold text-base" style="margin: 0 0 4px;">${evt.title}</h3>
+            <p class="text-xs text-muted mb-sm">${evt.guestCount || 24} Patrons • Reconciled Spend: ${App.formatINR(evt.targetBudget || 850000)}</p>
+            <button class="btn btn-subtle btn-xs btn-full" onclick="Storage.set(STORAGE_KEYS.CURRENT_EVENT_ID, '${evt.id}'); App.toast('Opened archive: ${evt.title}', 'history')">Inspect Archive</button>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    Storage.subscribe(STORAGE_KEYS.EVENTS, renderHistoryEvents);
+    document.addEventListener('DOMContentLoaded', renderHistoryEvents);
+  </script>
+</body>
+</html>

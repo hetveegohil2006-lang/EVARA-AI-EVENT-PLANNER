@@ -1,0 +1,169 @@
+/* ==========================================================================
+   EVARA DESIGN SYSTEM — RESPONSIVE ADAPTATIONS
+   Desktop (1200px+), Tablet (768px–1199px), Mobile (<768px)
+   ========================================================================== */
+
+/* Tablet (768px to 1199px) */
+@media (max-width: 1199px) {
+  :root {
+    --sidebar-width: 260px;
+    --gutter: 1.25rem;
+  }
+
+  .grid-cols-6 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .grid-cols-5 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .grid-cols-4 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .col-span-8, .col-span-7 {
+    grid-column: span 12 / span 12;
+  }
+
+  .col-span-4, .col-span-5 {
+    grid-column: span 12 / span 12;
+  }
+
+  .hero-banner-image {
+    height: 360px;
+  }
+
+  .header-search {
+    width: 240px;
+  }
+}
+
+/* Mobile Devices (< 768px) */
+@media (max-width: 767px) {
+  :root {
+    --sidebar-width: 280px;
+    --gutter: 1rem;
+    --header-height: 68px;
+
+    /* Scaled Mobile Typography */
+    --fs-display: 36px;
+    --lh-display: 44px;
+    --fs-headline-lg: 28px;
+    --lh-headline-lg: 36px;
+    --fs-headline-md: 24px;
+    --lh-headline-md: 32px;
+  }
+
+  /* Mobile Drawer Sidebar Navigation */
+  .app-sidebar,
+  aside.sidebar {
+    transform: translateX(-100%);
+    box-shadow: 4px 0 24px rgba(57, 48, 45, 0.2);
+  }
+
+  .app-sidebar.mobile-open,
+  aside.sidebar.mobile-open {
+    transform: translateX(0);
+  }
+
+  /* Drawer Backdrop */
+  .sidebar-backdrop {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(34, 26, 23, 0.5);
+    backdrop-filter: blur(4px);
+    z-index: 45;
+    opacity: 0;
+    visibility: hidden;
+    transition: all var(--transition-normal);
+  }
+
+  .sidebar-backdrop.active,
+  .sidebar-backdrop.visible {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .mobile-menu-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .app-header {
+    left: 0;
+    padding: 0 1rem;
+  }
+
+  .header-search {
+    display: none;
+  }
+
+  .user-profile-text {
+    display: none;
+  }
+
+  .currency-badge {
+    display: none;
+  }
+
+  .app-main {
+    margin-left: 0;
+    padding-top: var(--header-height);
+  }
+
+  .main-container {
+    padding: 1.25rem 1rem;
+  }
+
+  /* Grid Reductions */
+  .grid-cols-6, .grid-cols-5, .grid-cols-4, .grid-cols-3, .grid-cols-2 {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+
+  .col-span-12, .col-span-11, .col-span-10, .col-span-9,
+  .col-span-8, .col-span-7, .col-span-6, .col-span-5,
+  .col-span-4, .col-span-3, .col-span-2, .col-span-1 {
+    grid-column: span 1 / span 1;
+  }
+
+  .hero-banner-image {
+    height: 300px;
+  }
+
+  .hero-scrim {
+    padding: 1.25rem;
+  }
+
+  /* Stepper Bar on Mobile */
+  .stepper-container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+    padding: 1rem;
+  }
+
+  .step-connector {
+    display: none;
+  }
+
+  /* Tables Responsive Wrapper */
+  .table-responsive {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    border-radius: var(--radius-lg);
+  }
+
+  /* Mobile Flex Stacks */
+  .mobile-stack {
+    flex-direction: column !important;
+    align-items: stretch !important;
+  }
+
+  /* Touch Targets */
+  .btn {
+    min-height: 44px;
+  }
+}

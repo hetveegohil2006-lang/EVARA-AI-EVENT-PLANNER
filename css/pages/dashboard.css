@@ -1,0 +1,124 @@
+/* ==========================================================================
+   EVARA — DASHBOARD SPECIFIC STYLES
+   ========================================================================== */
+
+.dashboard-hero-ambient {
+  position: absolute;
+  top: -60px;
+  right: -60px;
+  width: 450px;
+  height: 450px;
+  border-radius: var(--radius-full);
+  background: radial-gradient(circle, rgba(233, 216, 200, 0.45) 0%, rgba(251, 235, 230, 0) 70%);
+  pointer-events-none;
+  z-index: 0;
+}
+
+.concierge-avatar-frame {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  border-radius: var(--radius-full);
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(57, 48, 45, 0.15);
+  border: 2px solid var(--color-champagne);
+  flex-shrink: 0;
+}
+
+.concierge-avatar-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.voice-wave {
+  display: flex;
+  align-items: flex-end;
+  gap: 3px;
+  height: 16px;
+}
+
+.voice-wave-bar {
+  width: 3px;
+  background-color: var(--secondary);
+  border-radius: var(--radius-full);
+  animation: waveBar 1.2s ease-in-out infinite;
+}
+
+.voice-wave-bar:nth-child(1) { height: 60%; animation-delay: 0s; }
+.voice-wave-bar:nth-child(2) { height: 100%; animation-delay: 0.2s; }
+.voice-wave-bar:nth-child(3) { height: 40%; animation-delay: 0.4s; }
+.voice-wave-bar:nth-child(4) { height: 80%; animation-delay: 0.6s; }
+
+@keyframes waveBar {
+  0%, 100% { transform: scaleY(0.4); }
+  50% { transform: scaleY(1); }
+}
+
+.prompt-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.4rem 0.9rem;
+  background-color: var(--surface-container-lowest);
+  border: 1px solid var(--color-champagne);
+  border-radius: var(--radius-full);
+  font-size: 13px;
+  color: var(--on-surface);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  box-shadow: var(--shadow-xs);
+}
+
+.prompt-chip:hover {
+  background-color: var(--surface-container-high);
+  border-color: var(--color-terracotta);
+  transform: translateY(-1px);
+}
+
+/* Event Archetype Selection Grid */
+.archetype-card {
+  position: relative;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: all var(--transition-normal);
+  height: 180px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 1.25rem;
+  color: var(--color-white);
+}
+
+.archetype-card img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.8s ease-out;
+  z-index: 0;
+}
+
+.archetype-card:hover img {
+  transform: scale(1.06);
+}
+
+.archetype-scrim {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(34, 26, 23, 0.92) 0%, rgba(34, 26, 23, 0.3) 65%, transparent 100%);
+  z-index: 1;
+}
+
+.archetype-content {
+  position: relative;
+  z-index: 2;
+}
+
+.archetype-card.selected {
+  border-color: var(--tertiary-gold);
+  box-shadow: 0 0 0 3px rgba(197, 164, 119, 0.4);
+}

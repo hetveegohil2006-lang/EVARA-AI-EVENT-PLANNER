@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>Guest Management &amp; Check-In — Villa San Valentino Gala — EVARA</title>
+  <meta name="description" content="Guest roster, VIP suites, RSVP tracking, arrival gate check-in, and dietary requirements."/>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+  
+  <link rel="stylesheet" href="../css/variables.css"/>
+  <link rel="stylesheet" href="../css/global.css"/>
+  <link rel="stylesheet" href="../css/layout.css"/>
+  <link rel="stylesheet" href="../css/components.css"/>
+  <link rel="stylesheet" href="../css/responsive.css"/>
+  <link rel="stylesheet" href="../css/pages/other-pages.css"/>
+  <link rel="stylesheet" href="../css/pages/events.css"/>
+  <link rel="icon" type="image/svg+xml" href="../assets/icons/evara-monogram.svg"/>
+</head>
+<body class="bg-[#F8F4EF]">
+  <!-- Mobile Menu Button -->
+  <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle navigation">
+    <span class="material-symbols-outlined">menu</span>
+  </button>
+  <div class="sidebar-backdrop" id="sidebarBackdrop"></div>
+
+  <!-- FIXED EVENT-SCOPED SIDEBAR -->
+  <aside class="sidebar">
+    <div class="px-md pt-lg pb-sm">
+      <a href="../dashboard.html" class="flex items-center gap-xs text-muted hover:text-primary" style="font-size: 13px; font-weight: 600; text-decoration: none;">
+        <span class="material-symbols-outlined" style="font-size: 16px;">arrow_back</span>
+        <span>Back to All Events</span>
+      </a>
+    </div>
+
+    <!-- Workspace Scope Card -->
+    <div class="px-md pb-sm">
+      <div class="p-sm rounded-lg" style="background: var(--color-champagne-light); border: 1px solid var(--color-champagne);">
+        <span class="text-xs uppercase text-muted font-bold tracking-wider block" style="font-size: 10px;">Workspace Scope</span>
+        <span class="font-bold text-sm truncate block" style="color: var(--color-espresso);">Tuscan Gala 2025</span>
+      </div>
+    </div>
+
+    <div class="px-md py-xs">
+      <span class="text-xs uppercase text-muted font-bold tracking-wider block" style="font-size: 10px;">Navigation Modules</span>
+    </div>
+
+    <!-- Nav Items -->
+    <nav class="flex-1 px-sm space-y-0.5 overflow-y-auto">
+      <a href="event-overview.html" class="nav-link">
+        <span class="material-symbols-outlined">dashboard</span>
+        <span>Overview</span>
+      </a>
+      <a href="checklist.html" class="nav-link">
+        <span class="material-symbols-outlined">checklist</span>
+        <span>Timeline &amp; Tasks</span>
+      </a>
+      <a href="budget.html" class="nav-link">
+        <span class="material-symbols-outlined">account_balance_wallet</span>
+        <span>Budget Ledger</span>
+      </a>
+      <a href="payments.html" class="nav-link">
+        <span class="material-symbols-outlined">payments</span>
+        <span>Payments &amp; QR</span>
+      </a>
+      <a href="vendors.html" class="nav-link">
+        <span class="material-symbols-outlined">storefront</span>
+        <span>Artisan Directory</span>
+      </a>
+      <a href="shopping.html" class="nav-link">
+        <span class="material-symbols-outlined">shopping_bag</span>
+        <span>Shopping Assistant</span>
+      </a>
+      <a href="guests.html" class="nav-link active">
+        <span class="material-symbols-outlined">how_to_reg</span>
+        <span>Guest Directory</span>
+      </a>
+      <a href="invitations.html" class="nav-link">
+        <span class="material-symbols-outlined">mark_email_read</span>
+        <span>Invitation Designer</span>
+      </a>
+      <a href="team-chat.html" class="nav-link">
+        <span class="material-symbols-outlined">forum</span>
+        <span>Team Chat</span>
+      </a>
+      <a href="ai-assistant.html" class="nav-link">
+        <span class="material-symbols-outlined" style="color: var(--color-terracotta);">auto_awesome</span>
+        <span>AI Concierge</span>
+      </a>
+      <a href="reports.html" class="nav-link">
+        <span class="material-symbols-outlined">lab_profile</span>
+        <span>Reports &amp; Exports</span>
+      </a>
+    </nav>
+
+    <!-- Footer AI Indicator -->
+    <div class="p-md border-t border-champagne">
+      <div class="p-sm rounded-lg flex items-center justify-between" style="background: var(--color-champagne-light);">
+        <div class="flex items-center gap-xs">
+          <span class="material-symbols-outlined text-sm" style="color: var(--color-terracotta);">auto_awesome</span>
+          <div>
+            <span class="font-bold text-xs block leading-tight">Concierge AI v2.4</span>
+            <span class="text-xs text-muted block" style="font-size: 10px;">Private Model Active</span>
+          </div>
+        </div>
+        <div class="status-dot status-dot-active"></div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- MAIN APP CONTAINER -->
+  <div class="app-main">
+    <!-- TOP HEADER -->
+    <header class="app-header">
+      <div class="flex items-center gap-md">
+        <button class="flex items-center gap-xs p-xs rounded-lg hover:bg-surface transition-colors" style="border: 1px solid var(--color-champagne);">
+          <div>
+            <div class="flex items-center gap-xs">
+              <span class="font-bold text-sm" style="color: var(--color-espresso);">Villa San Valentino Tuscan Gala 2025</span>
+              <span class="material-symbols-outlined text-sm text-muted">expand_more</span>
+            </div>
+            <span class="text-xs text-muted block text-left">Oct 24–27, 2025</span>
+          </div>
+          <span class="badge badge-gold" style="font-size: 10px; margin-left: 0.5rem;">Planning Active</span>
+        </button>
+      </div>
+
+      <div class="flex-1 max-w-md hidden md:block">
+        <div class="header-search">
+          <span class="material-symbols-outlined">search</span>
+          <input type="text" id="headerGuestSearch" placeholder="Search guests, suites, dietary alerts..."/>
+        </div>
+      </div>
+
+      <div class="flex items-center gap-sm">
+        <div class="currency-pill">
+          <span class="material-symbols-outlined text-sm">payments</span>
+          <span>INR (₹)</span>
+        </div>
+        <a href="notifications.html" class="icon-btn" aria-label="Notifications">
+          <span class="material-symbols-outlined">notifications</span>
+          <span class="notification-badge"></span>
+        </a>
+        <div class="header-divider"></div>
+        <a href="profile-settings.html" class="flex items-center gap-xs" style="text-decoration: none;">
+          <div class="text-right hidden xl:block">
+            <span class="font-bold text-xs block leading-tight" style="color: var(--color-espresso);">Eleanor Vance</span>
+            <span class="text-xs text-muted block" style="font-size: 11px;">Principal Host</span>
+          </div>
+          <div class="user-avatar">
+            <span class="material-symbols-outlined">person</span>
+          </div>
+        </a>
+      </div>
+    </header>
+
+    <!-- CONTENT WRAPPER -->
+    <main class="content-wrapper">
+      
+      <!-- TOP BANNER -->
+      <div class="card p-lg mb-lg flex flex-wrap items-center justify-between gap-md" style="background: white; border: 1px solid var(--color-champagne);">
+        <div class="max-w-2xl">
+          <div class="inline-flex items-center gap-xs px-sm py-xs rounded-full mb-xs" style="background: var(--color-champagne-light);">
+            <span class="status-dot status-dot-active"></span>
+            <span class="text-xs uppercase tracking-widest font-bold" style="color: var(--color-espresso); font-size: 10px;">Tuscan Sanctuary • Private Wing • Oct 24–27, 2025</span>
+          </div>
+          <h1 class="font-headline-lg" style="margin: 0 0 0.25rem;">Guest Management &amp; Check-In</h1>
+          <p class="font-body-md text-muted" style="margin: 0;">
+            Complete control over invited guests, concierge registrations, bespoke RSVPs, and real-time villa arrivals.
+          </p>
+        </div>
+
+        <div class="flex items-center gap-xs flex-wrap">
+          <button class="btn btn-secondary btn-sm" onclick="App.toast('Exporting Guest Roster to CSV...', 'file_download')">
+            <span class="material-symbols-outlined text-sm">file_download</span>
+            <span>Export Roster</span>
+          </button>
+          <button class="btn btn-subtle btn-sm" onclick="App.toast('Ready to import CSV guest list', 'upload_file')">
+            <span class="material-symbols-outlined text-sm">upload_file</span>
+            <span>Import CSV</span>
+          </button>
+          <button class="btn btn-primary btn-sm" onclick="openAddGuestModal()">
+            <span class="material-symbols-outlined text-sm">person_add</span>
+            <span>Add Guest</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- 4 KPI METRICS TILES -->
+      <div class="grid grid-cols-4 gap-md mb-lg">
+        <div class="card p-md flex flex-col justify-between" style="background: white;">
+          <div class="flex items-center justify-between">
+            <span class="text-xs uppercase tracking-wider text-muted font-bold">Total Invited Roster</span>
+            <span class="p-xs rounded bg-surface"><span class="material-symbols-outlined text-sm" style="color: var(--color-terracotta);">drafts</span></span>
+          </div>
+          <div class="mt-sm flex items-baseline justify-between">
+            <div>
+              <span class="font-headline-lg font-bold" style="color: var(--color-espresso);">42</span>
+              <span class="text-xs text-muted ml-1">Patrons</span>
+            </div>
+            <span class="badge badge-gold" style="font-size: 10px;">100% Dispatched</span>
+          </div>
+          <div class="mt-xs pt-xs flex items-center justify-between text-xs text-muted" style="border-top: 1px solid var(--color-champagne-light);">
+            <span>Curated cap: 45</span>
+            <span class="font-bold" style="color: var(--color-terracotta);">3 Vacancies</span>
+          </div>
+        </div>
+
+        <div class="card p-md flex flex-col justify-between" style="background: white;">
+          <div class="flex items-center justify-between">
+            <span class="text-xs uppercase tracking-wider text-muted font-bold">Confirmed Attendees</span>
+            <span class="p-xs rounded bg-surface"><span class="material-symbols-outlined text-sm" style="color: var(--color-mocha);">how_to_reg</span></span>
+          </div>
+          <div class="mt-sm flex items-baseline justify-between">
+            <div>
+              <span class="font-headline-lg font-bold" style="color: var(--color-espresso);">40</span>
+              <span class="text-xs text-muted ml-1">Total Pax</span>
+            </div>
+            <span class="badge" style="background: var(--color-champagne-light); color: var(--color-espresso); font-size: 10px;">34 Primary + 6 Acc.</span>
+          </div>
+          <div class="mt-xs pt-xs flex items-center gap-xs text-xs" style="border-top: 1px solid var(--color-champagne-light);">
+            <div style="flex: 1; height: 6px; background: var(--color-champagne-light); border-radius: 999px; overflow: hidden;">
+              <div style="width: 88%; height: 100%; background: var(--color-mocha);"></div>
+            </div>
+            <span class="font-bold" style="color: var(--color-mocha);">88%</span>
+          </div>
+        </div>
+
+        <div class="card p-md flex flex-col justify-between" style="background: white;">
+          <div class="flex items-center justify-between">
+            <span class="text-xs uppercase tracking-wider text-muted font-bold">Pending RSVPs</span>
+            <span class="p-xs rounded bg-surface"><span class="material-symbols-outlined text-sm" style="color: var(--color-espresso);">hourglass_top</span></span>
+          </div>
+          <div class="mt-sm flex items-baseline justify-between">
+            <div>
+              <span class="font-headline-lg font-bold" style="color: var(--color-espresso);">04</span>
+              <span class="text-xs text-muted ml-1">Awaiting</span>
+            </div>
+            <span class="badge" style="background: #FECDAF; color: #7A553E; font-size: 10px;">Nudge Active</span>
+          </div>
+          <div class="mt-xs pt-xs flex items-center justify-between text-xs text-muted" style="border-top: 1px solid var(--color-champagne-light);">
+            <span>Concierge follow-up</span>
+            <span class="font-bold" style="color: var(--color-espresso);">Oct 16, 18:00</span>
+          </div>
+        </div>
+
+        <div class="card p-md flex flex-col justify-between" style="background: white;">
+          <div class="flex items-center justify-between">
+            <span class="text-xs uppercase tracking-wider text-muted font-bold">Regrets &amp; Split Ledger</span>
+            <span class="p-xs rounded bg-surface"><span class="material-symbols-outlined text-sm" style="color: var(--color-terracotta);">account_balance_wallet</span></span>
+          </div>
+          <div class="mt-sm flex items-baseline justify-between">
+            <div>
+              <span class="font-bold text-lg" style="color: var(--color-espresso);">₹14,99,976</span>
+              <span class="text-xs text-muted block" style="font-size: 10px;">Settled (82%)</span>
+            </div>
+            <div class="text-right">
+              <span class="font-bold text-base" style="color: var(--color-muted);">02</span>
+              <span class="text-xs text-muted block" style="font-size: 10px;">Polite Regrets</span>
+            </div>
+          </div>
+          <div class="mt-xs pt-xs flex items-center justify-between text-xs text-muted" style="border-top: 1px solid var(--color-champagne-light);">
+            <span>Target: ₹41,666/pax</span>
+            <span class="font-bold" style="color: var(--color-terracotta);">₹2,49,996 Escrow</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ACCESS BAR & GATE SCANNER -->
+      <div class="grid grid-cols-12 gap-md mb-lg">
+        <!-- Registration URL (7 cols) -->
+        <div class="col-span-7 card p-lg flex flex-col justify-between" style="background: white;">
+          <div>
+            <div class="flex items-center justify-between mb-xs">
+              <div class="flex items-center gap-xs">
+                <span class="material-symbols-outlined text-sm" style="color: var(--color-terracotta);">vpn_key</span>
+                <span class="text-xs uppercase tracking-widest text-muted font-bold">Patron Access Terminal</span>
+              </div>
+              <span class="badge badge-gold" style="font-size: 10px;">Live &amp; Synced</span>
+            </div>
+            <h2 class="font-bold text-base" style="margin: 0 0 2px;">Unique Concierge Registration Portal</h2>
+            <p class="text-xs text-muted">Dispatched securely via digital calligraphy or WhatsApp Private Concierge.</p>
+
+            <div class="mt-md p-sm rounded-lg flex items-center justify-between gap-xs" style="background: var(--color-champagne-light); border: 1px solid var(--color-champagne);">
+              <div class="flex items-center gap-xs overflow-hidden">
+                <span class="material-symbols-outlined text-sm" style="color: var(--color-mocha);">link</span>
+                <span class="font-bold text-xs truncate" style="color: var(--color-espresso);">evara.luxury/c/valentino-gala-2025</span>
+              </div>
+              <div class="flex items-center gap-xs">
+                <button class="btn btn-subtle btn-xs" onclick="App.copyToClipboard('evara.luxury/c/valentino-gala-2025')">Copy Link</button>
+                <button class="btn btn-subtle btn-xs" onclick="App.toast('Dispatched RSVP Portal to VIP WhatsApp Broadcast', 'send')">WhatsApp</button>
+                <button class="icon-btn" onclick="App.toast('Showing VIP Access QR Code', 'qr_code_2')"><span class="material-symbols-outlined text-sm">qr_code_2</span></button>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-md grid grid-cols-3 gap-xs pt-xs" style="border-top: 1px solid var(--color-champagne-light);">
+            <div class="p-xs rounded bg-surface flex items-center justify-between">
+              <div>
+                <span class="font-bold text-xs block leading-tight">Allow +1 Guests</span>
+                <span class="text-muted" style="font-size: 10px;">Max 2 per patron</span>
+              </div>
+              <input type="checkbox" checked style="accent-color: var(--color-terracotta);"/>
+            </div>
+            <div class="p-xs rounded bg-surface flex items-center justify-between">
+              <div>
+                <span class="font-bold text-xs block leading-tight">Dietary Form Req.</span>
+                <span class="text-muted" style="font-size: 10px;">Allergen vetting</span>
+              </div>
+              <input type="checkbox" checked style="accent-color: var(--color-terracotta);"/>
+            </div>
+            <div class="p-xs rounded bg-surface flex items-center justify-between">
+              <div>
+                <span class="font-bold text-xs block leading-tight">Instant UPI Escrow</span>
+                <span class="text-muted" style="font-size: 10px;">₹41,666 tranche</span>
+              </div>
+              <input type="checkbox" checked style="accent-color: var(--color-terracotta);"/>
+            </div>
+          </div>
+        </div>
+
+        <!-- Live Gate Check-In (5 cols) -->
+        <div class="col-span-5 card p-lg flex flex-col justify-between" style="background: white;">
+          <div>
+            <div class="flex items-center justify-between mb-xs">
+              <div class="flex items-center gap-xs">
+                <span class="material-symbols-outlined text-sm" style="color: var(--color-mocha);">verified</span>
+                <span class="text-xs uppercase tracking-widest text-muted font-bold">Portico Arrivals Gate</span>
+              </div>
+              <span class="badge badge-gold" style="font-size: 10px;">Gate Scanner Ready</span>
+            </div>
+            <h2 class="font-bold text-base" style="margin: 0;">Live Check-In Terminal</h2>
+
+            <div class="grid grid-cols-4 gap-xs my-sm text-center">
+              <div class="p-xs rounded bg-surface">
+                <span class="text-muted block" style="font-size: 10px;">Expected</span>
+                <span class="font-bold text-base">40</span>
+              </div>
+              <div class="p-xs rounded bg-surface">
+                <span class="block font-bold" style="font-size: 10px; color: var(--color-mocha);">Checked-In</span>
+                <span class="font-bold text-base" style="color: var(--color-mocha);">28</span>
+              </div>
+              <div class="p-xs rounded bg-surface">
+                <span class="text-muted block" style="font-size: 10px;">In Transit</span>
+                <span class="font-bold text-base" style="color: var(--color-terracotta);">12</span>
+              </div>
+              <div class="p-xs rounded bg-surface">
+                <span class="text-muted block" style="font-size: 10px;">Regrets</span>
+                <span class="text-muted block font-bold text-base">02</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex items-center gap-xs mt-sm">
+            <div class="header-search flex-1">
+              <span class="material-symbols-outlined text-sm">qr_code_scanner</span>
+              <input type="text" id="quickScanInput" placeholder="Scan Pass ID or Guest Name..."/>
+            </div>
+            <button class="btn btn-primary btn-sm" onclick="handleQuickCheckIn()">Check-In</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- GUEST TABLE & INSPECTION DRAWER -->
+      <div class="grid grid-cols-12 gap-md">
+        <!-- Guest Table (8 cols) -->
+        <div class="col-span-8 card p-0 overflow-hidden" style="background: white;">
+          <div class="p-md flex items-center justify-between gap-sm" style="background: var(--color-champagne-light); border-bottom: 1px solid var(--color-champagne);">
+            <div class="flex items-center gap-xs">
+              <div class="header-search" style="width: 240px;">
+                <span class="material-symbols-outlined text-sm">search</span>
+                <input type="text" id="guestSearchTable" placeholder="Filter by patron or suite..."/>
+              </div>
+              <button class="btn btn-subtle btn-xs" onclick="App.toast('Filtering RSVPs: Confirmed only', 'filter_list')">All RSVPs</button>
+            </div>
+            <span class="text-xs text-muted">Viewing: <strong>6 of 42 Guests</strong></span>
+          </div>
+
+          <div style="overflow-x: auto;">
+            <table class="data-table" style="width: 100%; border-collapse: collapse;">
+              <thead>
+                <tr style="border-bottom: 2px solid var(--color-champagne); text-align: left; font-size: 11px; text-transform: uppercase; color: var(--color-muted);">
+                  <th style="padding: 0.75rem 1rem;">Guest &amp; Title</th>
+                  <th style="padding: 0.75rem 1rem;">RSVP Status</th>
+                  <th style="padding: 0.75rem 1rem; text-align: center;">Pax</th>
+                  <th style="padding: 0.75rem 1rem;">Contribution</th>
+                  <th style="padding: 0.75rem 1rem;">Escrow</th>
+                  <th style="padding: 0.75rem 1rem; text-align: right;">Inspect</th>
+                </tr>
+              </thead>
+              <tbody id="guestsTableBody">
+                <tr style="border-bottom: 1px solid var(--color-champagne-light); cursor: pointer;" onclick="inspectGuest('Eleanor Vance', 'Principal Host', 'Villa Master Suite', 'Vegan/Truffle Alert', 'Confirmed VIP', '₹41,666')">
+                  <td style="padding: 0.75rem 1rem;">
+                    <div class="flex items-center gap-xs">
+                      <div class="w-8 h-8 rounded-full flex items-center justify-center font-bold text-xs" style="background: var(--color-mocha); color: white;">EV</div>
+                      <div>
+                        <span class="font-bold text-sm block leading-tight">Eleanor Vance</span>
+                        <span class="text-xs text-muted block" style="font-size: 11px;">Principal Host • Villa Master Suite</span>
+                      </div>
+                    </div>
+                  </td>
+                  <td style="padding: 0.75rem 1rem;"><span class="badge badge-gold" style="font-size: 10px;">Confirmed VIP</span></td>
+                  <td style="padding: 0.75rem 1rem; text-align: center; font-weight: bold;">1</td>
+                  <td style="padding: 0.75rem 1rem; font-weight: bold; color: var(--color-espresso);">₹41,666</td>
+                  <td style="padding: 0.75rem 1rem;"><span class="badge" style="background: var(--color-champagne-light); font-size: 10px;">Settled 100%</span></td>
+                  <td style="padding: 0.75rem 1rem; text-align: right;"><span class="material-symbols-outlined text-sm text-muted">chevron_right</span></td>
+                </tr>
+                <tr style="border-bottom: 1px solid var(--color-champagne-light); cursor: pointer;" onclick="inspectGuest('Julian Ross', 'Private Sommelier', 'VIP Suite 4', 'Pescatarian Only', 'Confirmed', '₹41,666')">
+                  <td style="padding: 0.75rem 1rem;">
+                    <div class="flex items-center gap-xs">
+                      <div class="w-8 h-8 rounded-full flex items-center justify-center font-bold text-xs" style="background: var(--color-champagne); color: var(--color-mocha);">JR</div>
+                      <div>
+                        <span class="font-bold text-sm block leading-tight">Julian Ross</span>
+                        <span class="text-xs text-muted block" style="font-size: 11px;">VIP Suite 4 • Private Sommelier</span>
+                      </div>
+                    </div>
+                  </td>
+                  <td style="padding: 0.75rem 1rem;"><span class="badge badge-gold" style="font-size: 10px;">Confirmed</span></td>
+                  <td style="padding: 0.75rem 1rem; text-align: center; font-weight: bold;">2</td>
+                  <td style="padding: 0.75rem 1rem; font-weight: bold; color: var(--color-espresso);">₹41,666</td>
+                  <td style="padding: 0.75rem 1rem;"><span class="badge" style="background: var(--color-champagne-light); font-size: 10px;">Settled 100%</span></td>
+                  <td style="padding: 0.75rem 1rem; text-align: right;"><span class="material-symbols-outlined text-sm text-muted">chevron_right</span></td>
+                </tr>
+                <tr style="border-bottom: 1px solid var(--color-champagne-light); cursor: pointer;" onclick="inspectGuest('Sofia Sterling', 'Event Lead', 'Terrace Suite A', 'No Gluten', 'Confirmed', '₹41,666')">
+                  <td style="padding: 0.75rem 1rem;">
+                    <div class="flex items-center gap-xs">
+                      <div class="w-8 h-8 rounded-full flex items-center justify-center font-bold text-xs" style="background: #FECDAF; color: #7A553E;">SS</div>
+                      <div>
+                        <span class="font-bold text-sm block leading-tight">Sofia Sterling</span>
+                        <span class="text-xs text-muted block" style="font-size: 11px;">Terrace Suite A • Event Lead</span>
+                      </div>
+                    </div>
+                  </td>
+                  <td style="padding: 0.75rem 1rem;"><span class="badge badge-gold" style="font-size: 10px;">Confirmed</span></td>
+                  <td style="padding: 0.75rem 1rem; text-align: center; font-weight: bold;">1</td>
+                  <td style="padding: 0.75rem 1rem; font-weight: bold; color: var(--color-espresso);">₹41,666</td>
+                  <td style="padding: 0.75rem 1rem;"><span class="badge" style="background: var(--color-champagne-light); font-size: 10px;">Settled 100%</span></td>
+                  <td style="padding: 0.75rem 1rem; text-align: right;"><span class="material-symbols-outlined text-sm text-muted">chevron_right</span></td>
+                </tr>
+                <tr style="border-bottom: 1px solid var(--color-champagne-light); cursor: pointer;" onclick="inspectGuest('Matteo Rossi', 'Logistics Lead', 'Garden Annex 2', 'None', 'Pending Nudge', '₹41,666')">
+                  <td style="padding: 0.75rem 1rem;">
+                    <div class="flex items-center gap-xs">
+                      <div class="w-8 h-8 rounded-full flex items-center justify-center font-bold text-xs" style="background: var(--color-champagne-light); color: var(--color-espresso);">MR</div>
+                      <div>
+                        <span class="font-bold text-sm block leading-tight">Matteo Rossi</span>
+                        <span class="text-xs text-muted block" style="font-size: 11px;">Garden Annex 2 • Logistics Lead</span>
+                      </div>
+                    </div>
+                  </td>
+                  <td style="padding: 0.75rem 1rem;"><span class="badge" style="background: #FECDAF; color: #7A553E; font-size: 10px;">Pending Nudge</span></td>
+                  <td style="padding: 0.75rem 1rem; text-align: center; font-weight: bold;">1</td>
+                  <td style="padding: 0.75rem 1rem; font-weight: bold; color: var(--color-muted);">₹41,666</td>
+                  <td style="padding: 0.75rem 1rem;"><span class="badge" style="background: var(--color-champagne-light); font-size: 10px;">Escrow Pending</span></td>
+                  <td style="padding: 0.75rem 1rem; text-align: right;"><span class="material-symbols-outlined text-sm text-muted">chevron_right</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Inspection Drawer (4 cols) -->
+        <div class="col-span-4 card p-lg" id="guestInspectionDrawer" style="background: white; border: 1px solid var(--color-champagne);">
+          <div class="flex items-center justify-between mb-md">
+            <span class="text-xs uppercase tracking-widest text-muted font-bold">Patron Dossier</span>
+            <span class="badge badge-gold" id="dossierStatusBadge" style="font-size: 10px;">Confirmed VIP</span>
+          </div>
+
+          <div class="flex items-center gap-sm mb-md">
+            <div class="w-12 h-12 rounded-full flex items-center justify-center font-bold text-base" id="dossierAvatar" style="background: var(--color-mocha); color: white;">EV</div>
+            <div>
+              <h3 class="font-bold text-lg" id="dossierName" style="margin: 0;">Eleanor Vance</h3>
+              <span class="text-xs text-muted" id="dossierRole">Principal Host</span>
+            </div>
+          </div>
+
+          <div class="space-y-sm text-xs">
+            <div class="p-xs rounded bg-surface flex items-center justify-between">
+              <span class="text-muted">Suite Allotment</span>
+              <strong id="dossierSuite">Villa Master Suite</strong>
+            </div>
+            <div class="p-xs rounded bg-surface flex items-center justify-between">
+              <span class="text-muted">Dietary Requirements</span>
+              <strong id="dossierDietary" style="color: var(--color-terracotta);">Vegan / Truffle Alert</strong>
+            </div>
+            <div class="p-xs rounded bg-surface flex items-center justify-between">
+              <span class="text-muted">Tranche Contribution</span>
+              <strong id="dossierTranche">₹41,666 (Settled)</strong>
+            </div>
+          </div>
+
+          <div class="mt-lg pt-md flex items-center justify-between" style="border-top: 1px solid var(--color-champagne-light);">
+            <button class="btn btn-subtle btn-xs" onclick="App.toast('Dispatched custom concierge note to patron', 'mail')">Dispatch Note</button>
+            <button class="btn btn-primary btn-xs" onclick="App.toast('Patron checked-in at Portico Gate', 'verified')">Mark Arrived</button>
+          </div>
+        </div>
+      </div>
+
+    </main>
+  </div>
+
+  <!-- ADD GUEST MODAL -->
+  <div id="addGuestModal" class="modal-overlay" style="display: none; position: fixed; inset: 0; background: rgba(34,26,23,0.6); backdrop-filter: blur(4px); z-index: 100; align-items: center; justify-content: center; padding: 1rem;">
+    <div class="card p-lg max-w-lg w-full" style="background: white; border: 1px solid var(--color-champagne); box-shadow: var(--shadow-xl);">
+      <div class="flex items-center justify-between mb-md">
+        <h3 class="font-headline-sm" style="margin: 0;">Add Patron to Roster</h3>
+        <button class="icon-btn" onclick="document.getElementById('addGuestModal').style.display='none'">
+          <span class="material-symbols-outlined">close</span>
+        </button>
+      </div>
+
+      <form onsubmit="handleAddGuestSubmit(event)">
+        <div class="form-group mb-sm">
+          <label class="form-label">Full Name &amp; Title</label>
+          <input type="text" id="newGuestName" class="form-input" required placeholder="e.g. Contessa Beatrice d'Este"/>
+        </div>
+        <div class="grid grid-cols-2 gap-sm mb-sm">
+          <div>
+            <label class="form-label">Email or WhatsApp</label>
+            <input type="text" id="newGuestContact" class="form-input" required placeholder="+39 340 1234567"/>
+          </div>
+          <div>
+            <label class="form-label">Suite Allocation</label>
+            <input type="text" id="newGuestSuite" class="form-input" value="Villa Suite 5"/>
+          </div>
+        </div>
+        <div class="form-group mb-md">
+          <label class="form-label">Dietary Preferences</label>
+          <input type="text" id="newGuestDietary" class="form-input" placeholder="e.g. Vegetarian, Gluten-Free, No Shellfish"/>
+        </div>
+        <div class="flex items-center justify-end gap-sm pt-sm" style="border-top: 1px solid var(--color-champagne);">
+          <button type="button" class="btn btn-secondary" onclick="document.getElementById('addGuestModal').style.display='none'">Cancel</button>
+          <button type="submit" class="btn btn-primary">Add to Roster</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- SCRIPTS -->
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+  <script src="../js/firebaseConfig.js"></script>
+  <script src="../js/storage.js"></script>
+  <script src="../js/app.js"></script>
+  <script src="../js/navigation.js"></script>
+  <script src="../js/guests.js"></script>
+
+  <script>
+    function inspectGuest(name, role, suite, dietary, status, tranche) {
+      document.getElementById('dossierName').textContent = name;
+      document.getElementById('dossierRole').textContent = role;
+      document.getElementById('dossierSuite').textContent = suite;
+      document.getElementById('dossierDietary').textContent = dietary;
+      document.getElementById('dossierTranche').textContent = tranche + ' (Settled)';
+      document.getElementById('dossierStatusBadge').textContent = status;
+      document.getElementById('dossierAvatar').textContent = name.split(' ').map(n=>n[0]).join('');
+      App.toast(`Inspecting patron dossier for ${name}`, 'person');
+    }
+
+    function openAddGuestModal() {
+      document.getElementById('addGuestModal').style.display = 'flex';
+    }
+
+    async function handleAddGuestSubmit(e) {
+      e.preventDefault();
+      await GuestsController.addGuest(e);
+    }
+
+    function handleQuickCheckIn() {
+      const val = document.getElementById('quickScanInput').value.trim();
+      if (val) {
+        App.toast(`Checked-in patron: "${val}" at Portico Gate`, 'verified');
+        document.getElementById('quickScanInput').value = '';
+      } else {
+        App.toast('Please enter a Pass ID or patron name to check-in', 'qr_code_scanner');
+      }
+    }
+
+    // Guest search
+    document.getElementById('guestSearchTable').addEventListener('input', (e) => {
+      const q = e.target.value.toLowerCase().trim();
+      document.querySelectorAll('#guestsTableBody tr').forEach(row => {
+        row.style.display = row.textContent.toLowerCase().includes(q) ? '' : 'none';
+      });
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,13 @@
+# Runtime logs & PID files
+.server.pid
+server.log
+server.err
+*.log
+
+# Windows binary helpers
+powershell.exe
+powershell.cmd
+
+# OS files
+.DS_Store
+Thumbs.db

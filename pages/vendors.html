@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>Vendor Discovery — Villa San Valentino Gala — EVARA</title>
+  <meta name="description" content="Discover curated Tuscan artisans, sommeliers, and florists hand-verified for your celebration."/>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+  
+  <link rel="stylesheet" href="../css/variables.css"/>
+  <link rel="stylesheet" href="../css/global.css"/>
+  <link rel="stylesheet" href="../css/layout.css"/>
+  <link rel="stylesheet" href="../css/components.css"/>
+  <link rel="stylesheet" href="../css/responsive.css"/>
+  <link rel="stylesheet" href="../css/pages/other-pages.css"/>
+  <link rel="stylesheet" href="../css/pages/events.css"/>
+</head>
+<body class="bg-[#F8F4EF]">
+  <!-- Mobile Menu Button -->
+  <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle navigation">
+    <span class="material-symbols-outlined">menu</span>
+  </button>
+  <div class="sidebar-backdrop" id="sidebarBackdrop"></div>
+
+  <!-- FIXED EVENT-SCOPED SIDEBAR -->
+  <aside class="sidebar">
+    <div class="px-md pt-lg pb-sm">
+      <a href="../dashboard.html" class="flex items-center gap-xs text-muted hover:text-primary" style="font-size: 13px; font-weight: 600; text-decoration: none;">
+        <span class="material-symbols-outlined" style="font-size: 16px;">arrow_back</span>
+        <span>Back to All Events</span>
+      </a>
+    </div>
+
+    <!-- Workspace Scope Card -->
+    <div class="px-md pb-sm">
+      <div class="p-sm rounded-lg" style="background: var(--color-champagne-light); border: 1px solid var(--color-champagne);">
+        <span class="text-xs uppercase text-muted font-bold tracking-wider block" style="font-size: 10px;">Workspace Scope</span>
+        <span class="font-bold text-sm truncate block" style="color: var(--color-espresso);">Tuscan Gala 2025</span>
+      </div>
+    </div>
+
+    <div class="sidebar-section-label" style="padding-top: 4px;">Event Navigation</div>
+    <ul class="sidebar-nav">
+      <li class="sidebar-item">
+        <a href="event-overview.html" class="sidebar-link" data-path="event-overview">
+          <span class="material-symbols-outlined">dashboard</span>
+          <span>Event Overview</span>
+        </a>
+      </li>
+      <li class="sidebar-item">
+        <a href="checklist.html" class="sidebar-link" data-path="checklist">
+          <span class="material-symbols-outlined">checklist</span>
+          <span>Event Checklist</span>
+        </a>
+      </li>
+      <li class="sidebar-item">
+        <a href="guests.html" class="sidebar-link" data-path="guests">
+          <span class="material-symbols-outlined">mark_email_read</span>
+          <span>Guests &amp; Invitations</span>
+        </a>
+      </li>
+      <li class="sidebar-item">
+        <a href="budget.html" class="sidebar-link" data-path="budget">
+          <span class="material-symbols-outlined">account_balance_wallet</span>
+          <span>Budget &amp; Expenses</span>
+        </a>
+      </li>
+      <li class="sidebar-item">
+        <a href="payments.html" class="sidebar-link" data-path="payments">
+          <span class="material-symbols-outlined">qr_code_2</span>
+          <span>Payments &amp; QR Scanner</span>
+        </a>
+      </li>
+      <li class="sidebar-item">
+        <a href="vendors.html" class="sidebar-link active" data-path="vendors">
+          <span class="material-symbols-outlined">storefront</span>
+          <span>Vendors</span>
+        </a>
+      </li>
+      <li class="sidebar-item">
+        <a href="shopping.html" class="sidebar-link" data-path="shopping">
+          <span class="material-symbols-outlined">shopping_bag</span>
+          <span>Shopping Assistant</span>
+        </a>
+      </li>
+      <li class="sidebar-item">
+        <a href="checklist.html" class="sidebar-link" data-path="timeline">
+          <span class="material-symbols-outlined">calendar_today</span>
+          <span>Timeline</span>
+        </a>
+      </li>
+      <li class="sidebar-item">
+        <a href="team-chat.html" class="sidebar-link" data-path="team">
+          <span class="material-symbols-outlined">groups</span>
+          <span>Team &amp; Volunteers</span>
+        </a>
+      </li>
+      <li class="sidebar-item">
+        <a href="team-chat.html" class="sidebar-link" data-path="chat">
+          <span class="material-symbols-outlined">forum</span>
+          <span>Event Chat</span>
+        </a>
+      </li>
+      <li class="sidebar-item">
+        <a href="reports.html" class="sidebar-link" data-path="reports">
+          <span class="material-symbols-outlined">lab_profile</span>
+          <span>Reports &amp; Exports</span>
+        </a>
+      </li>
+    </ul>
+
+    <div class="sidebar-footer">
+      <ul class="sidebar-nav">
+        <li class="sidebar-item">
+          <a href="profile-settings.html" class="sidebar-link" data-path="settings">
+            <span class="material-symbols-outlined">settings</span>
+            <span>Event Settings</span>
+          </a>
+        </li>
+      </ul>
+      <div class="concierge-status">
+        <span class="status-dot"></span>
+        <span class="status-text">Concierge AI v2.4 Active</span>
+      </div>
+    </div>
+  </aside>
+
+  <!-- MAIN WRAPPER -->
+  <div class="main-wrapper">
+    <!-- BLURRED HEADER WITH EVENT SCOPE DROPDOWN -->
+    <header class="top-header">
+      <div class="flex items-center gap-md">
+        <div class="flex items-center gap-xs">
+          <img src="../assets/icons/evara-logo.svg" alt="EVARA Logo" style="height: 28px; width: auto;"/>
+          <div class="flex flex-col">
+            <span class="font-serif" style="font-weight: 700; color: var(--color-espresso); line-height: 1; font-size: 18px;">EVARA</span>
+            <span class="text-muted uppercase tracking-widest" style="font-size: 9px; font-weight: 600;">Private Concierge</span>
+          </div>
+        </div>
+
+        <div style="height: 24px; width: 1px; background: var(--color-champagne);" class="hidden sm:block"></div>
+
+        <div class="flex items-center gap-xs px-sm py-xs rounded-lg" style="background: var(--color-champagne-light); border: 1px solid var(--color-champagne);">
+          <div class="flex flex-col">
+            <div class="flex items-center gap-xs">
+              <span class="font-bold text-sm" style="color: var(--color-espresso);">Villa San Valentino Tuscan Gala 2025</span>
+              <span class="material-symbols-outlined" style="font-size: 16px; color: var(--color-muted);">expand_more</span>
+            </div>
+            <span class="text-muted text-xs">Oct 24–27, 2025</span>
+          </div>
+          <span class="badge badge-accent" style="font-size: 10px; margin-left: 6px;">Planning Active</span>
+        </div>
+      </div>
+
+      <div class="header-search hidden md:block" style="max-width: 320px;">
+        <span class="material-symbols-outlined search-icon">search</span>
+        <input type="text" class="search-input" id="vendorSearchHeader" placeholder="Search florists, caterers, sommeliers..."/>
+      </div>
+
+      <div class="header-actions">
+        <button class="btn btn-secondary" onclick="openShortlistTray()" style="font-size: 12px; padding: 6px 12px;">
+          <span class="material-symbols-outlined" style="font-size: 16px; color: var(--color-terracotta);">favorite</span>
+          <span>Shortlist</span>
+          <span class="badge badge-primary" id="headerShortlistBadge" style="font-size: 10px; padding: 1px 6px;">3</span>
+        </button>
+        <button class="icon-btn" aria-label="Notifications" onclick="window.location.href='notifications.html'">
+          <span class="material-symbols-outlined">notifications</span>
+          <span class="notification-badge"></span>
+        </button>
+        <div class="profile-pill" onclick="window.location.href='profile-settings.html'">
+          <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCblbJh5I878bB-SpKIAcY8gMe7Y6eDKxYbJLsCd9KulLzbHxlhTUyWD5y9ceH4RVYJjOwQwtyWCKA1CYDUwJB_eJeVVu7wvrhkUuvh1Pyxt159059DQaD3CoEXwd7iI0KGXa-OjhGk0K7YVTDOh5o9-gXmjcddhmp-tkv3nw1ee6SCxaERRbWfk-HgXJU9movKZDcCDa0ptrrt2gazDwN_0Sc6KueuTqtYp3fikBU" alt="Eleanor Vance" class="profile-avatar"/>
+          <div class="profile-info hidden xl:block">
+            <span class="profile-name">Eleanor Vance</span>
+            <span class="profile-role">Principal Host</span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- MAIN BODY -->
+    <main class="main-content">
+      <!-- 1. EDITORIAL PAGE HEADER & SEARCH -->
+      <section class="section" style="padding-top: var(--space-md); padding-bottom: var(--space-md);">
+        <div class="flex items-end justify-between flex-wrap gap-md mb-md">
+          <div class="max-w-2xl">
+            <div class="flex items-center gap-xs px-sm py-xs rounded-full mb-xs" style="background: var(--color-champagne-light); display: inline-flex;">
+              <span class="material-symbols-outlined text-primary" style="font-size: 14px;">auto_awesome</span>
+              <span class="text-xs uppercase tracking-wider font-bold" style="color: var(--color-espresso);">Curated Tuscan Directory • 240 Verified Partners</span>
+            </div>
+            <h1 class="page-title" style="font-size: 34px; margin-bottom: 4px;">Find Your Perfect Vendors</h1>
+            <p class="section-desc" style="font-size: 15px; margin: 0;">Discover the artisans, sommeliers, and visionaries who craft unforgettable Tuscan memories.</p>
+          </div>
+
+          <div class="flex items-center gap-sm">
+            <button class="btn btn-secondary" onclick="openShortlistTray()">
+              <span class="material-symbols-outlined" style="font-size: 18px; color: var(--color-terracotta);">favorite</span>
+              <span>My Shortlist</span>
+              <span class="badge badge-primary" id="shortlistCount" style="font-size: 10px;">3</span>
+            </button>
+            <button class="btn btn-primary" onclick="openRFPModal('All Shortlisted Vendors')">
+              <span class="material-symbols-outlined" style="font-size: 18px;">post_add</span>
+              <span>Request Multi-Vendor RFP</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Search & Filter Ribbon -->
+        <div class="card p-sm shadow-sm" style="background: #fff;">
+          <div class="grid grid-cols-1 md:grid-cols-12 gap-xs">
+            <div class="md:col-span-5 relative">
+              <span class="material-symbols-outlined search-icon">search</span>
+              <input type="text" class="search-input w-full" id="vendorSearchInput" placeholder="Search florists, caterers, lighting, sommeliers..."/>
+            </div>
+
+            <div class="md:col-span-4 relative">
+              <select class="search-input w-full" id="locationFilter" style="padding-left: 36px;">
+                <option value="all">Tuscany &amp; Chianti (Radius 50km)</option>
+                <option value="florence">Florence Historic Center &amp; Fiesole</option>
+                <option value="siena">Siena &amp; Val d'Orcia Countryside</option>
+                <option value="lucca">Pisa, Lucca &amp; Versilia Coast</option>
+                <option value="arezzo">Arezzo &amp; Cortona Estates</option>
+              </select>
+              <span class="material-symbols-outlined" style="position: absolute; left: 10px; top: 50%; transform: translateY(-50%); font-size: 18px; color: var(--color-terracotta);">location_on</span>
+            </div>
+
+            <div class="md:col-span-3 flex items-center gap-xs">
+              <button class="btn btn-secondary flex-1 justify-between" style="font-size: 12px; padding: 8px 12px;" onclick="App.toast('Budget filters: Luxury Tier (₹1L - ₹5L+)', 'tune')">
+                <span class="flex items-center gap-xs"><span class="material-symbols-outlined text-primary" style="font-size: 16px;">tune</span> Budget</span>
+                <span class="material-symbols-outlined" style="font-size: 16px;">expand_more</span>
+              </button>
+              <button class="btn btn-primary" style="font-size: 12px; padding: 8px 16px;" onclick="filterVendors()">
+                Explore
+              </button>
+            </div>
+          </div>
+
+          <!-- Category Filter Pills -->
+          <div class="flex items-center gap-xs overflow-x-auto pt-sm text-xs" style="scrollbar-width: none;">
+            <button class="badge badge-primary cursor-pointer category-pill active" data-cat="all">All Categories</button>
+            <button class="badge cursor-pointer category-pill" data-cat="floral">Floral &amp; Décor (45)</button>
+            <button class="badge cursor-pointer category-pill" data-cat="catering">Catering &amp; Fine Wine (38)</button>
+            <button class="badge cursor-pointer category-pill" data-cat="photo">Photography &amp; Drone (29)</button>
+            <button class="badge cursor-pointer category-pill" data-cat="venue">Venues &amp; Villas (24)</button>
+            <button class="badge cursor-pointer category-pill" data-cat="music">Acoustic &amp; Entertainment (22)</button>
+            <button class="badge cursor-pointer category-pill" data-cat="transport">Luxury Chauffeurs (14)</button>
+            <button class="badge cursor-pointer category-pill" data-cat="favors">Letterpress &amp; Favors (12)</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- 2. AI RECOMMENDATION BANNER: ARIA CONCIERGE -->
+      <section class="section" style="padding-top: 0; padding-bottom: var(--space-md);">
+        <div class="card p-lg shadow-sm relative overflow-hidden" style="background: linear-gradient(135deg, var(--color-champagne-light) 0%, #fff 100%); border: 1px solid var(--color-champagne);">
+          <div class="flex items-start justify-between flex-wrap gap-md">
+            <div class="flex items-start gap-md max-w-3xl">
+              <div class="feature-icon" style="background: var(--color-espresso); color: #fff; width: 44px; height: 44px; flex-shrink: 0;">
+                <span class="material-symbols-outlined" style="font-size: 22px;">auto_awesome</span>
+              </div>
+              <div>
+                <div class="flex items-center gap-xs mb-xs">
+                  <span class="text-xs uppercase font-bold tracking-wider" style="color: var(--color-terracotta);">Aria Concierge Intelligence</span>
+                  <span class="status-dot" style="background: var(--color-success);"></span>
+                  <span class="text-muted text-xs">Real-Time Tuscan Sync</span>
+                </div>
+                <h3 class="font-serif" style="font-size: 22px; margin: 0 0 6px 0;">Hand-Selected for Villa San Valentino Gala 2025</h3>
+                <p class="text-muted text-xs" style="margin: 0; line-height: 1.6;">
+                  Based on your guest count (<strong>36 Guests</strong>), total budget allocation (<strong>₹15,00,000</strong>), and your selected <em class="font-serif italic" style="color: var(--color-espresso);">Rustic Editorial &amp; Candlestick</em> moodboard: these 3 bespoke Tuscan ateliers have guaranteed availability on <strong>Oct 24–27, 2025</strong>.
+                </p>
+              </div>
+            </div>
+
+            <div class="flex items-center gap-xs flex-wrap">
+              <button class="btn btn-primary" onclick="scrollToTopRecommendations()">View AI Matches</button>
+              <button class="btn btn-secondary" onclick="App.toast('Comparing 3 finalist bids against Tuscan benchmark SLAs', 'splitscreen')">
+                <span class="material-symbols-outlined" style="font-size: 16px;">splitscreen</span>
+                <span>Compare 3 Finalists</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 3. CURATED TUSCAN DISCIPLINES BENTO GRID -->
+      <section class="section" style="padding-top: 0; padding-bottom: var(--space-md);">
+        <div class="flex items-baseline justify-between mb-sm">
+          <div>
+            <span class="section-tag">Browse By Craft</span>
+            <h2 class="font-serif" style="font-size: 24px; margin: 2px 0 0 0;">Curated Tuscan Disciplines</h2>
+          </div>
+          <a href="#" class="text-primary text-xs font-bold uppercase tracking-wider flex items-center gap-xs" style="text-decoration: none;">
+            <span>View all 10 disciplines</span>
+            <span class="material-symbols-outlined" style="font-size: 14px;">arrow_forward</span>
+          </a>
+        </div>
+
+        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-md">
+          <!-- Venues -->
+          <div class="card overflow-hidden shadow-sm hover:shadow-md cursor-pointer" onclick="filterByCategory('venue')">
+            <div style="height: 130px; position: relative;">
+              <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuB1T2bRnP33WQlLYu37kQl-kCIqkvIW2J-oVdiOCj0F6xwbgpWDZ2HNQBJ4S8oWp8Uxg1KNSNfNuqnxwCdy-oZvpVpD05XLmt4u0xDEiEC8KZ40i3lqD61_btkF73bNUoWbeYLv1WuBES4LHAZw-QmmOGflKIHabixszG6e6sGw7Z7ST_snikQcFGEXheUIZk_n5CXsQvpBErOtPpU-W7HaFVLHtPuguZoTrLr8nYw" alt="Venues" style="width: 100%; height: 100%; object-fit: cover;"/>
+              <span class="badge" style="position: absolute; top: 8px; right: 8px; background: rgba(255,255,255,0.9); font-size: 10px;">24</span>
+            </div>
+            <div class="p-xs">
+              <strong style="font-size: 13px; display: block;">Venues &amp; Villas</strong>
+              <span class="text-muted text-xs">Castles &amp; wine estates</span>
+            </div>
+          </div>
+
+          <!-- Catering -->
+          <div class="card overflow-hidden shadow-sm hover:shadow-md cursor-pointer" onclick="filterByCategory('catering')">
+            <div style="height: 130px; position: relative;">
+              <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuD8fpSl-P8oaxhSwioiRyi9Yp0o16eiUz-xhzr-5WfwpC9EuwIUwoV9Rg3V0bnNCGoxDsC4IpS6hC5cWdYiFr6FYT31i4HcfxYzifFaFW_iMjD1kwT86jtX1-oouTZ9oaG_3hHxhRbedpst6I8fj9pfIL6cRuh-jUJ5bhMddSQec3P1dMf7ZJwNzo37npyt0mjoYJ4VUwPUvnZTpYq3iSMMH6TAU4a8v6UX8ZDTzNc" alt="Catering" style="width: 100%; height: 100%; object-fit: cover;"/>
+              <span class="badge" style="position: absolute; top: 8px; right: 8px; background: rgba(255,255,255,0.9); font-size: 10px;">38</span>
+            </div>
+            <div class="p-xs">
+              <strong style="font-size: 13px; display: block;">Catering &amp; Fine Wine</strong>
+              <span class="text-muted text-xs">Michelin private cellars</span>
+            </div>
+          </div>
+
+          <!-- Floral -->
+          <div class="card overflow-hidden shadow-sm hover:shadow-md cursor-pointer" onclick="filterByCategory('floral')">
+            <div style="height: 130px; position: relative;">
+              <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCf9qSvvUDzw49g2LZrJfVriupYIulbRKR1M7SpGHjHWGEvmMXkOvLGgus5k5VR0bGxeplbEROe1pt5xEvx4PapjqhbbYpU4t1JQcwYouumqAr9xOig98ZIuQvbyFDUdMgQF_TGZvKTYiaccs5yvugjOHe1gzz_q_crU8_-XX_EVfqRlr7L-YWXYW7sG6cfouR6Nu38Y6sH1QCnP1l75qTQPKeIveN03hNT71gFYw8" alt="Floral" style="width: 100%; height: 100%; object-fit: cover;"/>
+              <span class="badge" style="position: absolute; top: 8px; right: 8px; background: rgba(255,255,255,0.9); font-size: 10px;">45</span>
+            </div>
+            <div class="p-xs">
+              <strong style="font-size: 13px; display: block;">Floral &amp; Décor</strong>
+              <span class="text-muted text-xs">Olive arches &amp; botanicals</span>
+            </div>
+          </div>
+
+          <!-- Photography -->
+          <div class="card overflow-hidden shadow-sm hover:shadow-md cursor-pointer" onclick="filterByCategory('photo')">
+            <div style="height: 130px; position: relative;">
+              <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAM4jURO85yPSL3Fb3XRJywUwMuH3pW8A7aFpwLBoNe7MGzoG9EpWMFxcd96H7sZOEV6VfaqmI69SUTaGbUi0b048HPp8BxgrrmANbHxrbyAwqdoF0ODjkAgHcP78cXyoSfnkmo2Clduhoj-vdyWG5M9izKa84RDf7tQmF2pKJQv56rHiG4Un5vVwDtlGmKOVI0otoZ7TTgBCZ-wwQUQmAchQ_ma45Y1ab1S2RewLk" alt="Photography" style="width: 100%; height: 100%; object-fit: cover;"/>
+              <span class="badge" style="position: absolute; top: 8px; right: 8px; background: rgba(255,255,255,0.9); font-size: 10px;">29</span>
+            </div>
+            <div class="p-xs">
+              <strong style="font-size: 13px; display: block;">Photography &amp; Drone</strong>
+              <span class="text-muted text-xs">Editorial photojournalism</span>
+            </div>
+          </div>
+
+          <!-- Chauffeurs -->
+          <div class="card overflow-hidden shadow-sm hover:shadow-md cursor-pointer" onclick="filterByCategory('transport')">
+            <div style="height: 130px; position: relative;">
+              <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCYN8fYEfsAkht8o38zvPYb8msF9_pdH1JDYPBlWU1JCxMI0g3C-tPRAOjRojCwqpXIrTF24wG_oLqqkhIYK531CvHuN3pjuTZkGTm_Pzx60P4WI2jP4rgR9Z7ket6YQO-uVcXpQUz9vzKT4MDXO4kipRu5EUUrEX-Y2jnfteRN_m0fFwPHN-5C_dbywrR5OnGGhlnyLW4ZzktED-XALLg_KGHclOsWnn56KsI9otI" alt="Chauffeurs" style="width: 100%; height: 100%; object-fit: cover;"/>
+              <span class="badge" style="position: absolute; top: 8px; right: 8px; background: rgba(255,255,255,0.9); font-size: 10px;">14</span>
+            </div>
+            <div class="p-xs">
+              <strong style="font-size: 13px; display: block;">Luxury Chauffeurs</strong>
+              <span class="text-muted text-xs">Florence airport Mercedes</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 4. FEATURED VENDOR LISTINGS GRID -->
+      <section class="section" id="topRecommendationsSection" style="padding-top: 0; padding-bottom: var(--space-xl);">
+        <div class="flex items-center justify-between mb-md">
+          <div class="flex items-center gap-xs">
+            <span class="status-dot" style="background: var(--color-terracotta);"></span>
+            <h2 class="font-serif" style="font-size: 24px; margin: 0;">Top Tuscan Recommendations</h2>
+          </div>
+          <div class="text-xs text-muted">
+            <span>Sort by: <strong>EVARA Relevance</strong></span>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-lg" id="vendorGrid">
+          <!-- Vendor 1: Fiori di Firenze -->
+          <div class="card overflow-hidden shadow-sm hover:shadow-lg flex flex-col justify-between vendor-item" data-category="floral">
+            <div>
+              <div style="position: relative; height: 240px;">
+                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBz4fNegj2ovUcHGhXK_8KueefjQlRAZXoaBw5cWVVBAuzGZP_vhCbn5hDjDNOoacP0xbEHHNNPJDTGG_5KP6lTCMFwnip81sjEhK2OpWmKdk0Ru2EY76uLaSLwogiI-3p7QVzsDGTv5e7JfwnChpP5ZbqPu1GizqGeYDeto9KnHjXvneYd_n2ptZfpidGNgn4DGuSgV2k5ZQRJY9N7qKTrrM3dbgtPTsbcFvE8jnQ" alt="Fiori di Firenze" style="width: 100%; height: 100%; object-fit: cover;"/>
+                <div style="position: absolute; top: 12px; left: 12px; display: flex; gap: 6px;">
+                  <span class="badge" style="background: rgba(255,255,255,0.92); font-size: 10px;">
+                    <span class="material-symbols-outlined text-success" style="font-size: 12px;">verified</span>
+                    Verified Partner
+                  </span>
+                  <span class="badge badge-accent" style="font-size: 10px;">Available Oct 24–27</span>
+                </div>
+                <button class="icon-btn shortlist-toggle-btn active" style="position: absolute; top: 12px; right: 12px; background: rgba(255,255,255,0.9); width: 34px; height: 34px;" onclick="toggleShortlist(this, 'Fiori di Firenze Atelier')">
+                  <span class="material-symbols-outlined" style="font-size: 18px; color: var(--color-terracotta);">favorite</span>
+                </button>
+                <div style="position: absolute; bottom: 12px; left: 12px; right: 12px; display: flex; justify-content: space-between; align-items: center; color: #fff;">
+                  <span class="text-xs uppercase font-bold tracking-wider" style="text-shadow: 0 1px 4px rgba(0,0,0,0.8);">Chianti Hills • 24km to Villa</span>
+                  <div class="flex items-center gap-xs px-xs py-1 rounded" style="background: rgba(34,26,23,0.7); backdrop-filter: blur(4px);">
+                    <span class="material-symbols-outlined" style="font-size: 14px; color: var(--color-gold);">star</span>
+                    <strong style="font-size: 12px;">4.9</strong>
+                    <span style="font-size: 10px; opacity: 0.8;">(48)</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="p-md">
+                <span class="section-tag" style="font-size: 10px;">Floral &amp; Festoon Design</span>
+                <h3 class="font-serif" style="font-size: 20px; margin: 2px 0 6px 0;">Fiori di Firenze Atelier</h3>
+                <p class="text-muted text-xs" style="margin: 0 0 12px 0; line-height: 1.5;">
+                  Bespoke Tuscan tablescapes, ancient olive branch arches, and suspended candlelight canopies tailored to architectural courtyards.
+                </p>
+
+                <div class="p-xs rounded-lg flex items-center justify-between" style="background: var(--color-champagne-light);">
+                  <div>
+                    <span class="text-muted text-xs block" style="font-size: 10px;">Starting Investment</span>
+                    <strong style="font-size: 16px; color: var(--color-espresso);">₹1,80,000</strong>
+                  </div>
+                  <div class="text-right">
+                    <span class="badge badge-accent" style="font-size: 10px;">Aria Match 98%</span>
+                    <span class="text-muted block" style="font-size: 9px; margin-top: 2px;">Includes Chianti Setup</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="px-md pb-md flex items-center gap-xs">
+              <button class="btn btn-secondary flex-1 justify-center" style="font-size: 12px;" onclick="openVendorDrawer('Fiori di Firenze Atelier', 'Floral & Festoon Design', '₹1,80,000', 'Chianti Hills')">
+                View Details
+              </button>
+              <button class="btn btn-primary flex-1 justify-center" style="font-size: 12px;" onclick="openRFPModal('Fiori di Firenze Atelier')">
+                Request Quote
+              </button>
+            </div>
+          </div>
+
+          <!-- Vendor 2: Cucina Toscana -->
+          <div class="card overflow-hidden shadow-sm hover:shadow-lg flex flex-col justify-between vendor-item" data-category="catering">
+            <div>
+              <div style="position: relative; height: 240px;">
+                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDfrPmY0w0VZ6IIKNvdXjIK1hiP3KBS9EadYULBk1c5WIJZKj3DgL8QtwQS96si70W1poNNLnHU_NlSAFmdzGk9n6_i9AL-r2eEk0zTTz8dH-mVXDOZCslUP7kez42h8k07FsC4FLz1-y6Gnpyc1xf9XgIEscTvGid_bBBT7RGDm80-Ezmes-jQYWlXciqCpfS9p4CV8jFs_9NnAw9QLTV3_c4ECReuahrAauRb_U8" alt="Cucina Toscana" style="width: 100%; height: 100%; object-fit: cover;"/>
+                <div style="position: absolute; top: 12px; left: 12px; display: flex; gap: 6px;">
+                  <span class="badge badge-success" style="font-size: 10px;">
+                    <span class="material-symbols-outlined" style="font-size: 12px;">eco</span>
+                    Organic Certified
+                  </span>
+                  <span class="badge" style="background: rgba(255,255,255,0.92); font-size: 10px;">In-House Sommelier</span>
+                </div>
+                <button class="icon-btn shortlist-toggle-btn active" style="position: absolute; top: 12px; right: 12px; background: rgba(255,255,255,0.9); width: 34px; height: 34px;" onclick="toggleShortlist(this, 'Cucina Toscana &amp; Chef Fabrizio')">
+                  <span class="material-symbols-outlined" style="font-size: 18px; color: var(--color-terracotta);">favorite</span>
+                </button>
+                <div style="position: absolute; bottom: 12px; left: 12px; right: 12px; display: flex; justify-content: space-between; align-items: center; color: #fff;">
+                  <span class="text-xs uppercase font-bold tracking-wider" style="text-shadow: 0 1px 4px rgba(0,0,0,0.8);">Greve in Chianti • 18km to Villa</span>
+                  <div class="flex items-center gap-xs px-xs py-1 rounded" style="background: rgba(34,26,23,0.7); backdrop-filter: blur(4px);">
+                    <span class="material-symbols-outlined" style="font-size: 14px; color: var(--color-gold);">star</span>
+                    <strong style="font-size: 12px;">5.0</strong>
+                    <span style="font-size: 10px; opacity: 0.8;">(64)</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="p-md">
+                <span class="section-tag" style="font-size: 10px;">Catering &amp; Sommelier</span>
+                <h3 class="font-serif" style="font-size: 20px; margin: 2px 0 6px 0;">Cucina Toscana &amp; Fabrizio</h3>
+                <p class="text-muted text-xs" style="margin: 0 0 12px 0; line-height: 1.5;">
+                  Farm-to-table Tuscan banquets, handmade tagliolini, wood-fired Florentine steak cuts, and organic Chianti Classico pairings.
+                </p>
+
+                <div class="p-xs rounded-lg flex items-center justify-between" style="background: var(--color-champagne-light);">
+                  <div>
+                    <span class="text-muted text-xs block" style="font-size: 10px;">Starting Investment</span>
+                    <strong style="font-size: 16px; color: var(--color-espresso);">₹2,25,000</strong>
+                  </div>
+                  <div class="text-right">
+                    <span class="badge badge-accent" style="font-size: 10px;">Aria Match 96%</span>
+                    <span class="text-muted block" style="font-size: 9px; margin-top: 2px;">For 36 Guests</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="px-md pb-md flex items-center gap-xs">
+              <button class="btn btn-secondary flex-1 justify-center" style="font-size: 12px;" onclick="openVendorDrawer('Cucina Toscana &amp; Fabrizio', 'Catering & Sommelier', '₹2,25,000', 'Greve in Chianti')">
+                View Details
+              </button>
+              <button class="btn btn-primary flex-1 justify-center" style="font-size: 12px;" onclick="openRFPModal('Cucina Toscana &amp; Fabrizio')">
+                Request Quote
+              </button>
+            </div>
+          </div>
+
+          <!-- Vendor 3: Lumière Cinematography -->
+          <div class="card overflow-hidden shadow-sm hover:shadow-lg flex flex-col justify-between vendor-item" data-category="photo">
+            <div>
+              <div style="position: relative; height: 240px;">
+                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBWbe9SJNpUYORL0HKZJlyYRJVyyuanGSUCQYxaw6tM3VoJ3j7LFfCBCJbQK6pJHiGTRUJ-XZVVQfjt9HmjYvfSf1__UM2gq_qxvhKvQcK_vldGgsdUdoKqn2i2dQPM7mmE3E3CM2vS8aArT3vwkP03IEFK9JpQaQ1471scTOLB5YGJvcgNiYlTfz2aLCSoJXgJ9d44ljlwtpfaivTxhN5I4WXvIfj1A5fo4mCvcTM" alt="Lumière Cinematography" style="width: 100%; height: 100%; object-fit: cover;"/>
+                <div style="position: absolute; top: 12px; left: 12px; display: flex; gap: 6px;">
+                  <span class="badge" style="background: rgba(255,255,255,0.92); font-size: 10px;">Vogue Weddings Featured</span>
+                  <span class="badge badge-accent" style="font-size: 10px;">4K Drone Licensed</span>
+                </div>
+                <button class="icon-btn shortlist-toggle-btn active" style="position: absolute; top: 12px; right: 12px; background: rgba(255,255,255,0.9); width: 34px; height: 34px;" onclick="toggleShortlist(this, 'Lumière Cinematography Florence')">
+                  <span class="material-symbols-outlined" style="font-size: 18px; color: var(--color-terracotta);">favorite</span>
+                </button>
+                <div style="position: absolute; bottom: 12px; left: 12px; right: 12px; display: flex; justify-content: space-between; align-items: center; color: #fff;">
+                  <span class="text-xs uppercase font-bold tracking-wider" style="text-shadow: 0 1px 4px rgba(0,0,0,0.8);">Florence • 32km to Villa</span>
+                  <div class="flex items-center gap-xs px-xs py-1 rounded" style="background: rgba(34,26,23,0.7); backdrop-filter: blur(4px);">
+                    <span class="material-symbols-outlined" style="font-size: 14px; color: var(--color-gold);">star</span>
+                    <strong style="font-size: 12px;">4.9</strong>
+                    <span style="font-size: 10px; opacity: 0.8;">(52)</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="p-md">
+                <span class="section-tag" style="font-size: 10px;">Photography &amp; Drone 4K</span>
+                <h3 class="font-serif" style="font-size: 20px; margin: 2px 0 6px 0;">Lumière Cinematography</h3>
+                <p class="text-muted text-xs" style="margin: 0 0 12px 0; line-height: 1.5;">
+                  Editorial photojournalism and twilight drone coverage for intimate destination celebrations across Val d'Orcia and Florence.
+                </p>
+
+                <div class="p-xs rounded-lg flex items-center justify-between" style="background: var(--color-champagne-light);">
+                  <div>
+                    <span class="text-muted text-xs block" style="font-size: 10px;">Starting Investment</span>
+                    <strong style="font-size: 16px; color: var(--color-espresso);">₹1,50,000</strong>
+                  </div>
+                  <div class="text-right">
+                    <span class="badge badge-accent" style="font-size: 10px;">Aria Match 94%</span>
+                    <span class="text-muted block" style="font-size: 9px; margin-top: 2px;">Includes Raw Reels</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="px-md pb-md flex items-center gap-xs">
+              <button class="btn btn-secondary flex-1 justify-center" style="font-size: 12px;" onclick="openVendorDrawer('Lumière Cinematography', 'Photography & Drone 4K', '₹1,50,000', 'Florence')">
+                View Details
+              </button>
+              <button class="btn btn-primary flex-1 justify-center" style="font-size: 12px;" onclick="openRFPModal('Lumière Cinematography')">
+                Request Quote
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <!-- MULTI-VENDOR RFP MODAL -->
+  <div class="modal" id="rfpModal" style="display: none;">
+    <div class="modal-content" style="max-width: 520px; padding: 32px;">
+      <div class="flex items-center justify-between pb-sm mb-md" style="border-bottom: 1px solid var(--color-champagne);">
+        <div>
+          <span class="section-tag">Direct Quotation Request</span>
+          <h3 class="font-serif" style="font-size: 20px; margin: 4px 0 0 0;" id="rfpTargetVendor">Request Multi-Vendor RFP</h3>
+        </div>
+        <button class="icon-btn" onclick="document.getElementById('rfpModal').style.display='none'">
+          <span class="material-symbols-outlined">close</span>
+        </button>
+      </div>
+
+      <form class="flex flex-col gap-sm" onsubmit="event.preventDefault(); document.getElementById('rfpModal').style.display='none'; App.toast('Bespoke RFP and date hold dispatched via EVARA Vault Concierge', 'celebration');">
+        <div class="form-group">
+          <label class="form-label">Event Scope</label>
+          <input type="text" class="form-input" value="Villa San Valentino Tuscan Gala 2025" readonly/>
+        </div>
+
+        <div class="grid grid-cols-2 gap-sm">
+          <div class="form-group">
+            <label class="form-label">Dates</label>
+            <input type="text" class="form-input" value="Oct 24–27, 2025" readonly/>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Headcount</label>
+            <input type="text" class="form-input" value="36 Guests" readonly/>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Bespoke Requirements / Notes</label>
+          <textarea class="form-input" rows="3" placeholder="Specify any dietary restrictions, lighting heights, or repertoire requirements..."></textarea>
+        </div>
+
+        <div class="flex items-center justify-end gap-sm mt-md pt-sm" style="border-top: 1px solid var(--color-champagne);">
+          <button type="button" class="btn btn-secondary" onclick="document.getElementById('rfpModal').style.display='none'">Cancel</button>
+          <button type="submit" class="btn btn-primary">Dispatch RFP</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- SCRIPTS -->
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+  <script src="../js/firebaseConfig.js"></script>
+  <script src="../js/storage.js"></script>
+  <script src="../js/app.js"></script>
+  <script src="../js/navigation.js"></script>
+  <script src="../js/vendors.js"></script>
+
+  <script>
+    let shortlistCountNum = 3;
+
+    async function toggleShortlist(btn, vendorName) {
+      const isFilled = btn.classList.contains('active');
+      const vendorId = btn.getAttribute('data-vendor-id') || vendorName.toLowerCase().replace(/[^a-z0-9]/g, '-');
+      if (isFilled) {
+        btn.classList.remove('active');
+        btn.querySelector('.material-symbols-outlined').style.color = 'var(--color-muted)';
+        shortlistCountNum = Math.max(0, shortlistCountNum - 1);
+        await Storage.toggleVendorShortlist(vendorId, false);
+        App.toast(`${vendorName} removed from shortlist`, 'favorite_border');
+      } else {
+        btn.classList.add('active');
+        btn.querySelector('.material-symbols-outlined').style.color = 'var(--color-terracotta)';
+        shortlistCountNum++;
+        await Storage.toggleVendorShortlist(vendorId, true);
+        App.toast(`${vendorName} added to shortlist!`, 'favorite');
+      }
+      document.getElementById('shortlistCount').textContent = shortlistCountNum;
+      document.getElementById('headerShortlistBadge').textContent = shortlistCountNum;
+    }
+
+    function openRFPModal(vendorName) {
+      document.getElementById('rfpTargetVendor').textContent = `Quote Request: ${vendorName}`;
+      document.getElementById('rfpModal').style.display = 'flex';
+    }
+
+    function openShortlistTray() {
+      App.toast(`You have ${shortlistCountNum} vendors in your active curation shortlist`, 'favorite');
+    }
+
+    function scrollToTopRecommendations() {
+      document.getElementById('topRecommendationsSection').scrollIntoView({ behavior: 'smooth' });
+    }
+
+    function openVendorDrawer(name, cat, price, loc) {
+      App.toast(`Opening portfolio & verified insurance certificate for ${name} (${loc})`, 'storefront');
+    }
+
+    function filterByCategory(cat) {
+      document.querySelectorAll('.category-pill').forEach(p => {
+        p.classList.toggle('badge-primary', p.getAttribute('data-cat') === cat);
+      });
+      document.querySelectorAll('.vendor-item').forEach(item => {
+        item.style.display = (cat === 'all' || item.getAttribute('data-category') === cat) ? '' : 'none';
+      });
+      App.toast(`Filtered by category: ${cat}`, 'filter_list');
+    }
+
+    document.querySelectorAll('.category-pill').forEach(pill => {
+      pill.addEventListener('click', () => {
+        filterByCategory(pill.getAttribute('data-cat'));
+      });
+    });
+
+    document.getElementById('vendorSearchInput').addEventListener('input', (e) => {
+      const q = e.target.value.toLowerCase().trim();
+      document.querySelectorAll('.vendor-item').forEach(item => {
+        item.style.display = item.textContent.toLowerCase().includes(q) ? '' : 'none';
+      });
+    });
+  </script>
+</body>
+</html>

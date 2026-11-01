@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>Profile &amp; Host Settings — EVARA</title>
+  <link rel="stylesheet" href="../css/variables.css"/>
+  <link rel="stylesheet" href="../css/global.css"/>
+  <link rel="stylesheet" href="../css/layout.css"/>
+  <link rel="stylesheet" href="../css/components.css"/>
+  <link rel="stylesheet" href="../css/responsive.css"/>
+  <link rel="stylesheet" href="../css/pages/dashboard.css"/>
+  <link rel="icon" type="image/svg+xml" href="../assets/icons/evara-monogram.svg"/>
+</head>
+<body class="bg-[#F8F4EF]">
+  <div class="app-shell">
+    <aside class="app-sidebar">
+      <div class="sidebar-header">
+        <a href="../index.html" class="brand-lockup">
+          <div class="brand-monogram">
+            <svg viewBox="0 0 60 60" width="22" height="22" fill="none"><path d="M18 17 H42 C44 17 45 18 45 20 C45 22 44 23 42 23 H24 V28 H38 C40 28 41 29 41 30.5 C41 32 40 33 38 33 H24 V37 H43 C45 37 46 38 46 40 C46 42 45 43 43 43 H18 C16.5 43 15.5 42 15.5 40.5 V19.5 C15.5 18 16.5 17 18 17 Z" fill="#E9D8C8"/></svg>
+          </div>
+          <div class="brand-text">
+            <span class="brand-name">EVARA</span>
+            <span class="brand-tagline">Private Concierge</span>
+          </div>
+        </a>
+      </div>
+      <div class="sidebar-nav">
+        <span class="nav-section-title">Navigation</span>
+        <a href="../dashboard.html" class="nav-item"><span class="material-symbols-outlined">grid_view</span><span>Dashboard</span></a>
+        <a href="notifications.html" class="nav-item"><span class="material-symbols-outlined">notifications</span><span>Notifications</span></a>
+        <a href="profile-settings.html" class="nav-item active"><span class="material-symbols-outlined">settings</span><span>Profile &amp; Settings</span></a>
+      </div>
+    </aside>
+
+    <div class="app-main">
+      <header class="app-header">
+        <h2 class="font-bold text-base" style="margin: 0;">Host Profile &amp; Atelier Security</h2>
+        <a href="../dashboard.html" class="btn btn-secondary btn-sm">Return to Dashboard</a>
+      </header>
+
+      <main class="content-wrapper">
+        <div class="mb-lg">
+          <h1 class="font-headline-lg" style="margin: 0 0 4px;">Host Credentials &amp; Escrow Security</h1>
+          <p class="font-body-md text-muted" style="margin: 0;">Manage your private credentials, banking gateway, and Aria concierge model parameters.</p>
+        </div>
+
+        <div class="grid grid-cols-12 gap-md">
+          <div class="col-span-8 card p-lg" style="background: white; border: 1px solid var(--color-champagne);">
+            <h3 class="font-bold text-base mb-md" style="margin: 0;">Principal Host Details</h3>
+            
+            <form id="hostProfileForm" onsubmit="handleProfileSubmit(event)">
+              <div class="grid grid-cols-2 gap-sm mb-sm">
+                <div>
+                  <label class="form-label">Full Name</label>
+                  <input type="text" id="hostFullName" class="form-input" value="Eleanor Vance" required/>
+                </div>
+                <div>
+                  <label class="form-label">Title / Role</label>
+                  <input type="text" id="hostTitle" class="form-input" value="Principal Host &amp; Patron" required/>
+                </div>
+              </div>
+
+              <div class="grid grid-cols-2 gap-sm mb-md">
+                <div>
+                  <label class="form-label">Verified Email</label>
+                  <input type="email" id="hostEmail" class="form-input" value="eleanor.vance@atelier.com" required/>
+                </div>
+                <div>
+                  <label class="form-label">WhatsApp Concierge</label>
+                  <input type="text" id="hostPhone" class="form-input" value="+39 340 9823412" required/>
+                </div>
+              </div>
+
+              <div class="pt-sm flex justify-end" style="border-top: 1px solid var(--color-champagne-light);">
+                <button type="submit" class="btn btn-primary">Save Changes</button>
+              </div>
+            </form>
+          </div>
+
+          <div class="col-span-4 card p-lg flex flex-col justify-between" style="background: white; border: 1px solid var(--color-champagne);">
+            <div>
+              <div class="w-12 h-12 rounded-full flex items-center justify-center font-bold text-lg mb-sm" id="hostCardAvatar" style="background: var(--color-mocha); color: white;">EV</div>
+              <h3 class="font-bold text-base" id="hostCardName" style="margin: 0 0 2px;">Eleanor Vance</h3>
+              <span class="text-xs text-muted block mb-md" id="hostCardSub">Host ID: #EV-77291 • Italian Banking KYC Verified</span>
+
+              <div class="p-sm rounded-lg" style="background: var(--color-champagne-light);">
+                <div class="flex items-center gap-xs font-bold text-xs" style="color: var(--color-espresso);">
+                  <span class="material-symbols-outlined text-sm" style="color: var(--color-terracotta);">lock</span>
+                  <span>AES-256 Escrow Protected</span>
+                </div>
+                <p class="text-muted mt-xs" style="font-size: 11px; margin: 0;">Multi-signature banking authorization enabled for all tranches exceeding ₹5,00,000.</p>
+              </div>
+            </div>
+
+            <button class="btn btn-subtle btn-xs btn-full mt-md" onclick="handleLogout()">Sign Out of Session</button>
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+  <script src="../js/firebaseConfig.js"></script>
+  <script src="../js/storage.js"></script>
+  <script src="../js/app.js"></script>
+  <script src="../js/auth.js"></script>
+  <script src="../js/navigation.js"></script>
+  <script>
+    function loadProfile() {
+      const user = Storage.get(STORAGE_KEYS.USER, DEFAULT_USER);
+      if (user) {
+        if (document.getElementById('hostFullName')) document.getElementById('hostFullName').value = user.name || user.displayName || 'Eleanor Vance';
+        if (document.getElementById('hostTitle')) document.getElementById('hostTitle').value = user.title || user.role || 'Principal Host & Patron';
+        if (document.getElementById('hostEmail')) document.getElementById('hostEmail').value = user.email || 'eleanor.vance@atelier.com';
+        if (document.getElementById('hostPhone')) document.getElementById('hostPhone').value = user.phone || '+39 340 9823412';
+        if (document.getElementById('hostCardName')) document.getElementById('hostCardName').textContent = user.name || user.displayName || 'Eleanor Vance';
+        if (document.getElementById('hostCardAvatar')) {
+          const n = user.name || user.displayName || 'EV';
+          document.getElementById('hostCardAvatar').textContent = n.split(' ').map(s=>s[0]).slice(0, 2).join('');
+        }
+      }
+    }
+
+    async function handleProfileSubmit(e) {
+      e.preventDefault();
+      const name = document.getElementById('hostFullName')?.value?.trim();
+      const title = document.getElementById('hostTitle')?.value?.trim();
+      const email = document.getElementById('hostEmail')?.value?.trim();
+      const phone = document.getElementById('hostPhone')?.value?.trim();
+
+      await handleUpdateProfile(name, title, email, phone);
+      loadProfile();
+    }
+
+    Storage.subscribe(STORAGE_KEYS.USER, loadProfile);
+    document.addEventListener('DOMContentLoaded', loadProfile);
+  </script>
+</body>
+</html>

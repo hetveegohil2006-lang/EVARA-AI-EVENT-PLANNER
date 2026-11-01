@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>Aria AI Concierge — Villa San Valentino Gala — EVARA</title>
+  <meta name="description" content="Intelligent event-planning companion synchronized with estate ecosystem, ledger, and guest registry."/>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+  
+  <link rel="stylesheet" href="../css/variables.css"/>
+  <link rel="stylesheet" href="../css/global.css"/>
+  <link rel="stylesheet" href="../css/layout.css"/>
+  <link rel="stylesheet" href="../css/components.css"/>
+  <link rel="stylesheet" href="../css/responsive.css"/>
+  <link rel="stylesheet" href="../css/pages/other-pages.css"/>
+  <link rel="stylesheet" href="../css/pages/events.css"/>
+  <link rel="icon" type="image/svg+xml" href="../assets/icons/evara-monogram.svg"/>
+</head>
+<body class="bg-[#F8F4EF]">
+  <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle navigation">
+    <span class="material-symbols-outlined">menu</span>
+  </button>
+  <div class="sidebar-backdrop" id="sidebarBackdrop"></div>
+
+  <!-- FIXED EVENT-SCOPED SIDEBAR -->
+  <aside class="sidebar">
+    <div class="px-md pt-lg pb-sm">
+      <a href="../dashboard.html" class="flex items-center gap-xs text-muted hover:text-primary" style="font-size: 13px; font-weight: 600; text-decoration: none;">
+        <span class="material-symbols-outlined" style="font-size: 16px;">arrow_back</span>
+        <span>Back to All Events</span>
+      </a>
+    </div>
+
+    <div class="px-md pb-sm">
+      <div class="p-sm rounded-lg" style="background: var(--color-champagne-light); border: 1px solid var(--color-champagne);">
+        <span class="text-xs uppercase text-muted font-bold tracking-wider block" style="font-size: 10px;">Workspace Scope</span>
+        <span class="font-bold text-sm truncate block" style="color: var(--color-espresso);">Tuscan Gala 2025</span>
+      </div>
+    </div>
+
+    <div class="px-md py-xs">
+      <span class="text-xs uppercase text-muted font-bold tracking-wider block" style="font-size: 10px;">Navigation Modules</span>
+    </div>
+
+    <nav class="flex-1 px-sm space-y-0.5 overflow-y-auto">
+      <a href="event-overview.html" class="nav-link"><span class="material-symbols-outlined">dashboard</span><span>Overview</span></a>
+      <a href="checklist.html" class="nav-link"><span class="material-symbols-outlined">checklist</span><span>Timeline &amp; Tasks</span></a>
+      <a href="budget.html" class="nav-link"><span class="material-symbols-outlined">account_balance_wallet</span><span>Budget Ledger</span></a>
+      <a href="payments.html" class="nav-link"><span class="material-symbols-outlined">payments</span><span>Payments &amp; QR</span></a>
+      <a href="vendors.html" class="nav-link"><span class="material-symbols-outlined">storefront</span><span>Artisan Directory</span></a>
+      <a href="shopping.html" class="nav-link"><span class="material-symbols-outlined">shopping_bag</span><span>Shopping Assistant</span></a>
+      <a href="guests.html" class="nav-link"><span class="material-symbols-outlined">how_to_reg</span><span>Guest Directory</span></a>
+      <a href="invitations.html" class="nav-link"><span class="material-symbols-outlined">mark_email_read</span><span>Invitation Designer</span></a>
+      <a href="team-chat.html" class="nav-link"><span class="material-symbols-outlined">forum</span><span>Team Chat</span></a>
+      <a href="ai-assistant.html" class="nav-link active"><span class="material-symbols-outlined" style="color: var(--color-terracotta);">auto_awesome</span><span>AI Concierge</span></a>
+      <a href="reports.html" class="nav-link"><span class="material-symbols-outlined">lab_profile</span><span>Reports &amp; Exports</span></a>
+    </nav>
+
+    <div class="p-md border-t border-champagne">
+      <div class="p-sm rounded-lg flex items-center justify-between" style="background: var(--color-champagne-light);">
+        <div class="flex items-center gap-xs">
+          <span class="material-symbols-outlined text-sm" style="color: var(--color-terracotta);">auto_awesome</span>
+          <div>
+            <span class="font-bold text-xs block leading-tight">Concierge AI v2.4</span>
+            <span class="text-xs text-muted block" style="font-size: 10px;">Private Model Active</span>
+          </div>
+        </div>
+        <div class="status-dot status-dot-active"></div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- MAIN APP CONTAINER -->
+  <div class="app-main">
+    <header class="app-header">
+      <div class="flex items-center gap-md">
+        <button class="flex items-center gap-xs p-xs rounded-lg hover:bg-surface transition-colors" style="border: 1px solid var(--color-champagne);">
+          <div>
+            <div class="flex items-center gap-xs">
+              <span class="font-bold text-sm" style="color: var(--color-espresso);">Villa San Valentino Tuscan Gala 2025</span>
+              <span class="material-symbols-outlined text-sm text-muted">expand_more</span>
+            </div>
+            <span class="text-xs text-muted block text-left">Oct 24–27, 2025</span>
+          </div>
+          <span class="badge badge-gold" style="font-size: 10px; margin-left: 0.5rem;">Planning Active</span>
+        </button>
+      </div>
+
+      <div class="flex-1 max-w-md hidden md:block">
+        <div class="header-search">
+          <span class="material-symbols-outlined">search</span>
+          <input type="text" placeholder="Ask Aria anything about Gala budget, guests, timing..."/>
+        </div>
+      </div>
+
+      <div class="flex items-center gap-sm">
+        <div class="currency-pill">
+          <span class="material-symbols-outlined text-sm">payments</span>
+          <span>INR (₹)</span>
+        </div>
+        <a href="notifications.html" class="icon-btn" aria-label="Notifications">
+          <span class="material-symbols-outlined">notifications</span>
+          <span class="notification-badge"></span>
+        </a>
+        <div class="header-divider"></div>
+        <a href="profile-settings.html" class="flex items-center gap-xs" style="text-decoration: none;">
+          <div class="text-right hidden xl:block">
+            <span class="font-bold text-xs block leading-tight" style="color: var(--color-espresso);">Eleanor Vance</span>
+            <span class="text-xs text-muted block" style="font-size: 11px;">Principal Host</span>
+          </div>
+          <div class="user-avatar"><span class="material-symbols-outlined">person</span></div>
+        </a>
+      </div>
+    </header>
+
+    <main class="content-wrapper">
+      <!-- Ambient AI Banner -->
+      <div class="card p-lg mb-lg flex flex-col lg:flex-row lg:items-end justify-between gap-md" style="background: white; border: 1px solid var(--color-champagne); position: relative; overflow: hidden;">
+        <div class="max-w-2xl">
+          <div class="inline-flex items-center gap-xs px-sm py-xs rounded-full mb-xs" style="background: var(--color-champagne-light);">
+            <span class="status-dot status-dot-active"></span>
+            <span class="text-xs uppercase tracking-widest font-bold" style="color: var(--color-terracotta); font-size: 10px;">Concierge Intelligence 2.4 • Private Neural Model</span>
+          </div>
+          <h1 class="font-headline-lg" style="margin: 0 0 0.25rem;">Meet Aria — Your EVARA AI Concierge</h1>
+          <p class="font-body-md text-muted" style="margin: 0;">
+            Your intelligent luxury event-planning companion, synchronized across your private estate ecosystem, financial ledger, and guest registry.
+          </p>
+        </div>
+
+        <!-- Persona Switcher -->
+        <div class="flex items-center gap-xs p-xs rounded-xl" style="background: var(--color-champagne-light);">
+          <button class="btn btn-primary btn-sm flex items-center gap-xs" id="ariaPersonaBtn" onclick="setAiPersona('Aria')">
+            <span class="material-symbols-outlined text-sm">auto_awesome</span>
+            <span class="text-left font-bold text-xs">Aria (Poetic Atelier)</span>
+          </button>
+          <button class="btn btn-subtle btn-sm flex items-center gap-xs" id="julianPersonaBtn" onclick="setAiPersona('Julian')">
+            <span class="material-symbols-outlined text-sm">engineering</span>
+            <span class="text-left font-bold text-xs">Julian (Logistics &amp; Ops)</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Real-time Synced Telemetry Strip -->
+      <div class="grid grid-cols-4 gap-md mb-lg">
+        <div class="card p-md flex flex-col justify-between" style="background: white;">
+          <div class="flex items-center justify-between">
+            <span class="text-xs uppercase tracking-wider text-muted font-bold">Liquid Contingency</span>
+            <span class="material-symbols-outlined text-sm" style="color: var(--color-mocha);">account_balance_wallet</span>
+          </div>
+          <div class="mt-xs">
+            <span class="font-bold text-base" style="color: var(--color-espresso);">₹4,55,000</span>
+            <span class="text-xs text-muted">/ ₹15,00,000</span>
+            <div style="width: 100%; height: 6px; background: var(--color-champagne-light); border-radius: 999px; overflow: hidden; margin-top: 6px;">
+              <div style="width: 30%; height: 100%; background: var(--color-mocha);"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card p-md flex flex-col justify-between" style="background: white;">
+          <div class="flex items-center justify-between">
+            <span class="text-xs uppercase tracking-wider text-muted font-bold">Patron Roster</span>
+            <span class="material-symbols-outlined text-sm" style="color: var(--color-terracotta);">how_to_reg</span>
+          </div>
+          <div class="mt-xs">
+            <span class="font-bold text-base" style="color: var(--color-espresso);">40 / 42 RSVP</span>
+            <span class="text-xs text-muted block" style="font-size: 11px;">88% dietary verified</span>
+          </div>
+        </div>
+
+        <div class="card p-md flex flex-col justify-between" style="background: white;">
+          <div class="flex items-center justify-between">
+            <span class="text-xs uppercase tracking-wider text-muted font-bold">Task Run-Sheet</span>
+            <span class="material-symbols-outlined text-sm" style="color: var(--color-mocha);">checklist</span>
+          </div>
+          <div class="mt-xs">
+            <span class="font-bold text-base" style="color: var(--color-espresso);">18 / 24 Completed</span>
+            <span class="text-xs text-muted block" style="font-size: 11px;">Velocity: +12% on schedule</span>
+          </div>
+        </div>
+
+        <div class="card p-md flex flex-col justify-between" style="background: white;">
+          <div class="flex items-center justify-between">
+            <span class="text-xs uppercase tracking-wider text-muted font-bold">Artisan Contracts</span>
+            <span class="material-symbols-outlined text-sm" style="color: var(--color-terracotta);">storefront</span>
+          </div>
+          <div class="mt-xs">
+            <span class="font-bold text-base" style="color: var(--color-espresso);">4 Locked &amp; Escrowed</span>
+            <span class="text-xs text-muted block" style="font-size: 11px;">Florence Sommelier, Chianti Strings</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Dedicated AI Chat Interface -->
+      <div class="card p-0 flex flex-col justify-between overflow-hidden" style="background: white; border: 1px solid var(--color-champagne); height: 500px;">
+        <div class="p-sm flex items-center justify-between" style="background: var(--color-champagne-light); border-bottom: 1px solid var(--color-champagne);">
+          <div class="flex items-center gap-xs">
+            <span class="material-symbols-outlined text-sm" style="color: var(--color-terracotta);">auto_awesome</span>
+            <span class="font-bold text-sm" id="chatPersonaLabel">Aria — Private Atelier Concierge</span>
+          </div>
+          <span class="badge badge-gold" style="font-size: 10px;">Context Window: 32K Tokens Synced</span>
+        </div>
+
+        <!-- Chat Stream -->
+        <div class="p-lg space-y-md overflow-y-auto flex-1" id="assistantMessages">
+          <div class="flex items-start gap-sm">
+            <div class="w-9 h-9 rounded-full flex items-center justify-center font-bold text-xs" style="background: var(--color-espresso); color: var(--color-champagne);">ARIA</div>
+            <div class="p-md rounded-2xl font-body-md text-sm" style="background: var(--color-champagne-light); max-width: 600px; line-height: 1.6; color: var(--color-espresso);">
+              Good evening, Eleanor. I have calibrated all 5 milestone phases for the <strong>Villa San Valentino Tuscan Gala</strong>. 
+              Your master budget is operating smoothly with ₹4,55,000 liquid headroom, and 40 out of 42 patrons have settled their escrow tranches. 
+              How may I assist your curation tonight?
+            </div>
+          </div>
+        </div>
+
+        <!-- Suggested Prompt Chips & Send Input -->
+        <div class="p-md" style="border-top: 1px solid var(--color-champagne); background: var(--surface);">
+          <div class="flex items-center gap-xs overflow-x-auto pb-sm">
+            <button class="px-sm py-xs rounded-full bg-white text-xs font-semibold hover:bg-surface-container" style="border: 1px solid var(--color-champagne);" onclick="quickPrompt('Summarize our unallocated supplies buffer and immediate vendor deadlines.')">
+              "Summarize supplies buffer &amp; deadlines"
+            </button>
+            <button class="px-sm py-xs rounded-full bg-white text-xs font-semibold hover:bg-surface-container" style="border: 1px solid var(--color-champagne);" onclick="quickPrompt('Draft a polite reminder message to the 4 pending VIP guests.')">
+              "Draft VIP RSVP reminder"
+            </button>
+            <button class="px-sm py-xs rounded-full bg-white text-xs font-semibold hover:bg-surface-container" style="border: 1px solid var(--color-champagne);" onclick="quickPrompt('Compare Blinkit vs Amazon delivery times for festoon lights.')">
+              "Blinkit vs Amazon delivery comparison"
+            </button>
+          </div>
+
+          <form class="flex items-center gap-xs" onsubmit="sendAssistantMessage(event)">
+            <input type="text" id="assistantInput" class="form-input flex-1" placeholder="Instruct Aria to draft wording, calculate splits, or inspect vendors..." required/>
+            <button type="submit" class="btn btn-primary"><span class="material-symbols-outlined text-sm">send</span></button>
+          </form>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+  <script src="../js/firebaseConfig.js"></script>
+  <script src="../js/storage.js"></script>
+  <script src="../js/app.js"></script>
+  <script src="../js/navigation.js"></script>
+  <script src="../js/assistant.js"></script>
+
+  <script>
+    let activePersona = 'Aria';
+
+    function setAiPersona(p) {
+      activePersona = p;
+      if (p === 'Aria') {
+        document.getElementById('ariaPersonaBtn').className = 'btn btn-primary btn-sm flex items-center gap-xs';
+        document.getElementById('julianPersonaBtn').className = 'btn btn-subtle btn-sm flex items-center gap-xs';
+        document.getElementById('chatPersonaLabel').textContent = 'Aria — Private Atelier Concierge';
+        App.toast('Switched to Aria (Poetic & Executive Concierge)', 'auto_awesome');
+      } else {
+        document.getElementById('ariaPersonaBtn').className = 'btn btn-subtle btn-sm flex items-center gap-xs';
+        document.getElementById('julianPersonaBtn').className = 'btn btn-primary btn-sm flex items-center gap-xs';
+        document.getElementById('chatPersonaLabel').textContent = 'Julian — Operations & Logistics Specialist';
+        App.toast('Switched to Julian (Ops & Logistics Agent)', 'engineering');
+      }
+    }
+
+    function quickPrompt(text) {
+      document.getElementById('assistantInput').value = text;
+      document.getElementById('assistantInput').focus();
+    }
+
+    function sendAssistantMessage(e) {
+      e.preventDefault();
+      const input = document.getElementById('assistantInput');
+      const text = input.value.trim();
+      if (!text) return;
+
+      const userHtml = `
+        <div class="flex items-start justify-end gap-sm">
+          <div class="p-md rounded-2xl font-body-md text-sm text-right" style="background: var(--color-mocha); color: white; max-width: 550px; line-height: 1.5;">
+            ${text}
+          </div>
+          <div class="w-9 h-9 rounded-full flex items-center justify-center font-bold text-xs" style="background: var(--color-champagne); color: var(--color-mocha);">EV</div>
+        </div>
+      `;
+      document.getElementById('assistantMessages').insertAdjacentHTML('beforeend', userHtml);
+      input.value = '';
+
+      setTimeout(() => {
+        const reply = activePersona === 'Aria' 
+          ? `I have updated your Villa San Valentino parameters. Both the master ledger and guest registry reflect your instructions. Unallocated supplies buffer remains secure at ₹45,000.`
+          : `Logistics confirmed: Route clearance scheduled. All vehicle manifests cross-checked with the Florence gate authority.`;
+
+        const aiHtml = `
+          <div class="flex items-start gap-sm">
+            <div class="w-9 h-9 rounded-full flex items-center justify-center font-bold text-xs" style="background: var(--color-espresso); color: var(--color-champagne);">${activePersona === 'Aria' ? 'ARIA' : 'JUL'}</div>
+            <div class="p-md rounded-2xl font-body-md text-sm" style="background: var(--color-champagne-light); max-width: 600px; line-height: 1.6; color: var(--color-espresso);">
+              ${reply}
+            </div>
+          </div>
+        `;
+        document.getElementById('assistantMessages').insertAdjacentHTML('beforeend', aiHtml);
+        document.getElementById('assistantMessages').scrollTop = document.getElementById('assistantMessages').scrollHeight;
+      }, 700);
+    }
+  </script>
+</body>
+</html>

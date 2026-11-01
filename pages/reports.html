@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>Reports &amp; Exports — Villa San Valentino Gala — EVARA</title>
+  <meta name="description" content="Executive audit summaries, reconciliation reports, and verified PDF / CSV data exports."/>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+  
+  <link rel="stylesheet" href="../css/variables.css"/>
+  <link rel="stylesheet" href="../css/global.css"/>
+  <link rel="stylesheet" href="../css/layout.css"/>
+  <link rel="stylesheet" href="../css/components.css"/>
+  <link rel="stylesheet" href="../css/responsive.css"/>
+  <link rel="stylesheet" href="../css/pages/other-pages.css"/>
+  <link rel="stylesheet" href="../css/pages/events.css"/>
+  <link rel="icon" type="image/svg+xml" href="../assets/icons/evara-monogram.svg"/>
+</head>
+<body class="bg-[#F8F4EF]">
+  <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle navigation">
+    <span class="material-symbols-outlined">menu</span>
+  </button>
+  <div class="sidebar-backdrop" id="sidebarBackdrop"></div>
+
+  <aside class="sidebar">
+    <div class="px-md pt-lg pb-sm">
+      <a href="../dashboard.html" class="flex items-center gap-xs text-muted hover:text-primary" style="font-size: 13px; font-weight: 600; text-decoration: none;">
+        <span class="material-symbols-outlined" style="font-size: 16px;">arrow_back</span>
+        <span>Back to All Events</span>
+      </a>
+    </div>
+
+    <div class="px-md pb-sm">
+      <div class="p-sm rounded-lg" style="background: var(--color-champagne-light); border: 1px solid var(--color-champagne);">
+        <span class="text-xs uppercase text-muted font-bold tracking-wider block" style="font-size: 10px;">Workspace Scope</span>
+        <span class="font-bold text-sm truncate block" style="color: var(--color-espresso);">Tuscan Gala 2025</span>
+      </div>
+    </div>
+
+    <div class="px-md py-xs">
+      <span class="text-xs uppercase text-muted font-bold tracking-wider block" style="font-size: 10px;">Navigation Modules</span>
+    </div>
+
+    <nav class="flex-1 px-sm space-y-0.5 overflow-y-auto">
+      <a href="event-overview.html" class="nav-link"><span class="material-symbols-outlined">dashboard</span><span>Overview</span></a>
+      <a href="checklist.html" class="nav-link"><span class="material-symbols-outlined">checklist</span><span>Timeline &amp; Tasks</span></a>
+      <a href="budget.html" class="nav-link"><span class="material-symbols-outlined">account_balance_wallet</span><span>Budget Ledger</span></a>
+      <a href="payments.html" class="nav-link"><span class="material-symbols-outlined">payments</span><span>Payments &amp; QR</span></a>
+      <a href="vendors.html" class="nav-link"><span class="material-symbols-outlined">storefront</span><span>Artisan Directory</span></a>
+      <a href="shopping.html" class="nav-link"><span class="material-symbols-outlined">shopping_bag</span><span>Shopping Assistant</span></a>
+      <a href="guests.html" class="nav-link"><span class="material-symbols-outlined">how_to_reg</span><span>Guest Directory</span></a>
+      <a href="invitations.html" class="nav-link"><span class="material-symbols-outlined">mark_email_read</span><span>Invitation Designer</span></a>
+      <a href="team-chat.html" class="nav-link"><span class="material-symbols-outlined">forum</span><span>Team Chat</span></a>
+      <a href="ai-assistant.html" class="nav-link"><span class="material-symbols-outlined" style="color: var(--color-terracotta);">auto_awesome</span><span>AI Concierge</span></a>
+      <a href="reports.html" class="nav-link active"><span class="material-symbols-outlined">lab_profile</span><span>Reports &amp; Exports</span></a>
+    </nav>
+  </aside>
+
+  <div class="app-main">
+    <header class="app-header">
+      <div class="flex items-center gap-md">
+        <button class="flex items-center gap-xs p-xs rounded-lg hover:bg-surface transition-colors" style="border: 1px solid var(--color-champagne);">
+          <div>
+            <div class="flex items-center gap-xs">
+              <span class="font-bold text-sm" style="color: var(--color-espresso);">Villa San Valentino Tuscan Gala 2025</span>
+              <span class="material-symbols-outlined text-sm text-muted">expand_more</span>
+            </div>
+            <span class="text-xs text-muted block text-left">Oct 24–27, 2025</span>
+          </div>
+          <span class="badge badge-gold" style="font-size: 10px; margin-left: 0.5rem;">Planning Active</span>
+        </button>
+      </div>
+      <div class="flex items-center gap-sm">
+        <div class="currency-pill"><span class="material-symbols-outlined text-sm">payments</span><span>INR (₹)</span></div>
+        <a href="notifications.html" class="icon-btn" aria-label="Notifications"><span class="material-symbols-outlined">notifications</span></a>
+      </div>
+    </header>
+
+    <main class="content-wrapper">
+      <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-md mb-lg">
+        <div>
+          <div class="inline-flex items-center gap-xs px-sm py-xs rounded-full mb-xs" style="background: var(--color-champagne-light);">
+            <span class="status-dot status-dot-active"></span>
+            <span class="text-xs uppercase tracking-widest font-bold" style="color: var(--color-espresso); font-size: 10px;">Executive Financial Audit</span>
+          </div>
+          <h1 class="font-headline-lg" style="margin: 0 0 0.25rem;">Reports &amp; Data Exports</h1>
+          <p class="font-body-md text-muted" style="margin: 0;">
+            Download certified audit packages, member expense statements, and comprehensive vendor ledger sheets.
+          </p>
+        </div>
+
+        <button class="btn btn-primary btn-sm" onclick="App.toast('Compiling Full Executive PDF Dossier...', 'picture_as_pdf')">
+          <span class="material-symbols-outlined text-sm">picture_as_pdf</span>
+          <span>Download Master Dossier</span>
+        </button>
+      </div>
+
+      <!-- Export Cards -->
+      <div class="grid grid-cols-3 gap-md mb-lg">
+        <div class="card p-lg flex flex-col justify-between" style="background: white; border: 1px solid var(--color-champagne);">
+          <div>
+            <div class="w-10 h-10 rounded-lg flex items-center justify-center mb-sm" style="background: var(--color-champagne-light); color: var(--color-mocha);">
+              <span class="material-symbols-outlined">table_view</span>
+            </div>
+            <h3 class="font-bold text-base" style="margin: 0 0 4px;">General Ledger (CSV)</h3>
+            <p class="text-xs text-muted">Complete breakdown of all 24 line-item expenses with bank UTRs and tax invoices.</p>
+          </div>
+          <button class="btn btn-secondary btn-full btn-sm mt-md" onclick="ReportsController.exportCSV('financial')">Export CSV</button>
+        </div>
+
+        <div class="card p-lg flex flex-col justify-between" style="background: white; border: 1px solid var(--color-champagne);">
+          <div>
+            <div class="w-10 h-10 rounded-lg flex items-center justify-center mb-sm" style="background: var(--color-champagne-light); color: var(--color-terracotta);">
+              <span class="material-symbols-outlined">how_to_reg</span>
+            </div>
+            <h3 class="font-bold text-base" style="margin: 0 0 4px;">Patron Attendance Manifest</h3>
+            <p class="text-xs text-muted">42 invited patrons, dietary restrictions, arrival gate timestamps, and room keys.</p>
+          </div>
+          <button class="btn btn-secondary btn-full btn-sm mt-md" onclick="ReportsController.exportCSV('guests')">Export Excel / CSV</button>
+        </div>
+
+        <div class="card p-lg flex flex-col justify-between" style="background: white; border: 1px solid var(--color-champagne);">
+          <div>
+            <div class="w-10 h-10 rounded-lg flex items-center justify-center mb-sm" style="background: var(--color-champagne-light); color: var(--color-espresso);">
+              <span class="material-symbols-outlined">receipt_long</span>
+            </div>
+            <h3 class="font-bold text-base" style="margin: 0 0 4px;">Escrow Settlement Certificate</h3>
+            <p class="text-xs text-muted">Signed cryptographic verification of ₹14,99,976 settled funds in Italian escrow.</p>
+          </div>
+          <button class="btn btn-secondary btn-full btn-sm mt-md" onclick="App.toast('Certified Escrow Settlement Statement generated', 'verified_user')">Export PDF</button>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+  <script src="../js/firebaseConfig.js"></script>
+  <script src="../js/storage.js"></script>
+  <script src="../js/app.js"></script>
+  <script src="../js/navigation.js"></script>
+  <script src="../js/reports.js"></script>
+</body>
+</html>

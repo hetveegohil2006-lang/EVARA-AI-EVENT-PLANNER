@@ -1,0 +1,179 @@
+/* ==========================================================================
+   EVARA — EVENTS & CREATION PIPELINE STYLES
+   ========================================================================== */
+
+/* Stepper Bar Top */
+.creation-stepper-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.25rem 1.5rem;
+  background-color: var(--surface-container-low);
+  border-radius: var(--radius-xl);
+  border: 1px solid rgba(233, 216, 200, 0.7);
+  box-shadow: var(--shadow-sm);
+  margin-bottom: var(--space-lg);
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.step-node {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.step-badge {
+  width: 32px;
+  height: 32px;
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 13px;
+  background-color: var(--surface-container-high);
+  color: var(--on-surface-variant);
+}
+
+.step-node.active .step-badge {
+  background-color: var(--color-terracotta);
+  color: var(--color-white);
+  box-shadow: 0 0 0 4px rgba(233, 216, 200, 0.8);
+}
+
+.step-node.completed .step-badge {
+  background-color: var(--secondary);
+  color: var(--color-white);
+}
+
+.step-connector-line {
+  height: 2px;
+  width: 48px;
+  background-color: var(--outline-variant);
+}
+
+@media (max-width: 900px) {
+  .step-connector-line {
+    display: none;
+  }
+}
+
+/* Event Overview Quick Stats Grid */
+.metric-bento-card {
+  padding: 1.25rem;
+  background-color: var(--surface-container-lowest);
+  border: 1px solid var(--color-champagne);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all var(--transition-fast);
+}
+
+.metric-bento-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--color-terracotta);
+}
+
+.metric-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+  font-size: 11.5px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--outline);
+}
+
+.metric-value {
+  font-family: var(--font-serif);
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--on-surface);
+  line-height: 1.2;
+}
+
+.metric-caption {
+  font-size: 12px;
+  color: var(--on-surface-variant);
+  margin-top: 4px;
+}
+
+/* Timeline & Checklist */
+.timeline-item {
+  position: relative;
+  padding-left: 2.25rem;
+  padding-bottom: 2rem;
+}
+
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: 11px;
+  top: 24px;
+  bottom: 0;
+  width: 2px;
+  background-color: var(--surface-container-highest);
+}
+
+.timeline-item:last-child::before {
+  display: none;
+}
+
+.timeline-dot {
+  position: absolute;
+  left: 0;
+  top: 2px;
+  width: 24px;
+  height: 24px;
+  border-radius: var(--radius-full);
+  background-color: var(--surface-container-high);
+  border: 2px solid var(--surface-container-lowest);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary);
+}
+
+.timeline-item.done .timeline-dot {
+  background-color: var(--success);
+  color: white;
+}
+
+.timeline-item.active .timeline-dot {
+  background-color: var(--color-terracotta);
+  color: white;
+  box-shadow: 0 0 0 4px rgba(184, 141, 114, 0.2);
+}
+
+/* Task Checkbox Row */
+.task-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.85rem 1rem;
+  background-color: var(--surface-container-lowest);
+  border: 1px solid var(--color-champagne);
+  border-radius: var(--radius-lg);
+  margin-bottom: 0.5rem;
+  transition: all var(--transition-fast);
+}
+
+.task-row:hover {
+  background-color: var(--surface-container-low);
+  border-color: var(--color-terracotta);
+}
+
+.task-row.completed {
+  opacity: 0.65;
+  background-color: var(--surface-container-low);
+}
+
+.task-row.completed .task-title {
+  text-decoration: line-through;
+}

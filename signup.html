@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Create Account — EVARA Private Concierge</title>
+  <link rel="stylesheet" href="css/variables.css" />
+  <link rel="stylesheet" href="css/global.css" />
+  <link rel="stylesheet" href="css/layout.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+  <link rel="icon" type="image/svg+xml" href="assets/icons/evara-monogram.svg" />
+</head>
+<body class="bg-surface">
+
+  <div style="min-height: 100vh; display: flex; flex-direction: column;" class="lg:flex-row">
+    <!-- LEFT SIDE: Cinematic Visual Hero -->
+    <div style="position: relative; flex: 1; min-height: 500px; display: flex; flex-direction: column; justify-content: space-between; padding: 3rem; overflow: hidden; background-color: var(--inverse-surface); order: 2;" class="lg:order-1">
+      <div style="position: absolute; inset: 0; background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDCoKIpmSrrmsUFK_KkwTgrenPcK6xN8dftD0pCZki6MlCA-zpnmlyCA1huwW94isQsNfPr-8VWXyhUhXDcMrTninx_dRD7-gXKBUsRxq6WlRybJcgGpzrKM1PtyawAGf_Dv9ys8VSZ7P43VYgOkoGwr7r68YLnZHzN-HnTrXrizLX7Evsi_WUSF--Bq_FN8we9ICtLkll_YYwK-WKc4jaa_DUwkfk3hJfm-0VYD04'); background-size: cover; background-position: center;"></div>
+      <div style="position: absolute; inset: 0; background: linear-gradient(to top, rgba(34, 26, 23, 0.95) 0%, rgba(34, 26, 23, 0.4) 60%, rgba(34, 26, 23, 0.25) 100%); pointer-events: none;"></div>
+
+      <!-- Top Overlay Content -->
+      <div style="position: relative; z-index: 10; display: flex; align-items: center; justify-content: space-between; gap: 1rem;">
+        <div class="inline-flex items-center gap-sm" style="padding: 0.5rem 1rem; border-radius: var(--radius-lg); background-color: rgba(255, 248, 246, 0.2); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.15);">
+          <div class="brand-monogram" style="width: 26px; height: 26px;">
+            <svg viewBox="0 0 60 60" width="18" height="18" fill="none">
+              <path d="M18 17 H42 C44 17 45 18 45 20 C45 22 44 23 42 23 H24 V28 H38 C40 28 41 29 41 30.5 C41 32 40 33 38 33 H24 V37 H43 C45 37 46 38 46 40 C46 42 45 43 43 43 H18 C16.5 43 15.5 42 15.5 40.5 V19.5 C15.5 18 16.5 17 18 17 Z" fill="#E9D8C8"/>
+            </svg>
+          </div>
+          <span class="font-label-sm" style="color: white; letter-spacing: 0.12em;">Private Concierge</span>
+        </div>
+
+        <div class="inline-flex items-center gap-xs badge badge-gold" style="background: rgba(34,26,23,0.5); backdrop-filter: blur(8px); color: var(--tertiary-fixed);">
+          <span class="material-symbols-outlined fill" style="font-size: 15px;">hotel_class</span>
+          <span>Bespoke 2025 Tier</span>
+        </div>
+      </div>
+
+      <!-- Bottom Testimonial Block -->
+      <div style="position: relative; z-index: 10; max-width: 520px; margin-top: auto;">
+        <div style="padding: 1.75rem; border-radius: var(--radius-xl); background-color: rgba(34, 26, 23, 0.7); backdrop-filter: blur(16px); border: 1px solid rgba(233, 216, 200, 0.2); box-shadow: var(--shadow-xl);">
+          <h2 class="font-headline-sm italic font-normal" style="color: white; line-height: 1.4; margin-bottom: 0.75rem;">
+            “Every moment, beautifully planned.”
+          </h2>
+          <p class="font-body-sm" style="color: rgba(255, 255, 255, 0.85); line-height: 1.6; margin-bottom: 1rem;">
+            From intimate salon birthdays overlooking city skylines to multiday Mediterranean celebrations, EVARA orchestrates bespoke venues, culinary artists, and acoustic design into effortless harmony.
+          </p>
+          <div style="display: flex; flex-wrap: gap-xs; gap: 0.5rem;">
+            <span class="badge" style="background: rgba(255,255,255,0.15); color: white; font-size: 10px;">AI Vendor Matching</span>
+            <span class="badge" style="background: rgba(255,255,255,0.15); color: white; font-size: 10px;">Automated Escrow</span>
+            <span class="badge" style="background: rgba(255,255,255,0.15); color: white; font-size: 10px;">Interactive Run-Sheet</span>
+          </div>
+        </div>
+        <div style="display: flex; justify-content: space-between; font-size: 11px; color: var(--color-champagne); opacity: 0.7; margin-top: 1rem; padding: 0 4px;">
+          <span>Mayfair · Lake Como · Beverly Hills</span>
+          <span>© 2025 EVARA Curated Technologies</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- RIGHT SIDE: Luxury Onboarding Interface -->
+    <div style="flex: 1.25; display: flex; flex-direction: column; justify-content: space-between; padding: 3rem 4.5rem; background-color: var(--surface-bright); order: 1;" class="lg:order-2">
+      <!-- Top Utility Header -->
+      <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 2rem;">
+        <a href="index.html" class="brand-lockup">
+          <div class="brand-monogram">
+            <svg viewBox="0 0 60 60" width="22" height="22" fill="none">
+              <path d="M18 17 H42 C44 17 45 18 45 20 C45 22 44 23 42 23 H24 V28 H38 C40 28 41 29 41 30.5 C41 32 40 33 38 33 H24 V37 H43 C45 37 46 38 46 40 C46 42 45 43 43 43 H18 C16.5 43 15.5 42 15.5 40.5 V19.5 C15.5 18 16.5 17 18 17 Z" fill="#C5A477"/>
+            </svg>
+          </div>
+          <span class="brand-name" style="font-size: 1.25rem;">EVARA</span>
+        </a>
+        <div class="font-body-sm">
+          <span>Already an invitee or host?</span>
+          <a href="login.html" class="btn btn-sm btn-surface" style="margin-left: 8px;">Sign In</a>
+        </div>
+      </div>
+
+      <!-- Main Form Container -->
+      <div style="max-width: 480px; width: 100%; margin: auto auto;">
+        <div style="margin-bottom: 1.75rem;">
+          <div class="badge badge-gold" style="margin-bottom: 0.75rem;">
+            <span class="material-symbols-outlined" style="font-size: 13px;">star</span>
+            <span>Private Concierge Access</span>
+          </div>
+          <h1 class="font-headline-lg" style="margin-bottom: 0.5rem;">
+            Let's create something <span class="italic font-serif">memorable.</span>
+          </h1>
+          <p class="font-body-md text-outline" style="line-height: 1.5;">
+            Join EVARA to design, orchestrate, and host high-stakes gatherings, milestone dinners, and bespoke weekend itineraries.
+          </p>
+        </div>
+
+        <!-- Form -->
+        <form onsubmit="handleSignupSubmit(event)">
+          <div class="form-group">
+            <label class="form-label" for="fullName">Full Name & Title</label>
+            <div class="input-wrapper">
+              <span class="material-symbols-outlined input-icon-left">person</span>
+              <input type="text" id="fullName" class="input-text" required placeholder="Eleanor Vance" value="Eleanor Vance" />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="workEmail">Work / Portfolio Email</label>
+            <div class="input-wrapper">
+              <span class="material-symbols-outlined input-icon-left">mail</span>
+              <input type="email" id="workEmail" class="input-text" required placeholder="eleanor.vance@atelier.com" value="eleanor.vance@atelier.com" />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="newPassword">Create Confidential Passcode</label>
+            <div class="input-wrapper">
+              <span class="material-symbols-outlined input-icon-left">lock</span>
+              <input type="password" id="newPassword" class="input-text" required placeholder="Minimum 8 characters" value="TuscanSummer2025" />
+              <button type="button" class="input-icon-right" onclick="togglePasswordVisibility('newPassword', 'signupPassIcon')">
+                <span class="material-symbols-outlined" id="signupPassIcon">visibility</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="eventArchetypeSelect">Primary Celebration Scope</label>
+            <div class="input-wrapper">
+              <span class="material-symbols-outlined input-icon-left">celebration</span>
+              <select id="eventArchetypeSelect" class="input-select" style="padding-left: 2.6rem;">
+                <option value="gala">Luxury Wedding & Tuscan Gala</option>
+                <option value="retreat">Private Alpine or Seaside Retreat</option>
+                <option value="rooftop">Milestone Rooftop Soirée</option>
+                <option value="summit">Executive Leadership Summit</option>
+              </select>
+            </div>
+          </div>
+
+          <div style="margin-bottom: 1.5rem;">
+            <label class="checkbox-custom">
+              <input type="checkbox" checked required />
+              <span class="checkbox-box"></span>
+              <span class="font-body-sm text-outline" style="font-size: 12.5px;">I agree to EVARA Concierge Escrow Governance & Privacy Terms</span>
+            </label>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-full btn-lg" style="margin-bottom: 0.75rem;">
+            <span>Request Portfolio Membership</span>
+            <span class="material-symbols-outlined" style="font-size: 18px;">arrow_forward</span>
+          </button>
+
+          <button type="button" onclick="quickDemoLogin()" class="btn btn-secondary btn-full btn-lg" style="border: 1px dashed var(--color-terracotta); background: rgba(184, 141, 114, 0.08); color: var(--color-espresso); justify-content: center;">
+            <span class="material-symbols-outlined" style="color: var(--color-terracotta); font-size: 18px;">auto_awesome</span>
+            <span>Instant Demo Access (Eleanor Vance)</span>
+          </button>
+        </form>
+      </div>
+
+      <!-- Security Trustmark -->
+      <div style="font-size: 11px; color: var(--outline); text-align: center; margin-top: 2rem;">
+        Protected by Private Concierge Multi-Sig Verification
+      </div>
+    </div>
+  </div>
+
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+  <script src="js/firebaseConfig.js"></script>
+  <script src="js/storage.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/auth.js"></script>
+</body>
+</html>

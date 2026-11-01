@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&amp;family=Plus+Jakarta+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"surface-container-high":"#f5e5e0","primary":"#664839","surface-dim":"#e6d7d2","on-surface":"#221a17","error":"#ba1a1a","secondary":"#7b563f","surface-container-low":"#fff1ec","tertiary-container":"#7e623b","surface-container-lowest":"#ffffff","on-error":"#ffffff","primary-container":"#80604f","tertiary-fixed":"#ffddb1","on-tertiary-container":"#ffe2bc","surface-tint":"#775847","primary-fixed":"#ffdbca","tertiary-fixed-dim":"#e4c192","secondary-container":"#fecdaf","on-tertiary":"#ffffff","surface-variant":"#efdfda","on-secondary-fixed":"#2e1504","surface-bright":"#fff8f6","on-error-container":"#93000a","primary-fixed-dim":"#e7beaa","tertiary":"#634a25","inverse-on-surface":"#fdede9","on-secondary-fixed-variant":"#603f29","on-background":"#221a17","on-primary-fixed-variant":"#5d4031","on-surface-variant":"#50443f","outline":"#82746e","secondary-fixed":"#ffdcc7","error-container":"#ffdad6","surface-container":"#fbebe6","background":"#fff8f6","secondary-fixed-dim":"#ecbd9f","on-primary":"#ffffff","on-secondary-container":"#7a553e","on-secondary":"#ffffff","on-primary-container":"#ffe0d1","outline-variant":"#d4c3bc","inverse-primary":"#e7beaa","surface":"#fff8f6","on-primary-fixed":"#2c1609","on-tertiary-fixed-variant":"#5a421e","inverse-surface":"#372e2b","on-tertiary-fixed":"#291800","surface-container-highest":"#efdfda"},borderRadius:{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},spacing:{"margin":"3rem","space-xs":"0.375rem","space-xl":"3.5rem","space-sm":"0.75rem","gutter":"1.5rem","margin-mobile":"1.25rem","gutter-mobile":"1rem","space-lg":"2rem","space-md":"1.25rem"},fontFamily:{"headline-lg-mobile":["Playfair Display"],"display-hero-mobile":["Playfair Display"],"title-md":["Plus Jakarta Sans"],"headline-sm":["Playfair Display"],"display-hero":["Playfair Display"],"label-sm":["Plus Jakarta Sans"],"body-lg":["Plus Jakarta Sans"],"headline-md":["Playfair Display"],"body-md":["Plus Jakarta Sans"],"title-lg":["Plus Jakarta Sans"],"headline-lg":["Playfair Display"],"body-sm":["Plus Jakarta Sans"],"label-md":["Plus Jakarta Sans"]},fontSize:{"headline-lg-mobile":["28px",{"lineHeight":"36px","letterSpacing":"-0.01em","fontWeight":"400"}],"display-hero-mobile":["36px",{"lineHeight":"44px","letterSpacing":"-0.01em","fontWeight":"400"}],"title-md":["16px",{"lineHeight":"24px","letterSpacing":"-0.005em","fontWeight":"600"}],"headline-sm":["22px",{"lineHeight":"28px","letterSpacing":"0em","fontWeight":"600"}],"display-hero":["56px",{"lineHeight":"64px","letterSpacing":"-0.02em","fontWeight":"400"}],"label-sm":["11px",{"lineHeight":"14px","letterSpacing":"0.06em","fontWeight":"600"}],"body-lg":["18px",{"lineHeight":"28px","letterSpacing":"0em","fontWeight":"400"}],"headline-md":["28px",{"lineHeight":"36px","letterSpacing":"-0.01em","fontWeight":"500"}],"body-md":["15px",{"lineHeight":"24px","letterSpacing":"0em","fontWeight":"400"}],"title-lg":["18px",{"lineHeight":"26px","letterSpacing":"-0.01em","fontWeight":"600"}],"headline-lg":["40px",{"lineHeight":"48px","letterSpacing":"-0.015em","fontWeight":"400"}],"body-sm":["13px",{"lineHeight":"20px","letterSpacing":"0.01em","fontWeight":"400"}],"label-md":["12px",{"lineHeight":"16px","letterSpacing":"0.08em","fontWeight":"600"}]}}}};</script></head><body class="bg-[#F8F4EF] font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-low shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-50 flex flex-col justify-between overflow-y-auto"><div class="flex flex-col"><div class="h-20 px-space-md flex items-center gap-space-sm"><img alt="EVARA Brand Wordmark &amp; Monogram Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1VBHLcpND7gN0lHMjZJpkmVs7GK3-iuaw2bcZU-Xk57skveghThXoZRIwVT7XDiJrLj5M1BbyzbKkAnOUSOVp9w_ZI6YGj-Kaz1DSwMb3C2eZ8O8cfEgqds7ntJnY8txMwNtEBQFmE60Uv_1_j_iSYEh0j9ioUGkf6cBdhMt2bjmFB5jmPIAFIyY3-MCR8-u-_Zols1HLdkoCUwSkCsiwI5UOT7Nl8t0-BK0UXMNp77"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm tracking-tight text-primary">EVARA</span><span class="font-label-sm text-label-sm tracking-wider uppercase text-on-surface-variant">Private Concierge</span></div></div><div class="px-space-md pt-space-xs pb-space-sm"><a class="flex items-center justify-center gap-space-xs w-full py-space-sm px-space-md rounded bg-primary text-on-primary hover:bg-primary-container hover:text-on-primary-container transition-all shadow-[0_4px_12px_-2px_rgba(57,48,45,0.08)]" data-path="create-new-event" href="#"><span class="material-symbols-outlined text-[18px]">add</span><span class="font-label-md text-label-md uppercase tracking-wider">Create New Event</span></a></div><nav class="flex flex-col gap-1 px-space-md mt-space-xs" data-active-classes="bg-surface-container-high text-primary font-semibold shadow-[0_2px_8px_rgba(57,48,45,0.04)]"><span class="px-space-sm pt-space-xs pb-1 font-label-sm text-label-sm uppercase tracking-wider text-outline">Curation</span><a class="flex items-center gap-space-sm px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="overview" href="#"><span class="material-symbols-outlined text-[20px]">grid_view</span><span class="font-body-md text-body-md">Overview</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="my-events" href="#"><span class="material-symbols-outlined text-[20px]">event_available</span><span class="font-body-md text-body-md">My Events</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="budget-planner" href="#"><span class="material-symbols-outlined text-[20px]">payments</span><span class="font-body-md text-body-md">Budget Planner</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="guests-and-invitations" href="#"><span class="material-symbols-outlined text-[20px]">mark_email_read</span><span class="font-body-md text-body-md">Guests &amp; Invitations</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="vendors" href="#"><span class="material-symbols-outlined text-[20px]">storefront</span><span class="font-body-md text-body-md">Vendors</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="shopping-assistant" href="#"><span class="material-symbols-outlined text-[20px]">shopping_bag</span><span class="font-body-md text-body-md">Shopping Assistant</span></a><span class="px-space-sm pt-space-sm pb-1 font-label-sm text-label-sm uppercase tracking-wider text-outline">Intelligence &amp; Archive</span><a class="flex items-center gap-space-sm px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="ai-event-assistant" href="#"><span class="material-symbols-outlined text-[20px] text-tertiary-container">auto_awesome</span><span class="font-body-md text-body-md">AI Event Assistant</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="event-history" href="#"><span class="material-symbols-outlined text-[20px]">history_edu</span><span class="font-body-md text-body-md">Event History</span></a></nav></div><div class="px-space-md py-space-md flex flex-col gap-1"><a class="flex items-center gap-space-sm px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="settings" href="#"><span class="material-symbols-outlined text-[20px]">settings</span><span class="font-body-md text-body-md">Settings</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="about-evara" href="#"><span class="material-symbols-outlined text-[20px]">info</span><span class="font-body-md text-body-md">About EVARA</span></a><div class="mt-space-xs pt-space-xs flex items-center gap-space-sm px-space-sm"><div class="h-2 w-2 rounded-full bg-secondary"></div><span class="font-label-sm text-label-sm text-outline tracking-wider uppercase">Concierge v2.4 Active</span></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-20 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex items-center justify-between px-space-lg"><div class="flex items-center gap-space-md"><img alt="EVARA Brand Wordmark &amp; Monogram Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1VBHLcpND7gN0lHMjZJpkmVs7GK3-iuaw2bcZU-Xk57skveghThXoZRIwVT7XDiJrLj5M1BbyzbKkAnOUSOVp9w_ZI6YGj-Kaz1DSwMb3C2eZ8O8cfEgqds7ntJnY8txMwNtEBQFmE60Uv_1_j_iSYEh0j9ioUGkf6cBdhMt2bjmFB5jmPIAFIyY3-MCR8-u-_Zols1HLdkoCUwSkCsiwI5UOT7Nl8t0-BK0UXMNp77"/><div class="hidden md:flex items-center gap-space-xs px-space-sm py-1.5 rounded bg-surface-container text-on-surface-variant"><span class="material-symbols-outlined text-[18px] text-outline">search</span><input class="bg-transparent font-body-sm text-body-sm text-on-surface placeholder:text-outline focus:outline-none w-64" placeholder="Search guest lists, venues, provisions..." type="text"/></div></div><div class="flex items-center gap-space-md"><button aria-label="Notifications" class="relative p-2 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-2 right-2 h-2 w-2 rounded-full bg-primary"></span></button><div class="h-6 w-px bg-outline-variant"></div><div class="flex items-center gap-space-sm"><div class="text-right hidden sm:block"><div class="font-title-md text-title-md text-on-surface">Eleanor Vance</div><div class="font-label-sm text-label-sm text-outline tracking-wide uppercase">Principal Host</div></div><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-1 ring-outline-variant" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCblbJh5I878bB-SpKIAcY8gMe7Y6eDKxYbJLsCd9KulLzbHxlhTUyWD5y9ceH4RVYJjOwQwtyWCKA1CYDUwJB_eJeVVu7wvrhkUuvh1Pyxt159059DQaD3CoEXwd7iI0KGXa-OjhGk0K7YVTDOh5o9-gXmjcddhmp-tkv3nw1ee6SCxaERRbWfk-HgXJU9movKZDcCDa0ptrrt2gazDwN_0Sc6KueuTqtYp3fikBU"/></div></div></header><main class="w-full pt-20 px-space-lg bg-[#F8F4EF]"><div class="flex flex-col w-full pb-36">
+<!-- 2. Refined Prominent Multi-Step Progress Indicator -->
+<section class="w-full pt-8 pb-8">
+<div class="flex items-center gap-2 mb-2">
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#E9D8C8] text-[#664839] font-label-sm text-label-sm uppercase tracking-wider font-semibold">
+<span class="w-2 h-2 rounded-full bg-[#B88D72] animate-pulse"></span>
+      Curated Creation Suite
+    </span>
+<span class="font-body-sm text-body-sm text-outline">Phase 1 of 4</span>
+</div>
+<div class="flex flex-col lg:flex-row lg:items-end justify-between gap-6 pb-6 border-b border-[#E9D8C8]/80">
+<div>
+<h1 class="font-headline-lg text-headline-lg text-primary tracking-tight font-serif">Step 1: Celebration Scope &amp; Archetype</h1>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">Define the bespoke spirit, capacity scale, and structural foundation for your gathering.</p>
+</div>
+<!-- Prominent Stepper Bar with connected champagne line -->
+<div class="relative flex items-center gap-4 bg-surface-container-lowest/80 backdrop-blur-md px-6 py-3.5 rounded-2xl border border-[#E9D8C8] shadow-sm">
+<!-- Step 1 (Active) -->
+<div class="flex items-center gap-2.5">
+<div class="w-8 h-8 rounded-full bg-[#B88D72] text-white flex items-center justify-center font-title-md text-title-md font-semibold shadow-sm ring-4 ring-[#E9D8C8]/60">1</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-[10px] uppercase tracking-wider text-[#B88D72] font-bold">Current</span>
+<span class="font-title-md text-title-md text-primary font-serif font-bold">Scope &amp; Archetype</span>
+</div>
+</div>
+<!-- Connector line -->
+<div class="w-10 h-0.5 bg-[#C5A477]"></div>
+<!-- Step 2 -->
+<div class="flex items-center gap-2.5 opacity-60">
+<div class="w-7 h-7 rounded-full bg-surface-container-high text-on-surface-variant flex items-center justify-center font-label-md text-label-md font-medium">2</div>
+<div class="hidden sm:flex flex-col">
+<span class="font-label-sm text-[10px] uppercase tracking-wider text-outline">Upcoming</span>
+<span class="font-title-md text-title-md text-on-surface-variant">Venue &amp; Itinerary</span>
+</div>
+</div>
+<!-- Connector line -->
+<div class="w-8 h-0.5 bg-outline-variant/60"></div>
+<!-- Step 3 -->
+<div class="flex items-center gap-2.5 opacity-60">
+<div class="w-7 h-7 rounded-full bg-surface-container-high text-on-surface-variant flex items-center justify-center font-label-md text-label-md font-medium">3</div>
+<div class="hidden sm:flex flex-col">
+<span class="font-label-sm text-[10px] uppercase tracking-wider text-outline">Upcoming</span>
+<span class="font-title-md text-title-md text-on-surface-variant">Financials &amp; Ledger</span>
+</div>
+</div>
+<!-- Connector line -->
+<div class="w-8 h-0.5 bg-outline-variant/60"></div>
+<!-- Step 4 -->
+<div class="flex items-center gap-2.5 opacity-60">
+<div class="w-7 h-7 rounded-full bg-surface-container-high text-on-surface-variant flex items-center justify-center font-label-md text-label-md font-medium">4</div>
+<div class="hidden md:flex flex-col">
+<span class="font-label-sm text-[10px] uppercase tracking-wider text-outline">Upcoming</span>
+<span class="font-title-md text-title-md text-on-surface-variant">Guestlist &amp; Invites</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- AI Concierge Guide ("Aria") Ambient Banner -->
+<section class="w-full mb-10">
+<div class="relative overflow-hidden rounded-2xl bg-gradient-to-r from-surface-container-high via-surface-container to-surface-container-low p-6 md:p-8 shadow-sm border border-[#E9D8C8]/60">
+<div class="absolute -right-16 -top-16 w-64 h-64 rounded-full bg-[#E9D8C8]/40 blur-3xl pointer-events-none"></div>
+<div class="relative flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+<div class="flex items-start gap-4">
+<div class="relative flex-shrink-0">
+<div class="w-14 h-14 rounded-full bg-primary-container p-0.5 shadow-md flex items-center justify-center ring-2 ring-[#C5A477]/40">
+<span class="material-symbols-outlined text-[30px] text-tertiary-fixed">smart_toy</span>
+</div>
+<span class="absolute bottom-0 right-0 w-3.5 h-3.5 rounded-full bg-emerald-600 ring-2 ring-surface animate-pulse" title="Ready to orchestrate"></span>
+</div>
+<div class="space-y-1">
+<div class="flex items-center gap-2">
+<span class="font-title-lg text-title-lg text-primary font-serif font-semibold">Aria</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline">Lead AI Concierge</span>
+<span class="px-2 py-0.5 rounded bg-tertiary-fixed/60 text-on-tertiary-fixed-variant font-label-sm text-label-sm">Active &amp; Calibrating</span>
+</div>
+<h2 class="font-headline-md text-headline-md text-on-surface tracking-tight font-serif">Let's plan something unforgettable.</h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl">
+              Good day, Eleanor. Whether it’s an intimate seaside villa retreat or a 250-guest celebration, I’ll calculate timelines, simulate budget ceilings, and assemble bespoke artisans as you specify your parameters.
+            </p>
+</div>
+</div>
+<div class="flex flex-wrap md:flex-col items-stretch gap-2.5 w-full md:w-auto flex-shrink-0">
+<button class="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-lg bg-primary text-on-primary hover:bg-primary-container transition-all shadow-sm font-label-md text-label-md uppercase tracking-wider" type="button">
+<span class="material-symbols-outlined text-[18px] text-tertiary-fixed">auto_awesome</span>
+            Auto-fill with AI Prompt
+          </button>
+<button class="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-lg bg-surface-container-lowest text-secondary hover:bg-surface-variant transition-colors font-label-md text-label-md border border-[#E9D8C8]" type="button">
+<span class="material-symbols-outlined text-[18px]">attachment</span>
+            Upload Concept / Moodboard
+          </button>
+</div>
+</div>
+</div>
+</section>
+<!-- Main Multi-section Form Canvas -->
+<div class="flex flex-col gap-12">
+<!-- Section 1: Event Identity & Name -->
+<section class="bg-surface-container-low/90 rounded-2xl p-6 md:p-8 shadow-sm border border-[#E9D8C8]/60">
+<div class="max-w-3xl space-y-4">
+<div>
+<div class="flex items-center gap-2 mb-1">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-[#B88D72] font-semibold">Section 01</span>
+<span class="w-1.5 h-1.5 rounded-full bg-outline-variant"></span>
+<span class="font-label-sm text-label-sm text-outline">Event Title</span>
+</div>
+<label class="block font-headline-md text-headline-md text-on-surface font-serif" for="event-title-input">
+            What should we call your celebration?
+          </label>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">
+            Give this curation a memorable name. You can refine this title whenever inspiration strikes.
+          </p>
+</div>
+<div class="relative">
+<div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none text-secondary">
+<span class="material-symbols-outlined text-[22px]">celebration</span>
+</div>
+<input class="w-full pl-12 pr-32 py-3.5 rounded-xl bg-surface-container-lowest text-on-surface font-title-lg text-title-lg focus:outline-none focus:ring-2 focus:ring-[#B88D72]/50 shadow-sm transition-all placeholder:text-outline/60 border border-[#E9D8C8]" id="event-title-input" placeholder="e.g. Sunset Soirée at Cap d'Antibes or Highfield Farmstead Gathering" type="text" value="Villa San Valentino Tuscan Gala 2025"/>
+<button class="absolute right-2.5 top-1/2 -translate-y-1/2 inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg bg-[#E9D8C8] text-primary font-label-sm text-label-sm hover:bg-[#d8c3b0] transition-colors font-semibold" type="button">
+<span class="material-symbols-outlined text-[16px] text-tertiary">magic_button</span>
+            Aria Refine
+          </button>
+</div>
+<div class="flex items-center gap-2 pt-1 font-body-sm text-body-sm text-outline">
+<span class="material-symbols-outlined text-[16px] text-[#B88D72]">tips_and_updates</span>
+<span>Aria tip: Evocative titles featuring the season and destination increase guest RSVP enthusiasm by 28%.</span>
+</div>
+</div>
+</section>
+<!-- 1. Section 2: Celebration Archetype (Noticeably Larger & Taller Cards ~180px, Rich Photography) -->
+<section class="space-y-6">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-4">
+<div>
+<div class="flex items-center gap-2 mb-1">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-[#B88D72] font-semibold">Section 02</span>
+<span class="w-1.5 h-1.5 rounded-full bg-outline-variant"></span>
+<span class="font-label-sm text-label-sm text-outline">Curated Archetypes</span>
+</div>
+<h2 class="font-headline-md text-headline-md text-on-surface font-serif">Choose your celebration archetype</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">
+            Select the foundation for your curated itinerary, catering formulas, and bespoke vendor matching.
+          </p>
+</div>
+<div class="flex items-center gap-2 font-label-md text-label-md text-outline">
+<span class="px-3 py-1 rounded-full bg-surface-container-high">Displaying 10 Bespoke Categories</span>
+</div>
+</div>
+<!-- 10 Selectable Cards Grid - Min height ~180px, Taller, Editorial Visuals -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-5" id="archetype-grid">
+<!-- 1. Wedding (ACTIVE SELECTED - Terracotta border, glowing champagne ring, SELECTED badge) -->
+<div class="group relative rounded-2xl cursor-pointer transition-all duration-300 ring-2 ring-[#B88D72] shadow-[0_8px_24px_rgba(184,141,114,0.32)] flex flex-col justify-end overflow-hidden min-h-[220px] transform hover:-translate-y-1" data-type="wedding">
+<!-- Photo Background -->
+<img alt="Wedding Banquet" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida/AEtjO1UjnlLoNkAWwFXJi85ltTqCugoqKdkeXWryS6zryuQ-dRFP6W1cwLJXeDgquNJHgq-SXiC33m3IDRhb1oU75tz2VpDp8qBlwxF9AIVm6B7OB47rH_1bD8NSDvJm8O-Le4wMmU1Ju-xFhSCXOcpmks16vxmljnq_JK-0vtaafawqshIPj9Vb6UyY4PViwtNdGEdktSDhC6Ho3yoEICdh3CQHVnxmdQqcAUnCP5bSC42p"/>
+<div class="absolute inset-0 bg-gradient-to-t from-[#221a17]/95 via-[#221a17]/60 to-transparent"></div>
+<!-- Glowing champagne top rim badge -->
+<div class="absolute top-3 left-3 right-3 flex items-center justify-between z-10">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-[#B88D72] text-white font-label-sm text-[11px] font-bold tracking-wider uppercase shadow-md">
+<span class="material-symbols-outlined text-[14px]">check</span> Selected
+    </span>
+<span class="w-6 h-6 rounded-full bg-[#C5A477] text-white flex items-center justify-center shadow-md">
+<span class="material-symbols-outlined text-[16px]">stars</span>
+</span>
+</div>
+<!-- Content overlay -->
+<div class="relative z-10 p-4 text-white">
+<span class="font-label-sm text-[11px] text-[#E9D8C8] uppercase tracking-wider block font-semibold">Ceremony &amp; Reception</span>
+<h3 class="font-title-lg text-title-lg font-serif text-white font-bold leading-tight">Wedding</h3>
+<p class="font-body-sm text-[12px] text-white/80 line-clamp-2 mt-1 leading-snug">Vow exchanges, formal dinner galas, and bespoke multi-day fêtes.</p>
+</div>
+</div>
+<!-- 2. Engagement -->
+<div class="group relative rounded-2xl cursor-pointer transition-all duration-300 border border-[#E9D8C8]/80 hover:border-[#B88D72]/60 hover:shadow-lg flex flex-col justify-end overflow-hidden min-h-[220px] transform hover:-translate-y-1" data-type="engagement">
+<img alt="Engagement Candlelit Terrace" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCqjt1n8e-oCOCz0UBJCFVkc3tZfywB0hBY21R428qA9QXMdz3byFz0KNmxvlJYT8qSYa51OMZp0pzFEvGGMYHav70le7Ka0S6Dg5dD6dbyeSucAekIZwRo1azi9chlUZ7PlsXIqmLqRHfcbgBMt8_r5oDLUFp2XTGwFqPjos47R4V69eqozHJjZhRFGo96J0BW_ZmOeuUL7cQDLqSVsMmOFhj_og2M_DMIgVvTesw"/>
+<div class="absolute inset-0 bg-gradient-to-t from-[#221a17]/90 via-[#221a17]/50 to-transparent"></div>
+<div class="relative z-10 p-4 text-white">
+<span class="font-label-sm text-[11px] text-[#E9D8C8] uppercase tracking-wider block font-semibold">Soirée &amp; Cocktail</span>
+<h3 class="font-title-lg text-title-lg font-serif text-white font-bold leading-tight">Engagement</h3>
+<p class="font-body-sm text-[12px] text-white/80 line-clamp-2 mt-1 leading-snug">Romantic candlelit terrace toasts, champagne lounges, and sunsets.</p>
+</div>
+</div>
+<!-- 3. Birthday Party (Using IMAGE_11) -->
+<div class="group relative rounded-2xl cursor-pointer transition-all duration-300 border border-[#E9D8C8]/80 hover:border-[#B88D72]/60 hover:shadow-lg flex flex-col justify-end overflow-hidden min-h-[220px] transform hover:-translate-y-1" data-type="birthday">
+<img alt="Birthday Rooftop" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida/AEtjO1VWxfQub_Wqa5zA-hYJ3lULwJIYCSELEvn9o5PowReD2jNuyTl7Q3HqEkoOtT6Lt0lMe0NTwXlR7p-vS0pmx07fFDio1ZEO2aL5o79rBsFKeHfReF2HWSLPVP6O6Go-M9BG3-_245CmlVd9hpLUqfXLqDT1F_ZthD6zxazFu6AurE5V8wglPR32I-ibWFZI-8_0s4QD9OaHvWWeNB7AV7392KgQXRXzEm1hhO8jHWA"/>
+<div class="absolute inset-0 bg-gradient-to-t from-[#221a17]/90 via-[#221a17]/50 to-transparent"></div>
+<div class="relative z-10 p-4 text-white">
+<span class="font-label-sm text-[11px] text-[#E9D8C8] uppercase tracking-wider block font-semibold">Milestone &amp; Salon</span>
+<h3 class="font-title-lg text-title-lg font-serif text-white font-bold leading-tight">Birthday Party</h3>
+<p class="font-body-sm text-[12px] text-white/80 line-clamp-2 mt-1 leading-snug">Jubilee banquets, rooftop cakes, sparklers, and music lounges.</p>
+</div>
+</div>
+<!-- 4. Villa Trip -->
+<div class="group relative rounded-2xl cursor-pointer transition-all duration-300 border border-[#E9D8C8]/80 hover:border-[#B88D72]/60 hover:shadow-lg flex flex-col justify-end overflow-hidden min-h-[220px] transform hover:-translate-y-1" data-type="villa-trip">
+<img alt="Tuscan Countryside Villa" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCKnN8N-pcRW15-4lFpauvegJxhgOJgVRSivJakaxNPYiQdSiXWlwful_gVjmXIQcleJCWS_W2Iz8QRaPxgFQ0uQxeRuhNdfvMn-tu4Hf8SyVmMd8JzJGSX2i36V2c3sYjb0exF6Mzx-MBXr8DPuh58I9AvhHhntigElXnWe9N0PBRKE9sOi95FMNG02Oj4uRQaT2lkJ1Y2mmBBPyaX5xDFwoL7G5bt4F6OfvYwpmk"/>
+<div class="absolute inset-0 bg-gradient-to-t from-[#221a17]/90 via-[#221a17]/50 to-transparent"></div>
+<div class="relative z-10 p-4 text-white">
+<span class="font-label-sm text-[11px] text-[#E9D8C8] uppercase tracking-wider block font-semibold">Getaway &amp; Retreat</span>
+<h3 class="font-title-lg text-title-lg font-serif text-white font-bold leading-tight">Villa Trip</h3>
+<p class="font-body-sm text-[12px] text-white/80 line-clamp-2 mt-1 leading-snug">Multi-day destination stays, private chef service, and rustic estate pools.</p>
+</div>
+</div>
+<!-- 5. Friends Reunion -->
+<div class="group relative rounded-2xl cursor-pointer transition-all duration-300 border border-[#E9D8C8]/80 hover:border-[#B88D72]/60 hover:shadow-lg flex flex-col justify-end overflow-hidden min-h-[220px] transform hover:-translate-y-1" data-type="friends">
+<img alt="Friends Gathering Dinner" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDNDVOXdv7GzyqEFWxeHc3JViljFCkaNPm3JtVFtarsSZgS6CDMVelieGas_shvxLabfAIBLficj5WSa-MYVlqzLwFU0UMtuIsQwV3IQIrMy_MoTq256bNxDmQUtCGAyT1hZsZr0om1pCvmd_yhwmrTCtrhuqdrpnqGsC8EoYwqbt1b3eIShpNC6J41_RRU4oWzO8ItZeu5xgupxbDiK-5c0iJcgEK8IsMxY3VjD54"/>
+<div class="absolute inset-0 bg-gradient-to-t from-[#221a17]/90 via-[#221a17]/50 to-transparent"></div>
+<div class="relative z-10 p-4 text-white">
+<span class="font-label-sm text-[11px] text-[#E9D8C8] uppercase tracking-wider block font-semibold">Intimate &amp; Lounge</span>
+<h3 class="font-title-lg text-title-lg font-serif text-white font-bold leading-tight">Friends Reunion</h3>
+<p class="font-body-sm text-[12px] text-white/80 line-clamp-2 mt-1 leading-snug">Rooftop sunset cocktails, wine tastings, and nostalgic dinners.</p>
+</div>
+</div>
+<!-- 6. Hackathon / Tech Summit -->
+<div class="group relative rounded-2xl cursor-pointer transition-all duration-300 border border-[#E9D8C8]/80 hover:border-[#B88D72]/60 hover:shadow-lg flex flex-col justify-end overflow-hidden min-h-[220px] transform hover:-translate-y-1" data-type="hackathon">
+<img alt="Modern Tech Loft Workshop" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD8wj3PH8qKVyvgd8qxqEeiPsLVOXZNrsZ7WVp1CW-k15TAMHGtoWxSn9QSCl9Hzf-K3SXq58ZyeWoA4eVT0ywvrgFZBzfRroZ9_VxpxKzwKNTRhNzrthVcHJ86ECv_N2uL9gRgIo-rTrrCquA-OZ86AEtDzwdu7XoHslSYEyzkO__ym3760BohH_7vc5rg9EAhwGE_vkshsM2GscDizkdMvbiE6-sHmi7d3Oo55ZU"/>
+<div class="absolute inset-0 bg-gradient-to-t from-[#221a17]/90 via-[#221a17]/50 to-transparent"></div>
+<div class="relative z-10 p-4 text-white">
+<span class="font-label-sm text-[11px] text-[#E9D8C8] uppercase tracking-wider block font-semibold">Tech Summit &amp; Sprint</span>
+<h3 class="font-title-lg text-title-lg font-serif text-white font-bold leading-tight">Hackathon</h3>
+<p class="font-body-sm text-[12px] text-white/80 line-clamp-2 mt-1 leading-snug">Modern loft engineering sprints, demo stages, and founder salons.</p>
+</div>
+</div>
+<!-- 7. Corporate Gala -->
+<div class="group relative rounded-2xl cursor-pointer transition-all duration-300 border border-[#E9D8C8]/80 hover:border-[#B88D72]/60 hover:shadow-lg flex flex-col justify-end overflow-hidden min-h-[220px] transform hover:-translate-y-1" data-type="corporate">
+<img alt="Corporate Gala Banquet Hall" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCerwfQeBB6vBnnqz0y5Ntmm3W3ub_Ui5gAZwllJZiIm5AoohNVNFgVhTFwX9ieWaXcd22MqqWlgfIglScXENTKBHhuYiAnnd28dZ0ETHIHQdlNqwUNCyzgjJ3tYSp8IG42PLIdIr7v6MmYu4RbeNX0gxZSJ6BNNglZqNSLkrYoD4DT35UY64jXr78tauzkY3n3XrsCos8VvkTA7Tpo9YhiB07DN_DRa9FoRCkoP-E"/>
+<div class="absolute inset-0 bg-gradient-to-t from-[#221a17]/90 via-[#221a17]/50 to-transparent"></div>
+<div class="relative z-10 p-4 text-white">
+<span class="font-label-sm text-[11px] text-[#E9D8C8] uppercase tracking-wider block font-semibold">Gala &amp; Executive</span>
+<h3 class="font-title-lg text-title-lg font-serif text-white font-bold leading-tight">Corporate Gala</h3>
+<p class="font-body-sm text-[12px] text-white/80 line-clamp-2 mt-1 leading-snug">Architectural banquet halls, annual partner summits, and awards.</p>
+</div>
+</div>
+<!-- 8. Community Guild -->
+<div class="group relative rounded-2xl cursor-pointer transition-all duration-300 border border-[#E9D8C8]/80 hover:border-[#B88D72]/60 hover:shadow-lg flex flex-col justify-end overflow-hidden min-h-[220px] transform hover:-translate-y-1" data-type="community">
+<img alt="Sunlit Garden Celebration" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBGXtb-XDtQBcgLrBjAjV-L_r1p3o43TwlVV_7xsi3TjTDfX5FYnqIlp1_6jFc7PnzAr4I5WUdsR6dWD5iLJSXWwZXM67JS7AelhMSN6cUFow-_siG2bzOuTOQQq1i_AnDbTSdHijuKGkOMnjV_PHsoyYSuPurNtL5AoFZVGSZZwvue1hzjSLYqpHBBQws1tzMvw5s8yuqQSYkfUaBmJtZb6d5XNbPOswRFdeXgC8g"/>
+<div class="absolute inset-0 bg-gradient-to-t from-[#221a17]/90 via-[#221a17]/50 to-transparent"></div>
+<div class="relative z-10 p-4 text-white">
+<span class="font-label-sm text-[11px] text-[#E9D8C8] uppercase tracking-wider block font-semibold">Garden Festival</span>
+<h3 class="font-title-lg text-title-lg font-serif text-white font-bold leading-tight">Community Guild</h3>
+<p class="font-body-sm text-[12px] text-white/80 line-clamp-2 mt-1 leading-snug">Sunlit outdoor garden festivals, artisanal stations, and cultural galas.</p>
+</div>
+</div>
+<!-- 9. Seasonal Festival -->
+<div class="group relative rounded-2xl cursor-pointer transition-all duration-300 border border-[#E9D8C8]/80 hover:border-[#B88D72]/60 hover:shadow-lg flex flex-col justify-end overflow-hidden min-h-[220px] transform hover:-translate-y-1" data-type="festival">
+<img alt="Warm Solstice Banquet Festival" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBZYRGseyXTtva0-Mjoa46h7LFqSdUYHbF4tPt2fd13T9UnybW5UQcvUiflW6Zr9sFAXfYKQK8m4rvNIJRDtYskkHZ-anbYR7-aLsxQxUZVl0Yk56gErLcDRUdCAgNszSW6dLuYSjBa30ofMfHjuI_3Bu6JLG9JCm6uVCgz8ar4URQr5_k4OEI1mchZdSGPhMdJVedI2SOkypPN7IPZp1peeYWtRDh2K-JnT5JTmms"/>
+<div class="absolute inset-0 bg-gradient-to-t from-[#221a17]/90 via-[#221a17]/50 to-transparent"></div>
+<div class="relative z-10 p-4 text-white">
+<span class="font-label-sm text-[11px] text-[#E9D8C8] uppercase tracking-wider block font-semibold">Multi-day &amp; Seasonal</span>
+<h3 class="font-title-lg text-title-lg font-serif text-white font-bold leading-tight">Seasonal Festival</h3>
+<p class="font-body-sm text-[12px] text-white/80 line-clamp-2 mt-1 leading-snug">Warm solstice banquets, seasonal lanterns, and curated performances.</p>
+</div>
+</div>
+<!-- 10. Bespoke Affair (Refined White-Glove Monogram Emblem) -->
+<div class="group relative rounded-2xl cursor-pointer transition-all duration-300 border border-[#E9D8C8]/80 bg-gradient-to-br from-surface-container-high via-surface-container to-surface-variant hover:border-[#B88D72]/60 hover:shadow-lg flex flex-col justify-between p-5 min-h-[220px] transform hover:-translate-y-1" data-type="bespoke">
+<div class="flex items-center justify-between">
+<span class="px-2.5 py-0.5 rounded-full bg-[#E9D8C8] text-[#664839] font-label-sm text-[10px] uppercase tracking-wider font-semibold">Atelier</span>
+<span class="w-8 h-8 rounded-full bg-surface-container-lowest flex items-center justify-center text-[#B88D72] shadow-sm">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+</span>
+</div>
+<div class="my-auto py-2 text-center">
+<div class="w-12 h-12 mx-auto rounded-full bg-[#E9D8C8]/60 border border-[#C5A477] flex items-center justify-center text-primary mb-2 shadow-inner">
+<span class="material-symbols-outlined text-[26px]">design_services</span>
+</div>
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-[#B88D72] font-semibold">White-Glove</span>
+</div>
+<div>
+<h3 class="font-title-lg text-title-lg font-serif text-on-surface font-bold leading-tight">Bespoke Affair</h3>
+<p class="font-body-sm text-[12px] text-on-surface-variant line-clamp-2 mt-0.5 leading-snug">Unconventional brief crafted completely from scratch with human concierge.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- 3. Section 3: Number of Participants (Interactive Comfortable Controls) -->
+<section class="bg-surface-container-low/90 rounded-2xl p-6 md:p-8 shadow-sm border border-[#E9D8C8]/60">
+<div class="flex items-center gap-2 mb-1">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-[#B88D72] font-semibold">Section 03</span>
+<span class="w-1.5 h-1.5 rounded-full bg-outline-variant"></span>
+<span class="font-label-sm text-label-sm text-outline">Capacity Planning</span>
+</div>
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-8">
+<div class="max-w-xl space-y-2">
+<h2 class="font-headline-md text-headline-md text-on-surface font-serif">Who's joining the celebration?</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+            Aria utilizes your projected guest count to calibrate seating architectures, calculate food &amp; wine allocations, and cross-reference exclusive property capacities.
+          </p>
+<!-- Preset Capacity Tier Pills -->
+<div class="flex flex-wrap items-center gap-2.5 pt-3" id="preset-pills">
+<button class="px-4 py-2 rounded-full text-on-surface-variant bg-surface-container hover:bg-surface-container-high font-label-md text-label-md transition-all border border-[#E9D8C8]/50" data-val="8" type="button">
+  Intimate (2–12)
+</button>
+<button class="px-4 py-2 rounded-full bg-primary text-on-primary font-label-md text-label-md shadow-md ring-2 ring-[#C5A477]/50 font-semibold transition-all" data-val="36" type="button">
+  Salon (13–40) <span class="ml-1 text-xs opacity-80">✓</span>
+</button>
+<button class="px-4 py-2 rounded-full text-on-surface-variant bg-surface-container hover:bg-surface-container-high font-label-md text-label-md transition-all border border-[#E9D8C8]/50" data-val="80" type="button">
+  Grand (41–120)
+</button>
+<button class="px-4 py-2 rounded-full text-on-surface-variant bg-surface-container hover:bg-surface-container-high font-label-md text-label-md transition-all border border-[#E9D8C8]/50" data-val="200" type="button">
+  Festival (121–300+)
+</button>
+</div>
+</div>
+<!-- Large Comfortable Circular Stepper Counter Box -->
+<div class="flex flex-col items-center sm:items-end gap-3 flex-shrink-0">
+<div class="flex items-center gap-5 bg-surface-container-lowest px-6 py-4 rounded-2xl shadow-sm border border-[#E9D8C8]">
+<!-- Large styled circular minus (-) -->
+<button aria-label="Decrease guest count" class="w-12 h-12 rounded-full bg-[#E9D8C8] hover:bg-[#d8c3b0] text-[#664839] flex items-center justify-center transition-all active:scale-95 shadow-sm" id="btn-decrement" type="button">
+<span class="material-symbols-outlined text-[24px]">remove</span>
+</button>
+<!-- Big Bold Number Display -->
+<div class="text-center px-4 min-w-[140px]">
+<div class="font-headline-lg text-4xl lg:text-5xl font-serif text-[#664839] font-bold leading-none" id="guest-count-display">36</div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-[#80604F] font-bold block mt-1.5">Guests Expected</span>
+</div>
+<!-- Large styled circular plus (+) -->
+<button aria-label="Increase guest count" class="w-12 h-12 rounded-full bg-[#B88D72] hover:bg-[#a67b61] text-white flex items-center justify-center transition-all active:scale-95 shadow-sm" id="btn-increment" type="button">
+<span class="material-symbols-outlined text-[24px]">add</span>
+</button>
+</div>
+<label class="flex items-center gap-2.5 cursor-pointer select-none text-right">
+<input class="w-4 h-4 rounded text-secondary focus:ring-secondary/40 accent-[#B88D72]" type="checkbox"/>
+<span class="font-body-sm text-body-sm text-on-surface-variant">I'll finalize exact participant count later</span>
+</label>
+</div>
+</div>
+</section>
+<!-- 4. Section 4: Event Organizer & Funding Architecture (Shared Contribution Expanded Settings) -->
+<section class="space-y-6">
+<div>
+<div class="flex items-center gap-2 mb-1">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-[#B88D72] font-semibold">Section 04</span>
+<span class="w-1.5 h-1.5 rounded-full bg-outline-variant"></span>
+<span class="font-label-sm text-label-sm text-outline">Financial Governance</span>
+</div>
+<h2 class="font-headline-md text-headline-md text-on-surface font-serif">Funding &amp; Contribution Architecture</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">
+          Specify how financial logistics, escrow deposits, and vendor disbursements will be orchestrated.
+        </p>
+</div>
+<!-- 4 Distinct Radio Cards Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-5" id="funding-architecture-group">
+<!-- 1. Personally Funded -->
+<label class="relative rounded-2xl p-6 bg-surface-container-low hover:bg-surface-container transition-all cursor-pointer shadow-sm flex flex-col justify-between border border-[#E9D8C8]/60 group">
+<div class="flex items-start justify-between gap-4">
+<div class="flex items-start gap-3.5">
+<div class="w-11 h-11 rounded-xl bg-surface-container-highest text-secondary flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-[24px]">account_balance_wallet</span>
+</div>
+<div>
+<span class="font-title-lg text-title-lg text-on-surface font-serif block font-semibold">Personally Funded</span>
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Single Host Escrow</span>
+</div>
+</div>
+<input class="w-5 h-5 text-primary accent-[#B88D72] cursor-pointer mt-1" name="funding_option" type="radio" value="personal"/>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mt-4">
+    Hosted entirely by you. Single organizer escrow account with automated scheduled vendor disbursements, milestones, and confidential billing.
+</p>
+</label>
+<!-- 2. Shared Contribution (Selected by Default with Expanded Settings Revealed) -->
+<div class="relative rounded-2xl p-6 bg-surface-container-high transition-all shadow-md ring-2 ring-[#B88D72] flex flex-col justify-between border border-[#B88D72]/40" id="shared-contribution-card">
+<div>
+<div class="flex items-start justify-between gap-4">
+<div class="flex items-start gap-3.5">
+<div class="w-11 h-11 rounded-xl bg-primary text-on-primary flex items-center justify-center flex-shrink-0 shadow-sm">
+<span class="material-symbols-outlined text-[24px]">group</span>
+</div>
+<div>
+<div class="flex items-center gap-2">
+<span class="font-title-lg text-title-lg text-on-surface font-serif font-semibold">Shared Contribution</span>
+<span class="px-2.5 py-0.5 rounded-full bg-[#E9D8C8] text-[#664839] font-label-sm text-label-sm font-semibold">Concierge Ledger</span>
+</div>
+<span class="font-label-sm text-label-sm text-[#B88D72] uppercase tracking-wider font-semibold">Split Pooling &amp; Collections</span>
+</div>
+</div>
+<input checked="" class="w-5 h-5 text-primary accent-[#B88D72] cursor-pointer mt-1" name="funding_option" type="radio" value="shared"/>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mt-3">
+  Participants contribute directly. Automated split ledgers, secure card / UPI collection portal, zero awkward payment chasing, and live treasury transparency.
+</p>
+<!-- Expanded Shared Contribution Settings -->
+<div class="mt-5 pt-4 border-t border-[#E9D8C8] space-y-4">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider font-semibold">Contribution Allocation Model</span>
+<span class="font-label-sm text-label-sm text-[#B88D72] font-semibold">Live Simulation</span>
+</div>
+<!-- Toggle Buttons -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+<label class="flex flex-col p-3.5 rounded-xl bg-surface-container-lowest cursor-pointer shadow-sm border-2 border-[#B88D72]">
+<div class="flex items-center justify-between">
+<span class="font-title-md text-title-md text-primary font-bold">Equal Split</span>
+<input checked="" class="w-4 h-4 text-primary accent-[#B88D72]" name="split_mechanism" type="radio" value="equal"/>
+</div>
+<div class="mt-2 text-xl font-serif text-[#664839] font-bold">$1,900 <span class="text-xs font-sans font-normal text-outline">/ attendee</span></div>
+<span class="font-body-sm text-[12px] text-on-surface-variant mt-1">Calculated uniformly across 36 projected guests.</span>
+</label>
+<label class="flex flex-col p-3.5 rounded-xl bg-surface-container hover:bg-surface-container-lowest cursor-pointer transition-colors border border-[#E9D8C8]">
+<div class="flex items-center justify-between">
+<span class="font-title-md text-title-md text-on-surface font-semibold">Custom Tiers</span>
+<input class="w-4 h-4 text-primary accent-[#B88D72]" name="split_mechanism" type="radio" value="custom"/>
+</div>
+<div class="mt-2 text-sm font-sans font-semibold text-secondary">By Suite / VIP Tier</div>
+<span class="font-body-sm text-[12px] text-on-surface-variant mt-1">Assign amounts by master villa suites, arrival dates, or guest tier.</span>
+</label>
+</div>
+<!-- Dynamic Breakdown Feature List -->
+<div class="p-3 bg-surface-container-lowest/80 rounded-xl space-y-2 border border-[#E9D8C8]/60">
+<div class="flex items-center gap-2 text-xs text-[#50443f]">
+<span class="material-symbols-outlined text-[16px] text-emerald-600">check_circle</span>
+<span class="font-semibold text-on-surface">Automated Guest Escrow Enabled</span>
+<span class="text-outline">• Funds secured until milestones release</span>
+</div>
+<div class="flex items-center gap-2 text-xs text-[#50443f]">
+<span class="material-symbols-outlined text-[16px] text-[#B88D72]">check_circle</span>
+<span class="font-semibold text-on-surface">Transparent Live Ledger</span>
+<span class="text-outline">• Guests view paid shares without seeing private fees</span>
+</div>
+<div class="flex items-center gap-2 text-xs text-[#50443f]">
+<span class="material-symbols-outlined text-[16px] text-[#C5A477]">check_circle</span>
+<span class="font-semibold text-on-surface">Discreet Guest Payment Reminders</span>
+<span class="text-outline">• Courteous automated WhatsApp / SMS pings</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- 3. Sponsored or Organization-Funded -->
+<label class="relative rounded-2xl p-6 bg-surface-container-low hover:bg-surface-container transition-all cursor-pointer shadow-sm flex flex-col justify-between border border-[#E9D8C8]/60 group">
+<div class="flex items-start justify-between gap-4">
+<div class="flex items-start gap-3.5">
+<div class="w-11 h-11 rounded-xl bg-surface-container-highest text-secondary flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-[24px]">corporate_fare</span>
+</div>
+<div>
+<span class="font-title-lg text-title-lg text-on-surface font-serif block font-semibold">Sponsored / Corporate</span>
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Corporate Tax Invoicing</span>
+</div>
+</div>
+<input class="w-5 h-5 text-primary accent-[#B88D72] cursor-pointer mt-1" name="funding_option" type="radio" value="sponsored"/>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mt-4">
+  Invoiced to a legal corporate entity, patron foundation, or sponsor ledger with multi-currency remittance and consolidated tax receipts.
+</p>
+</label>
+<!-- 4. Custom Arrangement -->
+<label class="relative rounded-2xl p-6 bg-surface-container-low hover:bg-surface-container transition-all cursor-pointer shadow-sm flex flex-col justify-between border border-[#E9D8C8]/60 group">
+<div class="flex items-start justify-between gap-4">
+<div class="flex items-start gap-3.5">
+<div class="w-11 h-11 rounded-xl bg-surface-container-highest text-secondary flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-[24px]">pie_chart</span>
+</div>
+<div>
+<span class="font-title-lg text-title-lg text-on-surface font-serif block font-semibold">Hybrid Architecture</span>
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Bespoke Rules</span>
+</div>
+</div>
+<input class="w-5 h-5 text-primary accent-[#B88D72] cursor-pointer mt-1" name="funding_option" type="radio" value="hybrid"/>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mt-4">
+  Co-funded model (e.g. host sponsors the private Tuscan estate grounds; guests contribute individually towards local dining and vineyard tours).
+</p>
+</label>
+</div>
+</section>
+<!-- Section 5: Real-Time Scope Summary Badge (AI Projection Box) -->
+<section class="rounded-2xl bg-surface-container p-6 shadow-sm flex flex-col md:flex-row items-center justify-between gap-6 border border-[#E9D8C8]">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-[#E9D8C8] text-[#664839] flex items-center justify-center flex-shrink-0 shadow-sm">
+<span class="material-symbols-outlined text-[24px]">insights</span>
+</div>
+<div>
+<h4 class="font-title-lg text-title-lg text-on-surface font-serif font-bold">Preliminary Concierge Calibrations</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+  Based on <span class="font-semibold text-primary">36 Guests</span> for a <span class="font-semibold text-primary">Wedding</span>, Aria has pre-indexed 14 verified Tuscan and Mediterranean estates with private chef licenses.
+</p>
+</div>
+</div>
+<div class="flex items-center gap-3 flex-shrink-0">
+<span class="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-surface-container-lowest text-secondary font-label-md text-label-md shadow-sm border border-[#E9D8C8]">
+<span class="material-symbols-outlined text-[16px] text-tertiary">check_circle</span>
+14 Venues Pre-qualified
+</span>
+</div>
+</section>
+</div>
+<!-- 5. Floating EVARA AI Concierge Assistant (Bottom-Right, above sticky nav) -->
+<div class="fixed bottom-24 right-8 z-40 flex flex-col items-end gap-2.5 pointer-events-auto">
+<!-- Welcoming Message Bubble -->
+<div class="max-w-sm bg-surface-container-lowest/95 backdrop-blur-md rounded-2xl p-4 shadow-[0_8px_30px_rgba(57,48,45,0.12)] border border-[#E9D8C8] animate-fade-in text-left">
+<div class="flex items-center justify-between mb-1.5">
+<div class="flex items-center gap-2">
+<span class="font-serif font-bold text-sm text-[#664839]">Aria</span>
+<span class="px-1.5 py-0.5 rounded bg-emerald-100 text-emerald-800 text-[10px] font-semibold">Active</span>
+</div>
+<button class="text-outline hover:text-on-surface text-xs" onclick="this.closest('.max-w-sm').classList.toggle('hidden')">
+<span class="material-symbols-outlined text-[16px]">close</span>
+</button>
+</div>
+<p class="text-xs text-on-surface-variant leading-relaxed">
+      Aria is calibrating 14 Tuscan estates for 36 guests...
+    </p>
+<!-- Quick Action Chips -->
+<div class="flex flex-wrap items-center gap-1.5 mt-3 pt-2 border-t border-[#E9D8C8]/60">
+<button class="px-2.5 py-1 rounded-full bg-surface-container hover:bg-[#E9D8C8] text-primary text-[11px] font-medium transition-colors">
+        Suggest Venue
+      </button>
+<button class="px-2.5 py-1 rounded-full bg-surface-container hover:bg-[#E9D8C8] text-primary text-[11px] font-medium transition-colors">
+        Refine Budget
+      </button>
+<button class="px-2.5 py-1 rounded-full bg-[#B88D72] text-white text-[11px] font-medium transition-colors flex items-center gap-1">
+<span>Ask Aria</span>
+<span>🎙️</span>
+</button>
+</div>
+</div>
+<!-- Concierge Floating Pill Icon -->
+<button class="group flex items-center gap-3 bg-[#664839] hover:bg-[#80604f] text-white pl-3 pr-4 py-2.5 rounded-full shadow-[0_6px_20px_rgba(102,72,57,0.35)] transition-all transform hover:scale-105" type="button">
+<div class="relative">
+<div class="w-8 h-8 rounded-full bg-[#E9D8C8] text-[#664839] flex items-center justify-center font-serif font-bold text-xs shadow-inner">
+        A
+      </div>
+<span class="absolute -bottom-0.5 -right-0.5 w-3 h-3 rounded-full bg-emerald-500 ring-2 ring-[#664839] animate-pulse"></span>
+</div>
+<div class="flex flex-col text-left">
+<span class="text-xs font-semibold tracking-wide">Concierge</span>
+<span class="text-[10px] text-[#E9D8C8]">Online • Click to expand</span>
+</div>
+</button>
+</div>
+<!-- Bottom Floating / Sticky Navigation Bar -->
+<aside class="fixed bottom-0 left-72 right-0 bg-surface/95 backdrop-blur-md px-space-lg py-4 shadow-[0_-4px_20px_rgba(57,48,45,0.06)] z-40 border-t border-[#E9D8C8]/60">
+<div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+<!-- Back Link -->
+<a class="inline-flex items-center gap-2 text-on-surface-variant hover:text-primary transition-colors font-title-md text-title-md" href="#">
+<span class="material-symbols-outlined text-[20px]">arrow_back</span>
+<span>Back to Overview</span>
+</a>
+<!-- Trust Micro-Copy (Center on Desktop) -->
+<div class="hidden lg:flex items-center gap-2 font-label-sm text-label-sm text-outline">
+<span class="material-symbols-outlined text-[16px] text-secondary">lock</span>
+<span>Encrypted draft saved continuously • Aria holds priority bookings for 48 hours</span>
+</div>
+<!-- Action Buttons -->
+<div class="flex items-center gap-3 w-full sm:w-auto justify-end">
+<button class="px-5 py-2.5 rounded-lg bg-surface-container hover:bg-surface-container-high text-primary font-label-md text-label-md uppercase tracking-wider transition-colors shadow-sm border border-[#E9D8C8]" type="button">
+          Save as Draft
+        </button>
+<button class="inline-flex items-center gap-2 px-6 py-2.5 rounded-lg bg-[#B88D72] text-white hover:bg-[#a67b61] font-label-md text-label-md uppercase tracking-wider transition-all shadow-md active:scale-95 font-semibold" id="btn-continue-step2" type="button">
+<span>Continue to Venue &amp; Itinerary</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</div>
+</div>
+</aside>
+<!-- Interactive Script -->
+<script>
+    (function initEventStudio() {
+      // 1. Interactive Participant Count Controls
+      let guestCount = 36;
+      const display = document.getElementById('guest-count-display');
+      const btnDec = document.getElementById('btn-decrement');
+      const btnInc = document.getElementById('btn-increment');
+      const presetButtons = document.querySelectorAll('#preset-pills button');
+
+      function updateGuestCount(val) {
+        guestCount = Math.max(1, Math.min(val, 999));
+        if (display) display.textContent = guestCount;
+      }
+
+      if (btnDec) {
+        btnDec.addEventListener('click', () => {
+          updateGuestCount(guestCount - 1);
+        });
+      }
+
+      if (btnInc) {
+        btnInc.addEventListener('click', () => {
+          updateGuestCount(guestCount + 1);
+        });
+      }
+
+      presetButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+          presetButtons.forEach(b => {
+            b.classList.remove('bg-primary', 'text-on-primary', 'shadow-md', 'ring-2', 'ring-[#C5A477]/50', 'font-semibold');
+            b.classList.add('bg-surface-container', 'text-on-surface-variant');
+            b.innerHTML = b.textContent.replace('✓', '').trim();
+          });
+          btn.classList.add('bg-primary', 'text-on-primary', 'shadow-md', 'ring-2', 'ring-[#C5A477]/50', 'font-semibold');
+          btn.classList.remove('bg-surface-container', 'text-on-surface-variant');
+          btn.innerHTML = btn.textContent.trim() + ' <span class="ml-1 text-xs opacity-80">✓</span>';
+          
+          const presetVal = parseInt(btn.getAttribute('data-val'), 10);
+          if (!isNaN(presetVal)) {
+            updateGuestCount(presetVal);
+          }
+        });
+      });
+
+      // 2. Dynamic Archetype Card Selection
+      const archetypeCards = document.querySelectorAll('#archetype-grid > div');
+      archetypeCards.forEach(card => {
+        card.addEventListener('click', () => {
+          archetypeCards.forEach(c => {
+            c.classList.remove('ring-2', 'ring-[#B88D72]', 'shadow-[0_8px_24px_rgba(184,141,114,0.32)]');
+            c.classList.add('border', 'border-[#E9D8C8]/80');
+            const topBadge = c.querySelector('.top-badge-indicator');
+            if (topBadge) topBadge.remove();
+          });
+
+          card.classList.remove('border', 'border-[#E9D8C8]/80');
+          card.classList.add('ring-2', 'ring-[#B88D72]', 'shadow-[0_8px_24px_rgba(184,141,114,0.32)]');
+
+          if (!card.querySelector('.top-badge-indicator')) {
+            const badge = document.createElement('div');
+            badge.className = 'top-badge-indicator absolute top-3 left-3 right-3 flex items-center justify-between z-10';
+            badge.innerHTML = `
+              <span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-[#B88D72] text-white font-label-sm text-[11px] font-bold tracking-wider uppercase shadow-md">
+                <span class="material-symbols-outlined text-[14px]">check</span> Selected
+              </span>
+              <span class="w-6 h-6 rounded-full bg-[#C5A477] text-white flex items-center justify-center shadow-md">
+                <span class="material-symbols-outlined text-[16px]">stars</span>
+              </span>
+            `;
+            card.prepend(badge);
+          }
+        });
+      });
+
+      // 3. Subtle Continue Notification
+      const continueBtn = document.getElementById('btn-continue-step2');
+      if (continueBtn) {
+        continueBtn.addEventListener('click', () => {
+          continueBtn.innerHTML = '<span class="material-symbols-outlined text-[18px] animate-spin">refresh</span><span>Opening Venue Catalog...</span>';
+          setTimeout(() => {
+            continueBtn.innerHTML = '<span>Step 2 Configured</span><span class="material-symbols-outlined text-[18px]">done</span>';
+          }, 700);
+        });
+      }
+    })();
+  </script>
+</div></main></div></body></html>

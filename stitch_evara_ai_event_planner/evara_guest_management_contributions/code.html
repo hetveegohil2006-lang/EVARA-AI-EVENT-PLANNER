@@ -1,0 +1,986 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&amp;family=Plus+Jakarta+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"surface-container-high":"#f5e5e0","primary":"#664839","surface-dim":"#e6d7d2","on-surface":"#221a17","error":"#ba1a1a","secondary":"#7b563f","surface-container-low":"#fff1ec","tertiary-container":"#7e623b","surface-container-lowest":"#ffffff","on-error":"#ffffff","primary-container":"#80604f","tertiary-fixed":"#ffddb1","on-tertiary-container":"#ffe2bc","surface-tint":"#775847","primary-fixed":"#ffdbca","tertiary-fixed-dim":"#e4c192","secondary-container":"#fecdaf","on-tertiary":"#ffffff","surface-variant":"#efdfda","on-secondary-fixed":"#2e1504","surface-bright":"#fff8f6","on-error-container":"#93000a","primary-fixed-dim":"#e7beaa","tertiary":"#634a25","inverse-on-surface":"#fdede9","on-secondary-fixed-variant":"#603f29","on-background":"#221a17","on-primary-fixed-variant":"#5d4031","on-surface-variant":"#50443f","outline":"#82746e","secondary-fixed":"#ffdcc7","error-container":"#ffdad6","surface-container":"#fbebe6","background":"#fff8f6","secondary-fixed-dim":"#ecbd9f","on-primary":"#ffffff","on-secondary-container":"#7a553e","on-secondary":"#ffffff","on-primary-container":"#ffe0d1","outline-variant":"#d4c3bc","inverse-primary":"#e7beaa","surface":"#fff8f6","on-primary-fixed":"#2c1609","on-tertiary-fixed-variant":"#5a421e","inverse-surface":"#372e2b","on-tertiary-fixed":"#291800","surface-container-highest":"#efdfda"},borderRadius:{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},spacing:{"margin":"3rem","space-xs":"0.375rem","space-xl":"3.5rem","space-sm":"0.75rem","gutter":"1.5rem","margin-mobile":"1.25rem","gutter-mobile":"1rem","space-lg":"2rem","space-md":"1.25rem"},fontFamily:{"headline-lg-mobile":["Playfair Display"],"display-hero-mobile":["Playfair Display"],"title-md":["Plus Jakarta Sans"],"headline-sm":["Playfair Display"],"display-hero":["Playfair Display"],"label-sm":["Plus Jakarta Sans"],"body-lg":["Plus Jakarta Sans"],"headline-md":["Playfair Display"],"body-md":["Plus Jakarta Sans"],"title-lg":["Plus Jakarta Sans"],"headline-lg":["Playfair Display"],"body-sm":["Plus Jakarta Sans"],"label-md":["Plus Jakarta Sans"]},fontSize:{"headline-lg-mobile":["28px",{"lineHeight":"36px","letterSpacing":"-0.01em","fontWeight":"400"}],"display-hero-mobile":["36px",{"lineHeight":"44px","letterSpacing":"-0.01em","fontWeight":"400"}],"title-md":["16px",{"lineHeight":"24px","letterSpacing":"-0.005em","fontWeight":"600"}],"headline-sm":["22px",{"lineHeight":"28px","letterSpacing":"0em","fontWeight":"600"}],"display-hero":["56px",{"lineHeight":"64px","letterSpacing":"-0.02em","fontWeight":"400"}],"label-sm":["11px",{"lineHeight":"14px","letterSpacing":"0.06em","fontWeight":"600"}],"body-lg":["18px",{"lineHeight":"28px","letterSpacing":"0em","fontWeight":"400"}],"headline-md":["28px",{"lineHeight":"36px","letterSpacing":"-0.01em","fontWeight":"500"}],"body-md":["15px",{"lineHeight":"24px","letterSpacing":"0em","fontWeight":"400"}],"title-lg":["18px",{"lineHeight":"26px","letterSpacing":"-0.01em","fontWeight":"600"}],"headline-lg":["40px",{"lineHeight":"48px","letterSpacing":"-0.015em","fontWeight":"400"}],"body-sm":["13px",{"lineHeight":"20px","letterSpacing":"0.01em","fontWeight":"400"}],"label-md":["12px",{"lineHeight":"16px","letterSpacing":"0.08em","fontWeight":"600"}]}}}};</script></head><body class="bg-[#F8F4EF] font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-low shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-50 flex flex-col justify-between overflow-y-auto"><div class="flex flex-col"><div class="h-20 px-space-md flex items-center gap-space-sm"><img alt="EVARA Brand Wordmark &amp; Monogram Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1VBHLcpND7gN0lHMjZJpkmVs7GK3-iuaw2bcZU-Xk57skveghThXoZRIwVT7XDiJrLj5M1BbyzbKkAnOUSOVp9w_ZI6YGj-Kaz1DSwMb3C2eZ8O8cfEgqds7ntJnY8txMwNtEBQFmE60Uv_1_j_iSYEh0j9ioUGkf6cBdhMt2bjmFB5jmPIAFIyY3-MCR8-u-_Zols1HLdkoCUwSkCsiwI5UOT7Nl8t0-BK0UXMNp77"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm tracking-tight text-primary">EVARA</span><span class="font-label-sm text-label-sm tracking-wider uppercase text-on-surface-variant">Private Concierge</span></div></div><div class="px-space-md pt-space-xs pb-space-sm"><a class="flex items-center justify-center gap-space-xs w-full py-space-sm px-space-md rounded bg-primary text-on-primary hover:bg-primary-container hover:text-on-primary-container transition-all shadow-[0_4px_12px_-2px_rgba(57,48,45,0.08)]" data-path="create-new-event" href="#"><span class="material-symbols-outlined text-[18px]">add</span><span class="font-label-md text-label-md uppercase tracking-wider">Create New Event</span></a></div><nav class="flex flex-col gap-1 px-space-md mt-space-xs" data-active-classes="bg-surface-container-high text-primary font-semibold shadow-[0_2px_8px_rgba(57,48,45,0.04)]"><span class="px-space-sm pt-space-xs pb-1 font-label-sm text-label-sm uppercase tracking-wider text-outline">Curation</span><a class="flex items-center gap-space-sm px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="overview" href="#"><span class="material-symbols-outlined text-[20px]">grid_view</span><span class="font-body-md text-body-md">Overview</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="my-events" href="#"><span class="material-symbols-outlined text-[20px]">event_available</span><span class="font-body-md text-body-md">My Events</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="budget-planner" href="#"><span class="material-symbols-outlined text-[20px]">payments</span><span class="font-body-md text-body-md">Budget Planner</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="guests-and-invitations" href="#"><span class="material-symbols-outlined text-[20px]">mark_email_read</span><span class="font-body-md text-body-md">Guests &amp; Invitations</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="vendors" href="#"><span class="material-symbols-outlined text-[20px]">storefront</span><span class="font-body-md text-body-md">Vendors</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="shopping-assistant" href="#"><span class="material-symbols-outlined text-[20px]">shopping_bag</span><span class="font-body-md text-body-md">Shopping Assistant</span></a><span class="px-space-sm pt-space-sm pb-1 font-label-sm text-label-sm uppercase tracking-wider text-outline">Intelligence &amp; Archive</span><a class="flex items-center gap-space-sm px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="ai-event-assistant" href="#"><span class="material-symbols-outlined text-[20px] text-tertiary-container">auto_awesome</span><span class="font-body-md text-body-md">AI Event Assistant</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="event-history" href="#"><span class="material-symbols-outlined text-[20px]">history_edu</span><span class="font-body-md text-body-md">Event History</span></a></nav></div><div class="px-space-md py-space-md flex flex-col gap-1"><a class="flex items-center gap-space-sm px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="settings" href="#"><span class="material-symbols-outlined text-[20px]">settings</span><span class="font-body-md text-body-md">Settings</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="about-evara" href="#"><span class="material-symbols-outlined text-[20px]">info</span><span class="font-body-md text-body-md">About EVARA</span></a><div class="mt-space-xs pt-space-xs flex items-center gap-space-sm px-space-sm"><div class="h-2 w-2 rounded-full bg-secondary"></div><span class="font-label-sm text-label-sm text-outline tracking-wider uppercase">Concierge v2.4 Active</span></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-20 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex items-center justify-between px-space-lg"><div class="flex items-center gap-space-md"><img alt="EVARA Brand Wordmark &amp; Monogram Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1VBHLcpND7gN0lHMjZJpkmVs7GK3-iuaw2bcZU-Xk57skveghThXoZRIwVT7XDiJrLj5M1BbyzbKkAnOUSOVp9w_ZI6YGj-Kaz1DSwMb3C2eZ8O8cfEgqds7ntJnY8txMwNtEBQFmE60Uv_1_j_iSYEh0j9ioUGkf6cBdhMt2bjmFB5jmPIAFIyY3-MCR8-u-_Zols1HLdkoCUwSkCsiwI5UOT7Nl8t0-BK0UXMNp77"/><div class="hidden md:flex items-center gap-space-xs px-space-sm py-1.5 rounded bg-surface-container text-on-surface-variant"><span class="material-symbols-outlined text-[18px] text-outline">search</span><input class="bg-transparent font-body-sm text-body-sm text-on-surface placeholder:text-outline focus:outline-none w-64" placeholder="Search guest lists, venues, provisions..." type="text"/></div></div><div class="flex items-center gap-space-md"><button aria-label="Notifications" class="relative p-2 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-2 right-2 h-2 w-2 rounded-full bg-primary"></span></button><div class="h-6 w-px bg-outline-variant"></div><div class="flex items-center gap-space-sm"><div class="text-right hidden sm:block"><div class="font-title-md text-title-md text-on-surface">Eleanor Vance</div><div class="font-label-sm text-label-sm text-outline tracking-wide uppercase">Principal Host</div></div><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-1 ring-outline-variant" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCblbJh5I878bB-SpKIAcY8gMe7Y6eDKxYbJLsCd9KulLzbHxlhTUyWD5y9ceH4RVYJjOwQwtyWCKA1CYDUwJB_eJeVVu7wvrhkUuvh1Pyxt159059DQaD3CoEXwd7iI0KGXa-OjhGk0K7YVTDOh5o9-gXmjcddhmp-tkv3nw1ee6SCxaERRbWfk-HgXJU9movKZDcCDa0ptrrt2gazDwN_0Sc6KueuTqtYp3fikBU"/></div></div></header><main class="w-full pt-20 px-space-lg bg-[#F8F4EF]"><div class="flex flex-col w-full">
+<!-- PROGRESS HEADER & BREADCRUMB STRIP -->
+<section class="flex flex-col gap-space-md mb-space-lg">
+<!-- Breadcrumb & Auto-save Status Strip -->
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-xs">
+<div class="flex items-center gap-space-xs text-on-surface-variant">
+<a class="flex items-center gap-1 font-body-sm text-body-sm hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-[18px]">arrow_back</span>
+<span>Back to Venue &amp; Itinerary</span>
+</a>
+<span class="text-outline-variant">/</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline">Phase 03 of 04</span>
+</div>
+<div class="inline-flex items-center gap-space-xs px-space-sm py-1 rounded bg-surface-container text-on-surface-variant self-start md:self-auto">
+<span class="h-2 w-2 rounded-full bg-secondary"></span>
+<span class="font-label-sm text-label-sm tracking-wide text-on-surface-variant">
+          Draft Auto-Saved at 19:14 CEST • Secure Multi-Host Vault
+        </span>
+</div>
+</div>
+<!-- Stepper Navigation -->
+<div class="grid grid-cols-2 lg:grid-cols-4 gap-space-sm">
+<!-- Phase 1 -->
+<div class="p-space-sm rounded bg-surface-container-low flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<div class="w-6 h-6 rounded-full bg-surface-container-high text-primary flex items-center justify-center font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">check</span>
+</div>
+<div>
+<div class="font-label-sm text-label-sm uppercase tracking-wider text-outline">Phase 01</div>
+<div class="font-title-md text-title-md text-on-surface">Event Basics</div>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-primary uppercase">Done</span>
+</div>
+<!-- Phase 2 -->
+<div class="p-space-sm rounded bg-surface-container-low flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<div class="w-6 h-6 rounded-full bg-surface-container-high text-primary flex items-center justify-center font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">check</span>
+</div>
+<div>
+<div class="font-label-sm text-label-sm uppercase tracking-wider text-outline">Phase 02</div>
+<div class="font-title-md text-title-md text-on-surface">Details &amp; Venue</div>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-primary uppercase">Done</span>
+</div>
+<!-- Phase 3 (Active) -->
+<div class="p-space-sm rounded bg-primary text-on-primary shadow-sm flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<div class="w-6 h-6 rounded-full bg-surface-container-low text-primary flex items-center justify-center font-label-sm text-label-sm">
+            03
+          </div>
+<div>
+<div class="font-label-sm text-label-sm uppercase tracking-wider text-on-primary-container">Phase 03 • Current</div>
+<div class="font-title-md text-title-md text-on-primary">Guests &amp; Split</div>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded bg-surface-container-low/20 font-label-sm text-label-sm text-on-primary uppercase tracking-wider">Active</span>
+</div>
+<!-- Phase 4 -->
+<div class="p-space-sm rounded bg-surface-container-low/60 flex items-center justify-between opacity-75">
+<div class="flex items-center gap-space-xs">
+<div class="w-6 h-6 rounded-full bg-surface-container text-outline flex items-center justify-center font-label-sm text-label-sm">
+            04
+          </div>
+<div>
+<div class="font-label-sm text-label-sm uppercase tracking-wider text-outline">Phase 04</div>
+<div class="font-title-md text-title-md text-outline">Review &amp; Create</div>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-outline uppercase">Upcoming</span>
+</div>
+</div>
+<!-- Editorial Hero Title Area -->
+<div class="mt-space-sm flex flex-col lg:flex-row lg:items-end justify-between gap-space-md">
+<div>
+<div class="inline-block px-2.5 py-1 rounded bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm uppercase tracking-wider mb-2">
+          Curated Creation Suite / Step 3 of 4
+        </div>
+<h1 class="font-display-hero text-display-hero text-on-surface tracking-tight">
+          Who’s joining your celebration?
+        </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mt-1">
+          Invite your circle, coordinate attendance telemetry, and keep every participant’s contribution seamlessly synchronized through EVARA Vault.
+        </p>
+</div>
+<!-- Quick Action Pill Group -->
+<div class="flex items-center gap-space-xs">
+<button class="px-space-md py-space-sm rounded bg-primary text-on-primary font-title-md text-title-md flex items-center gap-2 shadow-sm hover:bg-primary-container transition-colors" id="open-add-guest-modal">
+<span class="material-symbols-outlined text-[20px]">person_add</span>
+<span>Add Guest</span>
+</button>
+<button class="px-space-md py-space-sm rounded bg-surface-container text-on-surface font-title-md text-title-md flex items-center gap-2 hover:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined text-[20px]">ios_share</span>
+<span>Share Link</span>
+</button>
+</div>
+</div>
+</section>
+<!-- STATS & RSVP TELEMETRY STRIP -->
+<section class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-space-sm mb-space-xl">
+<div class="p-space-md rounded bg-surface-container-low shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between text-outline mb-space-xs">
+<span class="font-label-sm text-label-sm uppercase tracking-wider">Invitations</span>
+<span class="material-symbols-outlined text-[18px]">forward_to_inbox</span>
+</div>
+<div class="font-display-hero-mobile text-display-hero-mobile text-on-surface">42</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Dispatched multi-channel</div>
+</div>
+<div class="p-space-md rounded bg-surface-container-low shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between text-outline mb-space-xs">
+<span class="font-label-sm text-label-sm uppercase tracking-wider">Registrations</span>
+<span class="material-symbols-outlined text-[18px]">how_to_reg</span>
+</div>
+<div class="font-display-hero-mobile text-display-hero-mobile text-primary">38</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">90.4% response rate</div>
+</div>
+<div class="p-space-md rounded bg-surface-container-low shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between text-outline mb-space-xs">
+<span class="font-label-sm text-label-sm uppercase tracking-wider">Confirmed</span>
+<span class="material-symbols-outlined text-[18px] text-tertiary">check_circle</span>
+</div>
+<div class="font-display-hero-mobile text-display-hero-mobile text-on-surface">34</div>
+<div class="font-body-sm text-body-sm text-tertiary-container font-semibold">28 Primaries + 6 (+1s)</div>
+</div>
+<div class="p-space-md rounded bg-surface-container-low shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between text-outline mb-space-xs">
+<span class="font-label-sm text-label-sm uppercase tracking-wider">Pending</span>
+<span class="material-symbols-outlined text-[18px] text-secondary">hourglass_top</span>
+</div>
+<div class="font-display-hero-mobile text-display-hero-mobile text-secondary">4</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Automated reminders set</div>
+</div>
+<div class="p-space-md rounded bg-surface-container-low shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between text-outline mb-space-xs">
+<span class="font-label-sm text-label-sm uppercase tracking-wider">Declined</span>
+<span class="material-symbols-outlined text-[18px] text-outline">cancel</span>
+</div>
+<div class="font-display-hero-mobile text-display-hero-mobile text-outline">2</div>
+<div class="font-body-sm text-body-sm text-outline">Warm regrets sent</div>
+</div>
+<div class="p-space-md rounded bg-surface-container-high shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between text-primary mb-space-xs">
+<span class="font-label-sm text-label-sm uppercase tracking-wider">Seats Total</span>
+<span class="material-symbols-outlined text-[18px]">chair</span>
+</div>
+<div class="font-display-hero-mobile text-display-hero-mobile text-primary">36</div>
+<div class="flex items-center gap-1 font-body-sm text-body-sm text-primary font-medium">
+<span class="material-symbols-outlined text-[14px]">stars</span>
+<span>Goal Reached (100%)</span>
+</div>
+</div>
+</section>
+<!-- MAIN 2-COLUMN GRID (Roster & Contributions / Aria & RSVP Previews) -->
+<div class="grid grid-cols-1 xl:grid-cols-12 gap-space-lg items-start">
+<!-- LEFT COLUMN: Roster Table & Contribution Split (8 cols on XL) -->
+<div class="xl:col-span-8 flex flex-col gap-space-xl">
+<!-- SECTION: CONTRIBUTION ARCHITECTURE -->
+<section class="p-space-lg rounded bg-surface-container-lowest shadow-sm flex flex-col gap-space-md">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-xs">
+<div>
+<div class="flex items-center gap-space-xs mb-1">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline">Budget Orchestration</span>
+<span class="px-2 py-0.5 rounded bg-surface-container font-label-sm text-label-sm text-secondary">Step 2 Anchored</span>
+</div>
+<h2 class="font-headline-md text-headline-md text-on-surface">
+              Let’s split the budget fairly
+            </h2>
+</div>
+<div class="text-right">
+<div class="font-label-sm text-label-sm uppercase tracking-wider text-outline">Total Event Target</div>
+<div class="font-headline-sm text-headline-sm text-primary">₹15,00,000</div>
+</div>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+          Select how payments are reconciled. Real-time split calculations dynamically adjust as your guest confirmations evolve.
+        </p>
+<!-- 3 Contribution Methods (Radio Card Group) -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-sm pt-space-xs">
+<!-- Option A: Equal Contribution (Selected) -->
+<div class="p-space-md rounded bg-surface-container-high shadow-sm cursor-pointer transition-all flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-space-xs">
+<span class="font-title-md text-title-md text-on-surface">Equal Split</span>
+<span class="material-symbols-outlined text-primary text-[20px]">radio_button_checked</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                Divide target contribution equally among confirmed participants.
+              </p>
+</div>
+<div class="mt-space-md pt-space-xs">
+<div class="font-label-sm text-label-sm uppercase tracking-wider text-primary">Calculated Share</div>
+<div class="font-headline-sm text-headline-sm text-primary mt-0.5">₹41,666 <span class="font-body-sm text-body-sm text-on-surface-variant font-normal">/ attendee</span></div>
+<div class="font-label-sm text-label-sm text-outline mt-1">₹15,00,000 ÷ 36 Confirmed Seats</div>
+</div>
+</div>
+<!-- Option B: Custom Contribution Tiered -->
+<div class="p-space-md rounded bg-surface-container-low hover:bg-surface-container transition-all cursor-pointer flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-space-xs">
+<span class="font-title-md text-title-md text-on-surface">Custom Tiers</span>
+<span class="material-symbols-outlined text-outline text-[20px]">radio_button_unchecked</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                Define distinct amounts per room tier or relationship bracket.
+              </p>
+</div>
+<div class="mt-space-md pt-space-xs text-on-surface-variant">
+<div class="font-body-sm text-body-sm font-medium">Master Suite: ₹65,000</div>
+<div class="font-body-sm text-body-sm">Garden Wing: ₹35,000</div>
+<div class="font-label-sm text-label-sm text-outline mt-1">2 Tiers Configured</div>
+</div>
+</div>
+<!-- Option C: Organizer Funded -->
+<div class="p-space-md rounded bg-surface-container-low hover:bg-surface-container transition-all cursor-pointer flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-space-xs">
+<span class="font-title-md text-title-md text-on-surface">Host Covered</span>
+<span class="material-symbols-outlined text-outline text-[20px]">radio_button_unchecked</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                Principal host covers 100% of event costs. Zero guest fees.
+              </p>
+</div>
+<div class="mt-space-md pt-space-xs text-outline">
+<div class="font-label-sm text-label-sm uppercase tracking-wider">Guest Charge</div>
+<div class="font-headline-sm text-headline-sm text-on-surface mt-0.5">₹0.00</div>
+<div class="font-label-sm text-label-sm text-outline mt-1">Fully Underwritten</div>
+</div>
+</div>
+</div>
+<!-- ESCROW PROGRESS TELEMETRY BAR & STATS -->
+<div class="p-space-md rounded bg-surface-container-low flex flex-col gap-space-sm mt-space-xs">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[20px]">verified_user</span>
+<span class="font-title-md text-title-md text-on-surface">EVARA Escrow Vault Status</span>
+</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">
+<span class="font-semibold text-primary">₹10,83,316</span> of ₹15,00,000 (72.2% Funded)
+            </div>
+</div>
+<!-- Progress Bar -->
+<div class="w-full h-2.5 rounded-full bg-surface-container-high overflow-hidden">
+<div class="h-full bg-primary rounded-full transition-all duration-500" style="width: 72.2%;"></div>
+</div>
+<!-- Mini telemetry breakdown tiles -->
+<div class="grid grid-cols-2 md:grid-cols-4 gap-space-xs pt-1 text-center sm:text-left">
+<div class="p-2 rounded bg-surface-container-lowest">
+<div class="font-label-sm text-label-sm uppercase tracking-wider text-outline">Collected Escrow</div>
+<div class="font-title-md text-title-md text-primary">₹10,83,316</div>
+</div>
+<div class="p-2 rounded bg-surface-container-lowest">
+<div class="font-label-sm text-label-sm uppercase tracking-wider text-outline">Pending Release</div>
+<div class="font-title-md text-title-md text-secondary">₹4,16,684</div>
+</div>
+<div class="p-2 rounded bg-surface-container-lowest">
+<div class="font-label-sm text-label-sm uppercase tracking-wider text-outline">Paid Roster</div>
+<div class="font-title-md text-title-md text-on-surface">26 Guests</div>
+</div>
+<div class="p-2 rounded bg-surface-container-lowest">
+<div class="font-label-sm text-label-sm uppercase tracking-wider text-outline">Pending Split</div>
+<div class="font-title-md text-title-md text-outline">10 Guests</div>
+</div>
+</div>
+<div class="flex items-start gap-2 pt-1 text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px] text-tertiary-container mt-0.5">lock</span>
+<span class="font-body-sm text-body-sm text-outline">
+              EVARA Escrow Vault secures all deposits. Milestone tranches unlock to Villa San Valentino only upon host inspection &amp; digital co-signature.
+            </span>
+</div>
+</div>
+</section>
+<!-- SECTION: GUEST DIRECTORY & PARTY ROSTER -->
+<section class="p-space-lg rounded bg-surface-container-lowest shadow-sm flex flex-col gap-space-md">
+<!-- Roster Header & Actions -->
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-md">
+<div>
+<h2 class="font-headline-md text-headline-md text-on-surface">Guest Directory &amp; Party Roster</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Manage guest tiers, monitor real-time RSVP responses, and view escrow settlements.</p>
+</div>
+<div class="flex flex-wrap items-center gap-space-xs">
+<button class="px-space-sm py-1.5 rounded bg-surface-container text-on-surface font-label-md text-label-md hover:bg-surface-container-high transition-colors flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px]">upload_file</span>
+<span>Import CSV</span>
+</button>
+<button class="px-space-sm py-1.5 rounded bg-surface-container text-on-surface font-label-md text-label-md hover:bg-surface-container-high transition-colors flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px]">sync_alt</span>
+<span>Google Contacts</span>
+</button>
+<button class="px-space-sm py-1.5 rounded bg-primary text-on-primary font-label-md text-label-md hover:bg-primary-container transition-colors flex items-center gap-1.5 shadow-sm" id="add-guest-btn-2">
+<span class="material-symbols-outlined text-[16px]">add</span>
+<span>Add Guest Manually</span>
+</button>
+</div>
+</div>
+<!-- Filter Pill Bar & Search -->
+<div class="flex flex-col md:flex-row items-center justify-between gap-space-sm">
+<div class="w-full md:w-80 flex items-center gap-space-xs px-space-sm py-1.5 rounded bg-surface-container text-on-surface-variant">
+<span class="material-symbols-outlined text-[18px] text-outline">search</span>
+<input class="bg-transparent font-body-sm text-body-sm text-on-surface placeholder:text-outline focus:outline-none w-full" placeholder="Search by name, email, or party..." type="text"/>
+</div>
+<div class="flex items-center gap-1.5 overflow-x-auto w-full md:w-auto pb-1 md:pb-0">
+<button class="px-3 py-1 rounded bg-primary text-on-primary font-label-sm text-label-sm whitespace-nowrap">All (38)</button>
+<button class="px-3 py-1 rounded bg-surface-container text-on-surface-variant hover:bg-surface-container-high font-label-sm text-label-sm whitespace-nowrap">Confirmed (34)</button>
+<button class="px-3 py-1 rounded bg-surface-container text-on-surface-variant hover:bg-surface-container-high font-label-sm text-label-sm whitespace-nowrap">Pending RSVP (4)</button>
+<button class="px-3 py-1 rounded bg-surface-container text-on-surface-variant hover:bg-surface-container-high font-label-sm text-label-sm whitespace-nowrap">Paid (26)</button>
+<button class="px-3 py-1 rounded bg-surface-container text-on-surface-variant hover:bg-surface-container-high font-label-sm text-label-sm whitespace-nowrap">Payment Pending (8)</button>
+</div>
+</div>
+<!-- Guest Roster Table -->
+<div class="overflow-x-auto -mx-space-lg px-space-lg">
+<table class="w-full text-left min-w-[760px]">
+<thead>
+<tr class="text-outline font-label-sm text-label-sm uppercase tracking-wider bg-surface-container-low/60 rounded">
+<th class="py-space-sm px-space-sm">Guest &amp; Coordinates</th>
+<th class="py-space-sm px-space-sm">Party / +1</th>
+<th class="py-space-sm px-space-sm">Dispatch</th>
+<th class="py-space-sm px-space-sm">RSVP Status</th>
+<th class="py-space-sm px-space-sm">Escrow Share</th>
+<th class="py-space-sm px-space-sm text-right">Actions</th>
+</tr>
+</thead>
+<tbody class="font-body-md text-body-md text-on-surface">
+<!-- Row 1 -->
+<tr class="hover:bg-surface-container-low/40 transition-colors">
+<td class="py-space-md px-space-sm">
+<div class="flex items-center gap-space-sm">
+<img class="w-10 h-10 rounded-full object-cover shadow-sm" data-alt="Warm natural portrait of Julian Sterling in tailored Italian linen against soft Tuscan afternoon sunlight" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBmLleLaaFRVtZ6jOmM0Wf5GE-KXogkSyU2iM4oznu_xC2hxl4ea6MpaY7_kf3srEZxTntc0qjYHsYB-l_voaEBhokRs6PCR4qURwW63dL3lI-msfReWcC7NN2OkqJduvqrAJjbTOMua-iV4m8rbHWW4RzbGXe-WiM5Id2DeSEE0-p2cIt0OWAHkPFlUCuzPIXq6zpiw31ukVby89wAVhN4_RJ6WxJMvYsCfoHL66E"/>
+<div>
+<div class="font-title-md text-title-md text-on-surface">Julian Sterling</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">julian@sterling.co • +1 (415) 890-2134</div>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-sm">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-surface-container text-on-surface font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-[14px] text-primary">group</span>
+<span>+1 Sofia</span>
+</span>
+</td>
+<td class="py-space-md px-space-sm">
+<div class="flex items-center gap-1.5 text-on-surface-variant font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-[16px] text-tertiary">chat</span>
+<span>WhatsApp Delivered</span>
+</div>
+</td>
+<td class="py-space-md px-space-sm">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[14px]">check</span>
+<span>Confirmed</span>
+</span>
+</td>
+<td class="py-space-md px-space-sm">
+<div>
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-surface-container-high text-primary font-label-sm text-label-sm font-semibold">
+                      Paid — ₹41,666
+                    </span>
+<div class="font-label-sm text-label-sm text-outline mt-0.5">ICICI Razorpay Vault</div>
+</div>
+</td>
+<td class="py-space-md px-space-sm text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1 rounded text-outline hover:text-on-surface hover:bg-surface-container transition-colors" title="Message guest">
+<span class="material-symbols-outlined text-[18px]">mail</span>
+</button>
+<button class="p-1 rounded text-outline hover:text-on-surface hover:bg-surface-container transition-colors" title="Edit guest details">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 2 -->
+<tr class="hover:bg-surface-container-low/40 transition-colors">
+<td class="py-space-md px-space-sm">
+<div class="flex items-center gap-space-sm">
+<img class="w-10 h-10 rounded-full object-cover shadow-sm" data-alt="Refined elegant portrait of Claire Moreau wearing a silk blouse in a sunlit villa patio" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDQOhMcFCkRp-lRCZxWyLKL97xqEUomzDa5la9FVjCj7f0QJiBuoD60sxWQZYvHoLjKDae5qGtUnjvHfa1u2OnnbQOzPDcxbII22WO3b7vDv6Oz0xM9af4o4bmHz5YvQDvkRAEA1w-hS7h0NZZZqqCzt7LAWM2sF7NyXLjGuwPJnTOVCY8FDdKz-OBa5ZBzD0RepKPTtmqrGwE9V_Q55AmxLix_yzMVhSIP27Y7OB4"/>
+<div>
+<div class="font-title-md text-title-md text-on-surface">Claire Moreau</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">c.moreau@atelier-paris.fr • +33 6 42 19 88 02</div>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-sm">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-surface-container text-on-surface font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-[14px] text-outline">person</span>
+<span>Solo (1 Seat)</span>
+</span>
+</td>
+<td class="py-space-md px-space-sm">
+<div class="flex items-center gap-1.5 text-on-surface-variant font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-[16px] text-primary">mail</span>
+<span>Email Opened</span>
+</div>
+</td>
+<td class="py-space-md px-space-sm">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[14px]">check</span>
+<span>Confirmed</span>
+</span>
+</td>
+<td class="py-space-md px-space-sm">
+<div>
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-surface-container-high text-primary font-label-sm text-label-sm font-semibold">
+                      Paid — ₹41,666
+                    </span>
+<div class="font-label-sm text-label-sm text-outline mt-0.5">Wire Transfer Matched</div>
+</div>
+</td>
+<td class="py-space-md px-space-sm text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1 rounded text-outline hover:text-on-surface hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined text-[18px]">mail</span>
+</button>
+<button class="p-1 rounded text-outline hover:text-on-surface hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 3 -->
+<tr class="hover:bg-surface-container-low/40 transition-colors">
+<td class="py-space-md px-space-sm">
+<div class="flex items-center gap-space-sm">
+<img class="w-10 h-10 rounded-full object-cover shadow-sm" data-alt="Charming warm headshot of Dev &amp; Ananya Roy in chic evening rehearsal dinner attire" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAd0-_4nTaALKL8QB6BxC-OHILlR3UPL-STbNSQA3iEQcThsgZhNY6TXwn39W8bIuSYKTfwipEu3ujpnM2lSnitsArtN4wXsL1MLS8Rd6augGpxDOlB5sUIwY8e1iVNAOCtSlcCmR0_qVIEBMcy-e1-UvRgIfqIWWv8KH2BRXcX97hvTRxBDGdze_XQ8gn9P2gFAOgAHhzPUtUMIkI6FeItVb4RrDHYEgWn2hT-1rg"/>
+<div>
+<div class="font-title-md text-title-md text-on-surface">Dev &amp; Ananya Roy</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">dev.roy@mumbaiventures.in • +91 98201 44581</div>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-sm">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-surface-container text-on-surface font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-[14px] text-primary">group</span>
+<span>+1 Ananya</span>
+</span>
+</td>
+<td class="py-space-md px-space-sm">
+<div class="flex items-center gap-1.5 text-on-surface-variant font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-[16px] text-tertiary">chat</span>
+<span>WhatsApp Clicked</span>
+</div>
+</td>
+<td class="py-space-md px-space-sm">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[14px]">check</span>
+<span>Confirmed</span>
+</span>
+</td>
+<td class="py-space-md px-space-sm">
+<div>
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-surface-container text-secondary font-label-sm text-label-sm font-semibold">
+                      Pending Escrow
+                    </span>
+<div class="font-label-sm text-label-sm text-outline mt-0.5">UPI Link Sent Today</div>
+</div>
+</td>
+<td class="py-space-md px-space-sm text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1 rounded text-primary hover:bg-surface-container transition-colors" title="Send UPI reminder">
+<span class="material-symbols-outlined text-[18px]">send</span>
+</button>
+<button class="p-1 rounded text-outline hover:text-on-surface hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 4 -->
+<tr class="hover:bg-surface-container-low/40 transition-colors">
+<td class="py-space-md px-space-sm">
+<div class="flex items-center gap-space-sm">
+<img class="w-10 h-10 rounded-full object-cover shadow-sm" data-alt="Sophisticated portrait of Marcus Thorne in tailored bespoke dinner jacket against architectural archway" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCQUaz-rGmWSBXOfa47Cy4NdoYssdSe6sH2WbFMveIAlUZ0gedfn6Us1mqaLvRKcV48e3dHoD4ECHQZhytLZih5FnHPh89grap24rNlFb0n393Ry9PLYt_HodYX7aXSDGJnoNuhoOPzhlFRiHoYvqHNK9hwYGH7r98D1Gn18CGOjdfPp1dCj2r1FM55M3ikzTpF8E0EHgkeWyj5ByB6_bV88E8EQgOlHg-1MO7n5SI"/>
+<div>
+<div class="font-title-md text-title-md text-on-surface">Marcus Thorne</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">marcus.thorne@londoncapital.co.uk • +44 20 7946 0912</div>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-sm">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-surface-container text-outline font-body-sm text-body-sm">
+<span>Solo (1 Seat)</span>
+</span>
+</td>
+<td class="py-space-md px-space-sm">
+<div class="flex items-center gap-1.5 text-on-surface-variant font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-[16px] text-outline">sms</span>
+<span>SMS Delivered</span>
+</div>
+</td>
+<td class="py-space-md px-space-sm">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[14px]">schedule</span>
+<span>Pending RSVP</span>
+</span>
+</td>
+<td class="py-space-md px-space-sm">
+<div>
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-surface-container text-outline font-label-sm text-label-sm">
+                      Awaiting RSVP
+                    </span>
+<div class="font-label-sm text-label-sm text-outline mt-0.5">Expires in 48h</div>
+</div>
+</td>
+<td class="py-space-md px-space-sm text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1 rounded text-primary hover:bg-surface-container transition-colors" title="Resend Invite">
+<span class="material-symbols-outlined text-[18px]">replay</span>
+</button>
+<button class="p-1 rounded text-outline hover:text-on-surface hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 5 -->
+<tr class="hover:bg-surface-container-low/40 transition-colors">
+<td class="py-space-md px-space-sm">
+<div class="flex items-center gap-space-sm">
+<img class="w-10 h-10 rounded-full object-cover shadow-sm" data-alt="Chic elegant headshot of Beatrice Dupont in sunny garden backdrop with gentle smile" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAiVMXHau9uIg39Ws0Qwm2F3u5AJ9eLDmFTOBKd1hTbw5JMav0_hmP4lyHup447KhECu-JpVVfvTqMWMmzoXilr2zRRMXtP1hdWoOFLcb_QolKZGwqYtlQOFFZ9q3xQz9bfY9ZCUozsnl6bxlTPLpOq07kVUbcBxDu3lEkbSrawVtJTM80FJ0bIxsodY5poCIk6jLXxdGmZY_uPj2Yv2CBB842ZVFWhf5OeHCvXb7I"/>
+<div>
+<div class="font-title-md text-title-md text-on-surface">Beatrice Dupont</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">b.dupont@geneve-private.ch • +41 22 555 0198</div>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-sm">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-surface-container text-on-surface font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-[14px] text-primary">group</span>
+<span>+1 Henri</span>
+</span>
+</td>
+<td class="py-space-md px-space-sm">
+<div class="flex items-center gap-1.5 text-on-surface-variant font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-[16px] text-tertiary">chat</span>
+<span>WhatsApp Read</span>
+</div>
+</td>
+<td class="py-space-md px-space-sm">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[14px]">check</span>
+<span>Confirmed</span>
+</span>
+</td>
+<td class="py-space-md px-space-sm">
+<div>
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-surface-container-high text-primary font-label-sm text-label-sm font-semibold">
+                      Paid — ₹41,666
+                    </span>
+<div class="font-label-sm text-label-sm text-outline mt-0.5">SEPA Instant Settlement</div>
+</div>
+</td>
+<td class="py-space-md px-space-sm text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1 rounded text-outline hover:text-on-surface hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined text-[18px]">mail</span>
+</button>
+<button class="p-1 rounded text-outline hover:text-on-surface hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Table Pagination & Footer Notes -->
+<div class="flex flex-col sm:flex-row items-center justify-between gap-space-xs pt-space-xs text-on-surface-variant">
+<span class="font-body-sm text-body-sm">Showing 5 of 38 Invited Guests (34 Confirmed)</span>
+<div class="flex items-center gap-2">
+<button class="px-3 py-1 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm hover:bg-surface-container-high disabled:opacity-50" disabled="">Previous</button>
+<span class="font-label-sm text-label-sm text-outline">Page 1 of 8</span>
+<button class="px-3 py-1 rounded bg-surface-container text-on-surface font-label-sm text-label-sm hover:bg-surface-container-high">Next</button>
+</div>
+</div>
+</section>
+<!-- SECTION: MULTI-CHANNEL INVITATION GENERATOR -->
+<section class="p-space-lg rounded bg-surface-container-lowest shadow-sm flex flex-col gap-space-md">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-xs">
+<div>
+<div class="font-label-sm text-label-sm uppercase tracking-wider text-outline mb-1">Omni-Channel Outreach</div>
+<h2 class="font-headline-md text-headline-md text-on-surface">Let’s invite everyone!</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Automated personalized invites tailored for WhatsApp, luxury email templates, and carrier SMS.</p>
+</div>
+<!-- Channel Selection Tabs -->
+<div class="flex items-center gap-1 p-1 rounded bg-surface-container self-start sm:self-auto">
+<button class="channel-tab active-tab px-3 py-1.5 rounded bg-surface-container-lowest text-primary font-label-sm text-label-sm font-semibold shadow-sm transition-all flex items-center gap-1.5" id="tab-whatsapp">
+<span class="material-symbols-outlined text-[16px] text-tertiary">chat</span>
+<span>WhatsApp</span>
+</button>
+<button class="channel-tab px-3 py-1.5 rounded text-on-surface-variant font-label-sm text-label-sm hover:text-on-surface transition-all flex items-center gap-1.5" id="tab-email">
+<span class="material-symbols-outlined text-[16px]">mail</span>
+<span>Email Card</span>
+</button>
+<button class="channel-tab px-3 py-1.5 rounded text-on-surface-variant font-label-sm text-label-sm hover:text-on-surface transition-all flex items-center gap-1.5" id="tab-sms">
+<span class="material-symbols-outlined text-[16px]">sms</span>
+<span>Concierge SMS</span>
+</button>
+</div>
+</div>
+<!-- WhatsApp Interactive Preview Container -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-space-md items-center p-space-md rounded bg-surface-container-low" id="preview-whatsapp-container">
+<!-- Text Draft Box -->
+<div class="md:col-span-7 flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline">Dynamic WhatsApp Dispatch Body</span>
+<button class="text-primary font-label-sm text-label-sm hover:underline flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">content_copy</span>
+<span>Copy Copy</span>
+</button>
+</div>
+<div class="p-space-sm rounded bg-surface-container-lowest font-body-sm text-body-sm text-on-surface flex flex-col gap-2">
+<p>Dear <strong class="text-primary">{Guest Name}</strong>,</p>
+<p>Eleanor Vance cordially requests the honour of your presence at the <strong>Villa San Valentino Tuscan Gala 2025</strong> in Chianti Hills, Italy from <strong>October 24–27, 2025</strong>.</p>
+<p>We invite you to view the private itinerary, secure your suite, and confirm your RSVP at the dedicated link below:</p>
+<p class="font-semibold text-secondary">🔗 evara.luxury/c/valentino-gala-2025?guest={token}</p>
+<p class="text-outline text-label-sm font-label-sm">Please register your party by Sep 15 to assist with our private chef seatings.</p>
+</div>
+<div class="flex items-center gap-space-xs pt-2">
+<button class="px-space-md py-space-sm rounded bg-primary text-on-primary font-title-md text-title-md hover:bg-primary-container transition-colors flex items-center gap-2 shadow-sm">
+<span class="material-symbols-outlined text-[18px]">send</span>
+<span>Broadcast via WhatsApp (Ready)</span>
+</button>
+<button class="px-space-sm py-space-sm rounded bg-surface-container text-on-surface font-title-md text-title-md hover:bg-surface-container-high transition-colors">
+                Personalize Note
+              </button>
+</div>
+</div>
+<!-- WhatsApp Rich Preview Bubble -->
+<div class="md:col-span-5 flex flex-col items-center">
+<div class="w-full max-w-xs rounded bg-surface-container-lowest p-2.5 shadow-md flex flex-col gap-2">
+<!-- Rich Preview Card thumbnail using Villa San Valentino Tuscan Estate photo -->
+<div class="relative w-full h-36 rounded overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Bespoke Italian villa dinner courtyard bathed in warm golden sunset light with long linen banqueting table and wisteria vines" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC_ybKAi3zfhE5P3YHMRW13PqwMs_b6vz19kOROfAtltCzS4vSy5suu_4wQi2gs94moAXwqpDmt7f0N4CDKbKaEi9-zISfqWviNP1i4M1hP3jkUIaG8fFV_PUPHYfmRMZSdgDAzOmzeIQi-hUf5WfPCX8PFK2L_nWASrByFf8YEXoox7forePBvO07lJO30pHIjJI20CU8yRlAyc0TrNL9dWjv_pO4wPO2riwL-XHI"/>
+<div class="absolute bottom-2 left-2 px-2 py-0.5 rounded bg-inverse-surface/80 text-inverse-on-surface font-label-sm text-label-sm uppercase tracking-wider backdrop-blur-sm">
+                  evara.luxury
+                </div>
+</div>
+<div>
+<div class="font-title-md text-title-md text-on-surface">Villa San Valentino Tuscan Gala 2025</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2 mt-0.5">
+                  Join Eleanor Vance for three days of curated harvest dinners and celebration in Chianti Hills, Tuscany.
+                </div>
+<div class="font-label-sm text-label-sm text-primary mt-1.5">Tap to RSVP &amp; Review Itinerary</div>
+</div>
+<div class="text-right text-[10px] text-outline">19:14 ✓✓</div>
+</div>
+<span class="font-label-sm text-label-sm text-outline mt-2">Simulated Host WhatsApp Notification</span>
+</div>
+</div>
+<!-- CARD DESIGNER & TEMPLATE PICKER -->
+<div class="pt-space-xs flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-title-md text-title-md text-on-surface">Stationery Template &amp; Styling</span>
+<span class="font-label-sm text-label-sm text-primary">Bespoke Foil Press Enabled</span>
+</div>
+<div class="grid grid-cols-2 sm:grid-cols-4 gap-space-sm">
+<div class="p-space-sm rounded bg-surface-container-high cursor-pointer shadow-sm flex flex-col gap-1.5">
+<div class="h-16 rounded bg-surface-container-lowest flex items-center justify-center font-headline-sm text-headline-sm text-primary">
+                A&amp;E
+              </div>
+<div class="font-title-md text-title-md text-on-surface">Luxury Wedding</div>
+<div class="font-label-sm text-label-sm text-primary">Selected • Champagne Tone</div>
+</div>
+<div class="p-space-sm rounded bg-surface-container-low hover:bg-surface-container cursor-pointer transition-colors flex flex-col gap-1.5">
+<div class="h-16 rounded bg-surface-container flex items-center justify-center font-headline-sm text-headline-sm text-outline">
+                VSV
+              </div>
+<div class="font-title-md text-title-md text-on-surface">Minimalist Tuscan</div>
+<div class="font-label-sm text-label-sm text-outline">Stone Ivory &amp; Serif</div>
+</div>
+<div class="p-space-sm rounded bg-surface-container-low hover:bg-surface-container cursor-pointer transition-colors flex flex-col gap-1.5">
+<div class="h-16 rounded bg-secondary-fixed/40 flex items-center justify-center font-headline-sm text-headline-sm text-secondary">
+                1925
+              </div>
+<div class="font-title-md text-title-md text-on-surface">Warm Terracotta</div>
+<div class="font-label-sm text-label-sm text-outline">Earthy Linen &amp; Ochre</div>
+</div>
+<div class="p-space-sm rounded bg-surface-container-low hover:bg-surface-container cursor-pointer transition-colors flex flex-col gap-1.5">
+<div class="h-16 rounded bg-inverse-surface text-inverse-on-surface flex items-center justify-center font-headline-sm text-headline-sm">
+                NOIR
+              </div>
+<div class="font-title-md text-title-md text-on-surface">Black Tie Gala</div>
+<div class="font-label-sm text-label-sm text-outline">Midnight Gold Foil</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+<!-- RIGHT COLUMN: Aria AI Concierge & Live Mobile Registration Link Experience (4 cols on XL) -->
+<div class="xl:col-span-4 flex flex-col gap-space-lg">
+<!-- AI CONCIERGE "ARIA" SIDEBAR WIDGET -->
+<section class="p-space-md rounded bg-surface-container-low shadow-sm flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<div class="w-8 h-8 rounded-full bg-primary text-on-primary flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-[18px]">auto_awesome</span>
+</div>
+<div>
+<div class="font-title-md text-title-md text-on-surface">Aria Concierge</div>
+<div class="font-label-sm text-label-sm text-tertiary-container uppercase tracking-wider">Neural Curation Active</div>
+</div>
+</div>
+<span class="inline-flex items-center px-2 py-0.5 rounded bg-surface-container-high text-primary font-label-sm text-label-sm">
+            Live Insights
+          </span>
+</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">
+          Observing RSVP inflows and dynamic budget allocation across 38 invited parties:
+        </div>
+<!-- Aria Dynamic Insights -->
+<div class="flex flex-col gap-space-xs">
+<!-- Observation 1 -->
+<div class="p-space-xs rounded bg-surface-container-lowest flex items-start gap-2">
+<span class="material-symbols-outlined text-secondary text-[18px] mt-0.5">notification_important</span>
+<div class="font-body-sm text-body-sm text-on-surface">
+<span class="font-semibold text-primary">4 pending guests</span> have opened their invites but haven’t confirmed accommodations yet.
+            </div>
+</div>
+<!-- Observation 2 -->
+<div class="p-space-xs rounded bg-surface-container-lowest flex items-start gap-2">
+<span class="material-symbols-outlined text-tertiary text-[18px] mt-0.5">calculate</span>
+<div class="font-body-sm text-body-sm text-on-surface">
+              Dynamic split recalibrated from <span class="line-through text-outline">₹44,117</span> to <strong>₹41,666/person</strong> as 2 additional guests confirmed seats.
+            </div>
+</div>
+<!-- Observation 3 -->
+<div class="p-space-xs rounded bg-surface-container-lowest flex items-start gap-2">
+<span class="material-symbols-outlined text-primary text-[18px] mt-0.5">account_balance</span>
+<div class="font-body-sm text-body-sm text-on-surface">
+              Escrow milestone 01 (Villa deposit) reaches release threshold in 4 days. <strong>72.2% funded.</strong>
+</div>
+</div>
+</div>
+<!-- Quick AI Actions Chips -->
+<div class="flex flex-wrap gap-1.5 pt-1">
+<button class="px-2.5 py-1 rounded bg-surface-container-high text-primary hover:bg-primary hover:text-on-primary font-label-sm text-label-sm transition-colors flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">send</span>
+<span>Draft WhatsApp Nudge</span>
+</button>
+<button class="px-2.5 py-1 rounded bg-surface-container text-on-surface-variant hover:bg-surface-container-high font-label-sm text-label-sm transition-colors flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">refresh</span>
+<span>Recalculate Split</span>
+</button>
+<button class="px-2.5 py-1 rounded bg-surface-container text-on-surface-variant hover:bg-surface-container-high font-label-sm text-label-sm transition-colors">
+            Simulate 40 Guests
+          </button>
+</div>
+<!-- Prompt input for Aria -->
+<div class="mt-space-xs flex items-center gap-1 p-1 rounded bg-surface-container-lowest">
+<input class="bg-transparent font-body-sm text-body-sm text-on-surface placeholder:text-outline px-2 focus:outline-none w-full" placeholder="Ask Aria to organize rooms, dietary lists..." type="text"/>
+<button class="p-1.5 rounded bg-primary text-on-primary hover:bg-primary-container transition-colors">
+<span class="material-symbols-outlined text-[16px]">arrow_upward</span>
+</button>
+</div>
+</section>
+<!-- GUEST REGISTRATION LINK & PHONE MOCKUP RSVP PREVIEW -->
+<section class="p-space-md rounded bg-surface-container-lowest shadow-sm flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div>
+<div class="font-label-sm text-label-sm uppercase tracking-wider text-outline">Public Invite Link</div>
+<div class="font-headline-sm text-headline-sm text-on-surface">Your event, one simple link</div>
+</div>
+<span class="material-symbols-outlined text-primary text-[24px]">qr_code_2</span>
+</div>
+<!-- Public Link Box -->
+<div class="p-space-xs rounded bg-surface-container-low flex items-center justify-between gap-2">
+<div class="font-body-sm text-body-sm text-primary font-mono truncate">
+            evara.luxury/c/valentino-gala-2025
+          </div>
+<div class="flex items-center gap-1">
+<button class="p-1.5 rounded hover:bg-surface-container text-on-surface transition-colors" title="Copy URL">
+<span class="material-symbols-outlined text-[18px]">content_copy</span>
+</button>
+<button class="p-1.5 rounded hover:bg-surface-container text-on-surface transition-colors" title="Download QR">
+<span class="material-symbols-outlined text-[18px]">qr_code</span>
+</button>
+</div>
+</div>
+<!-- EMBEDDED PHONE MOCKUP (Mobile Guest RSVP View) -->
+<div class="mt-space-xs flex flex-col items-center">
+<div class="w-full max-w-[340px] rounded-2xl bg-surface-container shadow-xl overflow-hidden p-2">
+<!-- Simulated Phone Frame -->
+<div class="rounded-xl bg-background overflow-hidden shadow-inner flex flex-col">
+<!-- Mock Header Bar -->
+<div class="h-6 bg-surface-container-high px-4 flex items-center justify-between text-[11px] text-outline">
+<span>9:41</span>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px]">signal_cellular_4_bar</span>
+<span class="material-symbols-outlined text-[12px]">wifi</span>
+<span class="material-symbols-outlined text-[12px]">battery_full</span>
+</div>
+</div>
+<!-- Cover Image from attached prompt -->
+<div class="relative h-36 w-full">
+<img class="w-full h-full object-cover" data-alt="Outdoor Tuscan banquet under fairytale fairy lights in evening vineyard setting with guests laughing and toasting champagne" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCAAFwCwsKHsl_qtFPCQcf8EYQa8SuWMrcY9wbbKlg47270Lst5GJczzPEOsZUDAxRpJA2F7XLms-eOnEb7BIOhioNOSTo5C2nKf7bMYWa_J3MvPQq7UaZaLPxsbtm_fNlj_KG66fAnhz1GK0ZO9MMIDjR9Z_LPUXduL6kFjtTUt_8Yb5h0xUNOYNttqb4S3tVQiVdLeb6oe_xanVYisuryeWT2ANrgVXvOJDkJ7Q8"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-black/20"></div>
+<div class="absolute bottom-2 left-3 right-3 text-on-surface">
+<span class="font-label-sm text-label-sm text-primary font-bold uppercase tracking-wider">Private Gathering</span>
+<div class="font-headline-sm text-headline-sm text-on-surface leading-tight">Villa San Valentino Gala</div>
+</div>
+</div>
+<!-- Scrollable Mockup Content -->
+<div class="p-3 flex flex-col gap-2.5 max-h-[380px] overflow-y-auto">
+<div class="flex items-center gap-2 text-on-surface-variant font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-[16px] text-primary">calendar_today</span>
+<span>Oct 24–27, 2025 • Chianti Hills, Italy</span>
+</div>
+<div class="p-2 rounded bg-surface-container-low text-on-surface-variant font-body-sm text-body-sm italic">
+                  “We cannot wait to share the wine harvest and Tuscan evenings with our dearest circle.” — Eleanor
+                </div>
+<!-- Interactive Guest RSVP form simulation -->
+<div class="flex flex-col gap-2 pt-1">
+<div class="font-label-sm text-label-sm uppercase tracking-wider text-outline">Will you be joining us?</div>
+<div class="grid grid-cols-2 gap-1.5">
+<button class="py-1.5 px-2 rounded bg-primary text-on-primary font-title-md text-title-md text-center text-xs">
+                      Joyfully Accept
+                    </button>
+<button class="py-1.5 px-2 rounded bg-surface-container text-on-surface font-title-md text-title-md text-center text-xs">
+                      Regretfully Decline
+                    </button>
+</div>
+<div class="flex flex-col gap-1.5 mt-1">
+<div class="font-label-sm text-label-sm text-outline">Accompanying (+1 Guest)</div>
+<div class="flex items-center justify-between p-1.5 rounded bg-surface-container-low font-body-sm text-body-sm">
+<span>Sofia Sterling</span>
+<span class="material-symbols-outlined text-primary text-[16px]">check</span>
+</div>
+</div>
+<!-- Equal Split contribution trigger -->
+<div class="p-2 rounded bg-surface-container-high flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-primary uppercase font-bold">Your Share (Equal Split)</span>
+<span class="font-title-md text-title-md text-primary">₹41,666</span>
+</div>
+<div class="text-[11px] text-on-surface-variant">Includes 3 nights villa lodging, harvest banquets, and wine pairings.</div>
+<button class="w-full mt-1 py-1.5 rounded bg-primary text-on-primary font-label-md text-label-md text-center">
+                      Secure Suite via Escrow Vault
+                    </button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="font-label-sm text-label-sm text-outline mt-2 text-center">
+            Live Preview of Guest Mobile RSVP Experience
+          </div>
+</div>
+</section>
+</div>
+</div>
+<!-- STICKY FOOTER ACTIONS STRIP -->
+<footer class="mt-space-xl pt-space-lg pb-space-lg flex flex-col sm:flex-row items-center justify-between gap-space-md bg-[#F8F4EF]">
+<div class="flex items-center gap-space-xs text-on-surface-variant">
+<a class="px-space-md py-space-sm rounded bg-surface-container hover:bg-surface-container-high transition-colors font-title-md text-title-md text-on-surface flex items-center gap-2" href="#">
+<span class="material-symbols-outlined text-[18px]">arrow_back</span>
+<span>Back to Venue &amp; Itinerary</span>
+</a>
+<span class="font-label-sm text-label-sm text-outline hidden md:inline">Phase 02 Saved</span>
+</div>
+<div class="flex items-center gap-space-sm w-full sm:w-auto justify-end">
+<button class="px-space-md py-space-sm rounded bg-surface-container text-on-surface font-title-md text-title-md hover:bg-surface-container-high transition-colors">
+        Save as Draft
+      </button>
+<a class="px-space-lg py-space-sm rounded bg-primary text-on-primary font-title-md text-title-md hover:bg-primary-container transition-all flex items-center gap-2 shadow-sm" href="#">
+<span>Continue to Review &amp; Create</span>
+<span class="material-symbols-outlined text-[18px]">lock</span>
+</a>
+</div>
+</footer>
+<!-- MODAL / DRAWER FOR ADDING GUEST MANUALLY (Hidden by default, triggered via JS) -->
+<div class="fixed inset-0 bg-inverse-surface/40 backdrop-blur-sm z-50 flex items-center justify-center p-space-md hidden" id="add-guest-modal">
+<div class="bg-surface-container-lowest max-w-lg w-full rounded shadow-2xl p-space-lg flex flex-col gap-space-md max-h-[921px] overflow-y-auto">
+<div class="flex items-center justify-between">
+<div>
+<div class="font-label-sm text-label-sm uppercase tracking-wider text-outline">Guest Registration</div>
+<h3 class="font-headline-md text-headline-md text-on-surface">Add Guest to Celebration</h3>
+</div>
+<button class="p-1 rounded hover:bg-surface-container text-outline hover:text-on-surface transition-colors" id="close-add-guest-modal">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<div class="flex flex-col gap-space-sm">
+<div>
+<label class="font-label-sm text-label-sm uppercase tracking-wider text-outline mb-1 block">Full Name</label>
+<input class="w-full px-space-sm py-2 rounded bg-surface-container text-on-surface font-body-sm text-body-sm placeholder:text-outline focus:outline-none" placeholder="e.g. Julian Sterling" type="text"/>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-sm">
+<div>
+<label class="font-label-sm text-label-sm uppercase tracking-wider text-outline mb-1 block">Email Address</label>
+<input class="w-full px-space-sm py-2 rounded bg-surface-container text-on-surface font-body-sm text-body-sm placeholder:text-outline focus:outline-none" placeholder="julian@sterling.co" type="email"/>
+</div>
+<div>
+<label class="font-label-sm text-label-sm uppercase tracking-wider text-outline mb-1 block">Mobile / WhatsApp</label>
+<input class="w-full px-space-sm py-2 rounded bg-surface-container text-on-surface font-body-sm text-body-sm placeholder:text-outline focus:outline-none" placeholder="+1 (415) 890-2134" type="tel"/>
+</div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-sm">
+<div>
+<label class="font-label-sm text-label-sm uppercase tracking-wider text-outline mb-1 block">Accompanying Guests</label>
+<select class="w-full px-space-sm py-2 rounded bg-surface-container text-on-surface font-body-sm text-body-sm focus:outline-none">
+<option>Solo (0 Guests)</option>
+<option selected="">+1 Guest</option>
+<option>+2 Family</option>
+</select>
+</div>
+<div>
+<label class="font-label-sm text-label-sm uppercase tracking-wider text-outline mb-1 block">Suite Tier Assignment</label>
+<select class="w-full px-space-sm py-2 rounded bg-surface-container text-on-surface font-body-sm text-body-sm focus:outline-none">
+<option selected="">Equal Split (₹41,666)</option>
+<option>Master Terrace Suite (₹65,000)</option>
+<option>Garden Wing Suite (₹35,000)</option>
+<option>Host Complimentary (₹0)</option>
+</select>
+</div>
+</div>
+<div>
+<label class="font-label-sm text-label-sm uppercase tracking-wider text-outline mb-1 block">Dietary &amp; Concierge Notes</label>
+<input class="w-full px-space-sm py-2 rounded bg-surface-container text-on-surface font-body-sm text-body-sm placeholder:text-outline focus:outline-none" placeholder="e.g. Vegetarian preference, arriving via Florence train" type="text"/>
+</div>
+</div>
+<div class="flex items-center justify-end gap-space-xs pt-space-xs">
+<button class="px-space-md py-space-sm rounded bg-surface-container text-on-surface font-title-md text-title-md hover:bg-surface-container-high transition-colors" id="cancel-add-guest-modal">
+          Cancel
+        </button>
+<button class="px-space-md py-space-sm rounded bg-primary text-on-primary font-title-md text-title-md hover:bg-primary-container transition-colors shadow-sm" id="save-guest-action">
+          Save &amp; Generate Invite
+        </button>
+</div>
+</div>
+</div>
+<script>
+    // Client-side interactions for guest modal and channel switcher
+    const openBtn1 = document.getElementById('open-add-guest-modal');
+    const openBtn2 = document.getElementById('add-guest-btn-2');
+    const modal = document.getElementById('add-guest-modal');
+    const closeBtn = document.getElementById('close-add-guest-modal');
+    const cancelBtn = document.getElementById('cancel-add-guest-modal');
+    const saveBtn = document.getElementById('save-guest-action');
+
+    function openModal() {
+      if (modal) modal.classList.remove('hidden');
+    }
+    function closeModal() {
+      if (modal) modal.classList.add('hidden');
+    }
+
+    if (openBtn1) openBtn1.addEventListener('click', openModal);
+    if (openBtn2) openBtn2.addEventListener('click', openModal);
+    if (closeBtn) closeBtn.addEventListener('click', closeModal);
+    if (cancelBtn) cancelBtn.addEventListener('click', closeModal);
+    if (saveBtn) saveBtn.addEventListener('click', () => {
+      alert('Guest added to roster! Dynamic split recalibrated to ₹41,666.');
+      closeModal();
+    });
+
+    // Multi-channel switcher tabs
+    const tabWhatsapp = document.getElementById('tab-whatsapp');
+    const tabEmail = document.getElementById('tab-email');
+    const tabSms = document.getElementById('tab-sms');
+
+    function setActiveTab(selectedTab) {
+      [tabWhatsapp, tabEmail, tabSms].forEach(tab => {
+        if (!tab) return;
+        if (tab === selectedTab) {
+          tab.classList.add('bg-surface-container-lowest', 'text-primary', 'font-semibold', 'shadow-sm');
+          tab.classList.remove('text-on-surface-variant');
+        } else {
+          tab.classList.remove('bg-surface-container-lowest', 'text-primary', 'font-semibold', 'shadow-sm');
+          tab.classList.add('text-on-surface-variant');
+        }
+      });
+    }
+
+    if (tabWhatsapp) tabWhatsapp.addEventListener('click', () => setActiveTab(tabWhatsapp));
+    if (tabEmail) tabEmail.addEventListener('click', () => setActiveTab(tabEmail));
+    if (tabSms) tabSms.addEventListener('click', () => setActiveTab(tabSms));
+  </script>
+</div></main></div></body></html>

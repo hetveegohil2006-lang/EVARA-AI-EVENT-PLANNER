@@ -1,0 +1,974 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>Smart Shopping &amp; Procurement — Villa San Valentino Gala — EVARA</title>
+  <meta name="description" content="AI Procurement Concierge, multi-merchant price comparison, and collaborative shopping roster."/>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+  
+  <link rel="stylesheet" href="../css/variables.css"/>
+  <link rel="stylesheet" href="../css/global.css"/>
+  <link rel="stylesheet" href="../css/layout.css"/>
+  <link rel="stylesheet" href="../css/components.css"/>
+  <link rel="stylesheet" href="../css/responsive.css"/>
+  <link rel="stylesheet" href="../css/pages/other-pages.css"/>
+  <link rel="stylesheet" href="../css/pages/events.css"/>
+  <link rel="icon" type="image/svg+xml" href="../assets/icons/evara-monogram.svg"/>
+</head>
+<body class="bg-[#F8F4EF]">
+  <!-- Mobile Menu Button -->
+  <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle navigation">
+    <span class="material-symbols-outlined">menu</span>
+  </button>
+  <div class="sidebar-backdrop" id="sidebarBackdrop"></div>
+
+  <!-- FIXED EVENT-SCOPED SIDEBAR -->
+  <aside class="sidebar">
+    <div class="px-md pt-lg pb-sm">
+      <a href="../dashboard.html" class="flex items-center gap-xs text-muted hover:text-primary" style="font-size: 13px; font-weight: 600; text-decoration: none;">
+        <span class="material-symbols-outlined" style="font-size: 16px;">arrow_back</span>
+        <span>Back to All Events</span>
+      </a>
+    </div>
+
+    <!-- Workspace Scope Card -->
+    <div class="px-md pb-sm">
+      <div class="p-sm rounded-lg" style="background: var(--color-champagne-light); border: 1px solid var(--color-champagne);">
+        <span class="text-xs uppercase text-muted font-bold tracking-wider block" style="font-size: 10px;">Workspace Scope</span>
+        <span class="font-bold text-sm truncate block" style="color: var(--color-espresso);">Tuscan Gala 2025</span>
+      </div>
+    </div>
+
+    <div class="px-md py-xs">
+      <span class="text-xs uppercase text-muted font-bold tracking-wider block" style="font-size: 10px;">Navigation Modules</span>
+    </div>
+
+    <!-- Nav Items -->
+    <nav class="flex-1 px-sm space-y-0.5 overflow-y-auto">
+      <a href="event-overview.html" class="nav-link">
+        <span class="material-symbols-outlined">dashboard</span>
+        <span>Overview</span>
+      </a>
+      <a href="checklist.html" class="nav-link">
+        <span class="material-symbols-outlined">checklist</span>
+        <span>Timeline &amp; Tasks</span>
+      </a>
+      <a href="budget.html" class="nav-link">
+        <span class="material-symbols-outlined">account_balance_wallet</span>
+        <span>Budget Ledger</span>
+      </a>
+      <a href="payments.html" class="nav-link">
+        <span class="material-symbols-outlined">payments</span>
+        <span>Payments &amp; QR</span>
+      </a>
+      <a href="vendors.html" class="nav-link">
+        <span class="material-symbols-outlined">storefront</span>
+        <span>Artisan Directory</span>
+      </a>
+      <a href="shopping.html" class="nav-link active">
+        <span class="material-symbols-outlined">shopping_bag</span>
+        <span>Shopping Assistant</span>
+      </a>
+      <a href="guests.html" class="nav-link">
+        <span class="material-symbols-outlined">how_to_reg</span>
+        <span>Guest Directory</span>
+      </a>
+      <a href="invitations.html" class="nav-link">
+        <span class="material-symbols-outlined">mark_email_read</span>
+        <span>Invitation Designer</span>
+      </a>
+      <a href="team-chat.html" class="nav-link">
+        <span class="material-symbols-outlined">forum</span>
+        <span>Team Chat</span>
+      </a>
+      <a href="ai-assistant.html" class="nav-link">
+        <span class="material-symbols-outlined" style="color: var(--color-terracotta);">auto_awesome</span>
+        <span>AI Concierge</span>
+      </a>
+      <a href="reports.html" class="nav-link">
+        <span class="material-symbols-outlined">lab_profile</span>
+        <span>Reports &amp; Exports</span>
+      </a>
+    </nav>
+
+    <!-- Footer AI Indicator -->
+    <div class="p-md border-t border-champagne">
+      <div class="p-sm rounded-lg flex items-center justify-between" style="background: var(--color-champagne-light);">
+        <div class="flex items-center gap-xs">
+          <span class="material-symbols-outlined text-sm" style="color: var(--color-terracotta);">auto_awesome</span>
+          <div>
+            <span class="font-bold text-xs block leading-tight">Concierge AI v2.4</span>
+            <span class="text-xs text-muted block" style="font-size: 10px;">Private Model Active</span>
+          </div>
+        </div>
+        <div class="status-dot status-dot-active"></div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- MAIN APP CONTAINER -->
+  <div class="app-main">
+    <!-- TOP HEADER -->
+    <header class="app-header">
+      <div class="flex items-center gap-md">
+        <button class="flex items-center gap-xs p-xs rounded-lg hover:bg-surface transition-colors" style="border: 1px solid var(--color-champagne);">
+          <div>
+            <div class="flex items-center gap-xs">
+              <span class="font-bold text-sm" style="color: var(--color-espresso);">Villa San Valentino Tuscan Gala 2025</span>
+              <span class="material-symbols-outlined text-sm text-muted">expand_more</span>
+            </div>
+            <span class="text-xs text-muted block text-left">Oct 24–27, 2025</span>
+          </div>
+          <span class="badge badge-gold" style="font-size: 10px; margin-left: 0.5rem;">Planning Active</span>
+        </button>
+      </div>
+
+      <div class="flex-1 max-w-md hidden md:block">
+        <div class="header-search">
+          <span class="material-symbols-outlined">search</span>
+          <input type="text" id="shoppingSearchInput" placeholder="Search 140+ sourced items, suppliers, SKU..."/>
+        </div>
+      </div>
+
+      <div class="flex items-center gap-sm">
+        <div class="currency-pill">
+          <span class="material-symbols-outlined text-sm">payments</span>
+          <span>INR (₹)</span>
+        </div>
+        <a href="notifications.html" class="icon-btn" aria-label="Notifications">
+          <span class="material-symbols-outlined">notifications</span>
+          <span class="notification-badge"></span>
+        </a>
+        <div class="header-divider"></div>
+        <a href="profile-settings.html" class="flex items-center gap-xs" style="text-decoration: none;">
+          <div class="text-right hidden xl:block">
+            <span class="font-bold text-xs block leading-tight" style="color: var(--color-espresso);">Eleanor Vance</span>
+            <span class="text-xs text-muted block" style="font-size: 11px;">Principal Host</span>
+          </div>
+          <div class="user-avatar">
+            <span class="material-symbols-outlined">person</span>
+          </div>
+        </a>
+      </div>
+    </header>
+
+    <!-- CONTENT WRAPPER -->
+    <main class="content-wrapper">
+      
+      <!-- HERO BANNER -->
+      <section class="card mb-lg overflow-hidden" style="padding: 0; background: var(--color-espresso); color: white; position: relative;">
+        <div style="height: 280px; position: relative; overflow: hidden;">
+          <div style="position: absolute; inset: 0; background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD_qeu6cZBT78GHT52nlvxcyxwQ4dD-cf20spt_ivp-Z79a6D7AnRvSM9Ev1OavJ9lYVErKHyihKkSGNU1hkZvCsGRbajyZ2qKJtQr006R1VW5uZ6PeEDMpiO5EsnCo9T4HfAdYzmMS1DfJo1pCCdndNNYrSU81K8LLY3CjaH5W5SOIAgZZAZqOGk1uIvXf5WxOdgakoNRzGyeyQoBeO1DRHrOzKdsiU3G6FAY7NkA'); background-size: cover; background-position: center; filter: brightness(0.65);"></div>
+          <div style="position: absolute; inset: 0; background: linear-gradient(to top, rgba(34,26,23,0.95) 0%, rgba(34,26,23,0.3) 60%, transparent 100%);"></div>
+          
+          <div style="position: absolute; bottom: 0; left: 0; right: 0; padding: 2rem; display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 1.5rem; z-index: 2;">
+            <div>
+              <div class="inline-flex items-center gap-xs px-sm py-xs rounded-full mb-xs" style="background: rgba(255, 255, 255, 0.15); backdrop-filter: blur(8px);">
+                <span class="material-symbols-outlined text-xs" style="color: var(--color-champagne);">hotel_class</span>
+                <span class="text-xs uppercase tracking-widest font-bold" style="color: var(--color-champagne);">Villa San Valentino Tuscan Gala 2025</span>
+              </div>
+              <h1 class="font-headline-lg" style="color: white; margin: 0 0 0.25rem;">Smart Shopping</h1>
+              <p class="font-body-md" style="color: rgba(255, 255, 255, 0.85); margin: 0; max-width: 600px;">
+                Find everything your event needs, curated with concierge precision and real-time vendor arbitrage.
+              </p>
+            </div>
+
+            <!-- Buffer KPI Pill -->
+            <div class="p-md rounded-xl flex items-center gap-md" style="background: rgba(255, 248, 246, 0.95); backdrop-filter: blur(12px); color: var(--color-espresso); box-shadow: var(--shadow-lg);">
+              <div class="w-10 h-10 rounded-lg flex items-center justify-center" style="background: var(--color-champagne-light); color: var(--color-mocha);">
+                <span class="material-symbols-outlined">account_balance_wallet</span>
+              </div>
+              <div>
+                <div class="flex items-center gap-xs">
+                  <span class="text-xs uppercase tracking-wider text-muted font-bold">Master Cap: ₹15,00,000</span>
+                  <span class="badge badge-gold" style="font-size: 10px;">Live</span>
+                </div>
+                <div class="font-bold text-lg" style="color: var(--color-mocha);">
+                  ₹45,000 <span class="text-xs font-normal text-muted">unallocated supplies buffer</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Toolbar Strip -->
+        <div class="p-md flex flex-wrap items-center justify-between gap-md" style="background: #FFF8F6; color: var(--color-espresso); border-top: 1px solid var(--color-champagne);">
+          <div class="flex items-center gap-xs overflow-x-auto pb-1 sm:pb-0" id="categoryFilterContainer">
+            <button class="btn btn-primary btn-sm category-pill active" data-filter="all">All Supplies</button>
+            <button class="btn btn-subtle btn-sm category-pill" data-filter="decor">Décor Essentials</button>
+            <button class="btn btn-subtle btn-sm category-pill" data-filter="instant">Instant Delivery</button>
+            <button class="btn btn-subtle btn-sm category-pill" data-filter="artisan">Artisan Bespoke</button>
+            <button class="btn btn-subtle btn-sm category-pill" data-filter="pending">Pending Purchase (6)</button>
+          </div>
+
+          <div class="flex items-center gap-xs text-xs text-muted">
+            <span class="uppercase tracking-wider font-bold">Merchant Scope:</span>
+            <span class="px-sm py-xs rounded bg-surface font-semibold" style="border: 1px solid var(--color-champagne);">Amazon • Blinkit • Meesho • Flipkart</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- 8 CURATION TAXONOMY CATALOGUES -->
+      <section class="mb-xl">
+        <div class="flex items-center justify-between mb-md">
+          <div>
+            <span class="text-xs uppercase tracking-widest font-bold block" style="color: var(--color-terracotta);">Curation Taxonomy</span>
+            <h2 class="font-headline-md">Event Catalogues</h2>
+          </div>
+          <span class="text-xs text-muted">8 Curated Collections • 100% Tuscan-Adapted</span>
+        </div>
+
+        <div class="grid grid-cols-4 gap-md">
+          <!-- Card 1 -->
+          <div class="card card-interactive p-0 overflow-hidden" onclick="App.toast('Browsing 24 sourced Decorations', 'yard')">
+            <div style="height: 140px; overflow: hidden; position: relative;">
+              <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCJgHJ21r09_Z1RR-p5qT59xM5IrrNe2yZY2OTrktaBECObU1E8hvKa6W4WSiCckVSF_4q5A4fzls7UxBaxnyP83wOb89lnJ051HHSDbkDiCZexssnoogfK4PbMOrxWTh12K6lerg1EsOt-lYk2TNoBQ-EqHMz0ghGHQuGPJ73-lhZDsYyvPlf0026qaY3VRp6gsq-gLA562eQqS-0pzrxLmgiOoY1XyPUxNPXs6e0" alt="Decorations" style="width: 100%; height: 100%; object-fit: cover;" />
+            </div>
+            <div class="p-md">
+              <div class="flex items-center justify-between mb-xs">
+                <h3 class="font-bold text-base" style="margin: 0;">Decorations</h3>
+                <span class="material-symbols-outlined text-sm" style="color: var(--color-terracotta);">yard</span>
+              </div>
+              <p class="text-xs text-muted line-clamp-2" style="margin-bottom: 0.75rem;">Tuscan festoons, hand-baked terracotta urns, fresh olive branch garlands.</p>
+              <div class="flex items-center justify-between font-bold text-xs" style="color: var(--color-mocha);">
+                <span>24 Items Sourced</span>
+                <span class="material-symbols-outlined text-sm">arrow_forward</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="card card-interactive p-0 overflow-hidden" onclick="App.toast('Browsing 12 sourced Clothing & Accessories', 'checkroom')">
+            <div style="height: 140px; overflow: hidden; position: relative;">
+              <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBSUA1gg-_khTeL1dmmL-LD19ywnkfkEWPwz44Eb_5Nc_M9jgLVPjsgyvAkL5SFIeouQrGUe4iWXggIdV0DVDV9jWaIjDVK0xbiVKu-sQTqHMYq4jAPRhcgfjpZyylOZ4LdSiTPTHK3AqM-u8C7_0_6YRkOp6GbNdHFTH1c0wMs5UWFTj0A8_x32_UUdt7yAM_TlmybCBPJ4OCgzbaaUvdkODK8pytbimZWNB6CkLk" alt="Clothing & Accs" style="width: 100%; height: 100%; object-fit: cover;" />
+            </div>
+            <div class="p-md">
+              <div class="flex items-center justify-between mb-xs">
+                <h3 class="font-bold text-base" style="margin: 0;">Clothing &amp; Accs</h3>
+                <span class="material-symbols-outlined text-sm" style="color: var(--color-terracotta);">checkroom</span>
+              </div>
+              <p class="text-xs text-muted line-clamp-2" style="margin-bottom: 0.75rem;">Formal linen guest wraps, tailored pashminas, embroidered monogram ties.</p>
+              <div class="flex items-center justify-between font-bold text-xs" style="color: var(--color-mocha);">
+                <span>12 Items Sourced</span>
+                <span class="material-symbols-outlined text-sm">arrow_forward</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="card card-interactive p-0 overflow-hidden" onclick="App.toast('Browsing 18 sourced Gifts & Return Favors', 'featured_seasonal_and_gifts')">
+            <div style="height: 140px; overflow: hidden; position: relative;">
+              <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAmFqUNBuIuPSN9WhI8j9ec09WUJ-qjWA1GtbVKRItl53ZQ_2U09IxEpfnLEI7UHjtONkZcUgavgPdOAFDhl_fhkv2jIo1qSO8_V7J5pYDc8vj50uciZVtlK4_9wue5-sL1GXTPM4RUM4yyhEsOMrRRLY0z4Rg2MNz-za13B1GlOAFfSICG8btC-0ZUBBepRKx8-CFZrCkfMdHWnQ0YQIvvDnx3a4OSV8K7DOadTmg" alt="Gifts" style="width: 100%; height: 100%; object-fit: cover;" />
+            </div>
+            <div class="p-md">
+              <div class="flex items-center justify-between mb-xs">
+                <h3 class="font-bold text-base" style="margin: 0;">Gifts &amp; Return Gifts</h3>
+                <span class="material-symbols-outlined text-sm" style="color: var(--color-terracotta);">featured_seasonal_and_gifts</span>
+              </div>
+              <p class="text-xs text-muted line-clamp-2" style="margin-bottom: 0.75rem;">Artisanal Chianti olive oil 100ml flacons, monogrammed stone coasters.</p>
+              <div class="flex items-center justify-between font-bold text-xs" style="color: var(--color-mocha);">
+                <span>18 Items Sourced</span>
+                <span class="material-symbols-outlined text-sm">arrow_forward</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="card card-interactive p-0 overflow-hidden" onclick="App.toast('Browsing 32 sourced Kitchen & Dining essentials', 'wine_bar')">
+            <div style="height: 140px; overflow: hidden; position: relative;">
+              <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuC-mb3qDhcaj1yfKcarPpjtOD6nGlaC-xpmrEvAETf-YYhy9sQP3XerWh5xSNIq3QLMyLnEiQfeI3sKCm1xmiRwDeOUQaNNnUk8lCx5Io1wKjO5_wWSxzNbUd9F0CzctELNL7Yp1f6qlGiEX-GCSbcTHldKjg1HmWjuFHLl9Pnot2WQkk29wR-w3yP18TFhNwpzcEuYfaTRyawSHBmzQcTTWqT26YG2hj-ce4CHYL8" alt="Kitchen & Dining" style="width: 100%; height: 100%; object-fit: cover;" />
+            </div>
+            <div class="p-md">
+              <div class="flex items-center justify-between mb-xs">
+                <h3 class="font-bold text-base" style="margin: 0;">Kitchen &amp; Dining</h3>
+                <span class="material-symbols-outlined text-sm" style="color: var(--color-terracotta);">wine_bar</span>
+              </div>
+              <p class="text-xs text-muted line-clamp-2" style="margin-bottom: 0.75rem;">Vintage amber crystal stemware, letterpress cork coasters, linen napkins.</p>
+              <div class="flex items-center justify-between font-bold text-xs" style="color: var(--color-mocha);">
+                <span>32 Items Sourced</span>
+                <span class="material-symbols-outlined text-sm">arrow_forward</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 5 -->
+          <div class="card card-interactive p-0 overflow-hidden" onclick="App.toast('Browsing 15 Party Supplies items', 'celebration')">
+            <div style="height: 140px; overflow: hidden; position: relative;">
+              <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDSN5UPxeO1aNybeB9JK53VZw3hdWjZnAj_qPuWj4_gPJzqaEl1599x8BzVKcAFjgzQRifDuUCROzw_vJxZgp5eyzuXQm2Sg8vTr05dfKLFyFz3jP2a81PF8UWs0YMgLE6Cg9XNUZPTC0dA_84QFihM7mS1jKHpJIbNqbwX6t9_mcq3xlSMUCoMLqNU8ZVq7RWJqNAfnqSdhL2cQaWYc4s-FFLrM1KTFcQuGYfNbcg" alt="Party Supplies" style="width: 100%; height: 100%; object-fit: cover;" />
+            </div>
+            <div class="p-md">
+              <div class="flex items-center justify-between mb-xs">
+                <h3 class="font-bold text-base" style="margin: 0;">Party Supplies</h3>
+                <span class="material-symbols-outlined text-sm" style="color: var(--color-terracotta);">celebration</span>
+              </div>
+              <p class="text-xs text-muted line-clamp-2" style="margin-bottom: 0.75rem;">Smokeless indoor cold sparklers, dried botanical biodegradable confetti.</p>
+              <div class="flex items-center justify-between font-bold text-xs" style="color: var(--color-mocha);">
+                <span>15 Items Sourced</span>
+                <span class="material-symbols-outlined text-sm">arrow_forward</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 6 -->
+          <div class="card card-interactive p-0 overflow-hidden" onclick="App.toast('Browsing 9 Electronics & AV items', 'speaker')">
+            <div style="height: 140px; overflow: hidden; position: relative;">
+              <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAA73jur3RKL3A9PvZuyraQJbBGyIseogpRj_gpC3IRs4LSZjQ0UBUAGyiSuO1zNlphhoDs_u5B_8GIBFRVibQssCBqkcuMRz-mc9VvMgktxIQgqAfVc48dOBXz1Gzm-JIoZ-wIH0AlsWmajtHTU5vos0DZWnLWpAmnsqTSeQnhgDh3un3rIBc2TvTfAyfAq4SZX3_QQVS90ERjlhQI_6Wn66GkpWlIUw3IlpJV51w" alt="Electronics & AV" style="width: 100%; height: 100%; object-fit: cover;" />
+            </div>
+            <div class="p-md">
+              <div class="flex items-center justify-between mb-xs">
+                <h3 class="font-bold text-base" style="margin: 0;">Electronics &amp; AV</h3>
+                <span class="material-symbols-outlined text-sm" style="color: var(--color-terracotta);">speaker</span>
+              </div>
+              <p class="text-xs text-muted line-clamp-2" style="margin-bottom: 0.75rem;">Portable audio monitors, battery amber uplights, wireless lavaliers.</p>
+              <div class="flex items-center justify-between font-bold text-xs" style="color: var(--color-mocha);">
+                <span>9 Items Sourced</span>
+                <span class="material-symbols-outlined text-sm">arrow_forward</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 7 -->
+          <div class="card card-interactive p-0 overflow-hidden" onclick="App.toast('Browsing 11 Travel Essentials', 'luggage')">
+            <div style="height: 140px; overflow: hidden; position: relative;">
+              <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuATpoe6T0pgh0tTqNASrEKrHNxa2FBs0r5gdJ3wn6AI7Y_aIO7dOYXf8LFMuj8LyUFh4pe4-qMnVSV7YM1kZlNv1pzotxWejiNsyYypv-p2chqRrjWAmKrGZtiGtGN_8_8sJkq3X0SCSM-btR3YTtNS4_YjNqhO6Vtvy8WSUYwOIrBhE1sy5aRdgnonB4yOfZKQOMqXzZaRAgoolBuPWQeQ1PTHtwMOFysxnM6gut4" alt="Travel Essentials" style="width: 100%; height: 100%; object-fit: cover;" />
+            </div>
+            <div class="p-md">
+              <div class="flex items-center justify-between mb-xs">
+                <h3 class="font-bold text-base" style="margin: 0;">Travel Essentials</h3>
+                <span class="material-symbols-outlined text-sm" style="color: var(--color-terracotta);">luggage</span>
+              </div>
+              <p class="text-xs text-muted line-clamp-2" style="margin-bottom: 0.75rem;">Embossed saddle leather luggage tags, villa guest welcome amenity kits.</p>
+              <div class="flex items-center justify-between font-bold text-xs" style="color: var(--color-mocha);">
+                <span>11 Items Sourced</span>
+                <span class="material-symbols-outlined text-sm">arrow_forward</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 8 -->
+          <div class="card card-interactive p-0 overflow-hidden" onclick="App.toast('Browsing 20 Stationery & Wax Seals', 'history_edu')">
+            <div style="height: 140px; overflow: hidden; position: relative;">
+              <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCI50QBbKpjEK5ZEv2KCR-oGxoXimjUA9pCIRju_JDbKOy0HMdDDDR-8IJb6BBhprttyNnpfI-_U5L68IqeY9EN5QPXxNM0VYfMFA1fC2tNCdNtlqpnHfUi4NYT5ksXX7w5r74D2RRnWfUXm_APOYG07AlTwRR7vTd7t8NbMl6nKt6qgdSsVH1Qh_4Q7WmkrldxjthtqbwDakd9cqmDNNFfqCpCZpvlOoaWl9nJR0A" alt="Stationery & Seals" style="width: 100%; height: 100%; object-fit: cover;" />
+            </div>
+            <div class="p-md">
+              <div class="flex items-center justify-between mb-xs">
+                <h3 class="font-bold text-base" style="margin: 0;">Stationery &amp; Seals</h3>
+                <span class="material-symbols-outlined text-sm" style="color: var(--color-terracotta);">history_edu</span>
+              </div>
+              <p class="text-xs text-muted line-clamp-2" style="margin-bottom: 0.75rem;">Bespoke monogram wax seals, deckle-edge cotton escort cards, calligraphic ink.</p>
+              <div class="flex items-center justify-between font-bold text-xs" style="color: var(--color-mocha);">
+                <span>20 Items Sourced</span>
+                <span class="material-symbols-outlined text-sm">arrow_forward</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- AI PROCUREMENT CONCIERGE & FISCAL INSIGHTS -->
+      <div class="grid grid-cols-12 gap-md mb-xl">
+        
+        <!-- Left: AI Procurement Widget (8 cols) -->
+        <div class="col-span-8 card relative overflow-hidden" style="background: var(--color-champagne-light); border: 1px solid var(--color-champagne);">
+          <div class="flex items-center justify-between mb-md">
+            <div class="flex items-center gap-xs">
+              <div class="w-9 h-9 rounded-lg flex items-center justify-center" style="background: var(--color-mocha); color: white;">
+                <span class="material-symbols-outlined text-sm">auto_awesome</span>
+              </div>
+              <div>
+                <h2 class="font-bold text-base" style="margin: 0; color: var(--color-espresso);">AI Procurement Concierge</h2>
+                <span class="text-xs text-muted">Autonomous price scraper matching local Italian stock &amp; instant hub logistics</span>
+              </div>
+            </div>
+            <span class="badge badge-gold">Engine Active</span>
+          </div>
+
+          <div class="grid grid-cols-2 gap-sm mb-sm">
+            <div>
+              <label class="form-label">Target Item Description</label>
+              <input type="text" id="targetItemName" class="form-input" value="Terracotta candle hurricanes with wind shield"/>
+            </div>
+            <div class="grid grid-cols-2 gap-xs">
+              <div>
+                <label class="form-label">Target Qty</label>
+                <input type="number" id="targetItemQty" class="form-input" value="24"/>
+              </div>
+              <div>
+                <label class="form-label">Max Budget</label>
+                <input type="text" id="targetItemBudget" class="form-input" value="₹8,000"/>
+              </div>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-2 gap-sm mb-md">
+            <div>
+              <label class="form-label">Fulfillment Priority</label>
+              <div class="grid grid-cols-2 gap-xs">
+                <label class="p-xs rounded-lg flex items-center gap-xs cursor-pointer bg-white" style="border: 1px solid var(--color-champagne);">
+                  <input type="radio" name="deliverySpeed" checked/>
+                  <div>
+                    <span class="font-bold text-xs block leading-tight">Instant / Same-Day</span>
+                    <span class="text-xs text-muted block" style="font-size: 10px;">Blinkit, Zepto Hub</span>
+                  </div>
+                </label>
+                <label class="p-xs rounded-lg flex items-center gap-xs cursor-pointer bg-white" style="border: 1px solid var(--color-champagne);">
+                  <input type="radio" name="deliverySpeed"/>
+                  <div>
+                    <span class="font-bold text-xs block leading-tight">Priority Prime / Bulk</span>
+                    <span class="text-xs text-muted block" style="font-size: 10px;">Amazon, Meesho</span>
+                  </div>
+                </label>
+              </div>
+            </div>
+            <div>
+              <label class="form-label">Aesthetic Alignment</label>
+              <div class="flex items-center gap-xs flex-wrap">
+                <span class="px-sm py-xs rounded-lg bg-white text-xs font-semibold flex items-center gap-xs" style="border: 1px solid var(--color-champagne);">
+                  <span class="w-2 h-2 rounded-full" style="background: var(--color-terracotta);"></span> Tuscan Terracotta
+                </span>
+                <span class="px-sm py-xs rounded-lg bg-white text-xs font-semibold flex items-center gap-xs" style="border: 1px solid var(--color-champagne);">
+                  <span class="w-2 h-2 rounded-full" style="background: var(--color-mocha);"></span> Warm Amber Glow
+                </span>
+                <span class="px-sm py-xs rounded-lg bg-white text-xs font-semibold flex items-center gap-xs" style="border: 1px solid var(--color-champagne);">
+                  <span class="w-2 h-2 rounded-full" style="background: #D4C3BC;"></span> Matte Linen
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex items-center justify-between pt-xs" style="border-top: 1px solid var(--color-champagne);">
+            <div class="flex items-center gap-xs text-xs text-muted">
+              <span class="material-symbols-outlined text-sm" style="color: var(--color-terracotta);">info</span>
+              <span>Cross-checks current catalog with allocated ₹45,000 contingency pool</span>
+            </div>
+            <button class="btn btn-primary" id="btnAiSearch" onclick="runAiScraper(this)">
+              <span class="material-symbols-outlined text-sm">travel_explore</span>
+              <span>Find Products with AI</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Right: AI Fiscal Insights (4 cols) -->
+        <div class="col-span-4 card flex flex-col justify-between" style="background: white; border: 1px solid var(--color-champagne);">
+          <div>
+            <div class="flex items-center gap-xs mb-xs">
+              <span class="material-symbols-outlined text-sm" style="color: var(--color-terracotta);">savings</span>
+              <h3 class="font-bold text-base" style="margin: 0;">AI Fiscal Insights</h3>
+            </div>
+            <p class="text-xs text-muted mb-md">Algorithmic margin &amp; packaging optimizers tailored to your spend.</p>
+
+            <div class="space-y-sm">
+              <div class="p-sm rounded-xl" style="background: var(--color-champagne-light); border: 1px solid var(--color-champagne);">
+                <div class="font-bold text-xs" style="color: var(--color-espresso);">Bulk Mill Direct Fulfillment</div>
+                <p class="text-xs text-muted mt-xs">Ordering 40x Olive Oil bottles direct from Chianti saves <strong style="color: var(--color-terracotta);">₹1,200</strong> in shipping margins.</p>
+                <div class="mt-xs flex items-center justify-between">
+                  <button class="btn btn-subtle btn-xs" onclick="App.toast('Strategy Applied: Bulk Mill Direct', 'check')">Apply Strategy</button>
+                  <span class="text-muted" style="font-size: 10px;">Validated 18m ago</span>
+                </div>
+              </div>
+
+              <div class="p-sm rounded-xl" style="background: var(--color-champagne-light); border: 1px solid var(--color-champagne);">
+                <div class="font-bold text-xs" style="color: var(--color-espresso);">Material Substitution Arbitrage</div>
+                <p class="text-xs text-muted mt-xs">Replace heavy imported glass with local brass sconces to save <strong style="color: var(--color-terracotta);">₹8,500</strong> within Décor.</p>
+                <div class="mt-xs flex items-center justify-between">
+                  <button class="btn btn-subtle btn-xs" onclick="App.toast('Specification Swapped: Brass Sconces', 'check')">Swap Specification</button>
+                  <span class="text-muted" style="font-size: 10px;">Saves 14% overall</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="pt-sm mt-md flex items-center justify-between" style="border-top: 1px solid var(--color-champagne);">
+            <span class="text-xs text-muted">Concierge Fiscal Agent</span>
+            <span class="text-xs font-bold flex items-center gap-xs" style="color: var(--color-terracotta);">
+              <span class="status-dot status-dot-active"></span> Active Monitoring
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <!-- PRODUCT DISCOVERY CARDS -->
+      <section class="mb-xl">
+        <div class="flex items-center justify-between mb-md">
+          <div>
+            <span class="text-xs uppercase tracking-widest font-bold block" style="color: var(--color-terracotta);">Real-Time Market Radar</span>
+            <h2 class="font-headline-md">Curated Product Discovery &amp; Comparison</h2>
+          </div>
+          <span class="text-xs text-muted">Sorted by: Cost-to-Impact Ratio</span>
+        </div>
+
+        <div class="grid grid-cols-4 gap-md mb-lg">
+          <!-- Item 1 -->
+          <div class="card p-md flex flex-col justify-between" style="background: white;">
+            <div>
+              <div style="height: 160px; border-radius: var(--radius-md); overflow: hidden; margin-bottom: 0.75rem; position: relative;">
+                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAmjUhPOwAU4NyJR6pscYa3ItVJwwDOloxwekFzvw-HPkqNHrl50oAdZSZtKCfp40hxJ0mLTyB9Tafbyfn6AXF30lDNzI2X-OD8m_2IAPbL0bmCgDmv8mbEPTzzAnKkAohfBehmGLkIt6DNZPEZ4EU7ArIUhmvDPKY1qbPSXPDI65_Kc1rJhAVdg1-nbvO6lLvu1nliaKkc00V_LVYo2arh0k1WtFPbJrD5Lni5JjE" alt="Tuscan Urns" style="width: 100%; height: 100%; object-fit: cover;" />
+                <span class="badge badge-gold" style="position: absolute; top: 8px; left: 8px; font-size: 10px;">Amazon Prime</span>
+                <span class="badge" style="position: absolute; bottom: 8px; right: 8px; background: rgba(34,26,23,0.8); color: white; font-size: 10px;">★ 4.8</span>
+              </div>
+              <span class="text-xs text-muted uppercase tracking-wider block font-bold">Décor Centerpiece</span>
+              <h3 class="font-bold text-sm truncate" style="margin: 2px 0 4px;">Handcrafted Tuscan Terracotta Urns</h3>
+              <p class="text-xs text-muted">45cm Height • Weatherproof earthenware • Pack of 2</p>
+            </div>
+            <div class="mt-md pt-sm" style="border-top: 1px solid var(--color-champagne);">
+              <div class="flex items-baseline justify-between mb-xs">
+                <span class="font-bold text-lg" style="color: var(--color-mocha);">₹3,499</span>
+                <span class="text-xs text-muted">Est. 2 days delivery</span>
+              </div>
+              <div class="grid grid-cols-2 gap-xs">
+                <button class="btn btn-subtle btn-xs" onclick="App.toast('Terracotta Urns added to Wishlist', 'bookmark')">Wishlist</button>
+                <button class="btn btn-primary btn-xs" onclick="addItemToRoster('Tuscan Terracotta Urns', 3499, 'Amazon')">Add List</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 2 -->
+          <div class="card p-md flex flex-col justify-between" style="background: white;">
+            <div>
+              <div style="height: 160px; border-radius: var(--radius-md); overflow: hidden; margin-bottom: 0.75rem; position: relative;">
+                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCYddzuRcWAoy3zxU_5S5F2ZVsXS8BSGNjWp8yhwj8ApCP4a9HqVaIzfL4MWUWVbHbC4iOV6jpr06mfVkFmg5N0DmzCnw66VLdHihS9BV5GsF3EhfUjKOPLwFJLr8J5mmEhuFVTRXycqvN4lMDb5dUGXpaF0XqPDtLXmZB6gjgc_RGAXzTNr1Ne18dcNCCUdKRjEQxy7NHfr3Q1BoRrl_kLp2RHNKeOqM076Rfd5Rk" alt="Sparkler Fountains" style="width: 100%; height: 100%; object-fit: cover;" />
+                <span class="badge" style="position: absolute; top: 8px; left: 8px; background: #FFDBCA; color: #664839; font-size: 10px;">Blinkit Express</span>
+                <span class="badge" style="position: absolute; bottom: 8px; right: 8px; background: rgba(34,26,23,0.8); color: white; font-size: 10px;">⚡ 10 min ETA</span>
+              </div>
+              <span class="text-xs text-muted uppercase tracking-wider block font-bold">Night Celebration</span>
+              <h3 class="font-bold text-sm truncate" style="margin: 2px 0 4px;">50x Cold Sparkler Fountains</h3>
+              <p class="text-xs text-muted">Indoor-safe smokeless titanium formula • 60s burn</p>
+            </div>
+            <div class="mt-md pt-sm" style="border-top: 1px solid var(--color-champagne);">
+              <div class="flex items-baseline justify-between mb-xs">
+                <span class="font-bold text-lg" style="color: var(--color-mocha);">₹2,200</span>
+                <span class="text-xs text-muted">Instant local hub</span>
+              </div>
+              <div class="grid grid-cols-2 gap-xs">
+                <button class="btn btn-subtle btn-xs" onclick="App.toast('Cold Sparklers added to Wishlist', 'bookmark')">Wishlist</button>
+                <button class="btn btn-primary btn-xs" onclick="addItemToRoster('50x Cold Sparklers', 2200, 'Blinkit')">Add List</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 3 -->
+          <div class="card p-md flex flex-col justify-between" style="background: white;">
+            <div>
+              <div style="height: 160px; border-radius: var(--radius-md); overflow: hidden; margin-bottom: 0.75rem; position: relative;">
+                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDU4RErlJH0nCH3ODFDu5U5B01JQOVIifVE9D4BM7BvPcJXNzwWo6ljMchvdd5-i6jo2nGKA6QUgaJ5xF83mgDnKV7qWloCECNDMYDxd3pljJz1Ex54zg-FfyX7cy2vFhZSz4cHoL7jVlADBf2x3xVQQO3cwoAe2gj0iyIYRutwiuJg4Q0-9vIBMEKYbJ4r38uIkIuapwNLZM3YuGQOhnP5KyGqs_JAdE80V9CW9sw" alt="Olive Oil Favors" style="width: 100%; height: 100%; object-fit: cover;" />
+                <span class="badge badge-gold" style="position: absolute; top: 8px; left: 8px; font-size: 10px;">Meesho Artisans</span>
+                <span class="badge" style="position: absolute; bottom: 8px; right: 8px; background: rgba(34,26,23,0.8); color: white; font-size: 10px;">★ 4.9</span>
+              </div>
+              <span class="text-xs text-muted uppercase tracking-wider block font-bold">VIP Favor Suite</span>
+              <h3 class="font-bold text-sm truncate" style="margin: 2px 0 4px;">40x Monogrammed Olive Oil 100ml</h3>
+              <p class="text-xs text-muted">Extra virgin cold-pressed with personalized wax stamp</p>
+            </div>
+            <div class="mt-md pt-sm" style="border-top: 1px solid var(--color-champagne);">
+              <div class="flex items-baseline justify-between mb-xs">
+                <span class="font-bold text-lg" style="color: var(--color-mocha);">₹4,800</span>
+                <span class="text-xs text-muted">Batch prep: 4 days</span>
+              </div>
+              <div class="grid grid-cols-2 gap-xs">
+                <button class="btn btn-subtle btn-xs" onclick="App.toast('Olive Oil Favors added to Wishlist', 'bookmark')">Wishlist</button>
+                <button class="btn btn-primary btn-xs" onclick="addItemToRoster('40x Monogrammed Olive Oil', 4800, 'Meesho')">Add List</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 4 -->
+          <div class="card p-md flex flex-col justify-between" style="background: white;">
+            <div>
+              <div style="height: 160px; border-radius: var(--radius-md); overflow: hidden; margin-bottom: 0.75rem; position: relative;">
+                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAyC_pqPbFvaml0u-kVPBJvpxJ0dLwP4RELc5UBsUFBuJdXliXxw2ebMG6eKP1Qkx0cbYNyopyl_HZ1Q6yBEPN2jHk1GXO_swQlsGdTwzi3JzZ8azGx9kjKV3mO3-ihpiiLF7FDSVq_bCXex3eRnk46bos2udlHBPrMVoq_W4JWAU4gjwzUwi__LHe4sqnGgmjP1mys6jm6_JETHZYbEP_gRC35DpyGsFsEHx_A_sg" alt="Festoon Lights" style="width: 100%; height: 100%; object-fit: cover;" />
+                <span class="badge" style="position: absolute; top: 8px; left: 8px; background: #FFDDB1; color: #634A25; font-size: 10px;">Flipkart Supermart</span>
+                <span class="badge" style="position: absolute; bottom: 8px; right: 8px; background: rgba(34,26,23,0.8); color: white; font-size: 10px;">★ 4.7</span>
+              </div>
+              <span class="text-xs text-muted uppercase tracking-wider block font-bold">Courtyard Illumination</span>
+              <h3 class="font-bold text-sm truncate" style="margin: 2px 0 4px;">Festoon Amber Fairy Light 50m</h3>
+              <p class="text-xs text-muted">IP65 waterproof commercial grade cable • 2200K</p>
+            </div>
+            <div class="mt-md pt-sm" style="border-top: 1px solid var(--color-champagne);">
+              <div class="flex items-baseline justify-between mb-xs">
+                <span class="font-bold text-lg" style="color: var(--color-mocha);">₹1,850</span>
+                <span class="text-xs text-muted">Est. 3 days delivery</span>
+              </div>
+              <div class="grid grid-cols-2 gap-xs">
+                <button class="btn btn-subtle btn-xs" onclick="App.toast('Festoon Fairy Light added to Wishlist', 'bookmark')">Wishlist</button>
+                <button class="btn btn-primary btn-xs" onclick="addItemToRoster('Festoon Amber Lights 50m', 1850, 'Flipkart')">Add List</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- MULTI-MERCHANT COMPARISON GRID -->
+        <div class="card p-lg" style="background: white;">
+          <div class="flex items-center justify-between mb-md">
+            <div>
+              <h3 class="font-bold text-base" style="margin: 0;">Multi-Merchant Comparison Grid</h3>
+              <p class="text-xs text-muted" style="margin: 0;">Side-by-side pricing &amp; logistic reliability score across leading merchant networks</p>
+            </div>
+            <span class="badge badge-gold" style="font-size: 11px;">Taxes &amp; Customs Pre-Computed</span>
+          </div>
+
+          <div style="overflow-x: auto;">
+            <table class="data-table" style="width: 100%; border-collapse: collapse;">
+              <thead>
+                <tr style="border-bottom: 2px solid var(--color-champagne); text-align: left; font-size: 11px; text-transform: uppercase; color: var(--color-muted);">
+                  <th style="padding: 0.75rem 1rem;">Product Description</th>
+                  <th style="padding: 0.75rem 1rem;">Merchant Channel</th>
+                  <th style="padding: 0.75rem 1rem;">Unit Rate</th>
+                  <th style="padding: 0.75rem 1rem;">Delivery Lead Time</th>
+                  <th style="padding: 0.75rem 1rem;">Stock Status</th>
+                  <th style="padding: 0.75rem 1rem; text-align: right;">Direct Action</th>
+                </tr>
+              </thead>
+              <tbody id="merchantTableBody">
+                <tr style="border-bottom: 1px solid var(--color-champagne-light);">
+                  <td style="padding: 0.75rem 1rem; font-weight: 600;">Tuscan Terracotta Urns (45cm Pair)</td>
+                  <td style="padding: 0.75rem 1rem;"><span class="badge badge-gold" style="font-size: 11px;">Amazon Business</span></td>
+                  <td style="padding: 0.75rem 1rem; font-weight: bold; color: var(--color-mocha);">₹3,499</td>
+                  <td style="padding: 0.75rem 1rem; color: var(--color-muted); font-size: 13px;">48 Hours (Guaranteed)</td>
+                  <td style="padding: 0.75rem 1rem;"><span class="text-xs font-semibold" style="color: var(--color-terracotta);">• 14 pairs left</span></td>
+                  <td style="padding: 0.75rem 1rem; text-align: right;">
+                    <button class="btn btn-primary btn-xs" onclick="App.toast('Dispatching Amazon Business PO', 'local_shipping')">Order Now</button>
+                  </td>
+                </tr>
+                <tr style="border-bottom: 1px solid var(--color-champagne-light);">
+                  <td style="padding: 0.75rem 1rem; font-weight: 600;">50x Cold Sparkler Fountains (Indoor)</td>
+                  <td style="padding: 0.75rem 1rem;"><span class="badge" style="background: #FFDBCA; color: #664839; font-size: 11px;">Blinkit Local Hub</span></td>
+                  <td style="padding: 0.75rem 1rem; font-weight: bold; color: var(--color-mocha);">₹2,200</td>
+                  <td style="padding: 0.75rem 1rem; color: var(--color-muted); font-size: 13px;">10–15 Minutes</td>
+                  <td style="padding: 0.75rem 1rem;"><span class="text-xs font-semibold" style="color: var(--color-terracotta);">• In Stock</span></td>
+                  <td style="padding: 0.75rem 1rem; text-align: right;">
+                    <button class="btn btn-primary btn-xs" onclick="App.toast('Dispatching Blinkit Instant order', 'bolt')">Order Now</button>
+                  </td>
+                </tr>
+                <tr style="border-bottom: 1px solid var(--color-champagne-light);">
+                  <td style="padding: 0.75rem 1rem; font-weight: 600;">Monogrammed Olive Oil 100ml (Set of 40)</td>
+                  <td style="padding: 0.75rem 1rem;"><span class="badge badge-gold" style="font-size: 11px;">Meesho Curated</span></td>
+                  <td style="padding: 0.75rem 1rem; font-weight: bold; color: var(--color-mocha);">₹4,800</td>
+                  <td style="padding: 0.75rem 1rem; color: var(--color-muted); font-size: 13px;">4–5 Business Days</td>
+                  <td style="padding: 0.75rem 1rem;"><span class="text-xs font-semibold" style="color: var(--color-muted);">• Made to Order</span></td>
+                  <td style="padding: 0.75rem 1rem; text-align: right;">
+                    <button class="btn btn-subtle btn-xs" onclick="App.toast('Comparing 3 bespoke artisans', 'compare_arrows')">Compare</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td style="padding: 0.75rem 1rem; font-weight: 600;">Festoon Amber Fairy Cable 50m</td>
+                  <td style="padding: 0.75rem 1rem;"><span class="badge" style="background: #FFDDB1; color: #634A25; font-size: 11px;">Flipkart Wholesale</span></td>
+                  <td style="padding: 0.75rem 1rem; font-weight: bold; color: var(--color-mocha);">₹1,850</td>
+                  <td style="padding: 0.75rem 1rem; color: var(--color-muted); font-size: 13px;">3 Business Days</td>
+                  <td style="padding: 0.75rem 1rem;"><span class="text-xs font-semibold" style="color: var(--color-terracotta);">• High Inventory</span></td>
+                  <td style="padding: 0.75rem 1rem; text-align: right;">
+                    <button class="btn btn-primary btn-xs" onclick="App.toast('Dispatching Flipkart Wholesale PO', 'local_shipping')">Order Now</button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- COLLABORATIVE SHOPPING ROSTER -->
+      <section class="card p-lg" style="background: white; border: 1px solid var(--color-champagne);">
+        <div class="flex flex-wrap items-center justify-between gap-md mb-lg">
+          <div>
+            <div class="flex items-center gap-xs">
+              <span class="text-xs uppercase tracking-widest font-bold" style="color: var(--color-terracotta);">Collaborative Execution</span>
+              <span class="badge badge-gold" style="font-size: 10px;">Team Synchronized</span>
+            </div>
+            <h2 class="font-headline-md" style="margin-top: 4px;">Active Shopping Roster &amp; Member Assignments</h2>
+          </div>
+
+          <div class="flex items-center gap-md p-sm rounded-xl" style="background: var(--color-champagne-light); border: 1px solid var(--color-champagne);">
+            <div>
+              <span class="text-xs uppercase tracking-wider text-muted font-bold block" style="font-size: 10px;">Estimated Roster Total</span>
+              <span class="font-bold text-base" style="color: var(--color-espresso);">₹32,500</span>
+            </div>
+            <div style="width: 1px; height: 30px; background: var(--color-champagne);"></div>
+            <div>
+              <span class="text-xs uppercase tracking-wider text-muted font-bold block" style="font-size: 10px;">Actual Settled Spend</span>
+              <span class="font-bold text-base" style="color: var(--color-terracotta);">₹14,200</span>
+            </div>
+            <div style="width: 1px; height: 30px; background: var(--color-champagne);"></div>
+            <div class="flex items-center gap-xs">
+              <div class="text-right">
+                <span class="font-bold text-xs block leading-tight">Auto-Sync to Ledger</span>
+                <span class="text-xs text-muted block" style="font-size: 10px;">Real-time ledger audit</span>
+              </div>
+              <input type="checkbox" checked style="accent-color: var(--color-terracotta); width: 18px; height: 18px;"/>
+            </div>
+          </div>
+        </div>
+
+        <!-- Roster Item Cards -->
+        <div class="space-y-sm" id="shoppingRosterList">
+          <!-- Item 1 -->
+          <div class="p-md rounded-xl flex items-center justify-between gap-md" style="background: var(--color-champagne-light); border: 1px solid var(--color-champagne);">
+            <div class="flex items-center gap-md">
+              <input type="checkbox" checked style="accent-color: var(--color-terracotta); width: 18px; height: 18px;"/>
+              <div>
+                <h4 class="font-bold text-sm" style="margin: 0; color: var(--color-espresso);">Tuscan Terracotta Urns</h4>
+                <span class="text-xs text-muted">Qty: 2 Sets (4 urns) • Category: Decorations</span>
+              </div>
+            </div>
+            <div class="flex items-center gap-xs">
+              <div class="w-7 h-7 rounded-full flex items-center justify-center font-bold text-xs" style="background: var(--color-champagne); color: var(--color-mocha);">EV</div>
+              <div>
+                <span class="font-bold text-xs block leading-tight">Eleanor Vance</span>
+                <span class="text-xs text-muted block" style="font-size: 10px;">Principal Host</span>
+              </div>
+            </div>
+            <div class="flex items-center gap-md">
+              <span class="badge badge-gold" style="font-size: 11px;">Purchased</span>
+              <div class="text-right" style="min-width: 100px;">
+                <span class="font-bold text-sm block" style="color: var(--color-espresso);">₹6,998</span>
+                <span class="text-xs text-muted" style="text-decoration: line-through; font-size: 11px;">Est: ₹7,000</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 2 -->
+          <div class="p-md rounded-xl flex items-center justify-between gap-md" style="background: var(--color-champagne-light); border: 1px solid var(--color-champagne);">
+            <div class="flex items-center gap-md">
+              <input type="checkbox" checked style="accent-color: var(--color-terracotta); width: 18px; height: 18px;"/>
+              <div>
+                <h4 class="font-bold text-sm" style="margin: 0; color: var(--color-espresso);">50x Cold Sparkler Fountains</h4>
+                <span class="text-xs text-muted">Qty: 2 Packs (100 units) • Category: Party Supplies</span>
+              </div>
+            </div>
+            <div class="flex items-center gap-xs">
+              <div class="w-7 h-7 rounded-full flex items-center justify-center font-bold text-xs" style="background: var(--color-champagne); color: var(--color-mocha);">SS</div>
+              <div>
+                <span class="font-bold text-xs block leading-tight">Sofia Sterling</span>
+                <span class="text-xs text-muted block" style="font-size: 10px;">Event Lead</span>
+              </div>
+            </div>
+            <div class="flex items-center gap-md">
+              <span class="badge badge-gold" style="font-size: 11px;">Purchased</span>
+              <div class="text-right" style="min-width: 100px;">
+                <span class="font-bold text-sm block" style="color: var(--color-espresso);">₹4,400</span>
+                <span class="text-xs text-muted" style="text-decoration: line-through; font-size: 11px;">Est: ₹4,500</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 3 -->
+          <div class="p-md rounded-xl flex items-center justify-between gap-md" style="background: white; border: 1px solid var(--color-champagne);">
+            <div class="flex items-center gap-md">
+              <input type="checkbox" style="accent-color: var(--color-terracotta); width: 18px; height: 18px;"/>
+              <div>
+                <h4 class="font-bold text-sm" style="margin: 0; color: var(--color-espresso);">Warm Festoon Fairy Light 50m</h4>
+                <span class="text-xs text-muted">Qty: 4 Bundles • Category: Courtyard Lighting</span>
+              </div>
+            </div>
+            <div class="flex items-center gap-xs">
+              <div class="w-7 h-7 rounded-full flex items-center justify-center font-bold text-xs" style="background: var(--color-champagne-light); color: var(--color-espresso);">MR</div>
+              <div>
+                <span class="font-bold text-xs block leading-tight">Matteo Rossi</span>
+                <span class="text-xs text-muted block" style="font-size: 10px;">Logistics Coordinator</span>
+              </div>
+            </div>
+            <div class="flex items-center gap-md">
+              <span class="badge" style="background: var(--color-champagne-light); color: var(--color-espresso); font-size: 11px;">Pending Order</span>
+              <div class="text-right" style="min-width: 100px;">
+                <span class="font-bold text-sm block" style="color: var(--color-muted);">₹7,400</span>
+                <span class="text-xs text-muted" style="font-size: 11px;">Waiting approval</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 4 -->
+          <div class="p-md rounded-xl flex items-center justify-between gap-md" style="background: white; border: 1px solid var(--color-champagne);">
+            <div class="flex items-center gap-md">
+              <input type="checkbox" style="accent-color: var(--color-terracotta); width: 18px; height: 18px;"/>
+              <div>
+                <h4 class="font-bold text-sm" style="margin: 0; color: var(--color-espresso);">Artisanal Chianti Olive Oil Favors</h4>
+                <span class="text-xs text-muted">Qty: 40 Units (100ml) • Category: Gifts &amp; Return Gifts</span>
+              </div>
+            </div>
+            <div class="flex items-center gap-xs">
+              <div class="w-7 h-7 rounded-full flex items-center justify-center font-bold text-xs" style="background: var(--color-champagne); color: var(--color-mocha);">EV</div>
+              <div>
+                <span class="font-bold text-xs block leading-tight">Eleanor Vance</span>
+                <span class="text-xs text-muted block" style="font-size: 10px;">Principal Host</span>
+              </div>
+            </div>
+            <div class="flex items-center gap-md">
+              <span class="badge" style="background: #FECDAF; color: #7A553E; font-size: 11px;">Bulk Mill Bid</span>
+              <div class="text-right" style="min-width: 100px;">
+                <span class="font-bold text-sm block" style="color: var(--color-espresso);">₹3,600</span>
+                <span class="text-xs font-semibold" style="color: var(--color-terracotta); font-size: 11px;">Saves ₹1,200 direct</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Roster Actions -->
+        <div class="mt-lg pt-md flex items-center justify-between flex-wrap gap-md" style="border-top: 1px solid var(--color-champagne);">
+          <div class="flex items-center gap-xs">
+            <button class="btn btn-subtle btn-sm" onclick="openBespokeItemModal()">
+              <span class="material-symbols-outlined text-sm">add</span>
+              <span>Add Bespoke Entry</span>
+            </button>
+            <button class="btn btn-subtle btn-sm" onclick="App.toast('Exporting Purchase Order Sheets (CSV)...', 'file_download')">
+              <span class="material-symbols-outlined text-sm">file_download</span>
+              <span>Export PO Sheets</span>
+            </button>
+          </div>
+          <div class="flex items-center gap-xs text-xs text-muted">
+            <span class="material-symbols-outlined text-sm" style="color: var(--color-terracotta);">verified_user</span>
+            <span>Reconciled with Villa San Valentino Master Ledger • ₹45,000 buffer intact</span>
+          </div>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <!-- ADD BESPOKE ITEM MODAL -->
+  <div id="bespokeItemModal" class="modal-overlay" style="display: none; position: fixed; inset: 0; background: rgba(34,26,23,0.6); backdrop-filter: blur(4px); z-index: 100; align-items: center; justify-content: center; padding: 1rem;">
+    <div class="card p-lg max-w-lg w-full" style="background: white; border: 1px solid var(--color-champagne); box-shadow: var(--shadow-xl);">
+      <div class="flex items-center justify-between mb-md">
+        <h3 class="font-headline-sm" style="margin: 0;">Add Bespoke Shopping Item</h3>
+        <button class="icon-btn" onclick="document.getElementById('bespokeItemModal').style.display='none'">
+          <span class="material-symbols-outlined">close</span>
+        </button>
+      </div>
+
+      <form onsubmit="handleBespokeItemSubmit(event)">
+        <div class="form-group mb-sm">
+          <label class="form-label">Item Name</label>
+          <input type="text" id="newBespokeTitle" class="form-input" required placeholder="e.g. Travertine Stone Coasters (Set of 6)"/>
+        </div>
+        <div class="grid grid-cols-2 gap-sm mb-sm">
+          <div>
+            <label class="form-label">Category</label>
+            <select id="newBespokeCat" class="form-input">
+              <option value="Decorations">Decorations</option>
+              <option value="Gifts & Return Gifts">Gifts &amp; Return Gifts</option>
+              <option value="Party Supplies">Party Supplies</option>
+              <option value="Kitchen & Dining">Kitchen &amp; Dining</option>
+              <option value="Lighting">Lighting</option>
+            </select>
+          </div>
+          <div>
+            <label class="form-label">Estimated Cost (₹)</label>
+            <input type="number" id="newBespokeCost" class="form-input" required placeholder="2500"/>
+          </div>
+        </div>
+        <div class="form-group mb-md">
+          <label class="form-label">Assigned Member</label>
+          <select id="newBespokeAssignee" class="form-input">
+            <option value="Eleanor Vance">Eleanor Vance (Principal Host)</option>
+            <option value="Sofia Sterling">Sofia Sterling (Event Lead)</option>
+            <option value="Matteo Rossi">Matteo Rossi (Logistics)</option>
+          </select>
+        </div>
+        <div class="flex items-center justify-end gap-sm pt-sm" style="border-top: 1px solid var(--color-champagne);">
+          <button type="button" class="btn btn-secondary" onclick="document.getElementById('bespokeItemModal').style.display='none'">Cancel</button>
+          <button type="submit" class="btn btn-primary">Add to Roster</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- SCRIPTS -->
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+  <script src="../js/firebaseConfig.js"></script>
+  <script src="../js/storage.js"></script>
+  <script src="../js/app.js"></script>
+  <script src="../js/navigation.js"></script>
+  <script src="../js/shopping.js"></script>
+
+  <script>
+    function runAiScraper(btn) {
+      const orig = btn.innerHTML;
+      btn.disabled = true;
+      btn.innerHTML = '<span class="material-symbols-outlined text-sm animate-spin">refresh</span> Scraping 4 Market APIs...';
+      setTimeout(() => {
+        btn.disabled = false;
+        btn.innerHTML = orig;
+        App.toast('Found 6 matching items matching Tuscan Terracotta specification!', 'auto_awesome');
+      }, 1200);
+    }
+
+    async function addItemToRoster(name, price, merchant) {
+      await ShoppingController.addItem({
+        name,
+        price: Number(price),
+        merchant,
+        category: 'Artisan Decor',
+        qty: 1,
+        purchased: false
+      });
+      App.toast(`Added ${name} (${merchant} • ₹${price.toLocaleString()}) to Shopping Roster`, 'shopping_bag');
+    }
+
+    function openBespokeItemModal() {
+      document.getElementById('bespokeItemModal').style.display = 'flex';
+    }
+
+    async function handleBespokeItemSubmit(e) {
+      e.preventDefault();
+      const title = document.getElementById('newBespokeTitle')?.value?.trim();
+      const cat = document.getElementById('newBespokeCat')?.value || 'Decor';
+      const cost = parseInt(document.getElementById('newBespokeCost')?.value || '0', 10);
+      const assignee = document.getElementById('newBespokeAssignee')?.value?.trim() || 'Eleanor Vance';
+
+      if (!title) return;
+
+      await ShoppingController.addItem({
+        name: title,
+        category: cat,
+        price: cost,
+        qty: 1,
+        purchased: false,
+        assignedTo: assignee,
+        merchant: "Artisan Direct"
+      });
+
+      document.getElementById('bespokeItemModal').style.display = 'none';
+      e.target.reset();
+    }
+            <div>
+              <span class="font-bold text-xs block leading-tight">${assignee}</span>
+              <span class="text-xs text-muted block" style="font-size: 10px;">Assigned</span>
+            </div>
+          </div>
+          <div class="flex items-center gap-md">
+            <span class="badge" style="background: var(--color-champagne-light); color: var(--color-espresso); font-size: 11px;">Pending Order</span>
+            <div class="text-right" style="min-width: 100px;">
+              <span class="font-bold text-sm block" style="color: var(--color-espresso);">₹${cost.toLocaleString()}</span>
+              <span class="text-xs text-muted" style="font-size: 11px;">Custom Item</span>
+            </div>
+          </div>
+        </div>
+      `;
+
+      document.getElementById('shoppingRosterList').insertAdjacentHTML('afterbegin', itemHtml);
+      document.getElementById('bespokeItemModal').style.display = 'none';
+      App.toast(`Added "${title}" to your active shopping roster`, 'check_circle');
+    }
+
+    // Filter pills
+    document.querySelectorAll('.category-pill').forEach(pill => {
+      pill.addEventListener('click', () => {
+        document.querySelectorAll('.category-pill').forEach(p => p.className = 'btn btn-subtle btn-sm category-pill');
+        pill.className = 'btn btn-primary btn-sm category-pill active';
+        App.toast(`Filtered by: ${pill.textContent.trim()}`, 'filter_list');
+      });
+    });
+
+    // Search input
+    document.getElementById('shoppingSearchInput').addEventListener('input', (e) => {
+      const q = e.target.value.toLowerCase().trim();
+      document.querySelectorAll('#merchantTableBody tr').forEach(row => {
+        row.style.display = row.textContent.toLowerCase().includes(q) ? '' : 'none';
+      });
+    });
+  </script>
+</body>
+</html>
